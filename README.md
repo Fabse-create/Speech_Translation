@@ -2,6 +2,12 @@
 
 ## TODO
 - Mail (Trennung, neuer Plan, Was erwartet sie?)
+- Datapreprocessing for Whisper 
+- Embedding extraxtion from Whisper v2; save Embeddings
+- HDBSCAN with embeddings; save Clustering
+- Pre train Gatingmodel; sava Parameters; use Embedding extraxtion from before
+- Pre train Experts using static G with saved parameters; save parameters for Experts; use Embedding extraxtion from before
+- Train complete ASR
 
 ## Translation
 
