@@ -2,6 +2,9 @@
 
 ## TODO
 - ~~Mail (Trennung, neuer Plan, Was erwartet sie?)~~
+- Struktur (Stefan)
+- Translation skript (Fabian)
+- Salmon (Fabian)
 - Datapreprocessing for Whisper 
 - Embedding extraxtion from Whisper v2; save Embeddings
 - HDBSCAN with embeddings; save Clustering
