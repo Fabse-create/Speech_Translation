@@ -1,7 +1,7 @@
 # Speech_Translation
 
 ## TODO
-- Mail (Trennung, neuer Plan, Was erwartet sie?)
+- ~~Mail (Trennung, neuer Plan, Was erwartet sie?)~~
 - Datapreprocessing for Whisper 
 - Embedding extraxtion from Whisper v2; save Embeddings
 - HDBSCAN with embeddings; save Clustering
