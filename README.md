@@ -1,99 +1,210 @@
-# Speech_Translation
+# Speech Translation – Mixture of Experts (MoE) with Whisper
 
-## TODO
-- ~~Mail (Trennung, neuer Plan, Was erwartet sie?)~~
-- Struktur (Stefan)
-- Translation skript (Fabian)
-- Salmon (Fabian)
-- Datapreprocessing for Whisper 
-- Embedding extraxtion from Whisper v2; save Embeddings
-- HDBSCAN with embeddings; save Clustering
-- Pre train Gatingmodel; sava Parameters; use Embedding extraxtion from before
-- Pre train Experts using static G with saved parameters; save parameters for Experts; use Embedding extraxtion from before
-- Train complete ASR
+This project explores **speech-to-text translation (EN → DE)** using a **Mixture-of-Experts (MoE)** architecture built on **Whisper v2**, combined with **DeepL** for machine translation and **SALMONN** as an end-to-end baseline.
 
-## Translation
+---
 
-Pipeline für Übersetzung der Texte von Englisch nach Deutsch
-- DEEPL
+## ✅ TODO / Status
 
-## Struktur
+* ~~Mail (Trennung, neuer Plan, Erwartungen)~~
+* Struktur (Stefan)
+* Translation Script (Fabian)
+* SALMONN (Fabian)
+* Data preprocessing for Whisper
+* Embedding extraction from Whisper v2 (save embeddings)
+* HDBSCAN clustering on embeddings (save clusters)
+* Pre-train **Gating Model** (save parameters, reuse embeddings)
+* Pre-train **Experts** using static G (save parameters, reuse embeddings)
+* Train complete ASR (MoE)
 
-Whisper v2: Encoder LatentSpace Decoder
-Daten (circa 20% gesampled)<br>
-  |<br>
-Whisper v2 Encoder<br>
-  |<br>
-LatentSpace / Embeddings(E) durch whisperv2 medium eine Dimensionalität von 1280<br>
-  |<br>
-Clustering HDBSCAN<br>
-  |<br>
-Labels(y) für Daten zum vor trainieren des Gating Model
+---
 
-Gating Model(G):<br>
-lin(1280, 512)<br>
-ReLU(x)<br>
-lin(512, 10)
+## 🔁 Translation
 
-## Plan
+**Text translation pipeline (EN → DE):**
 
-1. Gating Model pre training:<br>
-G(E, y)
+* **DeepL**
+* Used as a cascaded MT system after ASR
+* Later: fine-tuned DeepL variant integrated into training
 
-2. Expert pre Training:<br>
-Daten (circa 20% gesampled) x, y_i <br>
-  | <br>
-Whisper v2 Encoder<br>
-  |<br>
-LatentSpace / Embeddings(E) durch whisperv2 medium eine Dimensionalität von 1280<br>
-  |<br>
-softmax(G(x)) -> reduziert Verteilung auf maximale Anzahl von Experten<br>
-  |<br>
-Whisper v2 Decoder<br>
-LoRA fine tuning (local loss)
+---
 
+## 🧱 Architecture / Structure
 
-3. Final Training<br>
-Daten (circa 80% gesampled, 10% eval, 10% val) x, y_i<br>
-  |<br>
-Whisper v2 Encoder<br>
-  |<br>
-LatentSpace / Embeddings(E) durch whisperv2 medium eine Dimensionalität von 1280<br>
-  |<br>
-softmax(G(x)) -> reduziert Verteilung auf maximale Anzahl von Experten<br>
-  |<br>
-Whisper v2 Decoder<br>
-LoRA fine tuning (gloabl loss probably auxilliary loss, gets backwarded to Gating Model aswell)
+### Base Model
 
-4. Add Deepl to ASR and Train again
+* **Whisper v2 (medium)**
 
-## Evaluation
+  * Encoder → Latent Space → Decoder
+  * Encoder embedding dimension: **1280**
 
-- General Performance rated by having an Eval Dataset
-  - Whisper v2 without finetuning with DEEPL as MT Cascaded
-  - Whisper v3 without finetuning with DEEPL as MT Cascaded
-  - Whisper v2 fine tuned with Lora with DEEPL as MT Cascaded
- 
-  - MoE using Whisper v2 with DEEPL as MT Cascaded
-  - MoE using Whisper v2 with DEEPL finetuned as MT Cascaded
- 
-  - SALMONN without finetuning End to End
-  - SALMONN with finetuning End to End
- 
- 
-  - MT
-    - DEEPL
-    - DEEPL finetuned  
- 
-- Comparison Values:
-  - BLEU
-  - WER
- 
-Wo tretten die Probleme auf?
-- Krankheit (sortiert nach welche Krankheit sorgt für was für einen Score)
+### Data Flow (Preprocessing & Clustering)
 
-## Weaknesses
-- Healthy Audio
-- noisy data?
-- nationality bias (80% USA)
-- 
+```
+Audio Data (≈20% sampled)
+   │
+   ▼
+Whisper v2 Encoder
+   │
+   ▼
+Latent Space / Embeddings (E ∈ R¹²⁸⁰)
+   │
+   ▼
+HDBSCAN Clustering
+   │
+   ▼
+Cluster Labels (y)
+```
+
+The cluster labels **y** are used to pre-train the **Gating Model**.
+
+---
+
+## 🧠 Gating Model (G)
+
+The gating network assigns embeddings to experts.
+
+**Architecture:**
+
+```
+Linear(1280 → 512)
+ReLU
+Linear(512 → 10)   # number of experts
+```
+
+Output is passed through **softmax** to obtain expert weights.
+
+---
+
+## 🚀 Training Plan
+
+### 1️⃣ Gating Model Pre-Training
+
+**Objective:** Learn cluster-aware routing.
+
+```
+Input:  Embeddings E
+Target: Cluster labels y
+
+Loss:   Cross-Entropy
+Train:  G(E) → y
+```
+
+Embeddings are reused (no re-encoding).
+
+---
+
+### 2️⃣ Expert Pre-Training (Static G)
+
+**Data:** ~20% sampled dataset
+
+```
+Audio x, Transcription yᵢ
+   │
+   ▼
+Whisper v2 Encoder
+   │
+   ▼
+Embeddings E
+   │
+   ▼
+Softmax(G(E))  → expert selection
+   │
+   ▼
+Whisper v2 Decoder (Expert-specific)
+```
+
+* **LoRA fine-tuning** per expert
+* **Local loss only**
+* Gating model frozen
+
+---
+
+### 3️⃣ Final End-to-End Training (MoE)
+
+**Data split:**
+
+* 80% train
+* 10% validation
+* 10% evaluation
+
+```
+Audio x, Transcription yᵢ
+   │
+   ▼
+Whisper v2 Encoder
+   │
+   ▼
+Embeddings E
+   │
+   ▼
+Softmax(G(E))  → expert distribution
+   │
+   ▼
+Whisper v2 Decoder (LoRA Experts)
+```
+
+* **Global loss** (with auxiliary routing loss)
+* Gradients flow back into:
+
+  * Experts
+  * Gating Model
+
+---
+
+### 4️⃣ ASR + MT Integration
+
+* Add **DeepL** to ASR output
+* Retrain / fine-tune pipeline
+* Optional: fine-tuned DeepL variant
+
+---
+
+## 📊 Evaluation
+
+### Baselines & Comparisons
+
+**ASR + MT Cascaded:**
+
+* Whisper v2 (no fine-tuning) + DeepL
+* Whisper v3 (no fine-tuning) + DeepL
+* Whisper v2 + LoRA fine-tuning + DeepL
+
+**MoE Models:**
+
+* Whisper v2 MoE + DeepL
+* Whisper v2 MoE + fine-tuned DeepL
+
+**End-to-End Models:**
+
+* SALMONN (no fine-tuning)
+* SALMONN (end-to-end fine-tuned)
+
+**MT Only:**
+
+* DeepL
+* Fine-tuned DeepL
+
+---
+
+### Metrics
+
+* **WER** (Word Error Rate)
+* **BLEU** (Translation Quality)
+
+---
+
+### Error Analysis
+
+* Where do errors occur?
+* Performance grouped by **disease / impairment type**
+* Identification of systematic weaknesses
+
+---
+
+## ⚠️ Known Weaknesses / Risks
+
+* Limited **healthy audio** baseline
+* Noisy or low-quality recordings
+* **Nationality bias** (~80% USA speakers)
+* Potential cluster imbalance
