@@ -1,0 +1,3805 @@
+{
+  "Contributor ID": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4",
+  "Do you consider U.S. English to be your first language": "No Response Supplied",
+  "What language(s) do you speak": "No Response Supplied",
+  "What age did you start speaking English": "No Response Supplied",
+  "I consent to have my voice samples shared in public at research conferences and similar professional meetings, and to have digital audio files of my voice be shared as part of professional research publications.": "Yes",
+  "Etiology": "ALS",
+  "BlockNumber": 4,
+  "Files": [
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29083_4560_16kHz.wav",
+      "Created": "2024-04-02 10:30:46",
+      "CreatedOrModified": "2024-04-03 13:43:18",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Stop listening.",
+        "Transcript": "Stop listening.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Hör auf zu hören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29097_4560_16kHz.wav",
+      "Created": "2024-04-02 10:31:29",
+      "CreatedOrModified": "2024-04-03 13:44:40",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make the screen brighter.",
+        "Transcript": "Make the screen brighter.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Mach den Bildschirm heller."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29098_4560_16kHz.wav",
+      "Created": "2024-04-02 10:32:23",
+      "CreatedOrModified": "2024-04-03 13:47:08",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is the pharmacy open?",
+        "Transcript": "Is the pharmacy open?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ist die Apotheke offen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29096_4560_16kHz.wav",
+      "Created": "2024-04-02 10:34:10",
+      "CreatedOrModified": "2024-04-03 13:56:05",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Send a message.",
+        "Transcript": "Send a message.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Sende eine Nachricht."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29095_4560_16kHz.wav",
+      "Created": "2024-04-02 10:35:22",
+      "CreatedOrModified": "2024-04-03 13:56:57",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Reschedule my meeting.",
+        "Transcript": "Reschedule my meeting.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Verlegen Sie mein Treffen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29094_4560_16kHz.wav",
+      "Created": "2024-04-02 10:37:16",
+      "CreatedOrModified": "2024-04-03 13:58:51",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please send this text.",
+        "Transcript": "Please send this text. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Bitte senden Sie diesen Text."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29337_4561_16kHz.wav",
+      "Created": "2024-04-02 10:45:18",
+      "CreatedOrModified": "2024-04-03 14:05:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Recipe with 2% milk.",
+        "Transcript": "Recipe for 2% milk.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Rezept für 2% Milch."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29350_4561_16kHz.wav",
+      "Created": "2024-04-02 10:45:39",
+      "CreatedOrModified": "2024-04-03 14:06:41",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "I need to cancel my order.",
+        "Transcript": "I need to cancel my order.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ich muss meine Bestellung stornieren."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29602_4561_16kHz.wav",
+      "Created": "2024-04-02 10:45:59",
+      "CreatedOrModified": "2024-04-03 14:06:58",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Map a route to Dulles Airport.",
+        "Transcript": "Map a route to Dulles Airport. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Karte eine Route zum Flughafen Dulles."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29107_4561_16kHz.wav",
+      "Created": "2024-04-02 10:46:28",
+      "CreatedOrModified": "2024-04-03 14:07:40",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How many refills are left on my abilify?",
+        "Transcript": "How many refills are left on my abilify?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wie viele Nachfüllungen sind noch auf meiner Abbilify?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29492_4561_16kHz.wav",
+      "Created": "2024-04-02 10:46:48",
+      "CreatedOrModified": "2024-04-03 14:07:56",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please call Park Bank.",
+        "Transcript": "Please call Park Bank.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Bitte rufen Sie die Park Bank an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29644_4561_16kHz.wav",
+      "Created": "2024-04-02 10:50:32",
+      "CreatedOrModified": "2024-04-03 14:11:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Show me movies with Will Ferrell.",
+        "Transcript": "Show me movies with Will Ferrell.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Zeig mir Filme mit Will Ferrell."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29125_4561_16kHz.wav",
+      "Created": "2024-04-02 10:53:04",
+      "CreatedOrModified": "2024-04-03 14:13:23",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Take insulin at dinner time.",
+        "Transcript": "Take insulin at dinner time.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Nehmen Sie Insulin zum Abendessen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29108_4561_16kHz.wav",
+      "Created": "2024-04-02 10:54:06",
+      "CreatedOrModified": "2024-04-03 14:14:55",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How many refills are left on my adderall?",
+        "Transcript": "How many refills are left on my adderall?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wie viele Nachfüllungen bleibt auf meinem Adderall?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29356_4561_16kHz.wav",
+      "Created": "2024-04-02 10:54:43",
+      "CreatedOrModified": "2024-04-12 15:48:18",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call Caleb Neville.",
+        "Transcript": "Call (uh). (ss: I don't know).",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ruf an. (ss: Ich weiß nicht)."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29579_4561_16kHz.wav",
+      "Created": "2024-04-02 10:55:57",
+      "CreatedOrModified": "2024-04-03 14:20:47",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Our parking space is red.",
+        "Transcript": "Our parking space is red.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Unser Parkplatz ist rot."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29648_4561_16kHz.wav",
+      "Created": "2024-04-02 10:56:17",
+      "CreatedOrModified": "2024-04-12 14:16:31",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How far is Vermont from Canada?",
+        "Transcript": "How far is Vermont Canadia?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wie weit ist Vermont Canadia?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29353_4561_16kHz.wav",
+      "Created": "2024-04-02 10:56:33",
+      "CreatedOrModified": "2024-04-03 14:21:28",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call Lynn Banks.",
+        "Transcript": "Call Lynn Banks.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ruf Lynn Banks an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29178_4563_16kHz.wav",
+      "Created": "2024-04-02 11:00:46",
+      "CreatedOrModified": "2024-04-03 14:30:45",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Who won gold in men's figure skating in the last Olympics?",
+        "Transcript": "Who won the gold in the men's figure skating in the last Olympics?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wer hat das Gold bei den letzten Olympischen Spielen gewonnen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29354_4563_16kHz.wav",
+      "Created": "2024-04-02 11:01:26",
+      "CreatedOrModified": "2024-04-03 14:31:15",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call Shawna Brock.",
+        "Transcript": "Call Shawna Brock.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ruf Shawna Brock an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29624_4563_16kHz.wav",
+      "Created": "2024-04-02 11:02:11",
+      "CreatedOrModified": "2024-04-03 14:31:57",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Timer for bread.",
+        "Transcript": "Timer for bread.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Zeit für Brot."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29349_4563_16kHz.wav",
+      "Created": "2024-04-02 11:02:50",
+      "CreatedOrModified": "2024-04-03 14:32:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "When is my item arriving, question mark.",
+        "Transcript": "When is my item (ar-) arriving, question mark.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wann ist mein Artikel (ar-) ankommen, Fragezeichen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29341_4563_16kHz.wav",
+      "Created": "2024-04-02 11:07:11",
+      "CreatedOrModified": "2024-04-03 14:39:21",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Recipe with garlic and lentils.",
+        "Transcript": "Recipe with garlic and lentils.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Rezept mit Knoblauch und Linsen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29611_4563_16kHz.wav",
+      "Created": "2024-04-02 11:07:34",
+      "CreatedOrModified": "2024-04-03 14:39:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Book a table for 6 at Silverlake.",
+        "Transcript": "Book a table for 6 at Silverlake.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Buchen Sie einen Tisch für 6 bei Silverlake."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29668_4563_16kHz.wav",
+      "Created": "2024-04-02 11:07:58",
+      "CreatedOrModified": "2024-04-03 14:41:11",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Read 'The One and Only Ivan' on Audiobook.",
+        "Transcript": "Read 'The One and Only Ivan' on Audiobook.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Lies 'Der Eine und Einzige Ivan' auf dem Hörbuch."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29124_4563_16kHz.wav",
+      "Created": "2024-04-02 11:08:18",
+      "CreatedOrModified": "2024-04-03 14:41:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Take intuniv at 2 PM.",
+        "Transcript": "Take intuniv at 2 PM.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Nehmen Sie intuniv um 14 Uhr."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29578_4563_16kHz.wav",
+      "Created": "2024-04-02 11:08:36",
+      "CreatedOrModified": "2024-04-03 14:41:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "We parked on level 3.",
+        "Transcript": "We parked on level 3.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wir haben auf Ebene 3 geparkt."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29333_4563_16kHz.wav",
+      "Created": "2024-04-02 11:08:57",
+      "CreatedOrModified": "2024-04-03 14:42:12",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Recipe with carrots and potatoes.",
+        "Transcript": "Recipe for carrots and potatoes.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Rezept für Karotten und Kartoffeln."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29360_4563_16kHz.wav",
+      "Created": "2024-04-02 11:09:14",
+      "CreatedOrModified": "2024-04-03 14:43:56",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call Goodwin Alma.",
+        "Transcript": "Call Goodwin Alma.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ruf Goodwin Alma an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29357_4563_16kHz.wav",
+      "Created": "2024-04-02 11:11:19",
+      "CreatedOrModified": "2024-07-21 23:00:54",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call Flo Giannopoulos.",
+        "Transcript": "Call Flo (ss: oh buddy, I don't know that name). ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ruf Flo an (ss: oh Kumpel, ich kenne diesen Namen nicht)."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29365_4563_16kHz.wav",
+      "Created": "2024-04-02 11:11:43",
+      "CreatedOrModified": "2024-04-03 14:46:26",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather on Christmas?",
+        "Transcript": "What's the weather on Christmas?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wie ist das Wetter an Weihnachten?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29628_4563_16kHz.wav",
+      "Created": "2024-04-02 11:03:58",
+      "CreatedOrModified": "2024-04-03 14:35:36",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What time is it in New York City?",
+        "Transcript": "What time is it in New York City?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wie spät ist es in New York City?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29117_4563_16kHz.wav",
+      "Created": "2024-04-02 11:10:41",
+      "CreatedOrModified": "2024-04-03 14:45:20",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Take depakote at 1 PM.",
+        "Transcript": "Take depakote at 1 PM.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Nehmen Sie Depakote um 13 Uhr."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29101_4564_16kHz.wav",
+      "Created": "2024-04-02 11:14:25",
+      "CreatedOrModified": "2024-04-03 14:50:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please send this email to the group.",
+        "Transcript": "Please send this email to the group.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Bitte senden Sie diese E-Mail an die Gruppe."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29122_4564_16kHz.wav",
+      "Created": "2024-04-02 11:15:05",
+      "CreatedOrModified": "2024-04-03 14:51:12",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Take focalin at 11:30 AM.",
+        "Transcript": "Take focalin at 11:30 AM.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Nehmen Sie um 11:30 Uhr Fokus."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29473_4564_16kHz.wav",
+      "Created": "2024-04-02 11:16:16",
+      "CreatedOrModified": "2024-04-03 14:53:28",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Add a puzzle for Tom to my gift list.",
+        "Transcript": "Add a puzzle to Tom to my gift list.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Füge Tom ein Rätsel auf meine Geschenkliste."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29657_4564_16kHz.wav",
+      "Created": "2024-04-02 11:16:37",
+      "CreatedOrModified": "2024-04-03 14:53:57",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the distance to Salem?",
+        "Transcript": "What's the distance to Salem?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wie weit ist es bis Salem?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29643_4564_16kHz.wav",
+      "Created": "2024-04-02 11:17:31",
+      "CreatedOrModified": "2024-04-03 14:54:36",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Show me a photo of man's first steps on the moon in 1969.",
+        "Transcript": "Show me a photo of man's first step on the moon in 1969.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Zeig mir ein Foto von dem ersten Schritt des Menschen auf dem Mond 1969."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29576_4564_16kHz.wav",
+      "Created": "2024-04-02 11:17:51",
+      "CreatedOrModified": "2024-04-03 14:54:58",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cancel my meeting with Vincent and Lin.",
+        "Transcript": "Cancel my meeting with Vincent & Lin.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ich breche mein Treffen mit Vincent & Lin ab."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29613_4564_16kHz.wav",
+      "Created": "2024-04-02 11:19:40",
+      "CreatedOrModified": "2024-04-03 14:58:24",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What museums are in Baltimore?",
+        "Transcript": "What museums are in Baltimore?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Welche Museen gibt es in Baltimore?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_21_4564_16kHz.wav",
+      "Created": "2024-04-02 11:20:39",
+      "CreatedOrModified": "2024-04-03 14:59:02",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn down the volume.",
+        "Transcript": "Turn down the volume.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Drehen Sie die Lautstärke."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_245_4564_16kHz.wav",
+      "Created": "2024-04-02 11:21:20",
+      "CreatedOrModified": "2024-04-03 14:59:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Siri, turn up the volume.",
+        "Transcript": "Hey Siri, turn up the volume.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Siri, dreh die Lautstärke hoch."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_517_4564_16kHz.wav",
+      "Created": "2024-04-02 11:21:43",
+      "CreatedOrModified": "2024-04-03 14:59:56",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn the TV to NBC.",
+        "Transcript": "Turn the TV to NBC.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Drehen Sie den Fernseher auf NBC."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_99_4564_16kHz.wav",
+      "Created": "2024-04-02 11:18:31",
+      "CreatedOrModified": "2024-04-03 14:56:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Help me relax.",
+        "Transcript": "Help me relax.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Hilf mir, mich zu entspannen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_228_4563_16kHz.wav",
+      "Created": "2024-04-02 11:03:09",
+      "CreatedOrModified": "2024-04-03 14:35:02",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn up the sound.",
+        "Transcript": "Turn up the sound.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Drehen Sie den Ton hoch."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_521_4563_16kHz.wav",
+      "Created": "2024-04-02 11:03:37",
+      "CreatedOrModified": "2024-04-03 14:35:20",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Play the latest episode of 'Crime Junkie'.",
+        "Transcript": "Play the latest episode of 'Crime Junkie'.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Spielen Sie die neueste Episode von 'Crime Junkie'."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_248_4563_16kHz.wav",
+      "Created": "2024-04-02 11:00:21",
+      "CreatedOrModified": "2024-04-03 14:29:14",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on the TV.",
+        "Transcript": "Turn on TV.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie das Fernsehen ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_186_4563_16kHz.wav",
+      "Created": "2024-04-02 11:01:56",
+      "CreatedOrModified": "2024-04-03 14:31:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cortana, play music.",
+        "Transcript": "Cortana, play music.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Cortana, spiel Musik."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_176_4561_16kHz.wav",
+      "Created": "2024-04-02 10:55:15",
+      "CreatedOrModified": "2024-04-03 14:20:08",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What song is this?",
+        "Transcript": "What song is this?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Welches Lied ist das?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_420_4561_16kHz.wav",
+      "Created": "2024-04-02 10:52:07",
+      "CreatedOrModified": "2024-04-03 14:12:53",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Play music on bedroom speakers.",
+        "Transcript": "Play music on bedroom speakers.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Spielen Sie Musik auf Schlafzimmer Lautsprecher."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_520_4561_16kHz.wav",
+      "Created": "2024-04-02 10:51:14",
+      "CreatedOrModified": "2024-04-03 14:12:21",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip forward 30 seconds.",
+        "Transcript": "Skip forward 30 seconds.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "30 Sekunden nach vorne."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1052_4560_16kHz.wav",
+      "Created": "2024-04-02 10:37:57",
+      "CreatedOrModified": "2024-04-03 13:59:13",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Find my phone.",
+        "Transcript": "Find my phone.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Such mein Handy."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1063_4560_16kHz.wav",
+      "Created": "2024-04-02 10:38:18",
+      "CreatedOrModified": "2024-04-03 13:59:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off the TV.",
+        "Transcript": "Turn off the TV.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie den Fernseher aus."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1071_4560_16kHz.wav",
+      "Created": "2024-04-02 10:38:36",
+      "CreatedOrModified": "2024-04-03 13:59:39",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off heat.",
+        "Transcript": "Turn off heat.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Hitze abschalten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1057_4560_16kHz.wav",
+      "Created": "2024-04-02 10:39:02",
+      "CreatedOrModified": "2024-04-03 14:00:04",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the temperature in the living room?",
+        "Transcript": "What's the temperature in the living room?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie ist die Temperatur im Wohnzimmer?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_172_4561_16kHz.wav",
+      "Created": "2024-04-02 10:49:40",
+      "CreatedOrModified": "2024-04-03 14:09:39",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Facebook, resume.",
+        "Transcript": "Hey Facebook, resume.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Hey Facebook, lauf fort."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1062_4560_16kHz.wav",
+      "Created": "2024-04-02 10:30:20",
+      "CreatedOrModified": "2024-04-03 13:43:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Answer the call.",
+        "Transcript": "Answer the call.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Geh ran."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Audible inspiration",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathiness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Nasal emission ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged phonemes",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:53"
+        }
+      ]
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1069_4560_16kHz.wav",
+      "Created": "2024-04-02 10:32:08",
+      "CreatedOrModified": "2024-04-03 13:46:35",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Stop the call.",
+        "Transcript": "Stop the call.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Hör auf zu telefonieren."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1059_4560_16kHz.wav",
+      "Created": "2024-04-02 10:36:00",
+      "CreatedOrModified": "2024-04-03 13:57:41",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Open reminders.",
+        "Transcript": "Open reminders.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Erinnerungen öffnen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1065_4560_16kHz.wav",
+      "Created": "2024-04-02 10:36:21",
+      "CreatedOrModified": "2024-04-03 13:57:58",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip this song.",
+        "Transcript": "Skip this song.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Überspring das Lied."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1060_4560_16kHz.wav",
+      "Created": "2024-04-02 10:36:38",
+      "CreatedOrModified": "2024-04-03 13:58:14",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's on my calendar tomorrow?",
+        "Transcript": "What's on my calendar tomorrow?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Was steht morgen in meinem Kalender?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1064_4560_16kHz.wav",
+      "Created": "2024-04-02 10:36:55",
+      "CreatedOrModified": "2024-04-03 13:58:29",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the time?",
+        "Transcript": "What's the time?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie spät ist es?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1068_4560_16kHz.wav",
+      "Created": "2024-04-02 10:39:46",
+      "CreatedOrModified": "2024-04-03 14:01:13",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Lower the temperature.",
+        "Transcript": "Lower the temperature.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Senken Sie die Temperatur."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1058_4560_16kHz.wav",
+      "Created": "2024-04-02 10:40:06",
+      "CreatedOrModified": "2024-04-03 14:01:30",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Add this music to favorites.",
+        "Transcript": "Add this music to favorites.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Fügen Sie diese Musik zu Favoriten hinzu."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1053_4560_16kHz.wav",
+      "Created": "2024-04-02 10:40:26",
+      "CreatedOrModified": "2024-04-03 14:01:55",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's on my shopping list?",
+        "Transcript": "What's on my shopping list?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Was steht auf meiner Einkaufsliste?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1074_4560_16kHz.wav",
+      "Created": "2024-04-02 10:34:26",
+      "CreatedOrModified": "2024-04-03 13:56:16",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on cooling.",
+        "Transcript": "Turn on cooling.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Kühlen anschalten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1054_4560_16kHz.wav",
+      "Created": "2024-04-02 10:34:39",
+      "CreatedOrModified": "2024-04-03 13:56:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hang up.",
+        "Transcript": "Hang up.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Leg auf."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1066_4560_16kHz.wav",
+      "Created": "2024-04-02 10:35:00",
+      "CreatedOrModified": "2024-04-03 13:56:46",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather like today?",
+        "Transcript": "What's the weather like today? ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie ist das Wetter heute?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1072_4560_16kHz.wav",
+      "Created": "2024-04-02 10:32:47",
+      "CreatedOrModified": "2024-04-03 13:50:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Increase volume to maximum.",
+        "Transcript": "Increase volume to maximum.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Volumen auf Maximum erhöhen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1056_4560_16kHz.wav",
+      "Created": "2024-04-02 10:33:09",
+      "CreatedOrModified": "2024-04-03 13:50:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Decrease volume to minimum.",
+        "Transcript": "Decrease the volume to minimum.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Verringern Sie das Volumen auf ein Minimum."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1070_4560_16kHz.wav",
+      "Created": "2024-04-02 10:33:26",
+      "CreatedOrModified": "2024-04-03 13:51:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me the news.",
+        "Transcript": "Tell me the news.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Erzählen Sie mir die Nachrichten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1061_4560_16kHz.wav",
+      "Created": "2024-04-02 10:33:55",
+      "CreatedOrModified": "2024-04-03 13:51:18",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What restaurants are nearby?",
+        "Transcript": "What restaurants are nearby?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Welche Restaurants befinden sich in der Nähe?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1075_4560_16kHz.wav",
+      "Created": "2024-04-02 10:31:05",
+      "CreatedOrModified": "2024-04-03 13:43:36",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on all switches.",
+        "Transcript": "Turn on all the switches.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie alle Schalter ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1076_4560_16kHz.wav",
+      "Created": "2024-04-02 10:28:46",
+      "CreatedOrModified": "2024-04-03 13:42:13",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call area code 053-621-4879.",
+        "Transcript": "Call area code 053-621-4879.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Ruf die Ortsvorwahl 053-621-4879 an."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Audible inspiration",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathiness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Nasal emission ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged phonemes",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:10:51"
+        }
+      ]
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_1055_4560_16kHz.wav",
+      "Created": "2024-04-02 10:29:42",
+      "CreatedOrModified": "2024-04-03 13:42:46",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make the text larger.",
+        "Transcript": "Make the text larger.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Machen Sie den Text größer."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Audible inspiration",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathiness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Nasal emission ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged phonemes",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:12:33"
+        }
+      ]
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_550_4563_16kHz.wav",
+      "Created": "2024-04-02 11:04:50",
+      "CreatedOrModified": "2024-04-03 14:36:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Brighten the closet light.",
+        "Transcript": "Brighten the closet light.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Erhellen Sie das Schranklicht."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_45_4563_16kHz.wav",
+      "Created": "2024-04-02 11:05:04",
+      "CreatedOrModified": "2024-04-03 14:37:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make it warmer.",
+        "Transcript": "Make it warmer.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Mach es wärmer."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29359_4564_16kHz.wav",
+      "Created": "2024-04-02 11:18:15",
+      "CreatedOrModified": "2024-04-03 14:55:17",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call Noreen Sanada.",
+        "Transcript": "Call Noreen Sanada. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Broadcast over more than one speaker",
+        "Translation": "Ruf Noreen Sanada an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_29647_4561_16kHz.wav",
+      "Created": "2024-04-02 10:51:40",
+      "CreatedOrModified": "2024-04-03 14:12:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Who won the Pirates game yesterday?",
+        "Transcript": "Who won the Pirates game yesterday?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Broadcast over more than one speaker",
+        "Translation": "Wer hat gestern das Piratenspiel gewonnen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_505_4561_16kHz.wav",
+      "Created": "2024-04-02 10:55:40",
+      "CreatedOrModified": "2024-04-03 14:20:24",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Broadcast 'The football game is about to start.'",
+        "Transcript": "Broadcast 'The football game is about to start.'",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Broadcast over more than one speaker",
+        "Translation": "Sendung 'Das Fußballspiel beginnt gleich.'"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_379_4561_16kHz.wav",
+      "Created": "2024-04-02 10:48:39",
+      "CreatedOrModified": "2024-04-03 14:09:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is there a chance of rain on the 13th?",
+        "Transcript": "Is there a chance of rain on the 13th?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Gibt es eine Chance auf Regen am 13.?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_80_4561_16kHz.wav",
+      "Created": "2024-04-02 10:43:46",
+      "CreatedOrModified": "2024-04-03 14:05:17",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the temperature outside?",
+        "Transcript": "What's the temperature outside?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wie ist die Temperatur draußen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_524_4561_16kHz.wav",
+      "Created": "2024-04-02 10:47:54",
+      "CreatedOrModified": "2024-04-03 14:08:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How's the traffic to Hoover Dam?",
+        "Transcript": "How's the traffic to Hoover Dam?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wie ist der Verkehr zum Hoover Dam?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_487_4564_16kHz.wav",
+      "Created": "2024-04-02 11:20:07",
+      "CreatedOrModified": "2024-04-03 14:58:48",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Who won the soccer game yesterday?",
+        "Transcript": "Who won the soccer game yesterday?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wer hat gestern das Fußballspiel gewonnen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_157_4563_16kHz.wav",
+      "Created": "2024-04-02 11:05:20",
+      "CreatedOrModified": "2024-04-03 14:37:23",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Where is the nearest bus stop?",
+        "Transcript": "Where is the nearest bus stop?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wo ist die nächste Bushaltestelle?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_63_4563_16kHz.wav",
+      "Created": "2024-04-02 11:05:45",
+      "CreatedOrModified": "2024-04-03 14:37:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "When is it going to rain?",
+        "Transcript": "When is it going to rain?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wann wird es regnen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_25_4563_16kHz.wav",
+      "Created": "2024-04-02 11:01:03",
+      "CreatedOrModified": "2024-04-03 14:30:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "When does the next train arrive?",
+        "Transcript": "When does the next train arrive?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wann kommt der nächste Zug an?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_132_4561_16kHz.wav",
+      "Created": "2024-04-02 10:57:37",
+      "CreatedOrModified": "2024-04-03 14:22:14",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What movies came out last week?",
+        "Transcript": "What movies came out last week?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Welche Filme sind letzte Woche erschienen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_144_4564_16kHz.wav",
+      "Created": "2024-04-02 11:18:51",
+      "CreatedOrModified": "2024-04-03 14:56:21",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Scan a QR code.",
+        "Transcript": "Scan a QR code. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Scannen Sie einen QR-Code."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_151_4564_16kHz.wav",
+      "Created": "2024-04-02 11:16:51",
+      "CreatedOrModified": "2024-04-03 14:54:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Redial.",
+        "Transcript": "Redial.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "- Umdrehen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_257_4564_16kHz.wav",
+      "Created": "2024-04-02 11:15:20",
+      "CreatedOrModified": "2024-04-03 14:51:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Open email.",
+        "Transcript": "Open email.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "E-Mail öffnen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_198_4563_16kHz.wav",
+      "Created": "2024-04-02 11:04:32",
+      "CreatedOrModified": "2024-04-03 14:36:47",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How long is left on the timer?",
+        "Transcript": "How long is left on the timer?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Wie lange bleibt noch auf dem Timer?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_368_4563_16kHz.wav",
+      "Created": "2024-04-02 11:06:36",
+      "CreatedOrModified": "2024-04-03 14:38:34",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Video call 1-800-642-7676.",
+        "Transcript": "Video call 1-800-642-7676.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Videoruf 1-800-642-7676."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_216_4561_16kHz.wav",
+      "Created": "2024-04-02 10:47:07",
+      "CreatedOrModified": "2024-04-03 14:08:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Request a taxi ride.",
+        "Transcript": "Request a taxi ride.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Fordern Sie eine Taxifahrt."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_153_4561_16kHz.wav",
+      "Created": "2024-04-02 10:50:53",
+      "CreatedOrModified": "2024-04-03 14:12:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Decrease the volume.",
+        "Transcript": "Decrease the volume.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Volumen verringern."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_202_4561_16kHz.wav",
+      "Created": "2024-04-02 10:52:31",
+      "CreatedOrModified": "2024-04-03 14:13:08",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's playing in the theaters near me?",
+        "Transcript": "What's playing in the theaters near me?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Was spielt in den Theatern in meiner Nähe?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_552_4561_16kHz.wav",
+      "Created": "2024-04-02 10:53:38",
+      "CreatedOrModified": "2024-04-03 14:14:08",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How many calories does a Big Mac have?",
+        "Transcript": "How many calories does a Big Mac have?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Wie viele Kalorien hat ein Big Mac?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_491_4564_16kHz.wav",
+      "Created": "2024-04-02 11:15:49",
+      "CreatedOrModified": "2024-04-03 14:52:12",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How tall is Peppa Pig?",
+        "Transcript": "How tall is Peppa Pig?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Wie groß ist Peppa Pig?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_492_4564_16kHz.wav",
+      "Created": "2024-04-02 11:21:00",
+      "CreatedOrModified": "2024-04-03 14:59:21",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Buy tickets at 7:00 PM.",
+        "Transcript": "Buy tickets at 7:00 PM.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Kaufen Sie Tickets um 19 Uhr."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_134_4564_16kHz.wav",
+      "Created": "2024-04-02 11:22:15",
+      "CreatedOrModified": "2024-04-03 15:00:30",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What film won the Oscar for best picture in 1949?",
+        "Transcript": "What film won the Oscar for best picture in 1949?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Welcher Film gewann 1949 den Oscar für das beste Bild?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_553_4561_16kHz.wav",
+      "Created": "2024-04-02 10:43:17",
+      "CreatedOrModified": "2024-04-03 14:05:03",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How do you say 'good morning' in Polish?",
+        "Transcript": "How do you say 'good morning' in Polish?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Wie sagt man auf Polnisch \"Guten Morgen\"?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_241_4563_16kHz.wav",
+      "Created": "2024-04-02 11:00:08",
+      "CreatedOrModified": "2024-04-03 14:28:15",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What alarms are set?",
+        "Transcript": "What alarms are set?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Welche Alarmanlagen sind eingestellt?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_67_4563_16kHz.wav",
+      "Created": "2024-04-02 11:06:07",
+      "CreatedOrModified": "2024-04-03 14:37:51",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Show me my alarms.",
+        "Transcript": "Show me my alarms.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Zeig mir meine Alarmanlage."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_451_4563_16kHz.wav",
+      "Created": "2024-04-02 11:09:35",
+      "CreatedOrModified": "2024-04-03 14:44:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cancel alarm for 4:30.",
+        "Transcript": "Cancel alarm for 4:30.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Alarm für 16:30 Uhr absagen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_52_4564_16kHz.wav",
+      "Created": "2024-04-02 11:19:14",
+      "CreatedOrModified": "2024-04-03 14:56:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Where is my first event tomorrow?",
+        "Transcript": "Where is my first (uh) event tomorrow?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wo ist mein erstes Ereignis morgen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_225_4564_16kHz.wav",
+      "Created": "2024-04-02 11:14:41",
+      "CreatedOrModified": "2024-04-03 14:50:36",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Snooze the alarm.",
+        "Transcript": "Snooze the alarm.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "- Ja, ja, ja, ja. - Ja, ja, ja. - Ja, ja."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_56_4563_16kHz.wav",
+      "Created": "2024-04-02 11:10:58",
+      "CreatedOrModified": "2024-04-03 14:45:32",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What time is it?",
+        "Transcript": "What time is it?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wie spät ist es?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_518_4561_16kHz.wav",
+      "Created": "2024-04-02 10:56:54",
+      "CreatedOrModified": "2024-04-03 14:21:43",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How do I make a 13 pound turkey?",
+        "Transcript": "How do I make a 13 pound turkey?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wie mache ich einen 13 Pfund Truthahn?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_478_4561_16kHz.wav",
+      "Created": "2024-04-02 10:57:18",
+      "CreatedOrModified": "2024-04-03 14:21:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Set an alarm for 11:45 AM.",
+        "Transcript": "Set an alarm for 11:45 AM.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Alarm auf 11:45 Uhr."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_547_4561_16kHz.wav",
+      "Created": "2024-04-02 10:47:30",
+      "CreatedOrModified": "2024-04-03 14:08:24",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cancel alarm for 8.",
+        "Transcript": "Cancel alarm for 8.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Alarm für 8 absagen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_508_4561_16kHz.wav",
+      "Created": "2024-04-02 10:48:15",
+      "CreatedOrModified": "2024-04-03 14:08:53",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Wake me up at 7 AM Monday.",
+        "Transcript": "Wake me up at 7 AM Monday.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Weck mich um 7 Uhr Montag."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_512_4561_16kHz.wav",
+      "Created": "2024-04-02 10:49:59",
+      "CreatedOrModified": "2024-04-03 14:11:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Create a Walmart shopping list.",
+        "Transcript": "Create a Walmart shopping list.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Erstellen Sie eine Einkaufsliste von Walmart."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_481_4561_16kHz.wav",
+      "Created": "2024-04-02 10:49:05",
+      "CreatedOrModified": "2024-04-03 14:09:26",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How far is Musk, Australia from here?",
+        "Transcript": "How far is Musk, Australia from here?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Plan a Trip or an Outdoor Visit",
+        "Translation": "Wie weit ist Musk, Australien von hier?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_246_4561_16kHz.wav",
+      "Created": "2024-04-02 10:44:07",
+      "CreatedOrModified": "2024-04-03 14:05:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What are some great vacation ideas?",
+        "Transcript": "What are some great vacation ideas?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Plan a Trip or an Outdoor Visit",
+        "Translation": "Was sind einige tolle Urlaubsideen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_545_4563_16kHz.wav",
+      "Created": "2024-04-02 11:09:59",
+      "CreatedOrModified": "2024-04-03 14:44:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How much is a round-trip flight to Portland, Maine?",
+        "Transcript": "How much is a round-trip flight to Portland, (Ore- uh) Marlyand?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Plan a Trip or an Outdoor Visit",
+        "Translation": "Wie viel kostet ein Hin- und Rückflug nach Portland, (Ore- uh) Marlyand?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_78_4563_16kHz.wav",
+      "Created": "2024-04-02 11:10:14",
+      "CreatedOrModified": "2024-04-03 14:45:02",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Siri.",
+        "Transcript": "Hey Siri.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "- Hey Siri. - Ich bin ein guter Freund."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_39_4563_16kHz.wav",
+      "Created": "2024-04-02 11:02:22",
+      "CreatedOrModified": "2024-04-03 14:32:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Alexa.",
+        "Transcript": "Alexa.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Alexa. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_148_4563_16kHz.wav",
+      "Created": "2024-04-02 11:01:40",
+      "CreatedOrModified": "2024-04-03 14:31:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cortana.",
+        "Transcript": "Cortana.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Cortana. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_49_4563_16kHz.wav",
+      "Created": "2024-04-02 11:04:12",
+      "CreatedOrModified": "2024-04-03 14:36:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Google.",
+        "Transcript": "Hey Google.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey, Google. - Hey, Google."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_78_4560_16kHz.wav",
+      "Created": "2024-04-02 10:39:13",
+      "CreatedOrModified": "2024-04-03 14:00:23",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Siri.",
+        "Transcript": "Hey Siri.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "- Hey Siri. - Ich bin ein guter Freund."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_162_4560_16kHz.wav",
+      "Created": "2024-04-02 10:39:31",
+      "CreatedOrModified": "2024-04-03 14:00:42",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Start listening.",
+        "Transcript": "Start listening.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Fang an zuzuhören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_162_4561_16kHz.wav",
+      "Created": "2024-04-02 10:55:00",
+      "CreatedOrModified": "2024-04-03 14:19:56",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Start listening.",
+        "Transcript": "Start listening.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Fang an zuzuhören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_148_4560_16kHz.wav",
+      "Created": "2024-04-02 10:30:04",
+      "CreatedOrModified": "2024-04-03 13:42:57",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cortana.",
+        "Transcript": "Cortana.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Cortana. - Ich weiß."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Audible inspiration",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathiness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Nasal emission ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged phonemes",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:14:05"
+        }
+      ]
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_39_4560_16kHz.wav",
+      "Created": "2024-04-02 10:29:06",
+      "CreatedOrModified": "2024-04-03 13:42:31",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Alexa.",
+        "Transcript": "Alexa.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Alexa. - Ich weiß."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Audible inspiration",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathiness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Nasal emission ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged phonemes",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:11:39"
+        }
+      ]
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_49_4560_16kHz.wav",
+      "Created": "2024-04-02 10:31:44",
+      "CreatedOrModified": "2024-04-03 13:45:13",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Google.",
+        "Transcript": "Hey Google.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey, Google. - Hey, Google."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_60_4560_16kHz.wav",
+      "Created": "2024-04-02 10:35:38",
+      "CreatedOrModified": "2024-04-03 13:57:24",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Facebook.",
+        "Transcript": "Hey Facebook.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey Facebook."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_31576_4560_16kHz.wav",
+      "Created": "2024-04-02 10:40:43",
+      "CreatedOrModified": "2024-04-03 14:02:12",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Echo",
+        "Transcript": "Echo",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-radio alphabet",
+        "Translation": "Echo"
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Audible inspiration",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathiness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Nasal emission ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged phonemes",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:15:53"
+        }
+      ]
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_33700_4560_16kHz.wav",
+      "Created": "2024-04-02 10:41:00",
+      "CreatedOrModified": "2024-04-03 14:02:26",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Romeo",
+        "Transcript": "Romeo",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-radio alphabet",
+        "Translation": "- Ich habe es nicht getan."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Audible inspiration",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathiness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Nasal emission ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged phonemes",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:16:39"
+        }
+      ]
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_34690_4561_16kHz.wav",
+      "Created": "2024-04-02 10:58:07",
+      "CreatedOrModified": "2024-04-03 14:23:24",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Whiskey",
+        "Transcript": "Whiskey",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-radio alphabet",
+        "Translation": "Whiskey"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_34772_4561_16kHz.wav",
+      "Created": "2024-04-02 10:58:46",
+      "CreatedOrModified": "2024-04-03 14:23:56",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "X-ray",
+        "Transcript": "X-ray",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-radio alphabet",
+        "Translation": "Röntgen"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_34536_4561_16kHz.wav",
+      "Created": "2024-04-02 10:58:19",
+      "CreatedOrModified": "2024-04-03 14:23:35",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Upward",
+        "Transcript": "Upward",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-computer commands",
+        "Translation": "Nach oben"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_30568_4560_16kHz.wav",
+      "Created": "2024-04-02 10:41:13",
+      "CreatedOrModified": "2024-04-03 14:02:43",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Backspace",
+        "Transcript": "Backspace",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-computer commands",
+        "Translation": "Zurück-Raum"
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Audible inspiration",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathiness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Nasal emission ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged phonemes",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:17:29"
+        }
+      ]
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_31345_4560_16kHz.wav",
+      "Created": "2024-04-02 10:41:26",
+      "CreatedOrModified": "2024-04-03 14:02:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Delete",
+        "Transcript": "Delete",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-computer commands",
+        "Translation": "Löschen"
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Audible inspiration",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathiness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Nasal emission ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged phonemes",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:18:17"
+        }
+      ]
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_33867_4560_16kHz.wav",
+      "Created": "2024-04-02 10:41:38",
+      "CreatedOrModified": "2024-04-03 14:03:18",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Shift",
+        "Transcript": "Shift",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-computer commands",
+        "Translation": "Schicht"
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Audible inspiration",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathiness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Nasal emission ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice ",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged phonemes",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "ALS",
+          "RatingDate": "2024-06-13 16:19:05"
+        }
+      ]
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_34338_4561_16kHz.wav",
+      "Created": "2024-04-02 10:58:31",
+      "CreatedOrModified": "2024-04-03 14:23:45",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "there",
+        "Transcript": "there",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-common",
+        "Translation": "dort"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_31561_4563_16kHz.wav",
+      "Created": "2024-04-02 11:12:02",
+      "CreatedOrModified": "2024-04-03 14:47:43",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "each",
+        "Transcript": "each",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-common",
+        "Translation": "jeweils"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_33859_4563_16kHz.wav",
+      "Created": "2024-04-02 11:12:15",
+      "CreatedOrModified": "2024-04-03 14:47:58",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "she",
+        "Transcript": "she",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-common",
+        "Translation": "sie"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_34328_4563_16kHz.wav",
+      "Created": "2024-04-02 11:12:26",
+      "CreatedOrModified": "2024-04-03 14:48:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "their",
+        "Transcript": "their",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-common",
+        "Translation": "ihre"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_34687_4563_16kHz.wav",
+      "Created": "2024-04-02 11:12:42",
+      "CreatedOrModified": "2024-04-03 14:48:47",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "which",
+        "Transcript": "which",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-common",
+        "Translation": "welche"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_34539_4563_16kHz.wav",
+      "Created": "2024-04-02 11:12:52",
+      "CreatedOrModified": "2024-07-29 11:15:54",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "use",
+        "Transcript": "use some",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "UA-common",
+        "Translation": "Anwendung"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_30790_4563_16kHz.wav",
+      "Created": "2024-04-02 11:13:04",
+      "CreatedOrModified": "2024-04-03 14:49:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "bullet",
+        "Transcript": "bullet",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "Kugel"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_30592_4563_16kHz.wav",
+      "Created": "2024-04-02 11:13:17",
+      "CreatedOrModified": "2024-04-03 14:49:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "barrel",
+        "Transcript": "barrel",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "Fass"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_34045_4563_16kHz.wav",
+      "Created": "2024-04-02 11:13:31",
+      "CreatedOrModified": "2024-04-03 14:49:52",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "spokesman",
+        "Transcript": "spokesman",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "Sprecher"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_31032_4563_16kHz.wav",
+      "Created": "2024-04-02 11:13:43",
+      "CreatedOrModified": "2024-04-03 14:50:02",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "combat",
+        "Transcript": "combat",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "Kampf"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_34464_4563_16kHz.wav",
+      "Created": "2024-04-02 11:13:54",
+      "CreatedOrModified": "2024-04-03 14:50:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "trip",
+        "Transcript": "trip",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "Reise"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_31668_4561_16kHz.wav",
+      "Created": "2024-04-02 10:57:57",
+      "CreatedOrModified": "2024-04-03 14:22:23",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "enter",
+        "Transcript": "enter",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "eingeben"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_31914_4561_16kHz.wav",
+      "Created": "2024-04-02 10:59:00",
+      "CreatedOrModified": "2024-04-03 14:25:44",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "flight",
+        "Transcript": "flight",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "Flug"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_33244_4561_16kHz.wav",
+      "Created": "2024-04-02 10:59:11",
+      "CreatedOrModified": "2024-04-03 14:25:54",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "please",
+        "Transcript": "please",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "Bitte."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_32156_4561_16kHz.wav",
+      "Created": "2024-04-02 10:59:22",
+      "CreatedOrModified": "2024-04-03 14:26:22",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "hardware",
+        "Transcript": "hardware",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "Hardware"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_31115_4561_16kHz.wav",
+      "Created": "2024-04-02 10:59:36",
+      "CreatedOrModified": "2024-04-03 14:27:42",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "connection",
+        "Transcript": "connection",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "Verbindung"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_34739_4561_16kHz.wav",
+      "Created": "2024-04-02 10:59:47",
+      "CreatedOrModified": "2024-04-03 14:28:00",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "withdrawal",
+        "Transcript": "withdrawal",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "Rücknahme"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_33924_4560_16kHz.wav",
+      "Created": "2024-04-02 10:41:49",
+      "CreatedOrModified": "2024-04-03 14:03:35",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "single",
+        "Transcript": "single",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "Einzeln"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_34363_4560_16kHz.wav",
+      "Created": "2024-04-02 10:42:00",
+      "CreatedOrModified": "2024-04-03 14:03:48",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "throw",
+        "Transcript": "throw",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "werfen"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_31665_4560_16kHz.wav",
+      "Created": "2024-04-02 10:42:13",
+      "CreatedOrModified": "2024-04-03 14:04:28",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "enough",
+        "Transcript": "enough",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "genug"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_33331_4560_16kHz.wav",
+      "Created": "2024-04-02 10:42:24",
+      "CreatedOrModified": "2024-04-03 14:04:39",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "president",
+        "Transcript": "president",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "Präsident"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "d0b51d79-c72c-4c4e-cb78-08dc45edfda4_33988_4560_16kHz.wav",
+      "Created": "2024-04-02 10:42:36",
+      "CreatedOrModified": "2024-04-03 14:04:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "solve",
+        "Transcript": "solve",
+        "Category Description": "Non-spontaneous Speech Prompts",
+        "Sub Category Description": "5k",
+        "Translation": "lösen"
+      },
+      "Ratings": []
+    }
+  ]
+}

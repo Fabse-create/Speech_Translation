@@ -1,0 +1,1743 @@
+{
+  "Contributor ID": "0c9851af-ac0a-4ce0-75ec-08dc5951d476",
+  "Do you consider U.S. English to be your first language": "Yes",
+  "What language(s) do you speak": "No Response Supplied",
+  "What age did you start speaking English": "No Response Supplied",
+  "I consent to have my voice samples shared in public at research conferences and similar professional meetings, and to have digital audio files of my voice be shared as part of professional research publications.": "Yes",
+  "Etiology": "Down Syndrome",
+  "BlockNumber": 4,
+  "Files": [
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_29097_4781_16kHz.wav",
+      "Created": "2024-04-12 17:16:17",
+      "CreatedOrModified": "2024-05-04 09:14:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make the screen brighter.",
+        "Transcript": "(ike- e-) Make the screen brighter.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "(kei-e-) Mach den Bildschirm heller."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (transient)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess or alternating loudness variation",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Atypical prosody",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Irregular articulatory breakdowns",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Loudness level (overall)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Atypical resonance",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Rate",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-19 19:18:03"
+        }
+      ]
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_29094_4781_16kHz.wav",
+      "Created": "2024-04-13 16:25:09",
+      "CreatedOrModified": "2024-06-12 09:17:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please send this text.",
+        "Transcript": "Send a text. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Schicken Sie eine SMS."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_29083_4781_16kHz.wav",
+      "Created": "2024-04-12 17:24:46",
+      "CreatedOrModified": "2024-06-12 09:17:02",
+      "Comment": "original: stop listening.",
+      "Prompt": {
+        "Prompt Text": "Stop listening.",
+        "Transcript": "Stop listening on the living room.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Hör auf, auf das Wohnzimmer zu hören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_29095_4781_16kHz.wav",
+      "Created": "2024-04-13 16:27:59",
+      "CreatedOrModified": "2024-06-12 09:22:47",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Reschedule my meeting.",
+        "Transcript": "Reschedule my meeting.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Verlegen Sie mein Treffen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_29096_4781_16kHz.wav",
+      "Created": "2024-04-13 16:31:30",
+      "CreatedOrModified": "2024-06-12 09:23:40",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Send a message.",
+        "Transcript": "Send a message.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Sende eine Nachricht."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_29353_4806_16kHz.wav",
+      "Created": "2024-04-16 19:11:31",
+      "CreatedOrModified": "2024-06-12 09:30:02",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call Lynn Banks.",
+        "Transcript": "Call (Lynn) Lynn Bank.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ruf (Lynn) Lynn Bank an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_29125_4806_16kHz.wav",
+      "Created": "2024-04-18 21:28:12",
+      "CreatedOrModified": "2024-07-01 18:49:12",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Take insulin at dinner time.",
+        "Transcript": "Take insulin (s- e-) at dinner time.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Nehmen Sie Insulin (s-e-) zum Abendessen ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_29579_4806_16kHz.wav",
+      "Created": "2024-04-18 21:28:45",
+      "CreatedOrModified": "2024-07-01 18:50:31",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Our parking space is red.",
+        "Transcript": "Our parking place is the red.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Unser Parkplatz ist der rote."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_29107_4806_16kHz.wav",
+      "Created": "2024-04-18 21:32:04",
+      "CreatedOrModified": "2024-07-01 18:51:13",
+      "Comment": "Original: How many refills are left on my abilify?",
+      "Prompt": {
+        "Prompt Text": "How many refills are left on my abilify?",
+        "Transcript": "How (r- r-) reset? ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wie (r-r-) zurückgesetzt?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_29337_4806_16kHz.wav",
+      "Created": "2024-04-18 21:32:25",
+      "CreatedOrModified": "2024-07-01 18:51:29",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Recipe with 2% milk.",
+        "Transcript": "Percent milk.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Prozent Milch."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_29124_4908_16kHz.wav",
+      "Created": "2024-04-23 17:27:07",
+      "CreatedOrModified": "2024-04-27 16:23:50",
+      "Comment": "original: Take intuniv at 2 PM.",
+      "Prompt": {
+        "Prompt Text": "Take intuniv at 2 PM.",
+        "Transcript": "Two PM.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Zwei Uhr."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_30172_4781_16kHz.wav",
+      "Created": "2024-04-13 16:34:36",
+      "CreatedOrModified": "2024-07-02 08:32:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me about the strangest thing you have ever eaten.",
+        "Transcript": "[Tell me about the strangest thing you have ever eaten.] Popcorn.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "Erzähl mir von dem seltsamsten Ding, das du je gegessen hast."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_30173_4781_16kHz.wav",
+      "Created": "2024-04-13 16:34:55",
+      "CreatedOrModified": "2024-07-02 08:32:03",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What do you like to do on a rainy day?",
+        "Transcript": "[What do you like to do on a rainy day?] I hated rainy days.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "Ich hasse Regentage."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_30175_4781_16kHz.wav",
+      "Created": "2024-04-13 16:35:12",
+      "CreatedOrModified": "2024-07-02 08:31:54",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me how you make your favorite lunch.",
+        "Transcript": "[Tell me how you make your favorite lunch.] Peanut butter and jelly.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Procedural question",
+        "Translation": "Wie machst du dein Lieblingsessen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_186_4908_16kHz.wav",
+      "Created": "2024-04-23 17:33:05",
+      "CreatedOrModified": "2024-04-27 17:39:00",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cortana, play music.",
+        "Transcript": "Cortana, play music.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Cortana, spiel Musik."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1065_4781_16kHz.wav",
+      "Created": "2024-04-13 16:30:04",
+      "CreatedOrModified": "2024-06-12 09:23:02",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip this song.",
+        "Transcript": "Skip that song.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Überspring das Lied."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1069_4781_16kHz.wav",
+      "Created": "2024-04-13 16:30:22",
+      "CreatedOrModified": "2024-06-12 09:23:11",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Stop the call.",
+        "Transcript": "Stop the call.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Hör auf zu telefonieren."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1072_4781_16kHz.wav",
+      "Created": "2024-04-13 16:30:41",
+      "CreatedOrModified": "2024-06-12 09:23:23",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Increase volume to maximum.",
+        "Transcript": "Increase to maximum.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Erhöhen Sie auf Maximum."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1068_4781_16kHz.wav",
+      "Created": "2024-04-13 16:25:23",
+      "CreatedOrModified": "2024-06-12 09:17:58",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Lower the temperature.",
+        "Transcript": "Lower the temperature.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Senken Sie die Temperatur."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1076_4781_16kHz.wav",
+      "Created": "2024-04-13 16:25:54",
+      "CreatedOrModified": "2024-06-12 09:20:28",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call area code 053-621-4879.",
+        "Transcript": "Call area code one (f-) fifty-three one seven nine.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Ruf die Ortskennung eins (f-) 53 eins sieben neun an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1053_4781_16kHz.wav",
+      "Created": "2024-04-13 16:26:20",
+      "CreatedOrModified": "2024-06-12 09:20:42",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's on my shopping list?",
+        "Transcript": "Where's my shopping list?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wo ist meine Einkaufsliste?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1061_4781_16kHz.wav",
+      "Created": "2024-04-13 16:26:43",
+      "CreatedOrModified": "2024-06-18 11:36:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What restaurants are nearby?",
+        "Transcript": "Where's our nearby?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wo ist unsere Nähe?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1056_4781_16kHz.wav",
+      "Created": "2024-04-13 16:27:20",
+      "CreatedOrModified": "2024-06-12 09:22:30",
+      "Comment": "Original: decrease volume to minimum.",
+      "Prompt": {
+        "Prompt Text": "Decrease volume to minimum.",
+        "Transcript": "A minimum.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Ein Minimum."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1070_4781_16kHz.wav",
+      "Created": "2024-04-13 16:27:45",
+      "CreatedOrModified": "2024-07-01 18:44:44",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me the news.",
+        "Transcript": "Tell me the news.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Erzählen Sie mir die Nachrichten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1075_4781_16kHz.wav",
+      "Created": "2024-04-12 17:21:06",
+      "CreatedOrModified": "2024-06-12 09:15:27",
+      "Comment": "Read prompt twice ",
+      "Prompt": {
+        "Prompt Text": "Turn on all switches.",
+        "Transcript": "Turn on (sw-) switches. Turn on.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie (sw-) ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1059_4781_16kHz.wav",
+      "Created": "2024-04-12 17:22:07",
+      "CreatedOrModified": "2024-05-04 09:15:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Open reminders.",
+        "Transcript": "Open reminders.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Erinnerungen öffnen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1064_4781_16kHz.wav",
+      "Created": "2024-04-12 17:22:59",
+      "CreatedOrModified": "2024-06-12 09:15:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the time?",
+        "Transcript": "What is the time?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie spät ist es?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1057_4781_16kHz.wav",
+      "Created": "2024-04-12 17:24:02",
+      "CreatedOrModified": "2024-06-12 09:16:05",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the temperature in the living room?",
+        "Transcript": "What temperature on the (li-) living room?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Welche Temperatur auf dem (li-) Wohnzimmer?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1074_4781_16kHz.wav",
+      "Created": "2024-04-12 17:16:36",
+      "CreatedOrModified": "2024-05-04 09:14:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on cooling.",
+        "Transcript": "Turn on (k-) cooling.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie die (k-) Kühlung ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1071_4781_16kHz.wav",
+      "Created": "2024-04-12 17:16:53",
+      "CreatedOrModified": "2024-05-04 09:14:18",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off heat.",
+        "Transcript": "Turn off (h-) heat.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Hitze abschalten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1062_4781_16kHz.wav",
+      "Created": "2024-04-12 17:17:15",
+      "CreatedOrModified": "2024-04-16 13:51:02",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Answer the call.",
+        "Transcript": "(That call) Answer the call.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(Dieser Anruf) Beantworte den Anruf."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_176_4806_16kHz.wav",
+      "Created": "2024-04-18 21:30:55",
+      "CreatedOrModified": "2024-04-27 17:38:51",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What song is this?",
+        "Transcript": "What song it is?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Was für ein Lied ist das?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_520_4806_16kHz.wav",
+      "Created": "2024-04-18 21:23:47",
+      "CreatedOrModified": "2024-06-12 09:35:47",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip forward 30 seconds.",
+        "Transcript": "Skip forty seconds.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "40 Sekunden überspringen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_1066_4781_16kHz.wav",
+      "Created": "2024-04-13 16:31:16",
+      "CreatedOrModified": "2024-07-01 18:19:15",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather like today?",
+        "Transcript": "What's the weather like (to ga-) today? ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie ist das Wetter heute (zu ga-)?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_45_4908_16kHz.wav",
+      "Created": "2024-04-23 17:25:55",
+      "CreatedOrModified": "2024-04-27 17:30:59",
+      "Comment": "Original: Make it warmer.",
+      "Prompt": {
+        "Prompt Text": "Make it warmer.",
+        "Transcript": "(k-) It warmer.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "(k-) Es ist wärmer."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_505_4806_16kHz.wav",
+      "Created": "2024-04-18 21:33:02",
+      "CreatedOrModified": "2024-07-01 18:51:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Broadcast 'The football game is about to start.'",
+        "Transcript": "Football set to start.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Broadcast over more than one speaker",
+        "Translation": "Fußball startet."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_132_4806_16kHz.wav",
+      "Created": "2024-04-18 21:34:47",
+      "CreatedOrModified": "2024-04-27 17:33:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What movies came out last week?",
+        "Transcript": "What came out (e-) last week?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Was kam letzte Woche heraus?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_524_4806_16kHz.wav",
+      "Created": "2024-04-16 19:15:31",
+      "CreatedOrModified": "2024-07-01 18:48:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How's the traffic to Hoover Dam?",
+        "Transcript": "(du- hoover) Hoover Dam?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "(Dumme) Der Hoover-Dum?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_63_4908_16kHz.wav",
+      "Created": "2024-04-18 21:50:54",
+      "CreatedOrModified": "2024-04-27 17:32:52",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "When is it going to rain?",
+        "Transcript": "When is it going to rain?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wann wird es regnen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_198_4908_16kHz.wav",
+      "Created": "2024-04-23 17:26:29",
+      "CreatedOrModified": "2024-04-27 17:39:53",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How long is left on the timer?",
+        "Transcript": "(how l-) How (long) long of the timer?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Wie lang ist der Timer?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_153_4806_16kHz.wav",
+      "Created": "2024-04-18 21:25:46",
+      "CreatedOrModified": "2024-04-27 17:36:08",
+      "Comment": "original: decrease the volume.",
+      "Prompt": {
+        "Prompt Text": "Decrease the volume.",
+        "Transcript": "Decrease of values.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Wertminderung."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_202_4806_16kHz.wav",
+      "Created": "2024-04-18 21:26:46",
+      "CreatedOrModified": "2024-04-27 17:40:42",
+      "Comment": "original: What's playing in the theaters near me?",
+      "Prompt": {
+        "Prompt Text": "What's playing in the theaters near me?",
+        "Transcript": "What a play theaters near me?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Was für ein Theater in meiner Nähe?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_56_4908_16kHz.wav",
+      "Created": "2024-04-23 17:27:23",
+      "CreatedOrModified": "2024-04-27 16:23:13",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What time is it?",
+        "Transcript": "What time is it?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wie spät ist es?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_451_4908_16kHz.wav",
+      "Created": "2024-04-23 17:23:53",
+      "CreatedOrModified": "2024-04-27 17:43:14",
+      "Comment": "original: Cancel alarm for 4:30.",
+      "Prompt": {
+        "Prompt Text": "Cancel alarm for 4:30.",
+        "Transcript": " For alarm four thirty.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Für Alarm vier dreißig."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_67_4908_16kHz.wav",
+      "Created": "2024-04-23 17:31:31",
+      "CreatedOrModified": "2024-04-27 17:33:04",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Show me my alarms.",
+        "Transcript": "Show me all the alarm.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Zeig mir den Alarm."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_241_4908_16kHz.wav",
+      "Created": "2024-04-23 17:32:15",
+      "CreatedOrModified": "2024-04-27 17:41:11",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What alarms are set?",
+        "Transcript": "What alarm are set?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Was für Alarmanlagen sind da?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_508_4806_16kHz.wav",
+      "Created": "2024-04-16 19:12:59",
+      "CreatedOrModified": "2024-06-28 17:46:31",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Wake me up at 7 AM Monday.",
+        "Transcript": "Wake me up at seven AM in the morning.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Weck mich um sieben Uhr morgens auf."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_547_4806_16kHz.wav",
+      "Created": "2024-04-16 19:14:27",
+      "CreatedOrModified": "2024-06-12 09:31:39",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cancel alarm for 8.",
+        "Transcript": "For AM.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Für AM."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_478_4806_16kHz.wav",
+      "Created": "2024-04-16 19:09:44",
+      "CreatedOrModified": "2024-06-12 09:29:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Set an alarm for 11:45 AM.",
+        "Transcript": "Set (e- e-) alarm clock (f- f- for) for (at) eleven AM.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "(e-e-) Wecker (f-f- for) für (um) elf Uhr eingestellt."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_481_4806_16kHz.wav",
+      "Created": "2024-04-18 21:25:23",
+      "CreatedOrModified": "2024-06-12 09:39:11",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How far is Musk, Australia from here?",
+        "Transcript": "(okay) How far Australia here?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Plan a Trip or an Outdoor Visit",
+        "Translation": "Wie weit ist Australien hier?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_246_4806_16kHz.wav",
+      "Created": "2024-04-18 21:31:27",
+      "CreatedOrModified": "2024-06-28 17:20:28",
+      "Comment": "original: What are some great vacation ideas?\n",
+      "Prompt": {
+        "Prompt Text": "What are some great vacation ideas?",
+        "Transcript": "What greatest vacation idea? ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Plan a Trip or an Outdoor Visit",
+        "Translation": "Was für eine tolle Urlaubsidee?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_49_4908_16kHz.wav",
+      "Created": "2024-04-23 17:31:40",
+      "CreatedOrModified": "2024-04-27 17:31:47",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Google.",
+        "Transcript": "Google.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Google. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_78_4908_16kHz.wav",
+      "Created": "2024-04-23 17:34:24",
+      "CreatedOrModified": "2024-04-27 17:33:17",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Siri.",
+        "Transcript": "Hey Siri.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "- Hey Siri. - Ich bin ein guter Freund."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_148_4908_16kHz.wav",
+      "Created": "2024-04-23 17:25:04",
+      "CreatedOrModified": "2024-04-27 17:35:36",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cortana.",
+        "Transcript": "Cortana.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Cortana. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_39_4908_16kHz.wav",
+      "Created": "2024-04-23 17:27:36",
+      "CreatedOrModified": "2024-04-27 17:30:29",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Alexa.",
+        "Transcript": "Alexa.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Alexa. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_162_4806_16kHz.wav",
+      "Created": "2024-04-18 21:35:07",
+      "CreatedOrModified": "2024-04-27 17:37:23",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Start listening.",
+        "Transcript": "Start listening.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Fang an zuzuhören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_49_4781_16kHz.wav",
+      "Created": "2024-04-13 16:30:56",
+      "CreatedOrModified": "2024-04-27 17:32:01",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Google.",
+        "Transcript": "Hey Google.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey, Google. - Hey, Google."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_60_4781_16kHz.wav",
+      "Created": "2024-04-13 16:28:33",
+      "CreatedOrModified": "2024-04-27 17:32:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Facebook.",
+        "Transcript": "Hey Facebook.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey Facebook."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_78_4781_16kHz.wav",
+      "Created": "2024-04-13 16:28:49",
+      "CreatedOrModified": "2024-04-27 17:33:11",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Siri.",
+        "Transcript": "Hey Siri.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "- Hey Siri. - Ich bin ein guter Freund."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_162_4781_16kHz.wav",
+      "Created": "2024-04-12 17:14:40",
+      "CreatedOrModified": "2024-04-27 17:37:16",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Start listening.",
+        "Transcript": "Start listening.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Fang an zuzuhören."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (transient)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess or alternating loudness variation",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Atypical prosody",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Irregular articulatory breakdowns",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Loudness level (overall)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Atypical resonance",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Rate",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:34:37"
+        }
+      ]
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_39_4781_16kHz.wav",
+      "Created": "2024-04-12 17:15:28",
+      "CreatedOrModified": "2024-04-27 17:30:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Alexa.",
+        "Transcript": "Alexa.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Alexa. - Ich weiß."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Atypical prosody",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (transient)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess or alternating loudness variation",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Irregular articulatory breakdowns",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Loudness level (overall)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Rate",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Atypical resonance",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-18 20:41:22"
+        }
+      ]
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_148_4781_16kHz.wav",
+      "Created": "2024-04-12 17:20:23",
+      "CreatedOrModified": "2024-04-27 17:35:30",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cortana.",
+        "Transcript": "Cortana.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Cortana. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_30169_4781_16kHz.wav",
+      "Created": "2024-04-13 16:33:22",
+      "CreatedOrModified": "2024-07-02 08:35:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Why do you like this band or singer?",
+        "Transcript": "[Why do you like this band or singer?] Because she's a good (h- ha- yiam-). Because I love her. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended pair question 2",
+        "Translation": "[Warum gefällt dir diese Band oder Sängerin?] Weil sie eine gute ist (h-ha- yiam-)."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (transient)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess or alternating loudness variation",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Loudness level (overall)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Irregular articulatory breakdowns",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Atypical resonance",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Rate",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Atypical prosody",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:10:46"
+        }
+      ]
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_30170_4781_16kHz.wav",
+      "Created": "2024-04-13 16:33:50",
+      "CreatedOrModified": "2024-07-02 08:37:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What is your favorite hobby?",
+        "Transcript": "[What is your favorite hobby?] Okay (um) watching Alyssa Capri. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended pair question 1",
+        "Translation": "Okay, Alyssa Capri zusehen."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (transient)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess or alternating loudness variation",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Atypical prosody",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Irregular articulatory breakdowns",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Loudness level (overall)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Rate",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Atypical resonance",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:14:38"
+        }
+      ]
+    },
+    {
+      "Filename": "0c9851af-ac0a-4ce0-75ec-08dc5951d476_30168_4781_16kHz.wav",
+      "Created": "2024-04-13 16:32:46",
+      "CreatedOrModified": "2024-06-13 14:41:01",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Who is your favorite band or singer?",
+        "Transcript": "[Who is your favorite band or singer?] Suzanne (d-) Somers.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended pair question 1",
+        "Translation": "[Wer ist deine Lieblingsband oder Sängerin?] Suzanne (d-) Somers."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (transient)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Irregular articulatory breakdowns",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Atypical prosody",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess or alternating loudness variation",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Loudness level (overall)",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Atypical resonance",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Rate",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Down Syndrome",
+          "RatingDate": "2025-08-20 19:08:02"
+        }
+      ]
+    }
+  ]
+}

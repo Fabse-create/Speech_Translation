@@ -1,0 +1,1495 @@
+{
+  "Contributor ID": "c15f15a6-86af-4a94-760d-08dc47b40b59",
+  "Do you consider U.S. English to be your first language": "Yes",
+  "What language(s) do you speak": "No Response Supplied",
+  "What age did you start speaking English": "No Response Supplied",
+  "I consent to have my voice samples shared in public at research conferences and similar professional meetings, and to have digital audio files of my voice be shared as part of professional research publications.": "Yes",
+  "Etiology": "Down Syndrome",
+  "BlockNumber": 8,
+  "Files": [
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29094_4468_16kHz.wav",
+      "Created": "2024-03-26 19:40:11",
+      "CreatedOrModified": "2024-05-31 08:29:43",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please send this text.",
+        "Transcript": "(p- p-) Please send (this) this text. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "(p-p-) Bitte senden Sie diesen Text."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29083_4468_16kHz.wav",
+      "Created": "2024-04-29 08:44:03",
+      "CreatedOrModified": "2024-05-31 10:41:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Stop listening.",
+        "Transcript": "(s-) Stop listening.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Hör auf zu hören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29098_4468_16kHz.wav",
+      "Created": "2024-04-29 08:49:13",
+      "CreatedOrModified": "2024-06-29 08:01:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is the pharmacy open?",
+        "Transcript": "(I-) Is the pharmacy open?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "(I-) Ist die Apotheke offen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29097_4468_16kHz.wav",
+      "Created": "2024-04-29 08:46:45",
+      "CreatedOrModified": "2024-05-31 10:43:32",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make the screen brighter.",
+        "Transcript": "Make the screen brighter (d-).",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Machen Sie den Bildschirm heller (d-)."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29102_5197_16kHz.wav",
+      "Created": "2024-05-01 17:56:35",
+      "CreatedOrModified": "2024-06-30 15:39:56",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please respond to my text.",
+        "Transcript": "Please (re-) respond (t-) to my text.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Bitte (re-) antworten Sie (t-) auf meinen Text."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29856_5197_16kHz.wav",
+      "Created": "2024-05-08 17:13:35",
+      "CreatedOrModified": "2024-06-30 15:42:35",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Find me things to do in Nepal.",
+        "Transcript": "Find (me) me things to do in Nepal.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Finde (ich) mir Dinge zu tun in Nepal."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29334_5197_16kHz.wav",
+      "Created": "2024-05-08 17:16:50",
+      "CreatedOrModified": "2024-06-30 15:46:28",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Recipe with sriracha, noodles, and cabbage.",
+        "Transcript": "(r-) Recipe with (sir-) sriracha, noodles, and cabbage.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "(r-) Rezept mit (sir-) sriracha, Nudeln und Kohl."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_30012_5197_16kHz.wav",
+      "Created": "2024-05-08 17:17:26",
+      "CreatedOrModified": "2024-06-30 15:47:24",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "When are the Cavs playing?",
+        "Transcript": "When are the Cavs playing?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wann spielen die Cavs?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_30020_5197_16kHz.wav",
+      "Created": "2024-05-08 17:15:03",
+      "CreatedOrModified": "2024-06-30 15:44:48",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Read 'Judy Moody' on Audiobook.",
+        "Transcript": "Read (Ju-) 'Judy Moody' on Audiobook.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Lies (Ju-) 'Judy Moody' auf Hörbuch."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29860_5197_16kHz.wav",
+      "Created": "2024-05-15 16:32:42",
+      "CreatedOrModified": "2024-06-30 15:49:31",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cancel my meeting with Sunny Inaz.",
+        "Transcript": "Cancel my meeting with Sunny (in-) Inaz.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "- Ich melde mich bei Sunny (in-) Inaz."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29357_5197_16kHz.wav",
+      "Created": "2024-05-15 16:34:39",
+      "CreatedOrModified": "2024-06-30 15:51:23",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call Flo Giannopoulos.",
+        "Transcript": "Call (Flo) Flo (~G-) Giannopoulos. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ruf (Flo) Flo (~G-) Giannopoulos an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29953_5617_16kHz.wav",
+      "Created": "2024-05-20 20:16:16",
+      "CreatedOrModified": "2024-06-30 15:55:51",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How many calories does 15 baby carrots have?",
+        "Transcript": "How many calories does fifteen (bab-) baby carrots have?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wie viele Kalorien haben fünfzehn (bab-) Babykarotten?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29501_5617_16kHz.wav",
+      "Created": "2024-05-20 20:17:08",
+      "CreatedOrModified": "2024-06-30 15:56:36",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's 48 ounces to pounds?",
+        "Transcript": "(w-) What's (f-) forty-eight ounces as pounds?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "(w-) Was sind (f-) 48 Unzen wie Pfund?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29343_5617_16kHz.wav",
+      "Created": "2024-05-20 20:18:06",
+      "CreatedOrModified": "2024-06-30 15:56:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hi, exclamation point.",
+        "Transcript": "Hi, exclamation point. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Hallo, Ausrufepunkt."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_30006_5617_16kHz.wav",
+      "Created": "2024-05-20 20:21:38",
+      "CreatedOrModified": "2024-06-30 15:59:08",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What was the score for the Chiefs game?",
+        "Transcript": "(w- w-) What (w- w-) was (the s-) the (sk-) score for the Chiefs game?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "(w-w-) Was (w-w-) war (die s-) die (sk-) Punktzahl für das Chiefs-Spiel?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29867_5617_16kHz.wav",
+      "Created": "2024-05-20 20:24:15",
+      "CreatedOrModified": "2024-06-30 16:02:44",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Video call Pat Eaton.",
+        "Transcript": "(v-) Video call Pat Eaton.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "(v-) Videoruf Pat Eaton."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29101_5617_16kHz.wav",
+      "Created": "2024-05-20 20:27:15",
+      "CreatedOrModified": "2024-06-30 16:05:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please send this email to the group.",
+        "Transcript": "Please send this (em-) email (mail) the group.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Bitte senden Sie diese (em-)E-Mail (mail) die Gruppe."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29963_5617_16kHz.wav",
+      "Created": "2024-05-22 18:05:50",
+      "CreatedOrModified": "2024-06-30 16:06:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Book a table for 5 at Dry Dock Grill.",
+        "Transcript": "Book (a) a (t-) table for five at (uh) Dry Dock Grill.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Buch (a) eine (t-) Tabelle für fünf bei (uh) Dry Dock Grill."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29341_5617_16kHz.wav",
+      "Created": "2024-05-22 18:07:00",
+      "CreatedOrModified": "2024-06-30 16:09:44",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Recipe with garlic and lentils.",
+        "Transcript": "Recipe with garlic and lentils.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Rezept mit Knoblauch und Linsen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29987_5617_16kHz.wav",
+      "Created": "2024-05-22 18:11:13",
+      "CreatedOrModified": "2024-06-30 16:12:30",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Message The Zen Family.",
+        "Transcript": "Message The Zen Family (~e).",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Nachricht Die Zen-Familie (~e)."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29370_5617_16kHz.wav",
+      "Created": "2024-05-22 18:16:22",
+      "CreatedOrModified": "2024-06-30 16:15:08",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather on February 1st?",
+        "Transcript": "(w-) What's (th-) the (w-) weather on February first?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "(w-) Was ist (th-) das (w-) Wetter am Februar zuerst?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29371_5617_16kHz.wav",
+      "Created": "2024-05-22 18:16:47",
+      "CreatedOrModified": "2024-06-30 16:16:04",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather on September 22nd?",
+        "Transcript": "(what-) What's (th-) the weather on September twenty-second?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "(was-) Wie ist (d-) das Wetter am September zweiundzwanzig?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29125_5812_16kHz.wav",
+      "Created": "2024-05-26 19:16:27",
+      "CreatedOrModified": "2024-06-30 16:16:43",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Take insulin at dinner time.",
+        "Transcript": "Take insulin at (din-) dinner time.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Nehmen Sie Insulin zum Abendessen ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_30009_5812_16kHz.wav",
+      "Created": "2024-05-26 19:17:26",
+      "CreatedOrModified": "2024-06-30 16:17:36",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the distance to Japan?",
+        "Transcript": "(wha-) What's (th-) the (d- d-) distance (to) to Japan?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "(wha-) Was ist (d-) die (d-d-) Entfernung (zu) nach Japan?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29338_5812_16kHz.wav",
+      "Created": "2024-05-26 19:19:23",
+      "CreatedOrModified": "2024-06-30 16:18:43",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Recipe with avocados and tomatoes.",
+        "Transcript": "(r-) Recipe with avocados and tomatoes.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "(r-) Rezept mit Avocados und Tomaten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_30011_5812_16kHz.wav",
+      "Created": "2024-05-26 19:23:56",
+      "CreatedOrModified": "2024-06-30 16:20:45",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather in Paris?",
+        "Transcript": "(w-) What's (th-) the (w-) weather (I-) in Paris?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "(w-) Was ist (th-) das (w-) Wetter (I-) in Paris?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29360_5812_16kHz.wav",
+      "Created": "2024-06-09 19:41:20",
+      "CreatedOrModified": "2024-07-01 17:55:15",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call Goodwin Alma.",
+        "Transcript": "Call (good- g- g-) Good (w-) win Alma.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ruf an (gut-g-g-) Gut (w-) gewinnen Alma."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29480_6196_16kHz.wav",
+      "Created": "2024-06-11 19:06:57",
+      "CreatedOrModified": "2024-06-30 16:28:26",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Our parking space is orange.",
+        "Transcript": "Our parking space is orange.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Unser Parkplatz ist orange."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_30172_4468_16kHz.wav",
+      "Created": "2024-04-30 18:24:26",
+      "CreatedOrModified": "2024-07-08 12:16:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me about the strangest thing you have ever eaten.",
+        "Transcript": "[Tell me about the strangest thing you have ever eaten.] I ate (um) goat and {g: (t-) tomato}. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "Ich habe Ziegen gegessen und Tomate."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1065_4468_16kHz.wav",
+      "Created": "2024-04-30 18:13:31",
+      "CreatedOrModified": "2024-06-29 08:07:11",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip this song.",
+        "Transcript": "(s- s-) Skip this song. (Um yeah)",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Überspring diesen Song."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1053_4468_16kHz.wav",
+      "Created": "2024-04-30 18:14:56",
+      "CreatedOrModified": "2024-06-29 08:08:08",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's on my shopping list?",
+        "Transcript": "(what) What's on my shopping list?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(was) Was steht auf meiner Einkaufsliste?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1071_4468_16kHz.wav",
+      "Created": "2024-04-29 08:47:11",
+      "CreatedOrModified": "2024-06-29 08:00:58",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off heat.",
+        "Transcript": "Turn off (he-) heat.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Hitze abschalten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1054_4468_16kHz.wav",
+      "Created": "2024-04-29 08:47:46",
+      "CreatedOrModified": "2024-06-29 08:01:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hang up.",
+        "Transcript": "Hang up.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Leg auf."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1056_4468_16kHz.wav",
+      "Created": "2024-04-30 18:10:39",
+      "CreatedOrModified": "2024-06-29 08:05:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Decrease volume to minimum.",
+        "Transcript": "Decrease the volume (to) to a minimum.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Verringern Sie das Volumen (bis) auf ein Minimum."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1072_4468_16kHz.wav",
+      "Created": "2024-04-30 18:11:45",
+      "CreatedOrModified": "2024-06-29 08:05:44",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Increase volume to maximum.",
+        "Transcript": "(in-) Increase the volume to maximum.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(in-) Erhöhen Sie das Volumen auf maximal."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_99_5197_16kHz.wav",
+      "Created": "2024-05-01 17:53:45",
+      "CreatedOrModified": "2024-06-29 08:11:41",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Help me relax.",
+        "Transcript": "(h-) Help me relax.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(h-) Hilf mir, mich zu entspannen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1069_4468_16kHz.wav",
+      "Created": "2024-04-29 08:49:40",
+      "CreatedOrModified": "2024-06-29 08:02:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Stop the call.",
+        "Transcript": "(s-) Stop the call.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(s-) Hör auf zu telefonieren."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1075_4468_16kHz.wav",
+      "Created": "2024-04-29 08:50:26",
+      "CreatedOrModified": "2024-06-29 08:02:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on all switches.",
+        "Transcript": "(tur-) Turn on all (sw-) switches.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(Tur-) Schalten Sie alle Schalter ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1057_4468_16kHz.wav",
+      "Created": "2024-04-29 08:51:13",
+      "CreatedOrModified": "2024-06-29 08:03:34",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the temperature in the living room?",
+        "Transcript": "What's the (temp- temp-) temperature in the (li-) living room?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie ist die Temperatur im (li-) Wohnzimmer?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1064_4468_16kHz.wav",
+      "Created": "2024-04-30 18:08:50",
+      "CreatedOrModified": "2024-06-29 08:03:46",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the time?",
+        "Transcript": "What's the time?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie spät ist es?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1062_4468_16kHz.wav",
+      "Created": "2024-04-30 18:09:20",
+      "CreatedOrModified": "2024-06-29 08:04:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Answer the call.",
+        "Transcript": "(an-) Answer the call.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(an-) Beantworte den Anruf."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1061_4468_16kHz.wav",
+      "Created": "2024-04-29 08:44:58",
+      "CreatedOrModified": "2024-05-31 10:41:41",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What restaurants are nearby?",
+        "Transcript": "What (r-) restaurants are nearby?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Welche (r-) Restaurants sind in der Nähe?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1060_4468_16kHz.wav",
+      "Created": "2024-04-29 08:45:27",
+      "CreatedOrModified": "2024-05-31 10:42:29",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's on my calendar tomorrow?",
+        "Transcript": "(What) What's on my (k-) calendar tomorrow?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(Was) Was steht morgen in meinem (k-) Kalender?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1070_4468_16kHz.wav",
+      "Created": "2024-04-29 08:42:54",
+      "CreatedOrModified": "2024-05-31 10:34:58",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me the news.",
+        "Transcript": "Tell me the news.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Erzählen Sie mir die Nachrichten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1074_4468_16kHz.wav",
+      "Created": "2024-03-26 19:28:51",
+      "CreatedOrModified": "2024-05-31 08:10:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on cooling.",
+        "Transcript": "(um w- uh) (I'll-*) I'll say (um turn on turn on turn on on on) on cooling. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Ich sage (um einschalten anschalten) beim Abkühlen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1066_4468_16kHz.wav",
+      "Created": "2024-03-26 19:33:32",
+      "CreatedOrModified": "2024-05-11 21:39:42",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather like today?",
+        "Transcript": "What's the weather (l-*)like (t-)today? ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie ist das Wetter (l-*) wie heute?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1052_4468_16kHz.wav",
+      "Created": "2024-03-26 19:38:34",
+      "CreatedOrModified": "2024-05-11 21:40:35",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Find my phone.",
+        "Transcript": "Okay. (fi-) Find my phone.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Okay. (fi-) Such mein Handy."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1063_4468_16kHz.wav",
+      "Created": "2024-03-26 19:39:04",
+      "CreatedOrModified": "2024-05-11 21:40:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off the TV.",
+        "Transcript": "(t- t-) Turn off the TV.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(t-t-t-) Schalten Sie den Fernseher aus."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_1059_4468_16kHz.wav",
+      "Created": "2024-03-26 19:39:34",
+      "CreatedOrModified": "2024-05-31 08:28:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Open reminders.",
+        "Transcript": "(o- open) Open re(mi-)minders.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(o-offen) Offene Re(mi-)Minderer."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_176_5197_16kHz.wav",
+      "Created": "2024-05-15 16:31:54",
+      "CreatedOrModified": "2024-06-30 15:49:08",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What song is this?",
+        "Transcript": "What (s-) song is this?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Was ist das für ein Lied?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_90_5197_16kHz.wav",
+      "Created": "2024-05-15 16:36:34",
+      "CreatedOrModified": "2024-06-30 15:52:58",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Dislike this song.",
+        "Transcript": "Dislike the song.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "- Das Lied ist nicht zu hören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_248_5197_16kHz.wav",
+      "Created": "2024-05-08 17:15:20",
+      "CreatedOrModified": "2024-06-30 15:45:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on the TV.",
+        "Transcript": "(m-) Turn on the TV.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(m-) Schalten Sie den Fernseher ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_154_5812_16kHz.wav",
+      "Created": "2024-06-09 19:42:15",
+      "CreatedOrModified": "2024-06-30 16:26:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip this track.",
+        "Transcript": "(s-) Skip this (tr-) track.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(s-) Überspringt diese (tr-) Spur."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_854_6196_16kHz.wav",
+      "Created": "2024-06-12 19:23:54",
+      "CreatedOrModified": "2024-06-30 16:33:11",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Set the volume to 3.",
+        "Transcript": "(S-) Set the (v- vol-) volume to three.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(S-) Setzt das (v- vol-) Volumen auf drei."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_69_6196_16kHz.wav",
+      "Created": "2024-06-11 19:11:44",
+      "CreatedOrModified": "2024-07-01 17:58:14",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off all switches.",
+        "Transcript": "Turn off (all) all (s-) switches.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Alle (s-) Schalter ausschalten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_852_5812_16kHz.wav",
+      "Created": "2024-05-28 20:32:36",
+      "CreatedOrModified": "2024-06-30 16:22:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Dim the playroom lights to 20%.",
+        "Transcript": "Dim the (play-) playroom (l- l- l-) lights to twenty percent.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Dim die (Spiel-)Spielzimmer (l-l-l--) Lichter auf zwanzig Prozent."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_853_5812_16kHz.wav",
+      "Created": "2024-05-26 19:18:42",
+      "CreatedOrModified": "2024-06-30 16:18:29",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Preheat the oven to 400 degrees.",
+        "Transcript": "(pre- preheat) Preheat (the) the (oven) oven to four hundred degrees.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "(vor der Hitze) Vorwärmen (den) den (Backofen) Ofen auf vierhundert Grad."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_892_5617_16kHz.wav",
+      "Created": "2024-05-22 18:09:42",
+      "CreatedOrModified": "2024-06-30 16:11:27",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off the lights in the kitchen.",
+        "Transcript": "(turn) Turn off (th-) the lights (in) in the (ki-) kitchen.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "(Drehen) Schalten Sie die Lichter (in) in der (ki-) Küche aus."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_432_5197_16kHz.wav",
+      "Created": "2024-05-08 17:17:47",
+      "CreatedOrModified": "2024-06-30 15:47:45",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Raise the temperature 5 degrees.",
+        "Transcript": "Raise the (temp-) temperature five degrees.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Erhöhen Sie die (Temp-) Temperatur fünf Grad."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_189_5197_16kHz.wav",
+      "Created": "2024-05-08 17:18:08",
+      "CreatedOrModified": "2024-06-30 15:48:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make it cooler.",
+        "Transcript": "(m-) Make it cooler.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "(m-) Mach es kühler."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_50_5617_16kHz.wav",
+      "Created": "2024-05-20 20:14:26",
+      "CreatedOrModified": "2024-06-30 15:53:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Raise the temperature.",
+        "Transcript": "Raise the (temp-) temperature.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Erhöhen Sie die (Temp-) Temperatur."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_425_5617_16kHz.wav",
+      "Created": "2024-05-20 20:25:26",
+      "CreatedOrModified": "2024-06-30 16:04:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn up the temperature 4 degrees.",
+        "Transcript": "Turn up (the) the (temp-) temperature four degrees.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Drehen Sie (die) die (Temp-) Temperatur vier Grad."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_29999_5617_16kHz.wav",
+      "Created": "2024-05-20 20:15:27",
+      "CreatedOrModified": "2024-06-30 15:55:12",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Who won the Sundevils game yesterday?",
+        "Transcript": "(who e- e-) Who (w- w-) won the Sundevils game (in the ga- ga-) yesterday?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Broadcast over more than one speaker",
+        "Translation": "(wer e- e-) Wer (w- w-) hat gestern das Sundevils-Spiel (im ga- ga-) gewonnen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_873_5617_16kHz.wav",
+      "Created": "2024-05-20 20:22:22",
+      "CreatedOrModified": "2024-06-30 15:59:32",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Did the Longhorns win?",
+        "Transcript": "Did the (uh) Longhorns win?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Haben die Longhorns gewonnen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_856_5197_16kHz.wav",
+      "Created": "2024-05-08 17:15:57",
+      "CreatedOrModified": "2024-06-30 15:45:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the Amazon stock price?",
+        "Transcript": "(huh w- w-) What's the (st- am-) Amazon stock price?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "(huh w- w-) Was ist der (st- am-) Amazon Aktienkurs?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_398_5197_16kHz.wav",
+      "Created": "2024-05-15 16:35:07",
+      "CreatedOrModified": "2024-06-30 15:52:14",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me about Manchester United.",
+        "Transcript": "(t-) Tell me (a-) about (m-) Manchester United.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "(t-) Erzähl mir von Manchester United."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_80_5197_16kHz.wav",
+      "Created": "2024-05-01 17:54:53",
+      "CreatedOrModified": "2024-06-29 08:12:36",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the temperature outside?",
+        "Transcript": "What's the (temp-) temperature like outside?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wie ist die Temperatur draußen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_880_5197_16kHz.wav",
+      "Created": "2024-05-01 17:57:37",
+      "CreatedOrModified": "2024-06-29 08:14:58",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me news from Bloomberg.",
+        "Transcript": "(tell) Tell me news from (uh bloom) Bloomberg.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "(Erzählt) Erzählt mir Neuigkeiten von Bloomberg."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_902_5617_16kHz.wav",
+      "Created": "2024-05-22 18:12:49",
+      "CreatedOrModified": "2024-06-30 16:13:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's Meta trading at?",
+        "Transcript": "What's Meta (tray-) trading at?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Woran tradet Meta (Tray-)?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_863_5812_16kHz.wav",
+      "Created": "2024-06-09 19:37:50",
+      "CreatedOrModified": "2024-07-01 17:57:27",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Who won the NBA game yesterday?",
+        "Transcript": "Who (w-) won the (~n) N (~b) BA game (yes-) yesterday?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wer (w-) hat gestern das (~n) N (~b) BA-Spiel (ja-) gewonnen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_784_5812_16kHz.wav",
+      "Created": "2024-05-26 19:26:15",
+      "CreatedOrModified": "2024-06-30 16:21:36",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Navigate to O'Hare Airport.",
+        "Transcript": "(n-) Navigate (t- to) to O'Hare Airport.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "(n-) Navigieren Sie (t-zu) zum Flughafen O'Hare."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_125_5812_16kHz.wav",
+      "Created": "2024-06-09 19:44:35",
+      "CreatedOrModified": "2024-06-30 16:27:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "When is Thanksgiving this year?",
+        "Transcript": "When is Thanksgiving (th- th-) this year?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wann ist Thanksgiving (th-th-) in diesem Jahr?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_198_5812_16kHz.wav",
+      "Created": "2024-05-26 19:21:07",
+      "CreatedOrModified": "2024-06-30 16:19:35",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How long is left on the timer?",
+        "Transcript": "How (l-) long (is) is (le-) left on the timer?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Wie lang (l-) ist (l-) auf dem Timer?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_68_5617_16kHz.wav",
+      "Created": "2024-05-22 18:10:35",
+      "CreatedOrModified": "2024-06-30 16:12:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Get help.",
+        "Transcript": "Get help.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Hol Hilfe."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_865_5617_16kHz.wav",
+      "Created": "2024-05-20 20:24:48",
+      "CreatedOrModified": "2024-06-30 16:04:13",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Video call Leo Rodrigues.",
+        "Transcript": "(v-) Video call Leo Rodrigues.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "(v-) Videoruf Leo Rodrigues."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_900_5617_16kHz.wav",
+      "Created": "2024-05-20 20:20:23",
+      "CreatedOrModified": "2024-06-30 15:58:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Open Grammarly.",
+        "Transcript": "Open Grammarly.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Öffnet Grammarly."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_257_5197_16kHz.wav",
+      "Created": "2024-05-15 16:37:33",
+      "CreatedOrModified": "2024-06-30 15:53:34",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Open email.",
+        "Transcript": "Open email.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "E-Mail öffnen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_807_5617_16kHz.wav",
+      "Created": "2024-05-20 20:19:43",
+      "CreatedOrModified": "2024-06-30 15:57:55",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is the St. Louis Arch ADA compliant?",
+        "Transcript": "(I-) Is the (uh s- s-) St. Louis (ar-) Arch (~A) ADA (k- k-) compliant?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "(I-) Ist der (uh s- s-) St. Louis (ar-) Arch (~A) ADA (k- k-) konform?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_243_5197_16kHz.wav",
+      "Created": "2024-05-15 16:35:33",
+      "CreatedOrModified": "2024-06-30 15:52:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me a poem.",
+        "Transcript": "Tell me a poem.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Erzähl mir ein Gedicht."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_906_5197_16kHz.wav",
+      "Created": "2024-05-15 16:37:09",
+      "CreatedOrModified": "2024-06-30 15:53:24",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Buy tickets at half-past noon.",
+        "Transcript": "Buy (ti-) tickets at half-past noon.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Kaufen Sie (Ti-) Tickets zur Hälfte der Mittagszeit."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_879_5197_16kHz.wav",
+      "Created": "2024-05-08 17:18:31",
+      "CreatedOrModified": "2024-06-30 15:48:20",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How do you spell 'confident'?",
+        "Transcript": "How do you spell 'confident'?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Wie schreibt man \"zuverlässig\"?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_391_5197_16kHz.wav",
+      "Created": "2024-05-01 17:55:53",
+      "CreatedOrModified": "2024-06-29 08:13:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How much is $10 in euros?",
+        "Transcript": "How much is (uh ten) ten (dol-) dollars in euros?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Wie viel kostet zehn Dollar in Euro?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_177_5197_16kHz.wav",
+      "Created": "2024-05-01 17:54:19",
+      "CreatedOrModified": "2024-06-29 08:12:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Show me nearby shopping malls.",
+        "Transcript": "(sh-) Show me nearby shopping malls.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "(sh-) Zeig mir in der Nähe Einkaufszentren."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_872_5617_16kHz.wav",
+      "Created": "2024-05-22 18:10:09",
+      "CreatedOrModified": "2024-06-30 16:11:55",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How tall is Mount Rushmore?",
+        "Transcript": "How tall is (m-) Mount (r-) Rushmore?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Wie groß ist (m-) Mount (r-) Rushmore?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_95_5617_16kHz.wav",
+      "Created": "2024-05-22 18:07:34",
+      "CreatedOrModified": "2024-06-30 16:10:26",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Delete my reminders for tomorrow.",
+        "Transcript": "Delete (lete my) my (r- r-) reminders for tomorrow.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "(Lösch mir) meine (r-r-) Erinnerungen für morgen löschen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_147_5617_16kHz.wav",
+      "Created": "2024-05-22 18:06:30",
+      "CreatedOrModified": "2024-06-30 16:09:21",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What does my day look like?",
+        "Transcript": "What (d-) does my day (loo- loo-) look like?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wie (d-) sieht mein Tag (loo-loo-) aus?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_67_5812_16kHz.wav",
+      "Created": "2024-05-26 19:19:51",
+      "CreatedOrModified": "2024-06-30 16:18:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Show me my alarms.",
+        "Transcript": "Show me (my) my alarms.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Zeig mir (meine) Alarme."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_392_6196_16kHz.wav",
+      "Created": "2024-06-11 19:18:03",
+      "CreatedOrModified": "2024-06-30 16:31:31",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Remind me to take a break in 45 minutes.",
+        "Transcript": "(r-) Remind me (to) to take a (g-) good break in forty-five minutes. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "(r-) Erinnert mich daran, eine (g-) gute Pause in 45 Minuten zu machen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_834_5197_16kHz.wav",
+      "Created": "2024-05-08 17:11:20",
+      "CreatedOrModified": "2024-06-30 15:40:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Set a reminder for the day spring training starts.",
+        "Transcript": "Set a reminder for the day spring training starts.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Stellen Sie eine Erinnerung für den Tag Frühlingstraining beginnt."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_181_5197_16kHz.wav",
+      "Created": "2024-05-01 17:52:07",
+      "CreatedOrModified": "2024-06-29 08:10:52",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "When is my next alarm?",
+        "Transcript": "When is my (n-) next alarm?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wann ist mein (n-) nächster Alarm?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_885_5197_16kHz.wav",
+      "Created": "2024-05-08 17:12:47",
+      "CreatedOrModified": "2024-06-30 15:42:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Wake me up at 8:20 AM every day.",
+        "Transcript": "(wake) Wake (uh m-) me up (at b- at) at eight twenty AM every day.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wach auf, ich bin jeden Tag um acht Uhr 20 auf."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_840_5197_16kHz.wav",
+      "Created": "2024-05-08 17:14:24",
+      "CreatedOrModified": "2024-06-30 15:44:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Create a Whole Foods shopping list.",
+        "Transcript": "(cre-) Create Whole Foods (uh sh-) shopping list.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "(Cre-) Erstellen Sie Whole Foods (uh sh-) Einkaufsliste."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_56_5197_16kHz.wav",
+      "Created": "2024-05-15 16:33:01",
+      "CreatedOrModified": "2024-06-30 15:49:39",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What time is it?",
+        "Transcript": "What time is it?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wie spät ist es?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_52_5197_16kHz.wav",
+      "Created": "2024-05-15 16:34:10",
+      "CreatedOrModified": "2024-06-30 15:50:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Where is my first event tomorrow?",
+        "Transcript": "(uh w-) Where's my (f-) first (ev-) event tomorrow?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wo ist mein (f-) erstes (ev-) Ereignis morgen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_145_5617_16kHz.wav",
+      "Created": "2024-05-20 20:26:24",
+      "CreatedOrModified": "2024-06-30 16:05:14",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Where is my next meeting?",
+        "Transcript": "(w-) Where's (m-) my next meeting?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wo ist (m-) mein nächstes Treffen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_844_5617_16kHz.wav",
+      "Created": "2024-05-20 20:23:08",
+      "CreatedOrModified": "2024-06-30 16:01:55",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Add a weighted blanket for Abigail to my gift list.",
+        "Transcript": "Add (a w- a) a (w- w- w- weigh-) weighted (bl-) blanket (to for for) for Abigail (to) to my (gift li-) gift list.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Hinzufügen (a w-a) a (w-w-w- wiegen-) gewichtete (bl-) Decke (für für) Abigail (to) zu meiner (gift li-) Geschenkliste."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_165_5617_16kHz.wav",
+      "Created": "2024-05-20 20:25:58",
+      "CreatedOrModified": "2024-06-30 16:04:52",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is my flight on time?",
+        "Transcript": "(is) Is my flight on time?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Plan a Trip or an Outdoor Visit",
+        "Translation": "(ist) Ist mein Flug pünktlich?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_886_5197_16kHz.wav",
+      "Created": "2024-05-08 17:12:02",
+      "CreatedOrModified": "2024-06-30 15:41:03",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How far is Fairbanks, Alaska from here?",
+        "Transcript": "(how) How's far is (uh fair- fair-)  Fairbanks, Alaska (from) from here?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Plan a Trip or an Outdoor Visit",
+        "Translation": "(wie) Wie weit ist es (uh fair- fair-) Fairbanks, Alaska (von) von hier?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_162_5197_16kHz.wav",
+      "Created": "2024-05-01 17:55:18",
+      "CreatedOrModified": "2024-06-29 08:13:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Start listening.",
+        "Transcript": "(s-) Start (l-) listening.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "(s-) Fangen Sie an zu hören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_162_4468_16kHz.wav",
+      "Created": "2024-04-30 18:12:35",
+      "CreatedOrModified": "2024-06-29 08:06:35",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Start listening.",
+        "Transcript": "Start (li-) listening.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Fangen Sie an zuzuhören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_78_4468_16kHz.wav",
+      "Created": "2024-04-29 08:43:31",
+      "CreatedOrModified": "2024-05-31 10:40:47",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Siri.",
+        "Transcript": "Hey Siri.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "- Hey Siri. - Ich bin ein guter Freund."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_148_4468_16kHz.wav",
+      "Created": "2024-03-26 19:40:37",
+      "CreatedOrModified": "2024-05-11 21:42:58",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cortana.",
+        "Transcript": "(cor-) Cortana.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "(kor-) Cortana."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_60_4468_16kHz.wav",
+      "Created": "2024-04-29 08:46:06",
+      "CreatedOrModified": "2024-05-31 10:42:54",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Facebook.",
+        "Transcript": "Hey Facebook (k-).",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey Facebook (k-). - (EN) Ich bin nicht sicher, ob du es weißt."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_39_4468_16kHz.wav",
+      "Created": "2024-04-30 18:09:44",
+      "CreatedOrModified": "2024-06-29 08:04:21",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Alexa.",
+        "Transcript": "Alexa.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Alexa. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_49_5617_16kHz.wav",
+      "Created": "2024-05-22 18:11:34",
+      "CreatedOrModified": "2024-06-30 16:12:43",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Google.",
+        "Transcript": "Hey Google.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey, Google. - Hey, Google."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c15f15a6-86af-4a94-760d-08dc47b40b59_30168_4468_16kHz.wav",
+      "Created": "2024-04-30 18:19:25",
+      "CreatedOrModified": "2024-07-01 06:26:14",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Who is your favorite band or singer?",
+        "Transcript": "[Who is your favorite band or singer?] My (f- f-) favorite band is Clintons.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended pair question 1",
+        "Translation": "[Wer ist deine Lieblingsband oder Sängerin?] Meine Lieblingsband ist Clintons."
+      },
+      "Ratings": []
+    }
+  ]
+}

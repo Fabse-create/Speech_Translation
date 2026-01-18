@@ -1,0 +1,263 @@
+{
+  "Contributor ID": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb",
+  "Do you consider U.S. English to be your first language": "No Response Supplied",
+  "What language(s) do you speak": "No Response Supplied",
+  "What age did you start speaking English": "No Response Supplied",
+  "I consent to have my voice samples shared in public at research conferences and similar professional meetings, and to have digital audio files of my voice be shared as part of professional research publications.": "Yes",
+  "Etiology": "Down Syndrome",
+  "BlockNumber": 1,
+  "Files": [
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_29097_12198_16kHz.wav",
+      "Created": "2025-01-13 20:01:08",
+      "CreatedOrModified": "2025-01-27 10:03:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make the screen brighter.",
+        "Transcript": "Make the screen brighter.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Mach den Bildschirm heller."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_29096_12198_16kHz.wav",
+      "Created": "2025-01-13 20:01:59",
+      "CreatedOrModified": "2025-01-27 10:03:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Send a message.",
+        "Transcript": "Send a message.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Sende eine Nachricht."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_29095_12198_16kHz.wav",
+      "Created": "2025-01-13 20:02:33",
+      "CreatedOrModified": "2025-01-27 10:05:22",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Reschedule my meeting.",
+        "Transcript": "(res- resk- sk- sk- sk-) Reschedule my meeting.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Verschieben Sie mein Treffen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_29098_12198_16kHz.wav",
+      "Created": "2025-01-13 20:05:22",
+      "CreatedOrModified": "2025-01-27 10:06:00",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is the pharmacy open?",
+        "Transcript": "Is the pharmacy open?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ist die Apotheke offen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_1057_12198_16kHz.wav",
+      "Created": "2025-01-13 20:00:39",
+      "CreatedOrModified": "2025-01-27 10:02:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the temperature in the living room?",
+        "Transcript": "What's the temperature in (the) the living room?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie ist die Temperatur im Wohnzimmer?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_1061_12198_16kHz.wav",
+      "Created": "2025-01-13 20:05:46",
+      "CreatedOrModified": "2025-01-27 10:06:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What restaurants are nearby?",
+        "Transcript": "What restaurants are nearby?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Welche Restaurants befinden sich in der Nähe?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_1053_12198_16kHz.wav",
+      "Created": "2025-01-13 20:02:47",
+      "CreatedOrModified": "2025-01-27 10:05:31",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's on my shopping list?",
+        "Transcript": "What's on my shopping list?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Was steht auf meiner Einkaufsliste?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_1075_12198_16kHz.wav",
+      "Created": "2025-01-13 20:03:08",
+      "CreatedOrModified": "2025-01-27 10:05:40",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on all switches.",
+        "Transcript": "Turn on all switches.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie alle Schalter ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_1065_12198_16kHz.wav",
+      "Created": "2025-01-13 20:02:16",
+      "CreatedOrModified": "2025-01-27 10:04:22",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip this song.",
+        "Transcript": "(sk- sk-) Skip this song.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(sk-sk-) Überspringt diesen Song."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_1072_12198_16kHz.wav",
+      "Created": "2025-01-13 19:46:00",
+      "CreatedOrModified": "2025-01-27 09:23:18",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Increase volume to maximum.",
+        "Transcript": "Increase volume to maximum.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Volumen auf Maximum erhöhen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_1055_12198_16kHz.wav",
+      "Created": "2025-01-13 19:46:49",
+      "CreatedOrModified": "2025-01-27 09:23:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make the text larger.",
+        "Transcript": "I make a text larger.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Ich mache eine SMS größer."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_1060_12198_16kHz.wav",
+      "Created": "2025-01-13 19:59:38",
+      "CreatedOrModified": "2025-01-27 10:02:14",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's on my calendar tomorrow?",
+        "Transcript": "What's on my calendar tomorrow?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Was steht morgen in meinem Kalender?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_1064_12198_16kHz.wav",
+      "Created": "2025-01-13 20:07:11",
+      "CreatedOrModified": "2025-01-27 10:15:27",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the time?",
+        "Transcript": "(w-) What's the time?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(w-) Wie spät ist es?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_201_12199_16kHz.wav",
+      "Created": "2025-02-19 15:03:01",
+      "CreatedOrModified": "2025-04-23 19:51:18",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Dim the living room lights to 50%.",
+        "Transcript": "Dim the (uh) living room lights to 50%.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Dim die (uh) Wohnzimmer Lichter zu 50%."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_148_12198_16kHz.wav",
+      "Created": "2025-01-13 20:00:20",
+      "CreatedOrModified": "2025-01-27 10:02:23",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cortana.",
+        "Transcript": "Cortana.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Cortana. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_49_12198_16kHz.wav",
+      "Created": "2025-01-13 20:01:41",
+      "CreatedOrModified": "2025-01-27 10:03:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Google.",
+        "Transcript": "(Hey Google) Hey Google.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey, Google. - Hey, Google."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_39_12198_16kHz.wav",
+      "Created": "2025-01-13 20:04:48",
+      "CreatedOrModified": "2025-01-27 10:05:48",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Alexa.",
+        "Transcript": "Alexa.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Alexa. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "2c36f1b5-db7f-4766-8117-08dd1e2cfafb_162_12198_16kHz.wav",
+      "Created": "2025-01-13 20:06:56",
+      "CreatedOrModified": "2025-01-27 10:15:15",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Start listening.",
+        "Transcript": "Start listening.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Fang an zuzuhören."
+      },
+      "Ratings": []
+    }
+  ]
+}

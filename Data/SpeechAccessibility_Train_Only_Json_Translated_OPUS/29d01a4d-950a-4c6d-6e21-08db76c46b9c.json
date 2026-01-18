@@ -1,0 +1,4243 @@
+{
+  "Contributor ID": "29d01a4d-950a-4c6d-6e21-08db76c46b9c",
+  "Do you consider U.S. English to be your first language": "No Response Supplied",
+  "What language(s) do you speak": "No Response Supplied",
+  "What age did you start speaking English": "No Response Supplied",
+  "I consent to have my voice samples shared in public at research conferences and similar professional meetings, and to have digital audio files of my voice be shared as part of professional research publications.": "Yes",
+  "Etiology": "Parkinson's Disease",
+  "BlockNumber": 1,
+  "Files": [
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1131_1427_16kHz.wav",
+      "Created": "2023-07-16 20:14:32",
+      "CreatedOrModified": "2023-07-27 14:21:30",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "At last Billy Woodchuck's lips began to feel very weird, puckered up as they were.",
+        "Transcript": "At last Billy Woodchuck's lips began to feel very weird, puckered up as they were.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Endlich begannen sich Billy Woodchucks Lippen sehr seltsam zu fühlen, verpuckt, wie sie waren."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:02:48"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:02:48"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:02:48"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:02:48"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:02:48"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:02:48"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:02:48"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:02:48"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:02:48"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:02:48"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:02:48"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:02:48"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1127_1427_16kHz.wav",
+      "Created": "2023-07-16 20:14:46",
+      "CreatedOrModified": "2023-07-27 14:22:03",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "He cleared his throat, turned to his companion, and opened his lips.",
+        "Transcript": "He cleared his throat, turned to his companion, and opened his lips.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Er räucherte sich, wandte sich zu seinem Gefährten und öffnete seine Lippen."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:03:26"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:03:26"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:03:26"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:03:26"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:03:26"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:03:26"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:03:26"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:03:26"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:03:26"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:03:26"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:03:26"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:03:26"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1129_1427_16kHz.wav",
+      "Created": "2023-07-16 20:14:58",
+      "CreatedOrModified": "2023-07-27 14:22:28",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "You can imagine how surprised and puzzled she was.",
+        "Transcript": "You can imagine how surprised and puzzled she was.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Sie können sich vorstellen, wie überrascht und verwirrt sie war."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:04:16"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:04:16"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:04:16"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:04:16"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:04:16"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:04:16"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:04:16"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:04:16"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:04:16"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:04:16"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:04:16"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:04:16"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_2225_1427_16kHz.wav",
+      "Created": "2023-07-16 20:15:22",
+      "CreatedOrModified": "2023-07-27 14:23:46",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "\"Oh, I'm not going to call you Stubby Toes any more!\" laughed Sister.",
+        "Transcript": "\"Oh, I'm not going to call you Stubby Toes any more!\" laughed Sister.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "\"Oh, ich werde dich nicht mehr Stubby Toes nennen!\" lachte Schwester."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:05:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:05:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:05:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:05:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:05:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:05:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:05:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:05:04"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:05:04"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:05:04"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:05:04"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:05:04"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1133_1427_16kHz.wav",
+      "Created": "2023-07-16 20:15:42",
+      "CreatedOrModified": "2023-07-27 14:25:13",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "A vague fear crept over her that he might finally succeed in proving to her that it was her duty to resign.",
+        "Transcript": "A vague fear crept over her that he might finally succeed in proving to her that it was her duty to resign.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Eine vage Angst schlich über sie, dass es ihm schließlich gelingen könnte, ihr zu beweisen, dass es ihre Pflicht war, zurückzutreten."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:04"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:04"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:04"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:04"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_2215_1427_16kHz.wav",
+      "Created": "2023-07-16 20:15:59",
+      "CreatedOrModified": "2023-07-27 14:26:53",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "When I was a young boy, father always said I was a born business manager.",
+        "Transcript": "When I was a young boy, father always said I was (born a b-) born a business manager.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Als ich ein junger Junge war, sagte Vater immer, ich sei (geboren ein b-) ein Business Manager geboren."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:53"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:53"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:53"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:53"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:53"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:53"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:06:53"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1130_1427_16kHz.wav",
+      "Created": "2023-07-16 20:16:15",
+      "CreatedOrModified": "2023-07-27 14:27:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "I'm quite sure you are too kind-hearted to enjoy giving pain to any living creature.",
+        "Transcript": "I'm quite sure you are too kind-hearted to enjoy giving pain to any living creature.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Ich bin mir sicher, dass du zu gutherzig bist, um jedem Lebewesen Schmerzen zu bereiten."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:07:43"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:07:43"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:07:43"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:07:43"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:07:43"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:07:43"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:07:43"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:07:43"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:07:43"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:07:43"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:07:43"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:07:43"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1128_1427_16kHz.wav",
+      "Created": "2023-07-16 20:16:29",
+      "CreatedOrModified": "2023-07-27 14:27:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Five of them refused, but the sixth agreed to lend forty thousand pounds.",
+        "Transcript": "Five of them refused, but the sixth agreed to lend forty thousand pounds.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Fünf von ihnen weigerten sich, aber der sechste stimmte zu, vierzigtausend Pfund zu leihen."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:08:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:08:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:08:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:08:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:08:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:08:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:08:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:08:37"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:08:37"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:08:37"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:08:37"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:08:37"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1827_1427_16kHz.wav",
+      "Created": "2023-07-16 20:16:46",
+      "CreatedOrModified": "2023-07-27 14:28:18",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "They tolerated his attendance with an air of aversion as though he were an intruder.",
+        "Transcript": "They tolerated his attendance with an air of aversion as though he was an intruder.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Sie tolerierten seine Anwesenheit mit einer Abneigung, als ob er ein Eindringling wäre."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:09:21"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:09:21"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:09:21"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:09:21"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:09:21"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:09:21"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:09:21"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:09:21"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:09:21"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:09:21"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:09:21"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:09:21"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1132_1427_16kHz.wav",
+      "Created": "2023-07-16 20:17:06",
+      "CreatedOrModified": "2023-07-27 14:28:40",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "The monkey said, \"Yes, I heard one man say that nitro-glycerine and dynamite were the same, that dynamite was just nitro-glycerine.\"",
+        "Transcript": "The monkey said, \"Yes, I heard one man say that nitro-glycerine and dynamite were the same, that dynamite was just nitro-glycerine.\"",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Der Affe sagte: \"Ja, ich hörte einen Mann sagen, dass Nitro-Glycerin und Dynamit das gleiche waren, dass Dynamit nur Nitro-Glycerin war.\""
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:10:09"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:10:09"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:10:09"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:10:09"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:10:09"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:10:09"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:10:09"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:10:09"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:10:09"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:10:09"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:10:09"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:10:09"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_18237_1527_16kHz.wav",
+      "Created": "2023-07-16 20:35:04",
+      "CreatedOrModified": "2023-07-27 14:09:16",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "In a Catholic world, the instinct that the man who serves the altar should be without physical ties.",
+        "Transcript": "In a Catholic world, the instinct that a man who (serves in) serves the altar should be without physical ties.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "In einer katholischen Welt sollte der Instinkt, dass ein Mann, der (dient in) dient den Altar ohne körperliche Bindungen sein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_23463_1527_16kHz.wav",
+      "Created": "2023-07-16 20:35:19",
+      "CreatedOrModified": "2023-07-27 14:08:13",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Splendour no longer seemed ceremonial, but natural.",
+        "Transcript": "Splendour no longer seemed ceremonial, but natural.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Die Splendour schien nicht mehr zeremoniell, sondern natürlich."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_14016_1527_16kHz.wav",
+      "Created": "2023-07-16 20:35:36",
+      "CreatedOrModified": "2023-07-27 14:07:46",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "The young man crept in softly and crouched down on the floor, laying his head on her lap.",
+        "Transcript": "The young man crept in softly and crouched down on the floor, laying his head on her lap.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Der junge Mann kroch weich hinein und kauerte auf dem Boden und legte seinen Kopf auf ihren Schoß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_26997_1527_16kHz.wav",
+      "Created": "2023-07-16 20:35:48",
+      "CreatedOrModified": "2023-07-27 14:06:57",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "The lines of distress had softened.",
+        "Transcript": "The lines of distress had softened.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Die Linien der Not waren gemildert."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_19870_1527_16kHz.wav",
+      "Created": "2023-07-16 20:36:02",
+      "CreatedOrModified": "2023-07-27 14:06:42",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Lady Ebony snorted and shook her head, as he passed.",
+        "Transcript": "Lady Ebony snorted and shook her head, as he passed.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Lady Ebony schnarchte und schüttelte den Kopf, als er vorbeiging."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_26769_1527_16kHz.wav",
+      "Created": "2023-07-16 20:36:17",
+      "CreatedOrModified": "2023-07-27 14:06:24",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "From that hour, Tom became a more faithful, and earnest student.",
+        "Transcript": "From that hour, Tom became a more faithful, and earnest student.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Von jener Stunde an wurde Tom ein treuerer und ernsthafter Schüler."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_26552_1527_16kHz.wav",
+      "Created": "2023-07-16 20:36:30",
+      "CreatedOrModified": "2023-07-27 14:05:47",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Father Jervis lifted a pacific hand.",
+        "Transcript": "Father Jervis lifted a pacific hand.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Vater Jervis hob eine friedfertige Hand."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_16009_1527_16kHz.wav",
+      "Created": "2023-07-16 20:36:43",
+      "CreatedOrModified": "2023-07-27 14:05:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "This was a very serious state of things.",
+        "Transcript": "This was a very serious state of things.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Das war ein sehr ernster Zustand der Dinge."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_14859_1527_16kHz.wav",
+      "Created": "2023-07-16 20:37:06",
+      "CreatedOrModified": "2023-07-27 14:05:16",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "He took the name of John Rokesmith.",
+        "Transcript": "He took the name of John Rokesmith.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Er nahm den Namen John Rokesmith an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_20593_1527_16kHz.wav",
+      "Created": "2023-07-16 20:37:21",
+      "CreatedOrModified": "2023-07-27 14:04:44",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Next, he bade his wife to get down from the camel.",
+        "Transcript": "Next, he bade his wife to get down from the camel.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Als nächstes bat er seine Frau, sich von dem Kamel zu befreien."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_27546_1845_16kHz.wav",
+      "Created": "2023-08-01 20:10:59",
+      "CreatedOrModified": "2023-08-20 16:09:53",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "The pinto edged away from him.",
+        "Transcript": "The pinto edged away from him.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Der Pinto hat sich von ihm entfernt."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_14781_1845_16kHz.wav",
+      "Created": "2023-08-01 20:11:11",
+      "CreatedOrModified": "2023-08-20 16:10:54",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "He struck with savage recklessness.",
+        "Transcript": "He struck with savage recklessness.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Er schlug mit wilder Leichtfertigkeit."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_25018_1845_16kHz.wav",
+      "Created": "2023-08-01 20:11:25",
+      "CreatedOrModified": "2023-08-20 16:11:12",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "The doctor attempted no further resistance.",
+        "Transcript": "The doctor attempted no further resistance.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Der Arzt versuchte keinen weiteren Widerstand."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_28744_1845_16kHz.wav",
+      "Created": "2023-08-01 20:11:38",
+      "CreatedOrModified": "2023-08-20 16:11:39",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "The strain had reached breaking point.",
+        "Transcript": "The strain had reached breaking point.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Die Belastung hatte den Bruchpunkt erreicht."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_28207_1845_16kHz.wav",
+      "Created": "2023-08-01 20:11:56",
+      "CreatedOrModified": "2023-08-20 16:12:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "He had clothes common enough in texture, yet carried in an uncommon fashion.",
+        "Transcript": "He had clothes common enough in texture, (yet he carr-) yet carried in an uncommon fashion.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Er hatte Kleidung gemeinsam genug in Textur, (noch er carr-) noch getragen in einer ungewöhnlichen Art und Weise."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_25658_1845_16kHz.wav",
+      "Created": "2023-08-01 20:12:15",
+      "CreatedOrModified": "2023-08-20 16:12:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "At half-past five, the little band arrived at the precipice and a short time after at the Chimneys.",
+        "Transcript": "At half-past five, the little band arrived at the precipice and a short time after at the Chimneys.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Um halb fünf kam die kleine Band am Abgrund an und kurz danach an den Chimneys."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_28801_1845_16kHz.wav",
+      "Created": "2023-08-01 20:12:28",
+      "CreatedOrModified": "2023-08-20 16:12:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "The tall man seemed to have disappeared.",
+        "Transcript": "The tall man seemed to have disappeared.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Der große Mann schien verschwunden zu sein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_19006_1845_16kHz.wav",
+      "Created": "2023-08-01 20:12:40",
+      "CreatedOrModified": "2023-08-20 16:13:56",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "It carried fine, powdery snowflakes.",
+        "Transcript": "It carried fine, powdery snowflakes.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Es trug feine, pulverige Schneeflocken."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_28600_1845_16kHz.wav",
+      "Created": "2023-08-01 20:12:51",
+      "CreatedOrModified": "2023-08-20 16:18:04",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "The shot had helped quiet the saddler.",
+        "Transcript": "The shot had helped quiet the saddler.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Der Schuss hatte dem Sattler geholfen, zu beruhigen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_20986_1845_16kHz.wav",
+      "Created": "2023-08-01 20:13:06",
+      "CreatedOrModified": "2023-08-20 16:18:16",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "One little load in it, may carry death to the bravest.",
+        "Transcript": "One little load in it, may carry death to the bravest.",
+        "Category Description": "Novel Sentences",
+        "Sub Category Description": "",
+        "Translation": "Eine kleine Last drin, kann den Tod zu den Mutigsten tragen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1114_1845_16kHz.wav",
+      "Created": "2023-08-01 20:14:50",
+      "CreatedOrModified": "2023-08-29 10:35:04",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What would you do if you couldn't use the internet or watch TV for a month?",
+        "Transcript": "What would you do if you couldn't use the internet or watch TV for a month?] If I couldn't use a TV or internet for a month, I would definitely spend more time doing (um) more reading and (uh) listening to radio. Or l guess that radio's, that's maybe counted as internet. (Um uh) I would do more creative thing like more drawing and (um) collage and more. (um) Yeah, (bu-) but I would say writing but my writing's not very easy to do, (um) and impossible to read at the moment. (um) I'd probably practice calligraphy. (I'd do) I'd do that. Yes. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "Was würdest du tun, wenn du nicht einen Monat lang das Internet benutzen oder fernsehen könntest?] Wenn ich einen Monat lang keinen Fernseher oder kein Internet benutzen könnte, würde ich definitiv mehr Zeit damit verbringen, (um) mehr zu lesen und (uh) Radio zu hören. Oder ich schätze, dass Radios, das vielleicht als Internet gezählt wird. (Um uh) Ich würde mehr kreative Dinge wie mehr Zeichnung und (um) Collage und mehr tun. (um) Ja, (bu-) aber ich würde sagen, Schreiben, aber mein Schreiben ist nicht sehr einfach zu tun, (um) und im Moment unmöglich zu lesen. (um) Ich würde wahrscheinlich Kalligraphie üben. (ich würde tun) Das würde ich tun. Ja."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1097_1845_16kHz.wav",
+      "Created": "2023-08-01 20:16:01",
+      "CreatedOrModified": "2023-08-29 15:20:12",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the best thing to do on a hot summer day?",
+        "Transcript": "[What's the best thing to do on a hot summer day?] I think (the beach is about) the best thing to do on the hot summer's day is to go and have a (s-) wonderful swim. (um) Particularly in the Atlantic where the (differential) differentiation between the air and the water temperature is quite great. So getting in the water is really refreshing (and) and invigorating. And (um) I (thi-) I love lying in the sun. Breathing up the calm beach. (Um) And you know going in for a swim and going back and breathing and going back for a swim, I think (that's) that's heaven to me. Right. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "[Was ist das Beste, was an einem heißen Sommertag zu tun?] Ich denke (der Strand ist ungefähr) das Beste, was am heißen Sommertag zu tun ist, zu gehen und ein (s-) wunderbares Schwimmen zu haben. (um) Besonders im Atlantik, wo die (differenzielle) Differenzierung zwischen Luft und Wassertemperatur ziemlich groß ist. So ins Wasser zu gelangen ist wirklich erfrischend (und) und belebend. Und (um) Ich (di-) Ich liebe es, in der Sonne zu liegen. Den ruhigen Strand zu atmen. (Um) Und du weißt, dass ich für ein Schwimmen gehe und zurück gehe und atme und zurück zum Schwimmen gehe, ich denke (das ist) das ist Himmel für mich. Richtig."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1084_1845_16kHz.wav",
+      "Created": "2023-08-01 20:17:14",
+      "CreatedOrModified": "2023-08-29 14:41:00",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How would you spend a rainy day?",
+        "Transcript": "[How would you spend a rainy day?] Rainy day depends on the temperature. Cold rainy day is, I like to you know (cal-) cuddle up in a blanket (and) and read or watch (um) a documentary or the news or (r-) TV, a movie. (um) But a summer rainy day, (um I'd) I'd really go out or garden or, you know I don't mind, I don't feel inclined to stay home necessarily. (Uh uh) I'll do usually things that I've been (pro-) procrastinating (um) sometimes when it rains (um) because (I’m) you know if I'm indoors. Like bills and phone calls that I've been avoiding. That kind of those awful things.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "[Wie würdest du einen regnerischen Tag verbringen?] Regentag hängt von der Temperatur ab. Kalter regnerischer Tag ist, ich mag es, dir zu wissen (kalt) kuscheln in einer Decke (und) und lesen oder sehen (um) eine Dokumentation oder die Nachrichten oder (r-) TV, ein Film. (um) Aber ein Sommer regnerischer Tag, (um ich würde) ich würde wirklich gehen oder Garten oder, du weißt, ich habe nichts dagegen, ich fühle mich nicht geneigt, zu Hause zu bleiben unbedingt. (Uh uh) Ich werde normalerweise Dinge, die ich (pro-) procrastinating (um) manchmal, wenn es regnet (um) weil (I n) Sie wissen, ob ich drinnen bin. Wie Rechnungen und Telefonanrufe, die ich vermieden habe. Diese Art von schrecklichen Dingen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1085_1845_16kHz.wav",
+      "Created": "2023-08-01 20:18:58",
+      "CreatedOrModified": "2023-09-11 14:06:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is your personality similar to any of your family members? How so?",
+        "Transcript": "[Is your personality similar to any of your family members? How so?] I don't think my personality is similar to my parents, both who were. I'm half way between them. (Uh w-) one was a (r-) real introvert and antisocial and the other was an extrovert and very social. (uh) And I'm somewhere in the middle. (Um) I'm probably similar to a first cousin in New Zealand. (Um) Because (we both we're both) we're both quite (w- w- um) not super confident but enjoy (um) fairly intellectual cultural things. Like museums and (uh) philharmonics and (you know um uh) reading and theater and the arts and (um uh) learning things. (um) And (she's) we're both quite gentle. (And um) And (i- we did not not um w- both bo- bo-) both indecisive too {g: apparently}. It's probably {w: 2} person.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "[Ist deine Persönlichkeit einem deiner Familienmitglieder ähnlich? Wie so?] Ich glaube nicht, dass meine Persönlichkeit meinen Eltern ähnlich ist, die beide waren. Ich bin halb zwischen ihnen. (Uh w-) Einer war ein (r-) realer Introverter und antisozial und der andere war ein extrovertierter und sehr sozialer. (uh) Und ich bin irgendwo in der Mitte. (Um) Ich bin wahrscheinlich einem Cousin in Neuseeland ähnlich. (Um) Weil (wir beide sind beide) wir beide ziemlich (w- w-um) nicht superbewusst sind, aber (um) ziemlich intellektuelle kulturelle Dinge genießen. Wie Museen und (uh) Philharmoniken und (du weißt um uh) Lesen und Theater und die Künste und (um uh) Dinge lernen. (um) Und (sie) wir sind beide ziemlich sanft. (und) Und (i- wir haben nicht um beides bo-bo-) auch unentschlossen. (g: offenbar} Es ist wahrscheinlich, dass 2 Person."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1107_1527_16kHz.wav",
+      "Created": "2023-08-01 19:52:43",
+      "CreatedOrModified": "2023-08-27 22:48:04",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's one thing you'd love to be an expert at and why?",
+        "Transcript": "[What's one thing you'd love to be an expert at and why?] (I'd love to try and be an expert) I'd love to be an expert at (landscape um) oh landscape (artic-) architecture and urban planning. (Uh) I think it's really urban planning. (Um) So to make cities more accessible, (use-) user friendly, green, environmentally safe. (Um uh) And (you) just joyful, healthy places to encourage social interaction (and um um) and enjoying (natu-) natural beauty (um it's you know natural and) and activities. (Uh) I think (that would) that would make the world a better place. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "[Was ist eine Sache, die Sie gerne ein Experte sein würde und warum?] (Ich würde gerne versuchen, ein Experte zu sein) Ich würde gerne ein Experte bei (Landschaft um) oh Landschaft (Artic-) Architektur und Stadtplanung sein. (Uh) Ich denke, es ist wirklich städtebauliche Planung. (Um) Um Städte zugänglicher, (Use-) nutzerfreundlicher, grüner, umweltschonender zu machen. (Um uh) Und (Sie) nur fröhliche, gesunde Orte, um soziale Interaktion (und um) zu fördern und genießen (natu-) natürliche Schönheit (um es ist Sie wissen, natürliche und) und Aktivitäten. (Uh) Ich denke (das würde) die Welt einen besseren Ort."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1095_1527_16kHz.wav",
+      "Created": "2023-08-01 19:54:14",
+      "CreatedOrModified": "2023-08-28 16:50:32",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What is one of your favorite animals and why?",
+        "Transcript": "[What is one of your favorite animals and why?] I've always loved horses. (uh) And it's not just riding, which I do enjoy. (Um) But I think that they're very intuitive animals. And (um they they s- the they) they're flighty. (They) They're easily spooked (and) and it's pretty easy to fall off them. (Uh but (um) And it's easy to get kicked by them. (They they) They (um) react (um uh). They're very much a flight rather than fight animal. But (they're um) they're intuitive and they know when. They're a very calming influence (for peo-) around people who (need them) need that. And (I think they're um) I think they're really loving (uh) animals. I think they're beautiful too. (I love) I love watching them. I love watching them move and (um) prance and play. (They're) They're (fun-) funny as well. They make me laugh. (um) But I think they're majestic and (um) just really cool animals. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "(Uh) Und sie sind leicht erschreckt (und) und es ist ziemlich einfach, sie fallen weg. (Uh, aber) Und es ist leicht, von ihnen getreten zu werden. (Sie) Sie (um) reagieren (um). Sie sind sehr viel ein Flug anstatt Kampftier. Aber (sie sind um) sie sind intuitiv und sie wissen, wann. Sie sind ein sehr beruhigender Einfluss (für Peo-) um Menschen, die (sie brauchen) brauchen. Und (Ich denke, sie sind um) Ich denke, sie sind wirklich lieben (uh) Tiere. Ich denke, sie sind auch schön. (Ich liebe) Ich liebe sie zu beobachten und (um) prance und spielen. (Sie sind) sie sind wirklich klasse. (Sie sind) sie sind wirklich lustig. (Uh) Sie sind auch schön. (Ich liebe) Ich liebe es, sie zu beobachten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1109_1527_16kHz.wav",
+      "Created": "2023-08-01 19:59:19",
+      "CreatedOrModified": "2023-08-29 15:18:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell us about your favorite toy as a child.",
+        "Transcript": "[Tell us about your favorite toy as a child.] When I was a child, I was about I think (s-) maybe eight, (uh) my friend had this white and pink fluffy, I believe it was a rabbit. And it (was uh) had robotic legs so it sort of shuffled along (um). And while it was moving (it) (ex-) excuse me. It banged the tambourine. It had (t-) two cymbals around legs and it was coming ching ching ching ching ching ching (clu- cla- cla- clas-) clapping these cymbals together. How (the legs) the two legs moved, (um) it was on its hind legs, (uh) moved backward and forwards. And for whatever reason, I thought that was fantastic. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "Als ich ein Kind war, dachte ich, (s-) vielleicht acht, (uh) mein Freund hatte dieses weiße und rosa flauschige, ich glaube, es war ein Kaninchen. Und es (war uh) hatte Roboterbeine, also mischte es sich zusammen. Und während es sich bewegte (es) (ex-) entschuldigt mich. Es schlug die Tamburine. Es hatte (t-) zwei Becken um Beine und es kam schmerzendes schmerzendes schmerzendes schmerzendes schmerzendes schmerzendes schmerzendes (clu-cla-cla-clas-) klatschte diese Becken zusammen. Wie (die Beine) die beiden Beine bewegten, (um) es war auf seinen Hinterbeinen, (uh) bewegte sich rückwärts und vorwärts. Und aus welchem Grund auch immer, ich dachte, das war fantastisch."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1082_1527_16kHz.wav",
+      "Created": "2023-08-01 20:01:08",
+      "CreatedOrModified": "2023-08-29 14:42:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What fictional character do you wish was real and why?",
+        "Transcript": "[What fictional character do you wish was real and why?] I grew up in the era of I Dream of Jeannie and (uh uh) Bewitched, which were both TV shows about a genie and a witch (um) in suburban America. (uh) Even though I was in Australia. (Uh) And (I think that I would) I think (I would love um) I'd love the genie to be true. Or to be real because she could grant me three wishes (and uh um). (It was) It was a sun show. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "[Welche fiktive Figur wünscht ihr, war real und warum?] Ich wuchs in der Ära von I Dream of Jeannie auf und (uh uh) Bewitched, die beide Fernsehsendungen über einen Genie und eine Hexe (um) in Vorort Amerika waren. (uh) Obwohl ich in Australien war. (Uh) Und (ich denke, dass ich) Ich denke (ich würde lieben um) Ich würde den Geist lieben, um wahr zu sein. Oder real zu sein, weil sie mir drei Wünsche (und uh um) gewähren konnte. (Es war) Es war eine Sonnensendung."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1077_1427_16kHz.wav",
+      "Created": "2023-07-16 20:18:58",
+      "CreatedOrModified": "2023-08-07 10:46:01",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell us about one of your favorite bands or singers.",
+        "Transcript": "[Tell us about one of your favorite bands or singers.] I really like David Byrne (um as a) as an artist, singer. (Um) I loved his band Talking Heads (uh) in the nineties, maybe eighties, (um) it might be that long ago now. And (um I really um) I think he's evolved and changed. He's had many iterations (of uh) of producing Brazilian music and (wor-) world music his {g: concerts} really put on stage by him, I think. (Uh) and (um) his original (m-) songs, (um) post Talking Heads, I think (are) a few of his albums I really love. (Um) and (he's) he's got a lovely voice, but he's a great song writer and it's (uh) the (I think it's a- uh) I love his style. (It's uh it's his it's) It's not his singing voice, it's his musical genius I think of (in-) inventing and creating and singing new ways of doing things and. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "Ich mag David Byrne (um als a) als Künstler, Sänger. (Um) Ich liebte seine Band Talking Heads (uh) in den 90er Jahren, vielleicht achtziger Jahre, (um) es könnte schon lange her sein. Und (um ich wirklich um) ich glaube, er hat sich entwickelt und verändert. Er hatte viele Iterationen (von uh) der Produktion brasilianischer Musik und (schlecht) Weltmusik seine {g: Konzerte} wirklich auf die Bühne von ihm gesetzt, ich denke. (Uh) und (um) seine ursprünglichen (m-) Songs, (um) Post Talking Heads, ich glaube (sind) ein paar seiner Alben, die ich wirklich liebe. (Um) und (er) hat eine schöne Stimme, aber er ist ein großer Songwriter und es ist (uh) die (ich denke, es ist ein- uh) Ich liebe seinen Stil. (es ist es, es ist sein es) Es ist nicht seine singende Stimme, und es ist in seiner Art und Weise zu singen, denke ich an seine Musik."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:12:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:12:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:12:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:12:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:12:04"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:12:04"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:12:04"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:12:04"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:12:04"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Repeated phonemes",
+          "Dimension Category Description": "Master",
+          "RatingDate": "2023-07-19 17:12:04"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:12:04"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:12:04"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:12:04"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1078_1427_16kHz.wav",
+      "Created": "2023-07-16 20:21:10",
+      "CreatedOrModified": "2023-08-07 10:52:42",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Talk about some of your hobbies.",
+        "Transcript": "[Talk about some of your hobbies.] (Uh) I'm a bit of a (um s- th- um su-) somebody who starts things and (uh) doesn't (r-) flits from thing to thing. (Uh) I've forgotten the word for it, but (um). (Uh I) I did collage (and um b-) which I used a lot of fabrics (m- from um) from Africa. And (um uh) paint and photo copies and I'd draw on top of things on top of patterns and connect the things needed with paint and ink. (Um that) I love doing that (um). (Uh and I've) I haven't done it in a while, but I'm going to get back to that. (Um I) I like exercising, fortunately because with Parkinson's you need to do that. (Uh) I love hiking, which I have not been doing a whole lot of (um) lately. (uh um) I love skiing, which also I haven't been doing too much of the last couple of years (um) like not at all. (Um) I really like the theater. Going to the theater and living (back back) being back in New York City. This is a great place to, you know, you have to see those theater. And (uh) museums, art galleries of (um fantas- m- mul-) multiple great galleries. (And um uh) And the New York Philharmonic. I think (that's th-) there's some of my hobbies. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "(Uh) Ich habe das Wort vergessen, aber (um) Ich habe Collage (und um b) die ich eine Menge Stoffe (m- aus um) aus Afrika benutzt habe. Und (um uh) malen und Fotokopien und ich würde auf die Dinge auf die oben auf Muster zeichnen und die Dinge, die mit Farbe und Tinte benötigt werden verbinden. (Um das) Ich liebe es, das zu tun (um). (Uh und ich) habe es nicht in einer Weile getan, aber ich werde wieder auf die Dinge zurück zu bekommen. (Um ich) Ich mag trainieren, glücklich, weil mit Parkinson Sie müssen das tun. (Uh) Ich liebe Wandern, die ich eine ganze Menge von (um) in letzter Zeit. (uh) Ich werde zu bekommen, um die Stadt zu skifahren, die ich habe auch ein großes Paar zu tun. (Uh) Ich habe viel zu viel zu viel zu tun."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:14:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:14:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:14:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:14:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:14:05"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:14:05"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:14:05"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:14:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:14:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:14:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:14:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:14:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Repeated phonemes",
+          "Dimension Category Description": "Master",
+          "RatingDate": "2023-07-19 17:14:05"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1079_1427_16kHz.wav",
+      "Created": "2023-07-16 20:23:26",
+      "CreatedOrModified": "2023-08-07 14:01:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell us about a book, movie, or video you have recently enjoyed.",
+        "Transcript": "[Tell us about a book, movie, or video you have recently enjoyed.] (Uh) I saw (um) a movie (that). Don't know if it actually won anything in the (uh) Oscars (um), but it was certainly a (nomin-) nominee. Which is (uh) the Banshees of Inisherin. Of (Inisher-). The Banshees of, I think it was Inisherin. (Um) which was about a place in Ireland during the easter uprising. So about nineteen forty I think, nineteen thirties, something like that. On this remote island off the coast of the (uh) country of Ireland. (Um uh) And it was incredibly great cinematography. (Um) Just beautiful landscape, vast scenery. (And um) The two main characters, who were just grappling (with) with mortality and friendship and meaning (and um) and (uh) (the) the really (the difficulty in um th- th-) the difficulty in communication. In communicating their internal landscapes so (um). Anyway, (it was a) it was a pretty heavy play but (uh th-) not play (mo-) movie but (um) I thought (it was) it was (basi-) written by a playwright. (Um) I thought it was really great film.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "(Uh) Ich sah (um) einen Film (das). Ich weiß nicht, ob er tatsächlich etwas in den (uh) Oscars (um) gewonnen hat, aber es war sicherlich ein (Nomin-)Nominierter. Das ist (uh) die Banshees von Inisherin. Von (Inisher-). Die Banshees von, ich glaube, es war Inisherin. (Um) das war ein Ort in Irland während des Ostaufstandes. Also etwa 19 vierzig, denke ich, neunzehn dreißiger Jahre, so etwas. Auf dieser abgelegenen Insel vor der Küste des (uh) Landes Irland. (Um) Und es war unglaublich große Kinematographie. (Um) Nur schöne Landschaft, riesige Landschaft. (Und um) Die beiden Hauptfiguren, die nur grappling (mit) mit Mortalität und Freundschaft und Bedeutung (und um) und (Uh) (die) die wirklich (die Schwierigkeit in der Kommunikation) war es ein Spiel, das ein ziemliches Spiel war (und um Film war.)"
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:15:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:15:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:15:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:15:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:15:58"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:15:58"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:15:58"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:15:58"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:15:58"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:15:58"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:15:58"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:15:58"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1080_1427_16kHz.wav",
+      "Created": "2023-07-16 20:24:35",
+      "CreatedOrModified": "2023-08-07 13:50:27",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How do you keep up to date with the news?",
+        "Transcript": "[How do you keep up to date with the news?] (Uh) I listen to NPR, (um str- uh) stream it at home. And (uh) look at headlines (um n-) New York Times digitally. And (uh) The Guardian digitally. (Um) Occasionally, I used to have the BBC World as my home page, but not so much. (N-) not anymore. (Um) And (um I) I think {g: I get a lot of news} (in uh) on the web now. (Uh) Yeah (and) and podcasts, I listen to The Daily. (Not) not daily but I listen to it, (um) which is a New York Times podcast. And (um) I think that's about it for my sources of news. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "[Wie halten Sie sich mit den Nachrichten auf dem Laufenden?] (Uh) Ich höre NPR, (um str- uh) streamt es zu Hause. Und (uh) schauen Sie sich Schlagzeilen (um n-) New York Times digital an. Und (uh) The Guardian digital. (um) Gelegentlich hatte ich die BBC World als meine Homepage, aber nicht so viel. (N-) nicht mehr. (um) Und (um I) Ich denke {g: Ich bekomme jetzt eine Menge Nachrichten} (in uh) im Internet. (Uh) Ja (und) und Podcasts, ich höre The Daily. (Nicht) nicht täglich, aber ich höre es, (um) das ist ein New York Times Podcast. Und (um) Ich denke, das ist es für meine Nachrichtenquellen."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:17:15"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:17:15"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:17:15"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:17:15"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:17:15"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:17:15"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:17:15"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:17:15"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:17:15"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:17:15"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:17:15"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:17:15"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1117_1427_16kHz.wav",
+      "Created": "2023-07-16 20:26:48",
+      "CreatedOrModified": "2023-08-28 17:13:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please explain the steps to make your favorite sandwich or other lunch food.",
+        "Transcript": "[Please explain the steps to make your favorite sandwich or other lunch food.] (Uh) I sometimes for lunch I'll have a (s-) smoothie. And I put in as much (um) fibrous stuff as I can. (I've got a) in the fridge I've got (a bag) a little box that I keep, (pack-) packets of (um) flax seed. I put (um um) a couple of tablespoons of ground flax seed. And (um) chia seed. (One uh) It's a table or a half tablespoon of that. And (um super greens) super greens (um) powder. And (um um mushroom) something mushroom and (um um) some other powder, I can't remember which one that is. (um) And then I put some protein powder in. And then I put (b- b-) banana and carrots maybe if I've got some and micro greens if I've got any. (uh) And (um) with some (oat) oat milk, (um) water or (ju-) juice, sometimes a bit of orange juice. And I put it in the blender and turn it to a liquidy pulpy sort of (almost), you can almost spoon it out and (it it) I have that for lunch. It sounds just disgusting. Oh and some (blue-) frozen blueberries I usually put in too. It sounds just (dis-) disgusting and it looks awful. But (it's it's) it's filling and it's I think good for you. Or good for me. (I)",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Procedural question",
+        "Translation": "(Uh) Manchmal habe ich zum Mittagessen eine (s-) Smoothie. Und ich habe so viel (um) Faserstoff wie ich kann. (ich habe eine) im Kühlschrank habe ich (eine) eine kleine Schachtel, die ich halte, (Pack-) Pakete von (um) Flachssamen. Ich habe (um) ein paar Esslöffel gemahlenen Flachssamen. Und (um) Chiasamen. (ein) Es ist ein Tisch oder ein halbes Esslöffel davon. Und (um) Super Greens (um) Pulver. Und (um) Pilz etwas und (um) etwas anderes Pulver, ich kann nicht daran erinnern, welches ist. (um) Und dann habe ich etwas Protein Pulver in. Und dann legte ich (b-b-) Bananen und Karotten vielleicht, wenn ich etwas und Mikro-Grüne, wenn ich habe. (uh) gut, dass ist, dass (um) Es ist, dass es ein wenig Saft (aber) Es ist ein wenig kühle und kühle."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:19:13"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:19:13"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:19:13"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:19:13"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:19:13"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:19:13"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:19:13"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:19:13"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:19:13"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:19:13"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:19:13"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:19:13"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Repeated phonemes",
+          "Dimension Category Description": "Master",
+          "RatingDate": "2023-07-19 17:19:13"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1126_1527_16kHz.wav",
+      "Created": "2023-08-01 20:02:18",
+      "CreatedOrModified": "2023-08-28 14:23:05",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please explain the steps to change a tire on a car.",
+        "Transcript": "[Please explain the steps to change a tire on a car.] I am not well versed in changing tires on cars. But I would suspect you need to loosen nuts and bolts to (unsu- undi- disenga- uh) take the tire off. And (uh you) first of all, actually you need to hoist the car up on the jack so it is not on the ground so you can get the wheel off. And (um) loosen whatever's (uh) holding it on. And (uh) take it off and replace (uh) the (uh) tire that isn't damaged. And tighten it up on the wheel (the) on the axel. And (um) that would be a changed tire. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Procedural question",
+        "Translation": "[Bitte erklären Sie die Schritte, um einen Reifen auf einem Auto zu wechseln.] Ich bin nicht gut im Reifenwechsel auf Autos. Aber ich vermute, Sie müssen Nüsse und Schrauben zu lösen (unsu-undi-disenga- uh) nehmen den Reifen aus. Und (uh Sie) zunächst einmal, eigentlich müssen Sie das Auto auf dem Wagenheber zu hissen, so dass es nicht auf dem Boden, so dass Sie das Rad aus. Und (um) lockern, was immer (uh) hält es an. Und (uh) nehmen Sie es aus und ersetzen (uh) den (uh) Reifen, der nicht beschädigt ist. Und ziehen Sie es auf dem Rad (dem) auf dem Axt. Und (um) das wäre ein veränderter Reifen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1119_1845_16kHz.wav",
+      "Created": "2023-08-01 20:20:37",
+      "CreatedOrModified": "2023-08-29 14:34:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please explain the steps to making breakfast for 4 people.",
+        "Transcript": "[Please explain the steps to making breakfast for 4 people.] Well so to make breakfast for four people, you need to have four plates or bowls, depending on what you're making. And (um uh) make sure you've got enough content for four people. So for pancakes, maybe you'd want to make two pancakes each so you would get plates. Four plates out and one big plate. And (um) do a batch of pancake mix. Do enough for four, six people even. (Um) With the egg and the flour and butter, and I need the oil in the pan. (um) And I like putting blueberries in them. (Uh) And just (um keep) keep the plate warm and keep on (uh) making pancakes until you've got enough for everybody and then put the plates up on the table with knifes and forks and some maple syrup. Maybe some cream, maybe bananas. (Uh) And something to drink. Probably orange juice and (uh) the option of coffee or chai tea. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Procedural question",
+        "Translation": "[Bitte erklären Sie die Schritte, um Frühstück für 4 Personen.] Nun, um Frühstück für vier Personen, Sie brauchen vier Teller oder Schüsseln, je nachdem, was Sie machen. Und (um uh) stellen Sie sicher, dass Sie genug Inhalt für vier Personen. Also für Pfannkuchen, vielleicht würden Sie zwei Pfannkuchen jeden machen, so dass Sie Platten zu bekommen. Vier Teller und ein großer Teller. Und (um) tun eine Partie Pfannkuchen Mix. Machen Sie genug für vier, sechs Personen sogar. (Um) Mit dem Ei und dem Mehl und Butter, und ich brauche das Öl in der Pfanne. (um) Und ich mag das Setzen von Heidelbeeren in ihnen. (Uh) Und nur (um halten) halten Sie die Platte warm und halten (uh) machen Pfannkuchen, bis Sie genug für alle haben und dann setzen Sie die Teller auf den Tisch mit Messern und Gabeln und etwas Ahornsirup. Vielleicht etwas Sahne, vielleicht Bananen. (Uh) Und etwas zu trinken. Wahrscheinlich Orangensaft und (uh) die Option von Kaffee oder Chai Tee."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_81_1846_16kHz.wav",
+      "Created": "2023-08-25 23:57:02",
+      "CreatedOrModified": "2023-08-29 14:25:27",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Like this song.",
+        "Transcript": "Like this song.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie dieses Lied."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_82_1846_16kHz.wav",
+      "Created": "2023-08-25 23:57:16",
+      "CreatedOrModified": "2023-08-29 14:25:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "When did this song come out?",
+        "Transcript": "When did this song come out?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wann ist das Lied erschienen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_53_1845_16kHz.wav",
+      "Created": "2023-08-01 20:03:34",
+      "CreatedOrModified": "2023-08-20 16:03:58",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Play music on living room speakers.",
+        "Transcript": "Play music on living room speakers.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Spielen Sie Musik auf Wohnzimmer Lautsprecher."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1064_1427_16kHz.wav",
+      "Created": "2023-07-16 20:06:34",
+      "CreatedOrModified": "2023-07-26 19:53:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the time?",
+        "Transcript": "What's the time?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie spät ist es?"
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:58:52"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:58:52"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:58:52"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:58:52"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:58:52"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:58:52"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:58:52"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:58:52"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:58:52"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:58:52"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:58:52"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:58:52"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1062_1427_16kHz.wav",
+      "Created": "2023-07-16 20:06:57",
+      "CreatedOrModified": "2023-07-26 19:53:32",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Answer the call.",
+        "Transcript": "Answer the call.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Geh ran."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:59:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:59:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:59:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:59:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:59:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:59:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:59:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:59:37"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:59:37"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:59:37"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:59:37"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 16:59:37"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1073_1427_16kHz.wav",
+      "Created": "2023-07-16 20:07:19",
+      "CreatedOrModified": "2023-07-26 19:53:56",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Start listening",
+        "Transcript": "Start listening",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Fangen Sie an zu hören"
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:18"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:18"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:18"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:18"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:18"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:18"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:18"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:18"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:18"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:18"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:18"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:18"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1058_1427_16kHz.wav",
+      "Created": "2023-07-16 20:07:42",
+      "CreatedOrModified": "2023-07-26 19:54:44",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Add this music to favorites.",
+        "Transcript": "Add this music to favorites.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Fügen Sie diese Musik zu Favoriten hinzu."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:01:47"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:01:47"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:01:47"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:01:47"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:01:47"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:01:47"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:01:47"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:01:47"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:01:47"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:01:47"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:01:47"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:01:47"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1055_1427_16kHz.wav",
+      "Created": "2023-07-16 20:08:20",
+      "CreatedOrModified": "2023-07-26 19:55:45",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make the text larger.",
+        "Transcript": "Make the text larger.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Machen Sie den Text größer."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1068_1427_16kHz.wav",
+      "Created": "2023-07-16 20:09:06",
+      "CreatedOrModified": "2023-07-27 12:36:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Lower the temperature.",
+        "Transcript": "Lower the temperature.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Senken Sie die Temperatur."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1072_1427_16kHz.wav",
+      "Created": "2023-07-16 20:09:32",
+      "CreatedOrModified": "2023-07-27 12:36:36",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Increase volume to maximum.",
+        "Transcript": "Increase volume to maximum.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Volumen auf Maximum erhöhen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1059_1427_16kHz.wav",
+      "Created": "2023-07-16 20:09:42",
+      "CreatedOrModified": "2023-07-27 12:37:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Open reminders.",
+        "Transcript": "Open reminders.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Erinnerungen öffnen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1075_1427_16kHz.wav",
+      "Created": "2023-07-16 20:10:02",
+      "CreatedOrModified": "2023-07-27 12:37:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on all switches.",
+        "Transcript": "(Turn) turn on all switches.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie alle Schalter ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1074_1427_16kHz.wav",
+      "Created": "2023-07-16 20:10:13",
+      "CreatedOrModified": "2023-07-27 12:38:26",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on cooling.",
+        "Transcript": "Turn on cooling.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Kühlen anschalten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1065_1427_16kHz.wav",
+      "Created": "2023-07-16 20:10:24",
+      "CreatedOrModified": "2023-07-27 12:39:19",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip this song.",
+        "Transcript": "Skip this song.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Überspring das Lied."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1060_1427_16kHz.wav",
+      "Created": "2023-07-16 20:10:35",
+      "CreatedOrModified": "2023-07-27 12:40:17",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's on my calendar tomorrow?",
+        "Transcript": "What's on my calendar tomorrow?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Was steht morgen in meinem Kalender?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1061_1427_16kHz.wav",
+      "Created": "2023-07-16 20:10:46",
+      "CreatedOrModified": "2023-07-27 12:45:26",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What restaurants are nearby?",
+        "Transcript": "(What) what restaurants are nearby?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(Was) Welche Restaurants sind in der Nähe?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1067_1427_16kHz.wav",
+      "Created": "2023-07-16 20:11:08",
+      "CreatedOrModified": "2023-07-27 12:53:12",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Stop listening",
+        "Transcript": "Stop listening",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Hör auf zu hören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1066_1427_16kHz.wav",
+      "Created": "2023-07-16 20:11:20",
+      "CreatedOrModified": "2023-07-27 12:56:15",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather like today?",
+        "Transcript": "What's the weather like today? ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie ist das Wetter heute?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1063_1427_16kHz.wav",
+      "Created": "2023-07-16 20:11:32",
+      "CreatedOrModified": "2023-07-27 12:57:51",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off the TV.",
+        "Transcript": "Turn off the TV.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie den Fernseher aus."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1052_1427_16kHz.wav",
+      "Created": "2023-07-16 20:11:43",
+      "CreatedOrModified": "2023-07-27 13:01:41",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Find my phone.",
+        "Transcript": "Find my phone.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Such mein Handy."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1070_1427_16kHz.wav",
+      "Created": "2023-07-16 20:12:04",
+      "CreatedOrModified": "2023-07-27 14:16:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me the news.",
+        "Transcript": "Tell me the news.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Erzählen Sie mir die Nachrichten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1054_1427_16kHz.wav",
+      "Created": "2023-07-16 20:12:15",
+      "CreatedOrModified": "2023-07-27 14:16:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hang up.",
+        "Transcript": "Hang up.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Leg auf."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1053_1427_16kHz.wav",
+      "Created": "2023-07-16 20:12:35",
+      "CreatedOrModified": "2023-07-27 14:16:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's on my shopping list?",
+        "Transcript": "What's on my shopping list?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Was steht auf meiner Einkaufsliste?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1071_1427_16kHz.wav",
+      "Created": "2023-07-16 20:12:46",
+      "CreatedOrModified": "2023-07-27 14:17:27",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off heat.",
+        "Transcript": "Turn off the heat.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie die Hitze ab."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1076_1427_16kHz.wav",
+      "Created": "2023-07-16 20:13:01",
+      "CreatedOrModified": "2023-07-27 14:18:32",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call area code 053-621-4879.",
+        "Transcript": "(Call) call area code 053-621-4879.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Ruf die Ortsvorwahl 053-621-4879 an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1056_1427_16kHz.wav",
+      "Created": "2023-07-16 20:13:14",
+      "CreatedOrModified": "2023-07-27 14:19:00",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Decrease volume to minimum.",
+        "Transcript": "Decrease volume to minimum.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Volumen auf ein Minimum reduzieren."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1069_1427_16kHz.wav",
+      "Created": "2023-07-16 20:14:16",
+      "CreatedOrModified": "2023-07-27 14:20:27",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Stop the call.",
+        "Transcript": "Stop the call.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Hör auf zu telefonieren."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_1057_1427_16kHz.wav",
+      "Created": "2023-07-16 20:08:41",
+      "CreatedOrModified": "2023-07-27 12:35:23",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the temperature in the living room?",
+        "Transcript": "What's the temperature in the living room?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie ist die Temperatur im Wohnzimmer?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_21_1527_16kHz.wav",
+      "Created": "2023-07-16 20:28:34",
+      "CreatedOrModified": "2023-07-27 14:29:24",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn down the volume.",
+        "Transcript": "Turn down the volume.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Drehen Sie die Lautstärke."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_27_1527_16kHz.wav",
+      "Created": "2023-07-16 20:30:17",
+      "CreatedOrModified": "2023-07-27 14:41:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Fast forward 1 minute.",
+        "Transcript": "Fast forward 1 minute.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schnell 1 Minute."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_29_1527_16kHz.wav",
+      "Created": "2023-07-16 20:30:41",
+      "CreatedOrModified": "2023-07-27 14:38:22",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cortana, what's playing?",
+        "Transcript": "Cortana, what's playing? ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Cortana, was spielt ihr?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_33_1527_16kHz.wav",
+      "Created": "2023-07-16 20:31:35",
+      "CreatedOrModified": "2023-07-27 14:33:41",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Play 'Me and Bobby McGee' by Janis Joplin.",
+        "Transcript": "Play 'Me and Bobby McGee' by Janis Joplin.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Spiel \"Ich und Bobby McGee\" von Janis Joplin."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_43_1527_16kHz.wav",
+      "Created": "2023-07-16 20:33:52",
+      "CreatedOrModified": "2023-07-27 14:11:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Play the latest episode of 'This American Life'.",
+        "Transcript": "Play the latest episode of 'This American Life'.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Spielen Sie die neueste Episode von 'This American Life'."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_92_1846_16kHz.wav",
+      "Created": "2023-08-25 23:59:16",
+      "CreatedOrModified": "2023-08-30 19:49:43",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Facebook, turn down the sound.",
+        "Transcript": "Hey Facebook, turn down the sound.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Hey Facebook, leiser."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_90_1846_16kHz.wav",
+      "Created": "2023-08-25 23:58:53",
+      "CreatedOrModified": "2023-08-30 19:50:04",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Dislike this song.",
+        "Transcript": "Dislike this song.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "- Das Lied ist nicht zu hören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_99_1846_16kHz.wav",
+      "Created": "2023-08-26 00:05:51",
+      "CreatedOrModified": "2023-08-30 19:47:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Help me relax.",
+        "Transcript": "Help me relax.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Hilf mir, mich zu entspannen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_103_1846_16kHz.wav",
+      "Created": "2023-08-26 00:06:46",
+      "CreatedOrModified": "2023-08-30 19:43:30",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Read 'To Kill A Mockingbird' on Audiobook.",
+        "Transcript": "Read (t-) 'To Kill A Mockingbird' on Audiobook.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Lies (t-) 'Um einen Mockingbird zu töten' auf Hörbuch."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_102_1846_16kHz.wav",
+      "Created": "2023-08-26 00:06:34",
+      "CreatedOrModified": "2023-08-30 19:43:41",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Preheat the oven to 200 degrees.",
+        "Transcript": "Preheat the oven to 200 degrees.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Den Ofen auf 200 Grad vorheizen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_85_1846_16kHz.wav",
+      "Created": "2023-08-25 23:57:53",
+      "CreatedOrModified": "2023-08-29 14:26:21",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn down the temperature 1 degree.",
+        "Transcript": "Turn down the temperature 1 degree.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Drehen Sie die Temperatur um 1 Grad."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_86_1846_16kHz.wav",
+      "Created": "2023-08-25 23:58:03",
+      "CreatedOrModified": "2023-08-29 14:26:31",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off the basement light.",
+        "Transcript": "Turn off the basement light.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Schalten Sie das Kellerlicht aus."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_88_1846_16kHz.wav",
+      "Created": "2023-08-25 23:58:30",
+      "CreatedOrModified": "2023-08-29 14:26:54",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on the kitchen light.",
+        "Transcript": "Turn on the kitchen light.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Schalten Sie die Küchenbeleuchtung an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_44_1527_16kHz.wav",
+      "Created": "2023-07-16 20:34:05",
+      "CreatedOrModified": "2023-07-27 14:11:20",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn up the temperature 2 degrees.",
+        "Transcript": "Turn up the temperature 2 degrees.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Drehen Sie die Temperatur 2 Grad."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_45_1527_16kHz.wav",
+      "Created": "2023-07-16 20:34:16",
+      "CreatedOrModified": "2023-07-27 14:10:56",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make it warmer.",
+        "Transcript": "(M-) make it warmer.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "(M-) Mach es wärmer."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_18_1527_16kHz.wav",
+      "Created": "2023-07-16 20:27:25",
+      "CreatedOrModified": "2023-07-27 14:15:47",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on heat.",
+        "Transcript": "Turn on heat.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "- Mach die Hitze an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_50_1845_16kHz.wav",
+      "Created": "2023-08-01 20:02:58",
+      "CreatedOrModified": "2023-08-19 13:03:21",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Raise the temperature.",
+        "Transcript": "Raise the temperature.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Erhöhen Sie die Temperatur."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_51_1845_16kHz.wav",
+      "Created": "2023-08-01 20:03:09",
+      "CreatedOrModified": "2023-08-19 13:03:29",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Answer the door.",
+        "Transcript": "Answer the door.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Geh zur Tür."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_69_1845_16kHz.wav",
+      "Created": "2023-08-01 20:07:49",
+      "CreatedOrModified": "2023-08-20 16:07:40",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off all switches.",
+        "Transcript": "Turn off all switches.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Schalten Sie alle Schalter ab."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_73_1845_16kHz.wav",
+      "Created": "2023-08-01 20:09:19",
+      "CreatedOrModified": "2023-08-20 16:08:39",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Unlock the front door.",
+        "Transcript": "Unlock the front door.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Schließ die Vordertür auf."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_74_1845_16kHz.wav",
+      "Created": "2023-08-01 20:09:33",
+      "CreatedOrModified": "2023-08-20 16:08:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Lower the temperature 4 degrees.",
+        "Transcript": "Lower the temperature 4 degrees.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Senken Sie die Temperatur 4 Grad."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_104_1846_16kHz.wav",
+      "Created": "2023-08-26 00:06:56",
+      "CreatedOrModified": "2023-08-30 19:43:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Broadcast 'It's time to wake up.'",
+        "Transcript": "Broadcast 'It's time to wake up.'",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Broadcast over more than one speaker",
+        "Translation": "Es ist Zeit aufzuwachen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_84_1846_16kHz.wav",
+      "Created": "2023-08-25 23:57:40",
+      "CreatedOrModified": "2023-08-29 14:25:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Do I need an umbrella today?",
+        "Transcript": "Do I need an umbrella today?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Brauche ich heute einen Schirm?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_79_1846_16kHz.wav",
+      "Created": "2023-08-25 23:56:38",
+      "CreatedOrModified": "2023-08-29 14:25:01",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me news from ABC.",
+        "Transcript": "Tell me news from ABC.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Erzähl mir Neuigkeiten von ABC."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_80_1846_16kHz.wav",
+      "Created": "2023-08-25 23:56:51",
+      "CreatedOrModified": "2023-08-29 14:25:19",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the temperature outside?",
+        "Transcript": "(What-) what's the temperature outside?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "(Was-) Wie ist die Temperatur draußen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_65_1845_16kHz.wav",
+      "Created": "2023-08-01 20:06:47",
+      "CreatedOrModified": "2023-08-20 16:06:39",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is there a chance of rain tomorrow?",
+        "Transcript": "Is there a chance of rain tomorrow?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Gibt es morgen eine Chance auf Regen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_77_1845_16kHz.wav",
+      "Created": "2023-08-01 20:10:28",
+      "CreatedOrModified": "2023-08-20 16:09:36",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How far is home from Vietnam?",
+        "Transcript": "How far is home from Vietnam?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wie weit ist es von Vietnam entfernt?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_41_1527_16kHz.wav",
+      "Created": "2023-07-16 20:33:07",
+      "CreatedOrModified": "2023-08-02 17:12:21",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How far is Walmart from here?",
+        "Transcript": "How far is Walmart from here? (ss: That's a question I would never ask.)",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wie weit ist Walmart von hier entfernt? (ss: Das ist eine Frage, die ich nie stellen würde.)"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_63_1845_16kHz.wav",
+      "Created": "2023-08-01 20:06:12",
+      "CreatedOrModified": "2023-08-20 16:06:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "When is it going to rain?",
+        "Transcript": "When is it going to rain?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wann wird es regnen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_48_1845_16kHz.wav",
+      "Created": "2023-08-01 20:02:38",
+      "CreatedOrModified": "2023-08-19 13:03:01",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Navigate to home.",
+        "Transcript": "Navigate to home.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Nach Hause."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_20_1527_16kHz.wav",
+      "Created": "2023-07-16 20:28:06",
+      "CreatedOrModified": "2023-07-27 14:28:56",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the distance to Pluckley, England?",
+        "Transcript": "What's the distance to Pluckley, England?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wie weit ist es nach Pluckley, England?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_28_1527_16kHz.wav",
+      "Created": "2023-07-16 20:30:29",
+      "CreatedOrModified": "2023-07-27 14:39:18",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the latest in the World Cup?",
+        "Transcript": "What's the latest in the World Cup?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Was ist das Neueste in der Weltmeisterschaft?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_23_1527_16kHz.wav",
+      "Created": "2023-07-16 20:29:19",
+      "CreatedOrModified": "2023-07-27 14:45:36",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Who won the baseball game yesterday?",
+        "Transcript": "(Who won) who won the ball game yesterday?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "(Wer hat gewonnen) Wer hat gestern das Ballspiel gewonnen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_25_1527_16kHz.wav",
+      "Created": "2023-07-16 20:29:52",
+      "CreatedOrModified": "2023-07-27 14:44:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "When does the next train arrive?",
+        "Transcript": "(When does) when does the next train arrive?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "(Wann kommt der nächste Zug an?)"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_24_1527_16kHz.wav",
+      "Created": "2023-07-16 20:29:36",
+      "CreatedOrModified": "2023-07-27 14:45:18",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please call area code 555-333-1000.",
+        "Transcript": "Please call area code 555-333-1000.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Bitte rufen Sie die Ortskennung 555-333-1000 an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_34_1527_16kHz.wav",
+      "Created": "2023-07-16 20:31:45",
+      "CreatedOrModified": "2023-07-27 14:32:54",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Brighten the screen.",
+        "Transcript": "(Brighten) brighten the screen.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "(Brighten) Erhellen Sie den Bildschirm."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_35_1527_16kHz.wav",
+      "Created": "2023-07-16 20:31:56",
+      "CreatedOrModified": "2023-07-27 14:32:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Read my new email.",
+        "Transcript": "Read my new email.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Lies meine neue E-Mail."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_54_1845_16kHz.wav",
+      "Created": "2023-08-01 20:03:48",
+      "CreatedOrModified": "2023-08-20 16:04:15",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please call 555-244-2922.",
+        "Transcript": "Please call 555-244-2922.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Rufen Sie bitte 555-244-2922 an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_68_1845_16kHz.wav",
+      "Created": "2023-08-01 20:07:38",
+      "CreatedOrModified": "2023-08-20 16:07:29",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Get help.",
+        "Transcript": "(Ge-) get help.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "(Ge-) Hol Hilfe."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_66_1845_16kHz.wav",
+      "Created": "2023-08-01 20:07:03",
+      "CreatedOrModified": "2023-08-20 16:07:02",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Video call area code 650-253-0000.",
+        "Transcript": "(Video) video call area code 650-253-0000.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Video-Anruf-Code 650-253-000."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_87_1846_16kHz.wav",
+      "Created": "2023-08-25 23:58:16",
+      "CreatedOrModified": "2023-08-29 14:26:46",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Open Gmail to send a message to Layne Banks.",
+        "Transcript": "Open Gmail to send a message to Layne Banks.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Öffnen Sie Gmail, um eine Nachricht an Layne Banks zu senden."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_89_1846_16kHz.wav",
+      "Created": "2023-08-25 23:58:43",
+      "CreatedOrModified": "2023-08-30 19:50:14",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is the Guggenheim ADA compliant?",
+        "Transcript": "Is the Guggenheim ADA compliant?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Ist das Guggenheim ADA kompatibel?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_70_1845_16kHz.wav",
+      "Created": "2023-08-01 20:08:00",
+      "CreatedOrModified": "2023-08-20 16:07:51",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Buy tickets at 11 AM.",
+        "Transcript": "Buy tickets at 11 AM.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Tickets kaufen um 11 Uhr."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_71_1845_16kHz.wav",
+      "Created": "2023-08-01 20:08:35",
+      "CreatedOrModified": "2023-08-20 16:08:15",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What are the side effects of atorvastatin?",
+        "Transcript": "What are the side effects of (avor-) atorvastatin?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Welche Nebenwirkungen hat Atorvastatin (vor)?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_42_1527_16kHz.wav",
+      "Created": "2023-07-16 20:33:26",
+      "CreatedOrModified": "2023-07-27 14:12:43",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is Comerica Park ADA compliant?",
+        "Transcript": "Is Comerica Park ADA compliant?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Ist Comerica Park ADA kompatibel?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_40_1527_16kHz.wav",
+      "Created": "2023-07-16 20:32:54",
+      "CreatedOrModified": "2023-07-27 14:14:26",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How tall is Mount Everest?",
+        "Transcript": "How tall is Mount Everest ?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Wie groß ist der Mount Everest?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_47_1527_16kHz.wav",
+      "Created": "2023-07-16 20:34:43",
+      "CreatedOrModified": "2023-07-27 14:09:57",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Who won the gold medal in men's figure skating in the 1952 Winter Olympics?",
+        "Transcript": "Who won the gold medal in men's figure skating in the 1952 Winter Olympics?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Wer gewann die Goldmedaille bei den Herren-Eislauf-Wahlspielen 1952?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_64_1845_16kHz.wav",
+      "Created": "2023-08-01 20:06:35",
+      "CreatedOrModified": "2023-08-20 16:06:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Who is the lead character in 'Star Wars'?",
+        "Transcript": "Who is the lead character in 'Star Wars'?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Wer ist die Hauptrolle in 'Star Wars'?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_30_1527_16kHz.wav",
+      "Created": "2023-07-16 20:30:55",
+      "CreatedOrModified": "2023-07-27 14:37:29",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the conversion of 24 ounces to grams?",
+        "Transcript": "What's the conversion of 24 ounces to grams?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Wie ist die Umwandlung von 24 Unzen in Gramm?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_32_1527_16kHz.wav",
+      "Created": "2023-07-16 20:31:20",
+      "CreatedOrModified": "2023-07-27 14:34:39",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How do you say 'dinner' in Spanish?",
+        "Transcript": "How do you say 'dinner' in Spanish?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Wie sagt man \"dinner\" auf Spanisch?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_37_1527_16kHz.wav",
+      "Created": "2023-07-16 20:32:21",
+      "CreatedOrModified": "2023-07-27 14:32:02",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is South Rim Trail of the Grand Canyon wheelchair accessible?",
+        "Transcript": "Is South Rim of the Grand Canyon wheelchair accessible? ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Ist Südrand des Grand Canyon rollstuhlgerecht?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_38_1527_16kHz.wav",
+      "Created": "2023-07-16 20:32:34",
+      "CreatedOrModified": "2023-07-27 14:31:41",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How do you spell 'quarantine'?",
+        "Transcript": "How do you spell 'quarantine'?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Wie schreibt man \"Quarantäne\"?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_46_1527_16kHz.wav",
+      "Created": "2023-07-16 20:34:27",
+      "CreatedOrModified": "2023-07-27 14:10:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's on my to-do list?",
+        "Transcript": "What's on my to-do list?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Was steht auf meiner To-Do-Liste?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_31_1527_16kHz.wav",
+      "Created": "2023-07-16 20:31:08",
+      "CreatedOrModified": "2023-07-27 14:35:57",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "I parked on level 5.",
+        "Transcript": "I parked on level 5.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Ich habe auf Ebene 5 geparkt."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_36_1527_16kHz.wav",
+      "Created": "2023-07-16 20:32:08",
+      "CreatedOrModified": "2023-07-27 14:32:23",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Set an alarm for 7:00 AM.",
+        "Transcript": "(Se-) set an alarm for 7:00 AM.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "(Se-) Alarm für 7 Uhr morgens."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_26_1527_16kHz.wav",
+      "Created": "2023-07-16 20:30:07",
+      "CreatedOrModified": "2023-07-27 14:44:44",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Set a reminder for my wedding anniversary.",
+        "Transcript": "Set a reminder for my wedding anniversary.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Ich erinnere mich an meinen Hochzeitstag."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_19_1527_16kHz.wav",
+      "Created": "2023-07-16 20:27:48",
+      "CreatedOrModified": "2023-07-27 14:29:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Set a reminder to take Spironolactone at 9 PM.",
+        "Transcript": "Set a reminder to take Spironolactone at 9 PM.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Stellen Sie eine Erinnerung an Spironolacton um 21 Uhr ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_61_1845_16kHz.wav",
+      "Created": "2023-08-01 20:05:43",
+      "CreatedOrModified": "2023-08-20 16:05:43",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Find me a smoothie recipe with pineapple, blueberries, bananas, and orange juice.",
+        "Transcript": "Find me a smoothie recipe with pineapple, blueberries, bananas, and orange juice.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Finden Sie mir ein Smoothie-Rezept mit Ananas, Heidelbeeren, Bananen und Orangensaft."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_62_1845_16kHz.wav",
+      "Created": "2023-08-01 20:06:00",
+      "CreatedOrModified": "2023-08-20 16:06:00",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cancel alarm for 11.",
+        "Transcript": "(Cancel al) cancel alarm for 11.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "(Abbrechen) Alarm für 11."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_56_1845_16kHz.wav",
+      "Created": "2023-08-01 20:04:35",
+      "CreatedOrModified": "2023-08-20 16:04:39",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What time is it?",
+        "Transcript": "What time is it?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wie spät ist es?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_57_1845_16kHz.wav",
+      "Created": "2023-08-01 20:04:47",
+      "CreatedOrModified": "2023-08-20 16:04:52",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Do I have anything scheduled for Monday?",
+        "Transcript": "Do I have anything scheduled for Monday?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Habe ich Montag was vor?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_58_1845_16kHz.wav",
+      "Created": "2023-08-01 20:04:58",
+      "CreatedOrModified": "2023-08-20 16:05:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Set a reminder for my dentist appointment.",
+        "Transcript": "Set a reminder for my dentist appointment.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Stellen Sie eine Erinnerung für meinen Zahnarzttermin."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_59_1845_16kHz.wav",
+      "Created": "2023-08-01 20:05:13",
+      "CreatedOrModified": "2023-08-20 16:05:20",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cancel my meeting with Nova Rawda at 12:30.",
+        "Transcript": "Cancel my meeting with Nova Rawda at 12:30.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Ich breche mein Treffen mit Nova Rawda um 12:30 Uhr ab."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_52_1845_16kHz.wav",
+      "Created": "2023-08-01 20:03:22",
+      "CreatedOrModified": "2023-08-19 13:03:46",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Where is my first event tomorrow?",
+        "Transcript": "(Where is) where's my first event tomorrow?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "(Wo ist) Wo ist mein erstes Event morgen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_72_1845_16kHz.wav",
+      "Created": "2023-08-01 20:09:09",
+      "CreatedOrModified": "2023-08-20 16:08:28",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How many refills are left on my estradiol?",
+        "Transcript": "How many refills are left on my estradiol?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wie viele Nachfüllungen sind noch auf meinem Estradiol?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_75_1845_16kHz.wav",
+      "Created": "2023-08-01 20:09:51",
+      "CreatedOrModified": "2023-08-20 16:09:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Add 3 pairs of socks, pears, apples, and carrots to the shopping list.",
+        "Transcript": "Add 3 pairs of socks, pears, apples, and carrots to the shopping list.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Fügen Sie 3 Paar Socken, Birnen, Äpfel und Karotten auf die Einkaufsliste."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_67_1845_16kHz.wav",
+      "Created": "2023-08-01 20:07:14",
+      "CreatedOrModified": "2023-08-20 16:07:14",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Show me my alarms.",
+        "Transcript": "Show me my alarms.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Zeig mir meine Alarmanlage."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_83_1846_16kHz.wav",
+      "Created": "2023-08-25 23:57:30",
+      "CreatedOrModified": "2023-08-29 14:25:48",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Schedule a refill for my amantadine prescription.",
+        "Transcript": "Schedule a refill for my amantadine prescription.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Planen Sie einen Nachfüllplan für mein Amantadinrezept."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_93_1846_16kHz.wav",
+      "Created": "2023-08-25 23:59:30",
+      "CreatedOrModified": "2023-08-30 19:49:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Remember that I put my passport in the filing cabinet.",
+        "Transcript": "Remember that I put my passport in the filing cabinet.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Denk daran, dass ich meinen Pass in den Aktenschrank gelegt habe."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_94_1846_16kHz.wav",
+      "Created": "2023-08-25 23:59:47",
+      "CreatedOrModified": "2023-08-30 19:49:22",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How many refills are left on my risperidone?",
+        "Transcript": "How many refills are left on my risperidone?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wie viele Nachfüllungen sind noch auf meinem Risperidon?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_95_1846_16kHz.wav",
+      "Created": "2023-08-25 23:59:57",
+      "CreatedOrModified": "2023-08-30 19:49:08",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Delete my reminders for tomorrow.",
+        "Transcript": "Delete my reminders for tomorrow.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Lösche meine Erinnerungen für morgen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_96_1846_16kHz.wav",
+      "Created": "2023-08-26 00:00:05",
+      "CreatedOrModified": "2023-08-30 19:48:42",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Where did I park?",
+        "Transcript": "Where did I park?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wo habe ich geparkt?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_97_1846_16kHz.wav",
+      "Created": "2023-08-26 00:00:26",
+      "CreatedOrModified": "2023-08-30 19:48:24",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How many refills are left on my clindamycin risperidone?",
+        "Transcript": "How many refills are left on my clindamycin risperidone?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wie viele Nachfüllungen sind noch auf meinem Clindamycin Risperidon?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_98_1846_16kHz.wav",
+      "Created": "2023-08-26 00:05:41",
+      "CreatedOrModified": "2023-08-30 19:47:46",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How many refills are left on my lorazepam?",
+        "Transcript": "How many refills are left on my lorazepam?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wie viele Nachfüllungen sind noch auf meinem Lorazepam?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_100_1846_16kHz.wav",
+      "Created": "2023-08-26 00:06:10",
+      "CreatedOrModified": "2023-08-30 19:47:28",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "My parking space is blue.",
+        "Transcript": "My parking space is blue.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Mein Parkplatz ist blau."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_101_1846_16kHz.wav",
+      "Created": "2023-08-26 00:06:23",
+      "CreatedOrModified": "2023-08-30 19:43:52",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Set a reminder to take Potassium at 2 PM.",
+        "Transcript": "Set a reminder to take Potassium at 2 PM.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Stellen Sie eine Erinnerung an Kalium auf 14 Uhr."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_91_1846_16kHz.wav",
+      "Created": "2023-08-25 23:59:04",
+      "CreatedOrModified": "2023-08-30 19:49:54",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How many refills are left on my baclofen?",
+        "Transcript": "How many refills are left on my baclofen?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wie viele Nachfüllungen sind noch auf meinem Baclofen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_76_1845_16kHz.wav",
+      "Created": "2023-08-01 20:10:04",
+      "CreatedOrModified": "2023-08-20 16:09:20",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What are the best places for vacation in January?",
+        "Transcript": "What are the best places for vacation in January?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Plan a Trip or an Outdoor Visit",
+        "Translation": "Was sind die besten Plätze für Urlaub im Januar?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_55_1845_16kHz.wav",
+      "Created": "2023-08-01 20:04:05",
+      "CreatedOrModified": "2023-08-20 16:04:29",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make me a reservation at Archibald's.",
+        "Transcript": "Make me a reservation at Archibald's.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Plan a Trip or an Outdoor Visit",
+        "Translation": "- Ich muss bei Archibald reservieren."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_60_1845_16kHz.wav",
+      "Created": "2023-08-01 20:05:25",
+      "CreatedOrModified": "2023-08-20 16:05:29",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Facebook.",
+        "Transcript": "Hey Facebook.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey Facebook."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_49_1845_16kHz.wav",
+      "Created": "2023-08-01 20:02:49",
+      "CreatedOrModified": "2023-08-19 13:03:11",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Google.",
+        "Transcript": "Hey Google.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey, Google. - Hey, Google."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_78_1846_16kHz.wav",
+      "Created": "2023-08-25 23:56:10",
+      "CreatedOrModified": "2023-08-29 14:24:51",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Siri.",
+        "Transcript": "Hey Siri.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "- Hey Siri. - Ich bin ein guter Freund."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_49_1427_16kHz.wav",
+      "Created": "2023-07-16 20:10:57",
+      "CreatedOrModified": "2023-07-27 12:47:18",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Google.",
+        "Transcript": "Hey Google.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey, Google. - Hey, Google."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_60_1427_16kHz.wav",
+      "Created": "2023-07-16 20:08:29",
+      "CreatedOrModified": "2023-07-26 19:56:00",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Facebook.",
+        "Transcript": "Hey Facebook.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey Facebook."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_148_1427_16kHz.wav",
+      "Created": "2023-07-16 20:07:59",
+      "CreatedOrModified": "2023-07-26 19:55:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cortana.",
+        "Transcript": "Cortana.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Cortana. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_78_1427_16kHz.wav",
+      "Created": "2023-07-16 20:07:27",
+      "CreatedOrModified": "2023-07-26 19:54:17",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Siri.",
+        "Transcript": "Hey Siri.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "- Hey Siri. - Ich bin ein guter Freund."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous) ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligbility ",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch level",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short rushes of speech",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:58"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Variable rate",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:58"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Parkinson Disease ",
+          "RatingDate": "2023-07-19 17:00:58"
+        }
+      ]
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_39_1427_16kHz.wav",
+      "Created": "2023-07-16 20:08:57",
+      "CreatedOrModified": "2023-07-27 12:35:44",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Alexa.",
+        "Transcript": "Alexa.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Alexa. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_39_1527_16kHz.wav",
+      "Created": "2023-07-16 20:32:43",
+      "CreatedOrModified": "2023-07-27 14:15:16",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Alexa.",
+        "Transcript": "Alexa.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Alexa. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "29d01a4d-950a-4c6d-6e21-08db76c46b9c_22_1527_16kHz.wav",
+      "Created": "2023-07-16 20:29:07",
+      "CreatedOrModified": "2023-07-27 14:29:54",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please send this email: \"Dear customer service, comma. I am writing about the status of order number 384972, period. Do you have a tracking update, question mark. Thank you, period.\"",
+        "Transcript": "Please send this email: \"Dear customer service, comma. I am writing about the status of order number 384972, period. Do you have a tracking update, question mark. Thank you, period.\"",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Text Dictation",
+        "Translation": "Bitte senden Sie diese E-Mail: \"Lieber Kundenservice, Komma. Ich schreibe über den Status der Bestellnummer 384972, Zeitraum. Haben Sie ein Tracking-Update, Fragezeichen. Danke, Zeitraum.\""
+      },
+      "Ratings": []
+    }
+  ]
+}

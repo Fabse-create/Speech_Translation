@@ -1,0 +1,2473 @@
+{
+  "Contributor ID": "109686bb-8e54-4ad7-530d-08dc95210be1",
+  "Do you consider U.S. English to be your first language": "No Response Supplied",
+  "What language(s) do you speak": "No Response Supplied",
+  "What age did you start speaking English": "No Response Supplied",
+  "I consent to have my voice samples shared in public at research conferences and similar professional meetings, and to have digital audio files of my voice be shared as part of professional research publications.": "No Response Supplied",
+  "Etiology": "Cerebral Palsy",
+  "BlockNumber": 2,
+  "Files": [
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29098_6607_16kHz.wav",
+      "Created": "2024-06-25 12:20:07",
+      "CreatedOrModified": "2024-06-27 16:47:20",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is the pharmacy open?",
+        "Transcript": "Pharmacy open?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Apotheke geöffnet?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29094_6607_16kHz.wav",
+      "Created": "2024-06-25 12:21:14",
+      "CreatedOrModified": "2024-06-28 00:18:27",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please send this text.",
+        "Transcript": "Please send this text. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Bitte senden Sie diesen Text."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29095_6607_16kHz.wav",
+      "Created": "2024-06-25 12:21:31",
+      "CreatedOrModified": "2024-06-28 00:19:08",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Reschedule my meeting.",
+        "Transcript": "Reschedule my meeting.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Verlegen Sie mein Treffen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29083_6607_16kHz.wav",
+      "Created": "2024-06-25 12:21:45",
+      "CreatedOrModified": "2024-06-28 00:19:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Stop listening.",
+        "Transcript": "Stop listening.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Hör auf zu hören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29097_6607_16kHz.wav",
+      "Created": "2024-06-25 12:23:29",
+      "CreatedOrModified": "2024-06-28 00:28:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make the screen brighter.",
+        "Transcript": "Make screen brighter.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Mach den Bildschirm heller."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29096_6607_16kHz.wav",
+      "Created": "2024-06-25 12:24:44",
+      "CreatedOrModified": "2024-06-28 00:32:56",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Send a message.",
+        "Transcript": "Send message.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Nachricht senden."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29120_6608_16kHz.wav",
+      "Created": "2024-06-25 12:36:06",
+      "CreatedOrModified": "2024-06-28 01:05:47",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Take fish oil at bedtime.",
+        "Transcript": "Take fish oil at bedtime.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Nimm Fischöl zum Schlafenszeitpunkt."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29370_6608_16kHz.wav",
+      "Created": "2024-06-25 12:36:31",
+      "CreatedOrModified": "2024-06-28 01:06:04",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather on February 1st?",
+        "Transcript": "What's the weather February 1st?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wie ist das Wetter am 1. Februar?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29354_6608_16kHz.wav",
+      "Created": "2024-06-25 12:40:27",
+      "CreatedOrModified": "2024-06-28 01:13:15",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call Shawna Brock.",
+        "Transcript": "Call (Shawna cook) Shawna Brock.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ruf an (Shawna Koch) Shawna Brock."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29251_6608_16kHz.wav",
+      "Created": "2024-06-25 12:40:52",
+      "CreatedOrModified": "2024-06-28 01:14:00",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is the MOMA ADA compliant?",
+        "Transcript": "Is the MOMA ADA compliant?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ist die MOMA ADA kompatibel?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29347_6608_16kHz.wav",
+      "Created": "2024-06-25 12:43:32",
+      "CreatedOrModified": "2024-06-28 01:18:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Thank you. Period.",
+        "Transcript": "Thank you. Period.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "- Danke, ich bin in der Zeit."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29368_6608_16kHz.wav",
+      "Created": "2024-06-25 12:42:26",
+      "CreatedOrModified": "2024-06-28 01:14:32",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather on my birthday?",
+        "Transcript": "What's the weather on my birthday?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wie ist das Wetter an meinem Geburtstag?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29444_6608_16kHz.wav",
+      "Created": "2024-06-25 12:45:18",
+      "CreatedOrModified": "2024-06-28 01:21:43",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Show me a photo of spring flowers.",
+        "Transcript": "Show me photo of.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Zeig mir das Foto von."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29351_6608_16kHz.wav",
+      "Created": "2024-06-25 12:45:56",
+      "CreatedOrModified": "2024-06-28 01:23:26",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "I received a wrong item.",
+        "Transcript": "I received wrong item.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Ich habe falsches Material erhalten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29449_6608_16kHz.wav",
+      "Created": "2024-06-25 12:47:51",
+      "CreatedOrModified": "2024-06-28 01:28:17",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How far is home from Chicago?",
+        "Transcript": "How far is home (from Chicago cago- from Chicago) from Chicago?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Wie weit ist es von Chicago (cago) von Chicago entfernt?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1081_6607_16kHz.wav",
+      "Created": "2024-06-25 12:26:33",
+      "CreatedOrModified": "2024-07-30 11:08:03",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me about your pets, or a pet you wished you had.",
+        "Transcript": "[Tell me about your pets, or a pet you wished you had.] I have fish. I have a fish.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "Ich habe einen Fisch."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged phonemes",
+          "Dimension Category Description": "Master",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:11:02"
+        }
+      ]
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_30172_6607_16kHz.wav",
+      "Created": "2024-06-25 12:30:09",
+      "CreatedOrModified": "2024-07-30 11:09:35",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me about the strangest thing you have ever eaten.",
+        "Transcript": "[Tell me about the strangest thing you have ever eaten.] {g: Maple. Maple}.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "Erzähl mir von dem seltsamsten, was du je gegessen hast."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_30173_6607_16kHz.wav",
+      "Created": "2024-06-25 12:31:15",
+      "CreatedOrModified": "2024-07-10 13:11:18",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What do you like to do on a rainy day?",
+        "Transcript": "[What do you like to do on a rainy day?] Like to watch TV.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended question",
+        "Translation": "Was machst du an einem regnerischen Tag?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_30175_6607_16kHz.wav",
+      "Created": "2024-06-25 12:32:08",
+      "CreatedOrModified": "2024-07-30 11:13:28",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me how you make your favorite lunch.",
+        "Transcript": "[Tell me how you make your favorite lunch.] {g: I like to boil f- food}.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Procedural question",
+        "Translation": "Ich koche gern f- Essen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_250_6608_16kHz.wav",
+      "Created": "2024-06-25 12:37:01",
+      "CreatedOrModified": "2024-06-28 01:06:40",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip to the next chapter.",
+        "Transcript": "Skip the chapter.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Überspring das Kapitel."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_154_6608_16kHz.wav",
+      "Created": "2024-06-25 12:37:33",
+      "CreatedOrModified": "2024-06-28 01:07:42",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip this track.",
+        "Transcript": "Skip the track. Skip this track.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Überspringe den Track."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29_6608_16kHz.wav",
+      "Created": "2024-06-25 12:37:47",
+      "CreatedOrModified": "2024-06-28 01:08:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cortana, what's playing?",
+        "Transcript": "Cortana, what's playing? ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Cortana, was spielt ihr?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_232_6608_16kHz.wav",
+      "Created": "2024-06-25 12:39:10",
+      "CreatedOrModified": "2024-06-28 01:11:32",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on my TV.",
+        "Transcript": "Turn on my TV.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie meinen Fernseher ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1065_6607_16kHz.wav",
+      "Created": "2024-06-25 12:24:57",
+      "CreatedOrModified": "2024-06-28 00:33:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip this song.",
+        "Transcript": "Skip song.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Lied überspringen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1069_6607_16kHz.wav",
+      "Created": "2024-06-25 12:24:24",
+      "CreatedOrModified": "2024-06-28 00:31:47",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Stop the call.",
+        "Transcript": "Stop the call.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Hör auf zu telefonieren."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1062_6607_16kHz.wav",
+      "Created": "2024-06-25 12:25:34",
+      "CreatedOrModified": "2024-06-28 00:35:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Answer the call.",
+        "Transcript": "Answer the (call) call.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Antworte dem (Ruf) Anruf."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1075_6607_16kHz.wav",
+      "Created": "2024-06-25 12:23:47",
+      "CreatedOrModified": "2024-06-28 00:30:04",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on all switches.",
+        "Transcript": "Turn on all switches.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie alle Schalter ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1058_6607_16kHz.wav",
+      "Created": "2024-06-25 12:24:03",
+      "CreatedOrModified": "2024-06-28 00:30:18",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Add this music to favorites.",
+        "Transcript": "Add this music to favorites.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Fügen Sie diese Musik zu Favoriten hinzu."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1053_6607_16kHz.wav",
+      "Created": "2024-06-25 12:22:24",
+      "CreatedOrModified": "2024-06-28 00:20:09",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's on my shopping list?",
+        "Transcript": "What's on my shopping list?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Was steht auf meiner Einkaufsliste?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1063_6607_16kHz.wav",
+      "Created": "2024-06-25 12:22:37",
+      "CreatedOrModified": "2024-06-28 00:26:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off the TV.",
+        "Transcript": "Turn off the TV.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie den Fernseher aus."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1066_6607_16kHz.wav",
+      "Created": "2024-06-25 12:23:14",
+      "CreatedOrModified": "2024-06-28 00:27:46",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather like today?",
+        "Transcript": "What's the weather like today? ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie ist das Wetter heute?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1060_6607_16kHz.wav",
+      "Created": "2024-06-25 12:20:23",
+      "CreatedOrModified": "2024-06-27 16:48:16",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's on my calendar tomorrow?",
+        "Transcript": "Calendar tomorrow?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Morgen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1059_6607_16kHz.wav",
+      "Created": "2024-06-25 12:20:37",
+      "CreatedOrModified": "2024-06-28 00:17:15",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Open reminders.",
+        "Transcript": "Open reminders.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Erinnerungen öffnen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1056_6607_16kHz.wav",
+      "Created": "2024-06-25 12:20:57",
+      "CreatedOrModified": "2024-06-28 00:17:46",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Decrease volume to minimum.",
+        "Transcript": "Decrease volume minimum.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Volumen verringern minimal."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1076_6607_16kHz.wav",
+      "Created": "2024-06-25 12:19:11",
+      "CreatedOrModified": "2024-06-27 16:45:45",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call area code 053-621-4879.",
+        "Transcript": "Area code oh five three, six two one, four eight (sev-) seven nine.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Vorwahl oh fünf drei, sechs zwei eins, vier acht (sev-) sieben neun."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1074_6607_16kHz.wav",
+      "Created": "2024-06-25 12:19:29",
+      "CreatedOrModified": "2024-06-27 16:46:22",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on cooling.",
+        "Transcript": "Turn on cool. Turn on.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "- Mach schon, mach schon."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1070_6607_16kHz.wav",
+      "Created": "2024-06-25 12:19:40",
+      "CreatedOrModified": "2024-06-27 16:46:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Tell me the news.",
+        "Transcript": "Tell me the news.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Erzählen Sie mir die Nachrichten."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1052_6607_16kHz.wav",
+      "Created": "2024-06-25 12:19:54",
+      "CreatedOrModified": "2024-06-27 16:47:07",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Find my phone.",
+        "Transcript": "Find my phone.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Such mein Handy."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1054_6607_16kHz.wav",
+      "Created": "2024-06-25 12:14:52",
+      "CreatedOrModified": "2024-06-27 16:37:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hang up.",
+        "Transcript": "Hang up.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Leg auf."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:39"
+        }
+      ]
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1071_6607_16kHz.wav",
+      "Created": "2024-06-25 12:15:34",
+      "CreatedOrModified": "2024-06-27 16:38:53",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off heat.",
+        "Transcript": "Turn heat.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Hitze heizen."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "Master",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:07:18"
+        }
+      ]
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1061_6607_16kHz.wav",
+      "Created": "2024-06-25 12:15:54",
+      "CreatedOrModified": "2024-06-27 16:39:16",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What restaurants are nearby?",
+        "Transcript": "What restaurants nearby?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Welche Restaurants in der Nähe?"
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Repeated phonemes",
+          "Dimension Category Description": "Master",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "Master",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:08:47"
+        }
+      ]
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1055_6607_16kHz.wav",
+      "Created": "2024-06-25 12:16:11",
+      "CreatedOrModified": "2024-06-27 16:39:36",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make the text larger.",
+        "Transcript": "Make text larger.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Text vergrößern."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:09:50"
+        }
+      ]
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1072_6607_16kHz.wav",
+      "Created": "2024-06-25 12:16:39",
+      "CreatedOrModified": "2024-06-27 16:40:08",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Increase volume to maximum.",
+        "Transcript": "Increase volume to.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Volumen auf erhöhen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1064_6607_16kHz.wav",
+      "Created": "2024-06-25 12:16:53",
+      "CreatedOrModified": "2024-06-27 16:40:23",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the time?",
+        "Transcript": "What's the time?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie spät ist es?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1057_6607_16kHz.wav",
+      "Created": "2024-06-25 12:17:14",
+      "CreatedOrModified": "2024-06-27 16:40:51",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the temperature in the living room?",
+        "Transcript": "What's the temperature for the room?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie ist die Temperatur für den Raum?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_1068_6607_16kHz.wav",
+      "Created": "2024-06-25 12:17:35",
+      "CreatedOrModified": "2024-06-27 16:42:08",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Lower the temperature.",
+        "Transcript": "Lower the temperature.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Senken Sie die Temperatur."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_119_6608_16kHz.wav",
+      "Created": "2024-06-25 12:40:06",
+      "CreatedOrModified": "2024-06-28 01:12:42",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Alexa, play more like this.",
+        "Transcript": "Alexa, play more like this.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Alexa, spiel mehr so."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_319_6608_16kHz.wav",
+      "Created": "2024-06-25 12:34:51",
+      "CreatedOrModified": "2024-06-28 01:01:27",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Lower the temperature 5 degrees.",
+        "Transcript": "Lower the temperature 5 degrees.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Senken Sie die Temperatur 5 Grad."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_73_6608_16kHz.wav",
+      "Created": "2024-06-25 12:35:45",
+      "CreatedOrModified": "2024-06-28 01:04:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Unlock the front door.",
+        "Transcript": "Unlock the door.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Schließ die Tür auf."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_349_6608_16kHz.wav",
+      "Created": "2024-06-25 12:42:55",
+      "CreatedOrModified": "2024-06-28 01:15:14",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off the lights in the kids' room.",
+        "Transcript": "Turn off kids' light room.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Schalten Sie das Lichtzimmer der Kinder aus."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_301_6608_16kHz.wav",
+      "Created": "2024-06-25 12:33:42",
+      "CreatedOrModified": "2024-06-28 00:59:05",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Preheat the oven to 225 degrees.",
+        "Transcript": "Preheat the oven to two.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Control Your Smart Home",
+        "Translation": "Den Ofen auf zwei vorheizen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_29377_6608_16kHz.wav",
+      "Created": "2024-06-25 12:46:51",
+      "CreatedOrModified": "2024-06-28 01:27:11",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Find me a soup recipe.",
+        "Transcript": "Find me soup recipe.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Broadcast over more than one speaker",
+        "Translation": "Such mir Suppenrezept."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_312_6608_16kHz.wav",
+      "Created": "2024-06-25 12:45:40",
+      "CreatedOrModified": "2024-06-28 01:22:17",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Who won the basketball game yesterday?",
+        "Transcript": "Who won the basketball game yesterday?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Wer hat gestern das Basketballspiel gewonnen?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_302_6608_16kHz.wav",
+      "Created": "2024-06-25 12:39:45",
+      "CreatedOrModified": "2024-06-28 01:12:11",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's Netflix trading at?",
+        "Transcript": "What's Netflix trading at?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Get News, Weather, and Traffic Updates",
+        "Translation": "Was ist Netflix Trading?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_199_6608_16kHz.wav",
+      "Created": "2024-06-25 12:35:08",
+      "CreatedOrModified": "2024-06-28 01:02:44",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Darken the screen.",
+        "Transcript": "Darken screen.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Dunkler Bildschirm."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_304_6608_16kHz.wav",
+      "Created": "2024-06-25 12:43:58",
+      "CreatedOrModified": "2024-06-28 01:18:45",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please call CVS Pharmacy.",
+        "Transcript": "Please call CVS Pharmacy.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "Bitte rufen Sie die CVS Apotheke an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_35_6608_16kHz.wav",
+      "Created": "2024-06-25 12:44:22",
+      "CreatedOrModified": "2024-06-28 01:19:23",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Read my new email.",
+        "Transcript": "(New) Read the new email.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "(Neu) Lesen Sie die neue E-Mail."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_140_6608_16kHz.wav",
+      "Created": "2024-06-25 12:34:27",
+      "CreatedOrModified": "2024-06-28 01:00:44",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call the nearest coffee shop.",
+        "Transcript": "(K- k-) Call the coffee. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Phone Operations",
+        "Translation": "(K-k-) Ruf den Kaffee an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_352_6608_16kHz.wav",
+      "Created": "2024-06-25 12:32:50",
+      "CreatedOrModified": "2024-06-28 00:58:10",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How do you say 'restroom' in French?",
+        "Transcript": "'Restroom' (fre- eh- fr-) French?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "\"Restraum\" (fre-e-fr-) Französisch?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_109_6608_16kHz.wav",
+      "Created": "2024-06-25 12:44:34",
+      "CreatedOrModified": "2024-06-28 01:20:42",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Flip a coin.",
+        "Transcript": "Flip coin.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "- Drehen Sie die Münze."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_221_6608_16kHz.wav",
+      "Created": "2024-06-25 12:35:29",
+      "CreatedOrModified": "2024-06-28 01:03:47",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Show me nearby restaurants.",
+        "Transcript": "Show me nearby restaurants.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Zeigen Sie mir die Restaurants in der Nähe."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_323_6608_16kHz.wav",
+      "Created": "2024-06-25 12:41:46",
+      "CreatedOrModified": "2024-06-28 01:14:19",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Is the nearest subway station ADA compliant?",
+        "Transcript": "Is the nearest subway station ADA compliant?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Online Search",
+        "Translation": "Ist die nächste U-Bahn-Station ADA kompatibel?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_303_6608_16kHz.wav",
+      "Created": "2024-06-25 12:44:54",
+      "CreatedOrModified": "2024-06-28 01:21:02",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Set a timer for 45 minutes.",
+        "Transcript": "Set timer 45 minutes.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Zeitschaltuhr 45 Minuten einstellen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_96_6608_16kHz.wav",
+      "Created": "2024-06-25 12:46:08",
+      "CreatedOrModified": "2024-06-28 01:23:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Where did I park?",
+        "Transcript": "Where did I park?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Wo habe ich geparkt?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_95_6608_16kHz.wav",
+      "Created": "2024-06-25 12:46:26",
+      "CreatedOrModified": "2024-06-28 01:25:46",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Delete my reminders for tomorrow.",
+        "Transcript": "Delete reminders tomorrow.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Everyday Tasks and Planning",
+        "Translation": "Erinnerungen morgen löschen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_310_6608_16kHz.wav",
+      "Created": "2024-06-25 12:38:49",
+      "CreatedOrModified": "2024-06-28 01:10:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "How much is a round-trip flight to Manchester, New Hampshire?",
+        "Transcript": "How much is a round-trip flight to Manchester, New Hampshire?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Plan a Trip or an Outdoor Visit",
+        "Translation": "Wie viel kostet ein Hin- und Rückflug nach Manchester, New Hampshire?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_78_6608_16kHz.wav",
+      "Created": "2024-06-25 12:33:59",
+      "CreatedOrModified": "2024-06-28 00:59:16",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Siri.",
+        "Transcript": "Hey Siri.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "- Hey Siri. - Ich bin ein guter Freund."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_162_6608_16kHz.wav",
+      "Created": "2024-06-25 12:38:00",
+      "CreatedOrModified": "2024-06-28 01:09:13",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Start listening.",
+        "Transcript": "Start listening.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Fang an zuzuhören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_60_6607_16kHz.wav",
+      "Created": "2024-06-25 12:17:43",
+      "CreatedOrModified": "2024-06-27 16:42:46",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Facebook.",
+        "Transcript": "Hey Facebook.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey Facebook."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_78_6607_16kHz.wav",
+      "Created": "2024-06-25 12:13:30",
+      "CreatedOrModified": "2024-06-27 16:37:20",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Siri.",
+        "Transcript": "Hey Siri.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "- Hey Siri. - Ich bin ein guter Freund."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "Master",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:06:05"
+        }
+      ]
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_162_6607_16kHz.wav",
+      "Created": "2024-06-25 12:22:53",
+      "CreatedOrModified": "2024-06-28 00:26:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Start listening.",
+        "Transcript": "Start listening. Start listen.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hör zu, hör zu."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_39_6607_16kHz.wav",
+      "Created": "2024-06-25 12:21:56",
+      "CreatedOrModified": "2024-06-28 00:19:48",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Alexa.",
+        "Transcript": "Alexa.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Alexa. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_49_6607_16kHz.wav",
+      "Created": "2024-06-25 12:24:15",
+      "CreatedOrModified": "2024-06-28 00:31:26",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Google.",
+        "Transcript": "Hey Google.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hey, Google. - Hey, Google."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_148_6607_16kHz.wav",
+      "Created": "2024-06-25 12:25:11",
+      "CreatedOrModified": "2024-06-28 00:35:30",
+      "Comment": "pronounces 'Cortana' as 'bercor'",
+      "Prompt": {
+        "Prompt Text": "Cortana.",
+        "Transcript": "Cortana.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Cortana. - Ich weiß."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_30171_6607_16kHz.wav",
+      "Created": "2024-06-25 12:29:34",
+      "CreatedOrModified": "2024-07-30 11:10:48",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Why is it your favorite hobby?",
+        "Transcript": "[Why is it your favorite hobby?] (I like) I like to {w: 1} people more full.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended pair question 2",
+        "Translation": "[Warum ist es dein Lieblings-Hobby?] (Ich mag) Ich mag es {w: 1} Leute voll zu machen."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged phonemes",
+          "Dimension Category Description": "Master",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "Master",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:15:23"
+        }
+      ]
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_30169_6607_16kHz.wav",
+      "Created": "2024-06-25 12:28:32",
+      "CreatedOrModified": "2024-07-10 13:09:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Why do you like this band or singer?",
+        "Transcript": "[Why do you like this band or singer?] I love (all) all his songs (too) too.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended pair question 2",
+        "Translation": "[Warum magst du diese Band oder diese Sängerin?] Ich liebe (alle) alle seine Lieder (zu) auch."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Prolonged intervals",
+          "Dimension Category Description": "Master",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Inappropriate silences",
+          "Dimension Category Description": "Master",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:13:17"
+        }
+      ]
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_30170_6607_16kHz.wav",
+      "Created": "2024-06-25 12:29:01",
+      "CreatedOrModified": "2024-07-30 11:11:47",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What is your favorite hobby?",
+        "Transcript": "[What is your favorite hobby?] {w: 5}.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended pair question 1",
+        "Translation": "[Was ist dein Lieblings-Hobby?] {w: 5}."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hoarse (wet) voice",
+          "Dimension Category Description": "Master",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "7",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        },
+        {
+          "Level": "7",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:14:16"
+        }
+      ]
+    },
+    {
+      "Filename": "109686bb-8e54-4ad7-530d-08dc95210be1_30168_6607_16kHz.wav",
+      "Created": "2024-06-25 12:27:47",
+      "CreatedOrModified": "2024-07-30 11:08:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Who is your favorite band or singer?",
+        "Transcript": "[Who is your favorite band or singer?] Favorite (sing) singer is {w: 1}.",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended pair question 1",
+        "Translation": "[Wer ist deine Lieblingsband oder Sängerin?] Lieblingssänger ist {w: 1}."
+      },
+      "Ratings": [
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Breathy voice (continuous)",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Hypernasality",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "1",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Pitch breaks",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Excess and equal stress ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Low pitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "2",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Reduced stress",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monoloudness",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Slow rate",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "3",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Strained-strangled voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Harsh voice",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "4",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Short phrases",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Distorted vowels",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "5",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Monopitch",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Imprecise consonants",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "6",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Intelligibility",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        },
+        {
+          "Level": "7",
+          "Comment": "",
+          "Other": "",
+          "Dimension Description": "Naturalness ",
+          "Dimension Category Description": "Cerebral Palsy",
+          "RatingDate": "2024-07-12 10:12:03"
+        }
+      ]
+    }
+  ]
+}
