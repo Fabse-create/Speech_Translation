@@ -8,7 +8,7 @@ This project explores **speech-to-text translation (EN → DE)** using a **Mixtu
 
 * ~~Mail (Trennung, neuer Plan, Erwartungen)~~
 * Struktur (Stefan)
-* ~~Translation Script (Fabian)~~
+* Translation Script (Fabian) mit google und dann OPUS finetunen
 * ~~SALMONN (Fabian)~~
 * Data preprocessing for Whisper
 * Embedding extraction from Whisper v2 (save embeddings)
