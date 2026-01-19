@@ -1,4 +1,4 @@
-# Speech Translation – Mixture of Experts (MoE) with Whisper
+# Speech Translation – Mixture of Experts (MoE) with Whisper because Stefan is the best
 
 This project explores **speech-to-text translation (EN → DE)** using a **Mixture-of-Experts (MoE)** architecture built on **Whisper v2**, combined with **DeepL** for machine translation and **SALMONN** as an end-to-end baseline.
 
