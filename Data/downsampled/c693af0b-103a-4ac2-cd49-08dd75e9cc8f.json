@@ -1,0 +1,81 @@
+{
+  "Contributor ID": "c693af0b-103a-4ac2-cd49-08dd75e9cc8f",
+  "Do you consider U.S. English to be your first language": "No Response Supplied",
+  "What language(s) do you speak": "No Response Supplied",
+  "What age did you start speaking English": "No Response Supplied",
+  "I consent to have my voice samples shared in public at research conferences and similar professional meetings, and to have digital audio files of my voice be shared as part of professional research publications.": "Yes",
+  "Etiology": "ALS",
+  "BlockNumber": 4,
+  "Files": [
+    {
+      "Filename": "c693af0b-103a-4ac2-cd49-08dd75e9cc8f_1066_13823_16kHz.wav",
+      "Created": "2025-04-09 13:03:48",
+      "CreatedOrModified": "2025-04-29 14:54:22",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather like today?",
+        "Transcript": "What's the weather like today?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie ist das Wetter heute?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c693af0b-103a-4ac2-cd49-08dd75e9cc8f_1076_13823_16kHz.wav",
+      "Created": "2025-04-09 13:09:23",
+      "CreatedOrModified": "2025-04-29 14:55:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call area code 053-621-4879.",
+        "Transcript": "Call area code 053-621-4879.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wählen Sie die Vorwahl 053-621-4879."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c693af0b-103a-4ac2-cd49-08dd75e9cc8f_1055_13823_16kHz.wav",
+      "Created": "2025-04-09 13:04:18",
+      "CreatedOrModified": "2025-04-29 14:54:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make the text larger.",
+        "Transcript": "Make the text larger.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Vergrößern Sie den Text."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c693af0b-103a-4ac2-cd49-08dd75e9cc8f_1062_13823_16kHz.wav",
+      "Created": "2025-04-09 13:04:29",
+      "CreatedOrModified": "2025-04-29 14:54:46",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Answer the call.",
+        "Transcript": "Answer the call.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Nehmen Sie den Anruf entgegen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c693af0b-103a-4ac2-cd49-08dd75e9cc8f_78_13823_16kHz.wav",
+      "Created": "2025-04-09 13:04:02",
+      "CreatedOrModified": "2025-04-29 14:54:27",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Siri.",
+        "Transcript": "Hey Siri.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hallo Siri."
+      },
+      "Ratings": []
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "Contributor ID": "6686c710-e679-4954-e969-08dc2e961576",
+  "Do you consider U.S. English to be your first language": "No Response Supplied",
+  "What language(s) do you speak": "No Response Supplied",
+  "What age did you start speaking English": "No Response Supplied",
+  "I consent to have my voice samples shared in public at research conferences and similar professional meetings, and to have digital audio files of my voice be shared as part of professional research publications.": "Yes",
+  "Etiology": "Stroke",
+  "BlockNumber": 2,
+  "Files": [
+    {
+      "Filename": "6686c710-e679-4954-e969-08dc2e961576_29094_3979_16kHz.wav",
+      "Created": "2024-03-01 15:59:48",
+      "CreatedOrModified": "2024-06-01 12:50:20",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Please send this text.",
+        "Transcript": "(ss: Yep) Please send this text. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "(ss: Yep) Bitte senden Sie diesen Text."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "6686c710-e679-4954-e969-08dc2e961576_1064_3979_16kHz.wav",
+      "Created": "2024-03-01 16:00:01",
+      "CreatedOrModified": "2024-06-01 12:50:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the time?",
+        "Transcript": "(w-) What the time?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(w-) Wie spät ist es?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "6686c710-e679-4954-e969-08dc2e961576_1065_3979_16kHz.wav",
+      "Created": "2024-03-01 16:00:24",
+      "CreatedOrModified": "2024-06-01 12:51:17",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip this song.",
+        "Transcript": "(t- tur-) Sit this song.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "(t- tur-) Setzen Sie dieses Lied."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "6686c710-e679-4954-e969-08dc2e961576_1066_3979_16kHz.wav",
+      "Created": "2024-03-01 16:03:01",
+      "CreatedOrModified": "2024-06-01 12:52:01",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather like today?",
+        "Transcript": "What (w-) weather it today? ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Was für ein (w-) Wetter ist heute?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "6686c710-e679-4954-e969-08dc2e961576_39_3979_16kHz.wav",
+      "Created": "2024-05-23 18:11:24",
+      "CreatedOrModified": "2024-06-28 17:16:17",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Alexa.",
+        "Transcript": "Alexa.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Alexa."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "6686c710-e679-4954-e969-08dc2e961576_162_3979_16kHz.wav",
+      "Created": "2024-03-01 16:00:34",
+      "CreatedOrModified": "2024-06-01 12:51:27",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Start listening.",
+        "Transcript": "Start listening.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Beginnen Sie mit dem Zuhören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "6686c710-e679-4954-e969-08dc2e961576_60_3979_16kHz.wav",
+      "Created": "2024-03-01 16:00:12",
+      "CreatedOrModified": "2024-06-01 12:50:51",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Facebook.",
+        "Transcript": "Hey Facebook.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hallo Facebook."
+      },
+      "Ratings": []
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "Contributor ID": "7a1b14f7-4f67-4cf4-a1fe-08dc11dcc589",
+  "Do you consider U.S. English to be your first language": "No Response Supplied",
+  "What language(s) do you speak": "No Response Supplied",
+  "What age did you start speaking English": "No Response Supplied",
+  "I consent to have my voice samples shared in public at research conferences and similar professional meetings, and to have digital audio files of my voice be shared as part of professional research publications.": "Yes",
+  "Etiology": "ALS",
+  "BlockNumber": 7,
+  "Files": [
+    {
+      "Filename": "7a1b14f7-4f67-4cf4-a1fe-08dc11dcc589_1065_3065_16kHz.wav",
+      "Created": "2024-02-07 13:31:29",
+      "CreatedOrModified": "2024-02-10 08:59:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip this song.",
+        "Transcript": "Skip this song.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Überspringen Sie dieses Lied."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "7a1b14f7-4f67-4cf4-a1fe-08dc11dcc589_1057_3065_16kHz.wav",
+      "Created": "2024-02-07 13:32:20",
+      "CreatedOrModified": "2024-02-10 09:01:37",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the temperature in the living room?",
+        "Transcript": "What's the temperature in the living room?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie hoch ist die Temperatur im Wohnzimmer?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "7a1b14f7-4f67-4cf4-a1fe-08dc11dcc589_1062_3065_16kHz.wav",
+      "Created": "2024-02-07 13:32:41",
+      "CreatedOrModified": "2024-02-10 09:01:55",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Answer the call.",
+        "Transcript": "Answer the call.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Nehmen Sie den Anruf entgegen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "7a1b14f7-4f67-4cf4-a1fe-08dc11dcc589_1072_3065_16kHz.wav",
+      "Created": "2024-04-03 14:24:05",
+      "CreatedOrModified": "2024-04-06 18:12:19",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Increase volume to maximum.",
+        "Transcript": "Increase volume to maximum.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Erhöhen Sie die Lautstärke auf Maximum."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "7a1b14f7-4f67-4cf4-a1fe-08dc11dcc589_1068_3065_16kHz.wav",
+      "Created": "2024-04-03 14:24:29",
+      "CreatedOrModified": "2024-04-06 18:12:34",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Lower the temperature.",
+        "Transcript": "Lower the temperature.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Senken Sie die Temperatur."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "7a1b14f7-4f67-4cf4-a1fe-08dc11dcc589_1054_3065_16kHz.wav",
+      "Created": "2024-04-03 14:24:48",
+      "CreatedOrModified": "2024-04-06 18:12:42",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hang up.",
+        "Transcript": "Hang up.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Legen Sie auf."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "7a1b14f7-4f67-4cf4-a1fe-08dc11dcc589_1075_3065_16kHz.wav",
+      "Created": "2024-04-03 14:25:11",
+      "CreatedOrModified": "2024-04-06 18:12:51",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on all switches.",
+        "Transcript": "Turn on all switches.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie alle Schalter ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "7a1b14f7-4f67-4cf4-a1fe-08dc11dcc589_1058_3065_16kHz.wav",
+      "Created": "2024-04-03 14:25:34",
+      "CreatedOrModified": "2024-04-06 18:13:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Add this music to favorites.",
+        "Transcript": "Add this music to favorites.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Diese Musik zu den Favoriten hinzufügen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "7a1b14f7-4f67-4cf4-a1fe-08dc11dcc589_1055_3065_16kHz.wav",
+      "Created": "2024-04-03 14:26:06",
+      "CreatedOrModified": "2024-04-06 18:13:16",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make the text larger.",
+        "Transcript": "Make the text larger.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Vergrößern Sie den Text."
+      },
+      "Ratings": []
+    }
+  ]
+}

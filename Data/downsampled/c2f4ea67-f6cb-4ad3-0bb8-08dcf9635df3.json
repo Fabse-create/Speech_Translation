@@ -1,0 +1,95 @@
+{
+  "Contributor ID": "c2f4ea67-f6cb-4ad3-0bb8-08dcf9635df3",
+  "Do you consider U.S. English to be your first language": "Yes",
+  "What language(s) do you speak": "No Response Supplied",
+  "What age did you start speaking English": "No Response Supplied",
+  "I consent to have my voice samples shared in public at research conferences and similar professional meetings, and to have digital audio files of my voice be shared as part of professional research publications.": "Yes",
+  "Etiology": "Down Syndrome",
+  "BlockNumber": 3,
+  "Files": [
+    {
+      "Filename": "c2f4ea67-f6cb-4ad3-0bb8-08dcf9635df3_29097_11076_16kHz.wav",
+      "Created": "2024-11-26 18:56:36",
+      "CreatedOrModified": "2025-01-23 11:35:59",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make the screen brighter.",
+        "Transcript": "Make the screen bigger.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Vergrößern Sie den Bildschirm."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c2f4ea67-f6cb-4ad3-0bb8-08dcf9635df3_1052_11159_16kHz.wav",
+      "Created": "2024-11-30 15:05:10",
+      "CreatedOrModified": "2024-12-10 13:27:27",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Find my phone.",
+        "Transcript": "Find my phone.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Finden Sie mein Telefon."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c2f4ea67-f6cb-4ad3-0bb8-08dcf9635df3_1075_11076_16kHz.wav",
+      "Created": "2024-11-27 07:28:09",
+      "CreatedOrModified": "2025-05-01 10:58:39",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on all switches.",
+        "Transcript": "Turn on all switches.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie alle Schalter ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c2f4ea67-f6cb-4ad3-0bb8-08dcf9635df3_1058_11076_16kHz.wav",
+      "Created": "2024-11-27 07:26:09",
+      "CreatedOrModified": "2024-12-10 13:25:50",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Add this music to favorites.",
+        "Transcript": "Add this music to favorites.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Diese Musik zu den Favoriten hinzufügen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c2f4ea67-f6cb-4ad3-0bb8-08dcf9635df3_1057_11076_16kHz.wav",
+      "Created": "2024-11-27 07:27:13",
+      "CreatedOrModified": "2024-12-10 13:26:16",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the temperature in the living room?",
+        "Transcript": "What's the temperature in the living room?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie hoch ist die Temperatur im Wohnzimmer?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "c2f4ea67-f6cb-4ad3-0bb8-08dcf9635df3_30204_11156_16kHz.wav",
+      "Created": "2024-11-30 14:21:49",
+      "CreatedOrModified": "2025-04-30 11:13:38",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Who is the most important person in your life?",
+        "Transcript": "[Who is the most important person in your life?] The most important person (i-) in my life, my mom and dad. ",
+        "Category Description": "Spontaneous Speech Prompts",
+        "Sub Category Description": "Open-ended pair question 1",
+        "Translation": "[Wer ist die wichtigste Person in deinem Leben?] Die wichtigste Person (i-) in meinem Leben sind meine Mutter und mein Vater."
+      },
+      "Ratings": []
+    }
+  ]
+}

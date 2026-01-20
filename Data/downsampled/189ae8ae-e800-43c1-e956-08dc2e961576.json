@@ -1,0 +1,221 @@
+{
+  "Contributor ID": "189ae8ae-e800-43c1-e956-08dc2e961576",
+  "Do you consider U.S. English to be your first language": "No Response Supplied",
+  "What language(s) do you speak": "No Response Supplied",
+  "What age did you start speaking English": "No Response Supplied",
+  "I consent to have my voice samples shared in public at research conferences and similar professional meetings, and to have digital audio files of my voice be shared as part of professional research publications.": "Yes",
+  "Etiology": "Stroke",
+  "BlockNumber": 6,
+  "Files": [
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_29083_3670_16kHz.wav",
+      "Created": "2024-02-22 10:13:55",
+      "CreatedOrModified": "2024-02-26 11:58:14",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Stop listening.",
+        "Transcript": "Stop listening.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "",
+        "Translation": "Hören Sie auf zuzuhören."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_1069_3670_16kHz.wav",
+      "Created": "2024-02-22 10:12:57",
+      "CreatedOrModified": "2024-02-26 11:58:06",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Stop the call.",
+        "Transcript": "Stop the call.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Beenden Sie den Anruf."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_1076_3670_16kHz.wav",
+      "Created": "2024-02-22 10:19:08",
+      "CreatedOrModified": "2024-02-26 11:58:43",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Call area code 053-621-4879.",
+        "Transcript": "Call the call 052-611-4789.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Rufen Sie die Nummer 052-611-4789 an."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_1065_3670_16kHz.wav",
+      "Created": "2024-02-22 10:32:25",
+      "CreatedOrModified": "2024-02-26 11:59:01",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Skip this song.",
+        "Transcript": "Skip the song.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Überspringen Sie das Lied."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_1060_3670_16kHz.wav",
+      "Created": "2024-02-22 11:26:39",
+      "CreatedOrModified": "2024-02-26 11:59:19",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's on my calendar tomorrow?",
+        "Transcript": "We are my computer tomorrow. ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wir sind morgen mein Computer."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_1057_3670_16kHz.wav",
+      "Created": "2024-02-22 09:44:25",
+      "CreatedOrModified": "2024-02-26 11:56:17",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the temperature in the living room?",
+        "Transcript": "What's the temperature in the library today? No, tomorrow.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie ist die Temperatur in der Bibliothek heute? Nein, morgen."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_1064_3670_16kHz.wav",
+      "Created": "2024-02-22 09:47:42",
+      "CreatedOrModified": "2024-02-26 11:56:25",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the time?",
+        "Transcript": "What's the time?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie spät ist es?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_1063_3670_16kHz.wav",
+      "Created": "2024-02-22 09:56:51",
+      "CreatedOrModified": "2024-02-26 11:56:33",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn off the TV.",
+        "Transcript": "Turn off the TV.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie den Fernseher aus."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_1066_3670_16kHz.wav",
+      "Created": "2024-02-22 10:00:09",
+      "CreatedOrModified": "2024-02-26 11:56:49",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What's the weather like today?",
+        "Transcript": "What is weather is today? ",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Wie ist das Wetter heute?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_1075_3670_16kHz.wav",
+      "Created": "2024-02-22 10:01:32",
+      "CreatedOrModified": "2024-02-26 11:57:04",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Turn on all switches.",
+        "Transcript": "Turn on the switch.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Schalten Sie den Schalter ein."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_1061_3670_16kHz.wav",
+      "Created": "2024-02-22 10:04:10",
+      "CreatedOrModified": "2024-02-26 11:57:15",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "What restaurants are nearby?",
+        "Transcript": "What restaurant are near?",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Welche Restaurants sind in der Nähe?"
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_1055_3670_16kHz.wav",
+      "Created": "2024-02-22 10:06:23",
+      "CreatedOrModified": "2024-02-26 11:57:31",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Make the text larger.",
+        "Transcript": "Text the large text.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Text den großen Text."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_1068_3670_16kHz.wav",
+      "Created": "2024-02-22 10:09:54",
+      "CreatedOrModified": "2024-02-26 11:57:39",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Lower the temperature.",
+        "Transcript": "Lower the temperature.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Playing and Controlling Media",
+        "Translation": "Senken Sie die Temperatur."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_49_3670_16kHz.wav",
+      "Created": "2024-02-22 10:11:56",
+      "CreatedOrModified": "2024-02-26 11:57:45",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Hey Google.",
+        "Transcript": "Hey Google.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "Hallo Google."
+      },
+      "Ratings": []
+    },
+    {
+      "Filename": "189ae8ae-e800-43c1-e956-08dc2e961576_148_3670_16kHz.wav",
+      "Created": "2024-02-22 10:23:05",
+      "CreatedOrModified": "2024-02-26 11:58:53",
+      "Comment": "",
+      "Prompt": {
+        "Prompt Text": "Cortana.",
+        "Transcript": "(t-) Cortana.",
+        "Category Description": "Digital Assistant Commands",
+        "Sub Category Description": "Wake Phrases",
+        "Translation": "(t-) Cortana."
+      },
+      "Ratings": []
+    }
+  ]
+}
