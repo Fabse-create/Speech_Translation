@@ -208,3 +208,6 @@ Whisper v2 Decoder (LoRA Experts)
 * Noisy or low-quality recordings
 * **Nationality bias** (~80% USA speakers)
 * Potential cluster imbalance
+* Huge overlap in dataset (basic sentences and words)
+
+  
