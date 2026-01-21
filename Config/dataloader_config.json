@@ -1,0 +1,18 @@
+{
+  "dataset_root": "Data/extracted_data",
+  "split": "Train",
+  "percent": 100,
+  "sampling": "random",
+  "seed": 42,
+  "max_samples": null,
+  "modes": {
+    "default": {},
+    "test": {
+      "split": "Dev",
+      "percent": 100,
+      "sampling": "random",
+      "seed": 42,
+      "max_samples": 100
+    }
+  }
+}

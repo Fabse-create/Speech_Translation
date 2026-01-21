@@ -1,4 +1,6 @@
 Data/raw_data/Downsampled/
 Data/extracted_data/Dev/
 Data/extracted_data/Train/
+__pycache__/
+*.pyc
 MT/opus_finetuned

@@ -1,0 +1,9 @@
+{
+  "data_config_path": "Config/dataloader_config.json",
+  "data_mode": "default",
+  "data_config_override": null,
+  "whisper_model": "v2",
+  "output_dir": "Data/embeddings/whisper_v2_embeddings",
+  "mapping_path": "Data/embeddings/whisper_v2_embeddings/mapping.json",
+  "overwrite": false
+}
