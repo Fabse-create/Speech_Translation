@@ -207,4 +207,7 @@ Whisper v2 Decoder (LoRA Experts)
 * Limited **healthy audio** baseline
 * Noisy or low-quality recordings
 * **Nationality bias** (~80% USA speakers)
-* Potential cluster imbalance
+* Potential cluster imbalance; cluster algortihm not evaluated
+* Huge overlap in dataset (basic sentences and words)
+
+  
