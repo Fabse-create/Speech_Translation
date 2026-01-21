@@ -3,8 +3,10 @@ from typing import Any, Dict, Optional
 
 import numpy as np
 import torch
-import whisper
 
+from transformers import WhisperForConditionalGeneration, WhisperProcessor
+
+from utils.audio import load_audio
 from utils.load_config import load_config
 
 
@@ -13,7 +15,7 @@ class WhisperV3:
         config = load_config(config_path)
         v3_config = config.get("v3", {})
 
-        model_name = v3_config.get("model_name", "large-v3")
+        model_name = v3_config.get("model_name", "openai/whisper-large-v3")
         download_root = v3_config.get("download_root")
         configured_device = device or v3_config.get(
             "device", "cuda" if torch.cuda.is_available() else "cpu"
@@ -23,25 +25,46 @@ class WhisperV3:
 
         self.config = v3_config
         self.device = configured_device
-        self.model = whisper.load_model(
-            model_name, device=configured_device, download_root=download_root
+        self.model_name = self._normalize_model_name(model_name)
+        self.processor = WhisperProcessor.from_pretrained(
+            self.model_name, cache_dir=download_root
         )
+        self.model = WhisperForConditionalGeneration.from_pretrained(
+            self.model_name, cache_dir=download_root
+        ).to(self.device)
         self.model.eval()
 
     def predict(self, wav_path: str, **decode_options: Any) -> Dict[str, Any]:
         options = dict(self.config.get("transcribe_options", {}))
         options.update(decode_options)
-        return self.model.transcribe(wav_path, **options)
+
+        audio = load_audio(wav_path)
+        input_features = self.processor.feature_extractor(
+            audio, sampling_rate=16000, return_tensors="pt"
+        ).input_features.to(self.device)
+
+        forced_decoder_ids = self.processor.get_decoder_prompt_ids(
+            language=options.get("language"),
+            task=options.get("task", "transcribe"),
+        )
+        generated_ids = self.model.generate(
+            input_features, forced_decoder_ids=forced_decoder_ids
+        )
+        text = self.processor.batch_decode(
+            generated_ids, skip_special_tokens=True
+        )[0]
+        return {"text": text}
 
     def extract_embeddings(self, wav_path: str) -> torch.Tensor:
-        audio = whisper.load_audio(wav_path)
-        audio = whisper.pad_or_trim(audio)
-        mel = whisper.log_mel_spectrogram(audio).to(self.device)
+        audio = load_audio(wav_path)
+        input_features = self.processor.feature_extractor(
+            audio, sampling_rate=16000, return_tensors="pt"
+        ).input_features.to(self.device)
 
         with torch.no_grad():
-            embeddings = self.model.encoder(mel)
+            encoder_outputs = self.model.model.encoder(input_features)
 
-        return embeddings
+        return encoder_outputs.last_hidden_state
 
     def save_embeddings(
         self,
@@ -54,3 +77,11 @@ class WhisperV3:
         output_path = output_dir / f"{embedding_id}.npy"
         np.save(output_path, embeddings.detach().cpu().numpy())
         return output_path
+
+    @staticmethod
+    def _normalize_model_name(model_name: str) -> str:
+        if "/" in model_name:
+            return model_name
+        if model_name.startswith("whisper-"):
+            return f"openai/{model_name}"
+        return f"openai/whisper-{model_name}"

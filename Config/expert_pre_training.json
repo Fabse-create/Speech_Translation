@@ -1,0 +1,42 @@
+{
+  "model_name": "openai/whisper-large-v2",
+  "language": "en",
+  "task": "transcribe",
+  "data_config_path": "Config/dataloader_config.json",
+  "data_mode": "default",
+  "data_config_override": {
+    "dataset_root": "Data/extracted_data",
+    "split": "Train",
+    "percent": 100,
+    "sampling": "random",
+    "seed": 42,
+    "max_samples": null,
+    "modes": {}
+  },
+  "cluster_labels_path": "Data/embeddings/whisper_v2_embeddings_clustered/HDBSCAN_soft.json",
+  "embeddings_dir": "Data/embeddings/whisper_v2_embeddings",
+  "gating_model_checkpoint": "checkpoints/gating_model/best.pt",
+  "gating_model_config": "Config/gating_model_config.json",
+  "use_gating_model": false,
+  "drop_noise": true,
+  "num_experts": 8,
+  "top_k_experts": 2,
+  "expert_fraction": 0.3,
+  "max_samples_per_expert": null,
+  "val_split": 0.1,
+  "batch_size": 2,
+  "epochs": 3,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0,
+  "seed": 42,
+  "num_workers": 0,
+  "use_lora": true,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": ["q_proj", "v_proj"]
+  },
+  "output_dir": "checkpoints/experts",
+  "fp16": true
+}

@@ -19,6 +19,46 @@ docker build -f docker/embedding/Dockerfile -t embedding-extractor .
 docker run --rm -v %cd%:/app embedding-extractor
 ```
 
+PowerShell variant:
+
+```bash
+docker run --rm -v ${PWD}:/app embedding-extractor
+```
+
+## Docker: choose what to sample
+
+The Docker container uses the same `Config/embedding_extraction.json` file.
+To control what is sampled, edit that config before running the container.
+
+Example config for **100 Train samples, stratified by illness**:
+
+```json
+{
+  "data_config_path": "Config/dataloader_config.json",
+  "data_mode": "default",
+  "data_config_override": {
+    "dataset_root": "Data/extracted_data",
+    "split": "Train",
+    "percent": 100,
+    "sampling": "stratified",
+    "seed": 42,
+    "max_samples": 100,
+    "modes": {}
+  },
+  "whisper_model": "v2",
+  "output_dir": "Data/embeddings/whisper_v2_embeddings",
+  "mapping_path": "Data/embeddings/whisper_v2_embeddings/mapping.json",
+  "overwrite": false
+}
+```
+
+Then run:
+
+```bash
+docker build -f docker/embedding/Dockerfile -t embedding-extractor .
+docker run --rm -v %cd%:/app embedding-extractor
+```
+
 ## Sampling commands for embedding extraction
 
 These commands generate a temporary config and then run the extractor with it.

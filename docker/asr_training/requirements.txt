@@ -1,0 +1,7 @@
+numpy
+torch
+transformers
+peft
+torchaudio
+librosa
+sentencepiece
