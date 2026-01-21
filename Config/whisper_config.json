@@ -1,0 +1,22 @@
+{
+  "v2": {
+    "model_name": "large-v2",
+    "device": "cuda",
+    "download_root": null,
+    "transcribe_options": {
+      "language": null,
+      "task": "transcribe",
+      "fp16": true
+    }
+  },
+  "v3": {
+    "model_name": "large-v3",
+    "device": "cuda",
+    "download_root": null,
+    "transcribe_options": {
+      "language": null,
+      "task": "transcribe",
+      "fp16": true
+    }
+  }
+}

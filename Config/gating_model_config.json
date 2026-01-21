@@ -1,0 +1,5 @@
+{
+  "input_dim": 1280,
+  "hidden_dim": 512,
+  "num_experts": 8
+}
