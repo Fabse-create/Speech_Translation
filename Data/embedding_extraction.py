@@ -51,14 +51,23 @@ def extract_embeddings(config_path: str = "Config/embedding_extraction.json") ->
     for sample in samples:
         wav_path = sample["wav_path"]
         sample_id = sample["id"]
-        embedding_path = output_dir / f"{sample_id}.npy"
+        contributor_id = sample.get("contributor_id")
+        wav_filename = Path(wav_path).name
+        embedding_dir = output_dir / contributor_id if contributor_id else output_dir
+        embedding_path = embedding_dir / f"{wav_filename}.npy"
 
         if overwrite or not embedding_path.exists():
-            embedding_path = model.save_embeddings(wav_path, output_dir=output_dir)
+            embedding_path = model.save_embeddings(
+                wav_path,
+                output_dir=embedding_dir,
+                embedding_id=wav_filename,
+            )
 
         mapping.append(
             {
                 "id": sample_id,
+                "contributor_id": contributor_id,
+                "wav_filename": wav_filename,
                 "wav_path": wav_path,
                 "embedding_path": str(embedding_path),
             }

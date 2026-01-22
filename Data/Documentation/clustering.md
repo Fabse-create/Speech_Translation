@@ -21,7 +21,25 @@ If you prefer a containerized run, use Docker:
 
 ```bash
 docker build -f docker/clustering/Dockerfile -t embedding-clustering .
-docker run --rm -v %cd%:/app embedding-clustering
+docker run --rm --name embedding-clustering -v %cd%:/app embedding-clustering
+```
+
+Stop:
+
+```bash
+docker stop embedding-clustering
+```
+
+Stop and delete cache:
+
+```bash
+docker stop embedding-clustering && docker builder prune -f
+```
+
+PowerShell:
+
+```powershell
+docker stop embedding-clustering; docker builder prune -f
 ```
 
 ### Use Spectral clustering

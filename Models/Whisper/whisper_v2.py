@@ -70,11 +70,12 @@ class WhisperV2:
         self,
         wav_path: str,
         output_dir: Path = Path("Data/embeddings/whisper_v2_embeddings"),
+        embedding_id: Optional[str] = None,
     ) -> Path:
         output_dir.mkdir(parents=True, exist_ok=True)
         embeddings = self.extract_embeddings(wav_path)
-        embedding_id = Path(wav_path).name
-        output_path = output_dir / f"{embedding_id}.npy"
+        resolved_id = embedding_id or Path(wav_path).name
+        output_path = output_dir / f"{resolved_id}.npy"
         np.save(output_path, embeddings.detach().cpu().numpy())
         return output_path
 

@@ -11,4 +11,6 @@ RUN apt-get update \
 COPY docker/embedding/requirements.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
+COPY . /app
+
 CMD ["python", "-m", "Data.embedding_extraction"]

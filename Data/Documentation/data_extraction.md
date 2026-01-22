@@ -6,23 +6,95 @@
 Whisper embeddings (v2 or v3), saves each embedding as a `.npy` file, and writes
 `mapping.json` so you can trace each embedding back to its original `.wav` file.
 
+## Extracted data structure
+
+The extracted dataset is organized by split and contributor folder. Use only
+contributor folders that contain a matching metadata JSON.
+
+```
+Data/extracted_data/
+  Train/
+    <CONTRIBUTOR_ID>/
+      <CONTRIBUTOR_ID>.json
+      <CONTRIBUTOR_ID>_<...>_16kHz.wav
+      ...
+  Dev/
+    <CONTRIBUTOR_ID>/
+      <CONTRIBUTOR_ID>.json
+      <CONTRIBUTOR_ID>_<...>_16kHz.wav
+      ...
+```
+
+Notes:
+- Ignore tar/json pairs or other top-level folders in `Train/` and `Dev/`;
+  they are duplicates of the contributor folders.
+- If a contributor folder does not contain `<CONTRIBUTOR_ID>.json`, it cannot
+  be used.
+
+Findings (from `python -m Data.check_dataset_paths`):
+- Train: `0` missing WAVs of `271368` files; `2` contributor folders missing metadata
+  (`Data/extracted_data/Train/SpeechAccessibility_2025-11-02_000` and
+  `Data/extracted_data/Train/SpeechAccessibility_2025-11-02_Train_Only_Json`).
+- Dev: `0` missing WAVs of `47836` files; `1` contributor folder missing metadata
+  (`Data/extracted_data/Dev/SpeechAccessibility_2025-11-02_Dev_Only_Json`).
+
 ## How to run embedding extraction
 
 ```bash
 python Data/embedding_extraction.py
 ```
 
+```powershell
+python -m Data.embedding_extraction
+```
+
 If `ffmpeg` is not installed locally, you can use the Docker container instead:
 
 ```bash
 docker build -f docker/embedding/Dockerfile -t embedding-extractor .
-docker run --rm -v %cd%:/app embedding-extractor
+docker run --rm --name embedding-extractor -v %cd%:/app embedding-extractor
+```
+
+Stop:
+
+```bash
+docker stop embedding-extractor
+```
+
+Stop and delete cache:
+
+```bash
+docker stop embedding-extractor && docker builder prune -f
+```
+
+PowerShell:
+
+```powershell
+docker stop embedding-extractor; docker builder prune -f
 ```
 
 PowerShell variant:
 
 ```bash
-docker run --rm -v ${PWD}:/app embedding-extractor
+docker run --rm --name embedding-extractor -v ${PWD}:/app embedding-extractor
+```
+
+Stop:
+
+```bash
+docker stop embedding-extractor
+```
+
+Stop and delete cache:
+
+```bash
+docker stop embedding-extractor && docker builder prune -f
+```
+
+PowerShell:
+
+```powershell
+docker stop embedding-extractor; docker builder prune -f
 ```
 
 ## Docker: choose what to sample
@@ -56,7 +128,25 @@ Then run:
 
 ```bash
 docker build -f docker/embedding/Dockerfile -t embedding-extractor .
-docker run --rm -v %cd%:/app embedding-extractor
+docker run --rm --name embedding-extractor -v %cd%:/app embedding-extractor
+```
+
+Stop:
+
+```bash
+docker stop embedding-extractor
+```
+
+Stop and delete cache:
+
+```bash
+docker stop embedding-extractor && docker builder prune -f
+```
+
+PowerShell:
+
+```powershell
+docker stop embedding-extractor; docker builder prune -f
 ```
 
 ## Sampling commands for embedding extraction

@@ -1,3 +1,6 @@
 numpy
-openai-whisper
 torch
+transformers
+torchaudio
+librosa
+sentencepiece

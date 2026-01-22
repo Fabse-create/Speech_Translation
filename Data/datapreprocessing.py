@@ -36,25 +36,37 @@ class WhisperDataLoader:
 
     def _iter_metadata_files(self) -> Iterable[Path]:
         split_dir = self.dataset_root / self.split
-        yield from split_dir.rglob("*.json")
+        if not split_dir.exists():
+            return
+        for contributor_dir in split_dir.iterdir():
+            if not contributor_dir.is_dir():
+                continue
+            metadata_path = contributor_dir / f"{contributor_dir.name}.json"
+            if metadata_path.exists():
+                yield metadata_path
 
     @staticmethod
-    def _parse_metadata(metadata_path: Path) -> List[Dict[str, Any]]:
+    def _resolve_wav_path(metadata_path: Path, filename: str) -> Path:
+        return metadata_path.parent / filename
+
+    def _parse_metadata(self, metadata_path: Path) -> List[Dict[str, Any]]:
         with metadata_path.open("r", encoding="utf-8") as metadata_file:
             data = json.load(metadata_file)
 
         etiology = data.get("Etiology", "Unknown")
         files = data.get("Files", [])
+        contributor_id = metadata_path.stem
 
         samples: List[Dict[str, Any]] = []
         for file_info in files:
             filename = file_info.get("Filename")
             if not filename:
                 continue
-            wav_path = metadata_path.parent / filename
+            wav_path = self._resolve_wav_path(metadata_path, filename)
             samples.append(
                 {
                     "id": filename,
+                    "contributor_id": contributor_id,
                     "wav_path": str(wav_path),
                     "etiology": etiology,
                     "prompt": file_info.get("Prompt", {}).get("Transcript"),
