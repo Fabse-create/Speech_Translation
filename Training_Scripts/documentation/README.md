@@ -56,6 +56,22 @@ docker stop st-gating-model; docker builder prune -f
 python Training_Scripts/expert_pre_training.py --config Config/expert_pre_training.json
 ```
 
+The expert pre-training flow can either:
+- Use cluster labels/embeddings from disk, or
+- Let Whisper v2 extract embeddings on the fly, then route samples through the frozen gating model.
+
+To enable on-the-fly routing, set in `Config/expert_pre_training.json`:
+- `"use_gating_model": true`
+- `"use_whisper_embeddings_for_gating": true`
+- `"gating_model_checkpoint": "checkpoints/gating_model/best.pt"`
+
+Data selection follows the dataloader settings (percent, sampling, max_samples).
+You can override max samples from the CLI:
+
+```
+python Training_Scripts/expert_pre_training.py --config Config/expert_pre_training.json --max-samples 50
+```
+
 ### With Docker
 
 Build:

@@ -1,6 +1,7 @@
 import argparse
 import json
 import random
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
@@ -10,8 +11,14 @@ import torch
 from torch import nn
 from torch.utils.data import DataLoader, Dataset, Subset, random_split
 
+ROOT_DIR = Path(__file__).resolve().parents[1]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.append(str(ROOT_DIR))
+
 from Data.datapreprocessing import WhisperDataLoader
+from Evaluation.evaluate_WER import WERScorer
 from Models.Gating_Model.gating_model import GatingModel
+from Models.Whisper.whisper_v2 import WhisperV2
 from utils.audio import load_audio
 from utils.load_config import load_config
 
@@ -41,6 +48,7 @@ class TrainingConfig:
     gating_model_checkpoint: Optional[str]
     gating_model_config: str
     use_gating_model: bool
+    use_whisper_embeddings_for_gating: bool
     drop_noise: bool
     num_experts: int
     top_k_experts: int
@@ -98,6 +106,14 @@ def _set_seed(seed: int) -> None:
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
+
+
+def _sample_key(sample: Dict[str, Any]) -> str:
+    contributor_id = sample.get("contributor_id")
+    sample_id = sample.get("id")
+    if contributor_id:
+        return f"{contributor_id}/{sample_id}"
+    return str(sample_id)
 
 
 def _ensure_dependencies(use_lora: bool) -> None:
@@ -161,16 +177,14 @@ def _load_cluster_labels(
 def _load_embeddings(
     embeddings_dir: Path,
 ) -> Dict[str, np.ndarray]:
-    embedding_files = list(embeddings_dir.glob("*.npy"))
+    embedding_files = list(embeddings_dir.rglob("*.npy"))
     if not embedding_files:
         raise FileNotFoundError(f"No embeddings found in {embeddings_dir}")
 
     embeddings: Dict[str, np.ndarray] = {}
     for embedding_path in embedding_files:
-        sample_id = embedding_path.name
-        if sample_id.endswith(".npy"):
-            sample_id = sample_id[: -len(".npy")]
-        embeddings[sample_id] = _pool_embedding(np.load(embedding_path))
+        sample_id = embedding_path.relative_to(embeddings_dir).with_suffix("")
+        embeddings[sample_id.as_posix()] = _pool_embedding(np.load(embedding_path))
     return embeddings
 
 
@@ -194,6 +208,7 @@ def _assign_experts(
     gating_model_checkpoint: Optional[Path],
     gating_model_config: str,
     use_gating_model: bool,
+    use_whisper_embeddings_for_gating: bool,
     drop_noise: bool,
     top_k_experts: int,
     device: torch.device,
@@ -205,16 +220,28 @@ def _assign_experts(
         )
 
     if use_gating_model:
-        if embeddings_dir is None or gating_model_checkpoint is None:
-            raise ValueError("embeddings_dir and gating_model_checkpoint are required.")
-        embeddings = _load_embeddings(embeddings_dir)
+        if gating_model_checkpoint is None:
+            raise ValueError("gating_model_checkpoint is required.")
+        embeddings: Optional[Dict[str, np.ndarray]] = None
+        if not use_whisper_embeddings_for_gating:
+            if embeddings_dir is None:
+                raise ValueError("embeddings_dir is required when not using Whisper embeddings.")
+            embeddings = _load_embeddings(embeddings_dir)
         gating_model = _load_gating_model(
             gating_model_checkpoint, gating_model_config, device
         )
+        whisper_model: Optional[WhisperV2] = None
+        if use_whisper_embeddings_for_gating:
+            whisper_model = WhisperV2(device=str(device))
         with torch.no_grad():
             for sample in samples:
-                sample_id = sample["id"]
-                embedding = embeddings.get(sample_id)
+                sample_id = _sample_key(sample)
+                embedding: Optional[np.ndarray] = None
+                if embeddings is not None:
+                    embedding = embeddings.get(sample_id)
+                elif whisper_model is not None:
+                    embedding_tensor = whisper_model.extract_embeddings(sample["wav_path"])
+                    embedding = _pool_embedding(embedding_tensor.detach().cpu().numpy())
                 if embedding is None:
                     continue
                 logits = gating_model(torch.from_numpy(embedding).to(device))
@@ -237,7 +264,7 @@ def _prepare_expert_indices(
     indices: Dict[int, List[int]] = {expert_id: [] for expert_id in range(num_experts)}
 
     for idx, sample in enumerate(samples):
-        labels = assignments.get(sample["id"])
+        labels = assignments.get(_sample_key(sample))
         if not labels:
             continue
         for label in labels:
@@ -287,6 +314,13 @@ def _trainable_parameters(model: nn.Module) -> Iterable[nn.Parameter]:
     return [param for param in model.parameters() if param.requires_grad]
 
 
+def _forward_model(model: nn.Module, **kwargs: torch.Tensor) -> Any:
+    base_model = getattr(model, "base_model", None)
+    if base_model is not None and hasattr(base_model, "forward"):
+        return base_model(**kwargs)
+    return model(**kwargs)
+
+
 def _evaluate(
     model: nn.Module,
     data_loader: DataLoader,
@@ -301,13 +335,46 @@ def _evaluate(
         for batch in data_loader:
             batch = {k: v.to(device) for k, v in batch.items()}
             with torch.cuda.amp.autocast(enabled=use_amp):
-                outputs = model(**batch)
+                outputs = _forward_model(
+                    model,
+                    input_features=batch["input_features"],
+                    labels=batch["labels"],
+                )
                 loss = outputs.loss
             batch_size = batch["input_features"].size(0)
             total_loss += loss.item() * batch_size
             total_samples += batch_size
 
     return total_loss / max(total_samples, 1)
+
+
+def _evaluate_wer(
+    model: "WhisperForConditionalGeneration",
+    data_loader: DataLoader,
+    processor: "WhisperProcessor",
+    device: torch.device,
+) -> float:
+    model.eval()
+    scorer = WERScorer(normalize=True)
+    references: List[str] = []
+    hypotheses: List[str] = []
+
+    with torch.no_grad():
+        for batch in data_loader:
+            input_features = batch["input_features"].to(device)
+            labels = batch["labels"].to(device)
+
+            generated_ids = model.generate(input_features)
+            preds = processor.batch_decode(generated_ids, skip_special_tokens=True)
+
+            labels = labels.clone()
+            labels[labels == -100] = processor.tokenizer.pad_token_id
+            refs = processor.batch_decode(labels, skip_special_tokens=True)
+
+            references.extend(refs)
+            hypotheses.extend(preds)
+
+    return scorer.corpus_wer(references, hypotheses)
 
 
 def _train_expert(
@@ -351,21 +418,69 @@ def _train_expert(
     )
     scaler = torch.cuda.amp.GradScaler(enabled=config.fp16)
 
+    metrics_path = Path(config.output_dir) / f"expert_{expert_id}" / "metrics.json"
+    metrics_path.parent.mkdir(parents=True, exist_ok=True)
+    metrics_history: List[Dict[str, float]] = []
+    if metrics_path.exists():
+        with metrics_path.open("r", encoding="utf-8") as metrics_file:
+            try:
+                metrics_history = json.load(metrics_file)
+            except json.JSONDecodeError:
+                metrics_history = []
+
     for epoch in range(1, config.epochs + 1):
         model.train()
+        total_loss = 0.0
+        total_samples = 0
         for batch in train_loader:
             batch = {k: v.to(device) for k, v in batch.items()}
             optimizer.zero_grad()
             with torch.cuda.amp.autocast(enabled=config.fp16):
-                outputs = model(**batch)
+                outputs = _forward_model(
+                    model,
+                    input_features=batch["input_features"],
+                    labels=batch["labels"],
+                )
                 loss = outputs.loss
+            batch_size = batch["input_features"].size(0)
+            total_loss += loss.item() * batch_size
+            total_samples += batch_size
             scaler.scale(loss).backward()
             scaler.step(optimizer)
             scaler.update()
 
+        train_loss = total_loss / max(total_samples, 1)
         if val_size > 0:
             val_loss = _evaluate(model, val_loader, device, config.fp16)
-            print(f"Expert {expert_id} epoch {epoch}: val_loss={val_loss:.4f}")
+            val_wer = _evaluate_wer(model, val_loader, processor, device)
+            metrics_history.append(
+                {
+                    "epoch": epoch,
+                    "train_loss": float(train_loss),
+                    "val_loss": float(val_loss),
+                    "val_wer": float(val_wer),
+                }
+            )
+            print(
+                f"Expert {expert_id} epoch {epoch}: "
+                f"val_loss={val_loss:.4f} val_wer={val_wer:.4f}"
+            )
+        else:
+            metrics_history.append(
+                {
+                    "epoch": epoch,
+                    "train_loss": float(train_loss),
+                    "val_loss": None,
+                    "val_wer": None,
+                }
+            )
+            print(
+                f"Expert {expert_id} epoch {epoch}: "
+                f"train_loss={train_loss:.4f} (no val split)"
+            )
+
+        with metrics_path.open("w", encoding="utf-8") as metrics_file:
+            json.dump(metrics_history, metrics_file, indent=2)
 
     output_dir = Path(config.output_dir) / f"expert_{expert_id}"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -392,6 +507,7 @@ def _load_training_config(config_path: str) -> TrainingConfig:
         gating_model_checkpoint=config.get("gating_model_checkpoint"),
         gating_model_config=config.get("gating_model_config", "Config/gating_model_config.json"),
         use_gating_model=bool(config.get("use_gating_model", False)),
+        use_whisper_embeddings_for_gating=bool(config.get("use_whisper_embeddings_for_gating", False)),
         drop_noise=bool(config.get("drop_noise", True)),
         num_experts=int(config.get("num_experts", 8)),
         top_k_experts=int(config.get("top_k_experts", 2)),
@@ -414,8 +530,12 @@ def _load_training_config(config_path: str) -> TrainingConfig:
     )
 
 
-def train(config_path: str) -> None:
+def train(config_path: str, max_samples: Optional[int] = None) -> None:
     config = _load_training_config(config_path)
+    if max_samples is not None:
+        if config.data_config_override is None:
+            config.data_config_override = {}
+        config.data_config_override["max_samples"] = int(max_samples)
     _ensure_dependencies(config.use_lora)
     _set_seed(config.seed)
 
@@ -445,6 +565,7 @@ def train(config_path: str) -> None:
         else None,
         gating_model_config=config.gating_model_config,
         use_gating_model=config.use_gating_model,
+        use_whisper_embeddings_for_gating=config.use_whisper_embeddings_for_gating,
         drop_noise=config.drop_noise,
         top_k_experts=config.top_k_experts,
         device=device,
@@ -462,7 +583,7 @@ def train(config_path: str) -> None:
     dataset = WhisperMoEDataset(
         [
             {
-                "id": sample["id"],
+                "id": _sample_key(sample),
                 "wav_path": sample["wav_path"],
                 "transcript": sample.get("prompt", ""),
             }
@@ -495,9 +616,15 @@ def _parse_args() -> argparse.Namespace:
         default="Config/expert_pre_training.json",
         help="Path to JSON config.",
     )
+    parser.add_argument(
+        "--max-samples",
+        type=int,
+        default=None,
+        help="Override max_samples for data selection (e.g., 50).",
+    )
     return parser.parse_args()
 
 
 if __name__ == "__main__":
     args = _parse_args()
-    train(args.config)
+    train(args.config, args.max_samples)

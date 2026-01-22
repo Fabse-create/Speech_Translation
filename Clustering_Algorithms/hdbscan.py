@@ -21,12 +21,14 @@ class HDBSCAN:
         min_cluster_size: int = 5,
         min_samples: Optional[int] = None,
         metric: str = "euclidean",
+        algorithm: str = "best",
         **kwargs: Any,
     ) -> None:
         self.model = hdbscan_lib.HDBSCAN(
             min_cluster_size=min_cluster_size,
             min_samples=min_samples,
             metric=metric,
+            algorithm=algorithm,
             prediction_data=True,
             **kwargs,
         )
@@ -36,8 +38,8 @@ class HDBSCAN:
     @staticmethod
     def _to_numpy(embeddings: Any) -> np.ndarray:
         if torch is not None and isinstance(embeddings, torch.Tensor):
-            return embeddings.detach().cpu().numpy()
-        return np.asarray(embeddings)
+            return embeddings.detach().cpu().numpy().astype(np.float64, copy=False)
+        return np.asarray(embeddings, dtype=np.float64)
 
     def fit(self, embeddings: Any) -> np.ndarray:
         data = self._to_numpy(embeddings)
@@ -50,7 +52,30 @@ class HDBSCAN:
         if self.labels_ is None:
             raise RuntimeError("Model is not fitted yet.")
 
-        memberships = hdbscan_lib.all_points_membership_vectors(self.model)
+        try:
+            memberships = hdbscan_lib.all_points_membership_vectors(self.model)
+        except AttributeError:
+            labels = np.asarray(self.labels_)
+            if labels.size == 0:
+                raise RuntimeError("No labels available for soft clustering.")
+            valid_labels = labels[labels >= 0]
+            n_clusters = int(valid_labels.max()) + 1 if valid_labels.size else 0
+            if n_clusters == 0:
+                memberships = np.zeros((labels.size, 0), dtype=np.float64)
+            else:
+                memberships = np.zeros((labels.size, n_clusters), dtype=np.float64)
+                for idx, label in enumerate(labels):
+                    if label >= 0:
+                        memberships[idx, int(label)] = 1.0
+            if include_noise:
+                noise_prob = (labels == -1).astype(np.float64)[:, None]
+                memberships_with_noise = np.concatenate([memberships, noise_prob], axis=1)
+                self.soft_clusters_ = memberships_with_noise
+                return memberships_with_noise
+            self.soft_clusters_ = memberships
+            return memberships
+        if memberships.ndim == 1:
+            memberships = memberships[:, None]
         if not include_noise:
             self.soft_clusters_ = memberships
             return memberships

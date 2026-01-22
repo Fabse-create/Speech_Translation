@@ -1,7 +1,12 @@
 import json
 import random
+import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.append(str(ROOT_DIR))
 
 import numpy as np
 import torch
@@ -22,7 +27,7 @@ class EmbeddingClusterDataset(Dataset):
     ) -> None:
         self.embeddings_dir = embeddings_dir
         self.num_experts = num_experts
-        self.entries = self._load_entries(labels_path)
+        self.entries = self._normalize_entries(self._load_entries(labels_path), num_experts)
 
     @staticmethod
     def _load_entries(labels_path: Path) -> List[Dict[str, object]]:
@@ -37,6 +42,43 @@ class EmbeddingClusterDataset(Dataset):
         if isinstance(data[0], dict) and "id" in data[0]:
             return data
         raise ValueError("Labels must include explicit 'id' entries.")
+
+    @staticmethod
+    def _normalize_entries(
+        entries: List[Dict[str, object]],
+        num_experts: int,
+    ) -> List[Dict[str, object]]:
+        normalized: List[Dict[str, object]] = []
+        for entry in entries:
+            if "probs" in entry:
+                probs = np.asarray(entry["probs"], dtype=np.float32)
+                if probs.ndim != 1:
+                    raise ValueError("Soft labels must be a 1D list.")
+                if probs.shape[0] == num_experts + 1:
+                    probs = probs[:-1]
+                if probs.shape[0] != num_experts:
+                    raise ValueError(
+                        f"Soft label size {probs.shape[0]} does not match num_experts {num_experts}."
+                    )
+                total = float(probs.sum())
+                if total <= 0.0:
+                    continue
+                probs = probs / total
+                normalized.append({**entry, "probs": probs.tolist()})
+                continue
+
+            if "label" in entry:
+                label = int(entry["label"])
+                if label < 0 or label >= num_experts:
+                    continue
+                normalized.append(entry)
+                continue
+
+            raise ValueError("Label entry must include 'probs' or 'label'.")
+
+        if not normalized:
+            raise ValueError("No valid labels found after normalization.")
+        return normalized
 
     @staticmethod
     def _pool_embedding(embedding: np.ndarray) -> np.ndarray:
@@ -121,10 +163,19 @@ def train(config_path: str = "Config/gating_model_config.json") -> Path:
 
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
     best_meta_path = checkpoint_dir / "best.json"
+    metrics_path = checkpoint_dir / "metrics.json"
     best_loss = float("inf")
     if best_meta_path.exists():
         with best_meta_path.open("r", encoding="utf-8") as meta_file:
             best_loss = json.load(meta_file).get("loss", best_loss)
+
+    metrics_history: List[Dict[str, float]] = []
+    if metrics_path.exists():
+        with metrics_path.open("r", encoding="utf-8") as metrics_file:
+            try:
+                metrics_history = json.load(metrics_file)
+            except json.JSONDecodeError:
+                metrics_history = []
 
     for epoch in range(1, epochs + 1):
         model.train()
@@ -150,6 +201,17 @@ def train(config_path: str = "Config/gating_model_config.json") -> Path:
         metrics = {"loss": train_loss, "accuracy": 0.0}
         if val_size > 0:
             metrics = evaluate_model(model, val_loader, device)
+
+        metrics_entry = {"epoch": epoch, "train_loss": train_loss, "val_loss": metrics["loss"], "val_accuracy": metrics["accuracy"]}
+        metrics_history.append(metrics_entry)
+        with metrics_path.open("w", encoding="utf-8") as metrics_file:
+            json.dump(metrics_history, metrics_file, indent=2)
+        print(
+            f"[Epoch {epoch}/{epochs}] "
+            f"train_loss={train_loss:.4f} "
+            f"val_loss={metrics['loss']:.4f} "
+            f"val_acc={metrics['accuracy']:.4f}"
+        )
 
         if metrics["loss"] < best_loss:
             best_loss = metrics["loss"]
