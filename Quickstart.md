@@ -33,6 +33,29 @@ This will:
 - Log all output to `Runs/test_1percent/training.log` for later review
 - Complete much faster than a full run while testing the entire pipeline
 
+### Test with Spectral Clustering (recommended for balanced experts)
+
+HDBSCAN can produce imbalanced clusters (most samples in one cluster). Spectral clustering 
+forces exactly N balanced clusters, which is often better for MoE training:
+
+```bash
+python Training_Scripts/train_pipeline.py --mode full --seed 42 \
+  --clustering-algorithm spectral \
+  --num-experts 8 \
+  --data-percent 1 \
+  --log-file Runs/test_spectral/training.log
+```
+
+For a fuller test with 10% of data:
+
+```bash
+python Training_Scripts/train_pipeline.py --mode full --seed 42 \
+  --clustering-algorithm spectral \
+  --num-experts 8 \
+  --data-percent 10 \
+  --log-file Runs/test_spectral_10pct/training.log
+```
+
 Defaults:
 - `num_experts=8`
 - Clustering uses HDBSCAN with dimensionality reduction and a plot.
