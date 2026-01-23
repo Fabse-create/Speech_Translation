@@ -18,6 +18,21 @@ python Training_Scripts/train_pipeline.py --mode quick --seed 42
 python Training_Scripts/train_pipeline.py --mode full --seed 42
 ```
 
+### Test with 1% of data (with file logging)
+
+Useful for verifying the full pipeline before committing to a long training run:
+
+```bash
+python Training_Scripts/train_pipeline.py --mode full --seed 42 \
+  --data-percent 1 \
+  --log-file Runs/test_1percent/training.log
+```
+
+This will:
+- Use 1% of data for all stages (embedding extraction, expert pre-training, ASR training)
+- Log all output to `Runs/test_1percent/training.log` for later review
+- Complete much faster than a full run while testing the entire pipeline
+
 Defaults:
 - `num_experts=8`
 - Clustering uses HDBSCAN with dimensionality reduction and a plot.
@@ -255,6 +270,8 @@ python Evaluation/plot_asr_metrics.py
 | `--num-experts` | `8` | Number of MoE experts |
 | `--resume` | `false` | Resume from existing checkpoints |
 | `--no-plot` | `false` | Skip plotting (faster on headless servers) |
+| `--data-percent` | `None` | Override data percentage for all stages (e.g., `1` for 1%) |
+| `--log-file` | `None` | Path to log file for storing all output |
 
 ### Batch Size & Workers
 

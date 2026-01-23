@@ -1,9 +1,11 @@
 import argparse
 import json
+import logging
 import random
 import shutil
 import sys
 from collections import defaultdict
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
@@ -14,6 +16,35 @@ from torch.utils.data import DataLoader
 ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
+
+
+def _setup_logging(log_file: Optional[str] = None) -> logging.Logger:
+    """Configure logging to console and optionally to a file."""
+    logger = logging.getLogger("train_pipeline")
+    logger.setLevel(logging.INFO)
+    
+    # Clear existing handlers
+    logger.handlers.clear()
+    
+    # Console handler
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
+    console_format = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+    console_handler.setFormatter(console_format)
+    logger.addHandler(console_handler)
+    
+    # File handler (if specified)
+    if log_file:
+        log_path = Path(log_file)
+        log_path.parent.mkdir(parents=True, exist_ok=True)
+        file_handler = logging.FileHandler(log_path, mode='a', encoding='utf-8')
+        file_handler.setLevel(logging.INFO)
+        file_format = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+        file_handler.setFormatter(file_format)
+        logger.addHandler(file_handler)
+        logger.info(f"Logging to file: {log_path}")
+    
+    return logger
 
 from Clustering_Algorithms.hdbscan import HDBSCAN
 from Clustering_Algorithms.spectral_clustering import Spectral_Clustering
@@ -650,8 +681,16 @@ def run_pipeline(
     gradient_accumulation_steps: int = 1,
     eval_every_n_epochs: int = 1,
     save_every_n_epochs: int = 5,
+    data_percent: Optional[int] = None,
+    log_file: Optional[str] = None,
 ) -> None:
     _set_seed(seed)
+
+    # Setup logging
+    logger = _setup_logging(log_file)
+    logger.info(f"Starting pipeline in '{mode}' mode with seed={seed}")
+    if data_percent is not None:
+        logger.info(f"Using custom data percentage: {data_percent}%")
 
     run_root = Path("Runs") / mode
     embeddings_dir = run_root / "embeddings" / f"whisper_{whisper_model}_embeddings"
@@ -685,18 +724,28 @@ def run_pipeline(
         asr_max = None
         include_dev = True
 
+    # Override percentages if data_percent is specified
+    if data_percent is not None:
+        embedding_percent = data_percent
+        expert_percent = data_percent
+        asr_percent = data_percent
+        embedding_max = None  # Use percentage, not fixed count
+        expert_max = None
+        asr_max = None
+        logger.info(f"Data percentages set to: embedding={embedding_percent}%, expert={expert_percent}%, asr={asr_percent}%")
+
     # OPTIMIZATION: Only remove run directory if not resuming
     if not resume:
         _remove_dir(run_root)
     else:
-        print(f"Resuming from existing run at {run_root}")
+        logger.info(f"Resuming from existing run at {run_root}")
 
     # STEP 1: Embedding extraction (with resume support)
     skip_embeddings = resume and embeddings_mapping.exists() and len(list(embeddings_dir.rglob("*.npy"))) > 0
     if skip_embeddings:
-        print(f"[RESUME] Skipping embedding extraction - found {len(list(embeddings_dir.rglob('*.npy')))} embeddings")
+        logger.info(f"[RESUME] Skipping embedding extraction - found {len(list(embeddings_dir.rglob('*.npy')))} embeddings")
     else:
-        print("[STEP 1/5] Extracting embeddings...")
+        logger.info("[STEP 1/5] Extracting embeddings...")
         _extract_embeddings(
             dataset_root=dataset_root,
             split="Train",
@@ -730,9 +779,9 @@ def run_pipeline(
                 resolved_experts = num_experts
         else:
             resolved_experts = num_experts
-        print(f"[RESUME] Skipping clustering - found labels at {labels_path} with {resolved_experts} experts")
+        logger.info(f"[RESUME] Skipping clustering - found labels at {labels_path} with {resolved_experts} experts")
     else:
-        print("[STEP 2/5] Clustering embeddings...")
+        logger.info("[STEP 2/5] Clustering embeddings...")
         labels_path, resolved_experts = _cluster_embeddings(
             embedding_dir=embeddings_dir,
             output_dir=clustered_dir,
@@ -764,9 +813,9 @@ def run_pipeline(
     if skip_gating:
         gating_checkpoint = gating_best_checkpoint
         gating_config = gating_ckpt_dir / "gating_pretrain_config.json"
-        print(f"[RESUME] Skipping gating pre-training - found checkpoint at {gating_checkpoint}")
+        logger.info(f"[RESUME] Skipping gating pre-training - found checkpoint at {gating_checkpoint}")
     else:
-        print("[STEP 3/5] Training gating model...")
+        logger.info("[STEP 3/5] Training gating model...")
         gating_config = _build_gating_config(
             base_path="Config/gating_model_config.json",
             num_experts=resolved_experts,
@@ -794,9 +843,9 @@ def run_pipeline(
     skip_experts = resume and any(expert_dirs_exist)
 
     if skip_experts:
-        print(f"[RESUME] Skipping expert pre-training - found {sum(expert_dirs_exist)}/{resolved_experts} expert directories")
+        logger.info(f"[RESUME] Skipping expert pre-training - found {sum(expert_dirs_exist)}/{resolved_experts} expert directories")
     else:
-        print("[STEP 4/5] Training experts...")
+        logger.info("[STEP 4/5] Training experts...")
         expert_override = _build_data_override(
             dataset_root, "Train", expert_percent, "stratified", seed, expert_max
         )
@@ -824,9 +873,9 @@ def run_pipeline(
     skip_asr = resume and asr_best_checkpoint.exists()
 
     if skip_asr:
-        print(f"[RESUME] Skipping ASR training - found checkpoint at {asr_best_checkpoint}")
+        logger.info(f"[RESUME] Skipping ASR training - found checkpoint at {asr_best_checkpoint}")
     else:
-        print("[STEP 5/5] Training full ASR model...")
+        logger.info("[STEP 5/5] Training full ASR model...")
         asr_override = _build_data_override(
             dataset_root, "Train", asr_percent, "stratified", seed, asr_max
         )
@@ -880,9 +929,9 @@ def run_pipeline(
         if not no_plot:
             plot_asr_metrics(asr_metrics_dir / "metrics.json", asr_metrics_dir)
 
-    print("\n" + "="*50)
-    print("Pipeline complete!")
-    print("="*50)
+    logger.info("="*50)
+    logger.info("Pipeline complete!")
+    logger.info("="*50)
 
 
 def _parse_args() -> argparse.Namespace:
@@ -1054,6 +1103,18 @@ def _parse_args() -> argparse.Namespace:
         default=5,
         help="Save checkpoints every N epochs.",
     )
+    parser.add_argument(
+        "--data-percent",
+        type=int,
+        default=None,
+        help="Override data percentage for all stages (e.g., 1 for 1%% of data).",
+    )
+    parser.add_argument(
+        "--log-file",
+        type=str,
+        default=None,
+        help="Path to log file. If specified, all output is logged to this file.",
+    )
     return parser.parse_args()
 
 
@@ -1090,4 +1151,7 @@ if __name__ == "__main__":
         gradient_accumulation_steps=args.gradient_accumulation_steps,
         eval_every_n_epochs=args.eval_every_n_epochs,
         save_every_n_epochs=args.save_every_n_epochs,
+        # Data percentage and logging
+        data_percent=args.data_percent,
+        log_file=args.log_file,
     )
