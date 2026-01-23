@@ -15,17 +15,17 @@
   },
   "gating_model_checkpoint": "checkpoints/gating_model/best.pt",
   "gating_model_config": "Config/gating_model_config.json",
-  "num_experts": 2,
+  "num_experts": 8,
   "top_k_experts": 2,
-  "expert_fraction": 0.3,
+  "expert_fraction": 0.5,
   "max_samples_per_expert": null,
   "val_split": 0.1,
-  "batch_size": 2,
-  "epochs": 3,
+  "batch_size": 4,
+  "epochs": 5,
   "learning_rate": 0.0001,
   "weight_decay": 0.0,
   "seed": 42,
-  "num_workers": 0,
+  "num_workers": 4,
   "use_lora": true,
   "lora": {
     "r": 16,
@@ -34,5 +34,8 @@
     "target_modules": ["q_proj", "v_proj"]
   },
   "output_dir": "checkpoints/experts",
-  "fp16": true
+  "fp16": true,
+  "embeddings_dir": null,
+  "gradient_accumulation_steps": 4,
+  "pin_memory": true
 }

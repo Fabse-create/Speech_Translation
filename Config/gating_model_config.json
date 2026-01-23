@@ -1,18 +1,18 @@
 {
   "input_dim": 1280,
   "hidden_dim": 512,
-  "num_experts": 2,
+  "num_experts": 8,
   "training": {
     "embeddings_dir": "Data/embeddings/whisper_v2_embeddings",
     "labels_path": "Data/embeddings/whisper_v2_embeddings_clustered/HDBSCAN_soft.json",
     "checkpoint_dir": "checkpoints/gating_model",
     "metrics_dir": "Evaluation/gating_model_results",
-    "batch_size": 32,
-    "epochs": 10,
+    "batch_size": 256,
+    "epochs": 20,
     "learning_rate": 0.0001,
-    "weight_decay": 0.0,
+    "weight_decay": 0.01,
     "val_split": 0.1,
     "seed": 42,
-    "num_workers": 0
+    "num_workers": 4
   }
 }

@@ -681,124 +681,198 @@ def run_pipeline(
     else:
         print(f"Resuming from existing run at {run_root}")
 
-    _extract_embeddings(
-        dataset_root=dataset_root,
-        split="Train",
-        percent=embedding_percent,
-        max_samples=embedding_max,
-        seed=seed,
-        output_dir=embeddings_dir,
-        mapping_path=embeddings_mapping,
-        whisper_model=whisper_model,
-        sampling="stratified",
-    )
+    # STEP 1: Embedding extraction (with resume support)
+    skip_embeddings = resume and embeddings_mapping.exists() and len(list(embeddings_dir.rglob("*.npy"))) > 0
+    if skip_embeddings:
+        print(f"[RESUME] Skipping embedding extraction - found {len(list(embeddings_dir.rglob('*.npy')))} embeddings")
+    else:
+        print("[STEP 1/5] Extracting embeddings...")
+        _extract_embeddings(
+            dataset_root=dataset_root,
+            split="Train",
+            percent=embedding_percent,
+            max_samples=embedding_max,
+            seed=seed,
+            output_dir=embeddings_dir,
+            mapping_path=embeddings_mapping,
+            whisper_model=whisper_model,
+            sampling="stratified",
+        )
 
-    labels_path, resolved_experts = _cluster_embeddings(
-        embedding_dir=embeddings_dir,
-        output_dir=clustered_dir,
-        algorithm=clustering_algorithm,
-        num_experts=num_experts,
-        min_clusters=min_clusters,
-        min_cluster_size=min_cluster_size,
-        min_samples=min_samples,
-        metric=metric,
-        allow_single_cluster=allow_single_cluster,
-        hdbscan_algorithm=hdbscan_algorithm,
-        allow_reduce_experts=allow_reduce_experts,
-        min_experts=min_experts,
-        max_retries=max_retries,
-        pooling=pooling,
-        reduce=reduce,
-        reduce_dim=reduce_dim,
-        plot_method=plot_method,
-        seed=seed,
-    )
+    # STEP 2: Clustering (with resume support)
+    soft_labels_path = clustered_dir / "HDBSCAN_soft.json"
+    spectral_labels_path = clustered_dir / "Spectral_soft.json"
+    skip_clustering = resume and (soft_labels_path.exists() or spectral_labels_path.exists())
+
+    if skip_clustering:
+        # Determine which labels file exists and count experts
+        if soft_labels_path.exists():
+            labels_path = soft_labels_path
+        else:
+            labels_path = spectral_labels_path
+        import json as _json
+        with labels_path.open("r") as f:
+            labels_data = _json.load(f)
+        if labels_data and "probs" in labels_data[0]:
+            resolved_experts = len(labels_data[0]["probs"])
+            # Adjust for noise column if present
+            if resolved_experts > num_experts:
+                resolved_experts = num_experts
+        else:
+            resolved_experts = num_experts
+        print(f"[RESUME] Skipping clustering - found labels at {labels_path} with {resolved_experts} experts")
+    else:
+        print("[STEP 2/5] Clustering embeddings...")
+        labels_path, resolved_experts = _cluster_embeddings(
+            embedding_dir=embeddings_dir,
+            output_dir=clustered_dir,
+            algorithm=clustering_algorithm,
+            num_experts=num_experts,
+            min_clusters=min_clusters,
+            min_cluster_size=min_cluster_size,
+            min_samples=min_samples,
+            metric=metric,
+            allow_single_cluster=allow_single_cluster,
+            hdbscan_algorithm=hdbscan_algorithm,
+            allow_reduce_experts=allow_reduce_experts,
+            min_experts=min_experts,
+            max_retries=max_retries,
+            pooling=pooling,
+            reduce=reduce,
+            reduce_dim=reduce_dim,
+            plot_method=plot_method if not no_plot else "pca",  # Use PCA if not plotting
+            seed=seed,
+        )
 
     if fp16 is None:
         fp16 = torch.cuda.is_available()
 
-    gating_config = _build_gating_config(
-        base_path="Config/gating_model_config.json",
-        num_experts=resolved_experts,
-        embeddings_dir=embeddings_dir,
-        labels_path=labels_path,
-        checkpoint_dir=gating_ckpt_dir,
-        metrics_dir=gating_metrics_dir,
-        seed=seed,
-        batch_size=gating_batch_size,
-        num_workers=num_workers,
-    )
-    _remove_if_exists(gating_metrics_dir / "metrics.json")
-    _remove_if_exists(gating_ckpt_dir / "best.json")
-    gating_checkpoint = train_gate(str(gating_config))
-    plot_gating_metrics(gating_metrics_dir / "metrics.json", gating_metrics_dir)
+    # STEP 3: Gating model pre-training (with resume support)
+    gating_best_checkpoint = gating_ckpt_dir / "best.pt"
+    skip_gating = resume and gating_best_checkpoint.exists()
 
-    expert_override = _build_data_override(
-        dataset_root, "Train", expert_percent, "stratified", seed, expert_max
-    )
-    expert_config = _build_expert_config(
-        base_path="Config/expert_pre_training.json",
-        num_experts=resolved_experts,
-        gating_checkpoint=gating_checkpoint,
-        gating_config=str(gating_config),
-        data_override=expert_override,
-        seed=seed,
-        batch_size=expert_batch_size,
-        num_workers=num_workers,
-        fp16=fp16,
-    )
-    _clear_expert_metrics(Path("Evaluation/expert_training_results"))
-    train_experts(str(expert_config))
-    plot_expert_metrics(Path("Evaluation/expert_training_results"), Path("Evaluation/expert_training_results"))
+    if skip_gating:
+        gating_checkpoint = gating_best_checkpoint
+        gating_config = gating_ckpt_dir / "gating_pretrain_config.json"
+        print(f"[RESUME] Skipping gating pre-training - found checkpoint at {gating_checkpoint}")
+    else:
+        print("[STEP 3/5] Training gating model...")
+        gating_config = _build_gating_config(
+            base_path="Config/gating_model_config.json",
+            num_experts=resolved_experts,
+            embeddings_dir=embeddings_dir,
+            labels_path=labels_path,
+            checkpoint_dir=gating_ckpt_dir,
+            metrics_dir=gating_metrics_dir,
+            seed=seed,
+            batch_size=gating_batch_size,
+            num_workers=num_workers,
+        )
+        if not resume:
+            _remove_if_exists(gating_metrics_dir / "metrics.json")
+            _remove_if_exists(gating_ckpt_dir / "best.json")
+        gating_checkpoint = train_gate(str(gating_config))
+        if not no_plot:
+            plot_gating_metrics(gating_metrics_dir / "metrics.json", gating_metrics_dir)
 
-    asr_override = _build_data_override(
-        dataset_root, "Train", asr_percent, "stratified", seed, asr_max
-    )
-    asr_config = _build_asr_config(
-        base_path="Config/asr_training.json",
-        num_experts=resolved_experts,
-        gating_checkpoint=gating_checkpoint,
-        gating_config=str(gating_config),
-        experts_dir=Path("checkpoints/experts"),
-        data_override=asr_override,
-        seed=seed,
-        output_dir=asr_output_dir,
-        metrics_dir=asr_metrics_dir,
-        batch_size=asr_batch_size,
-        num_workers=num_workers,
-        fp16=fp16,
-    )
+    # STEP 4: Expert pre-training (with resume support)
+    experts_output_dir = Path("checkpoints/experts")
+    expert_dirs_exist = [
+        (experts_output_dir / f"expert_{i}").exists() 
+        for i in range(resolved_experts)
+    ]
+    skip_experts = resume and any(expert_dirs_exist)
 
-    train_samples = _load_samples(
-        dataset_root,
-        split="Train",
-        percent=asr_percent,
-        sampling="stratified",
-        seed=seed,
-        max_samples=asr_max,
-    )
-    dev_samples: List[Dict[str, Any]] = []
-    if include_dev:
-        dev_samples = _load_samples(
+    if skip_experts:
+        print(f"[RESUME] Skipping expert pre-training - found {sum(expert_dirs_exist)}/{resolved_experts} expert directories")
+    else:
+        print("[STEP 4/5] Training experts...")
+        expert_override = _build_data_override(
+            dataset_root, "Train", expert_percent, "stratified", seed, expert_max
+        )
+        expert_config = _build_expert_config(
+            base_path="Config/expert_pre_training.json",
+            num_experts=resolved_experts,
+            gating_checkpoint=gating_checkpoint,
+            gating_config=str(gating_config),
+            data_override=expert_override,
+            seed=seed,
+            batch_size=expert_batch_size,
+            num_workers=num_workers,
+            fp16=fp16,
+            embeddings_dir=embeddings_dir,  # OPTIMIZATION: Pass cached embeddings
+            gradient_accumulation_steps=gradient_accumulation_steps,
+        )
+        if not resume:
+            _clear_expert_metrics(Path("Evaluation/expert_training_results"))
+        train_experts(str(expert_config))
+        if not no_plot:
+            plot_expert_metrics(Path("Evaluation/expert_training_results"), Path("Evaluation/expert_training_results"))
+
+    # STEP 5: Full ASR training (with resume support)
+    asr_best_checkpoint = asr_output_dir / "best.json"
+    skip_asr = resume and asr_best_checkpoint.exists()
+
+    if skip_asr:
+        print(f"[RESUME] Skipping ASR training - found checkpoint at {asr_best_checkpoint}")
+    else:
+        print("[STEP 5/5] Training full ASR model...")
+        asr_override = _build_data_override(
+            dataset_root, "Train", asr_percent, "stratified", seed, asr_max
+        )
+        asr_config = _build_asr_config(
+            base_path="Config/asr_training.json",
+            num_experts=resolved_experts,
+            gating_checkpoint=gating_checkpoint,
+            gating_config=str(gating_config),
+            experts_dir=Path("checkpoints/experts"),
+            data_override=asr_override,
+            seed=seed,
+            output_dir=asr_output_dir,
+            metrics_dir=asr_metrics_dir,
+            batch_size=asr_batch_size,
+            num_workers=num_workers,
+            fp16=fp16,
+            gradient_accumulation_steps=gradient_accumulation_steps,
+            eval_every_n_epochs=eval_every_n_epochs,
+            save_every_n_epochs=save_every_n_epochs,
+        )
+
+        train_samples = _load_samples(
             dataset_root,
-            split="Dev",
+            split="Train",
             percent=asr_percent,
             sampling="stratified",
             seed=seed,
             max_samples=asr_max,
         )
-    all_samples = train_samples + dev_samples
-    if not all_samples:
-        raise ValueError("No ASR samples with transcripts available for training.")
+        dev_samples: List[Dict[str, Any]] = []
+        if include_dev:
+            dev_samples = _load_samples(
+                dataset_root,
+                split="Dev",
+                percent=asr_percent,
+                sampling="stratified",
+                seed=seed,
+                max_samples=asr_max,
+            )
+        all_samples = train_samples + dev_samples
+        if not all_samples:
+            raise ValueError("No ASR samples with transcripts available for training.")
 
-    _run_asr_training(
-        config_path=asr_config,
-        samples=all_samples,
-        seed=seed,
-        output_dir=asr_output_dir,
-        metrics_dir=asr_metrics_dir,
-    )
-    plot_asr_metrics(asr_metrics_dir / "metrics.json", asr_metrics_dir)
+        _run_asr_training(
+            config_path=asr_config,
+            samples=all_samples,
+            seed=seed,
+            output_dir=asr_output_dir,
+            metrics_dir=asr_metrics_dir,
+        )
+        if not no_plot:
+            plot_asr_metrics(asr_metrics_dir / "metrics.json", asr_metrics_dir)
+
+    print("\n" + "="*50)
+    print("Pipeline complete!")
+    print("="*50)
 
 
 def _parse_args() -> argparse.Namespace:
@@ -941,6 +1015,35 @@ def _parse_args() -> argparse.Namespace:
         default="umap",
         help="Visualization method for clusters.",
     )
+    # NEW: Resume and optimization arguments
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="Resume from existing checkpoints instead of starting fresh.",
+    )
+    parser.add_argument(
+        "--no-plot",
+        action="store_true",
+        help="Skip plotting (useful for headless servers or faster runs).",
+    )
+    parser.add_argument(
+        "--gradient-accumulation-steps",
+        type=int,
+        default=1,
+        help="Gradient accumulation steps for larger effective batch sizes.",
+    )
+    parser.add_argument(
+        "--eval-every-n-epochs",
+        type=int,
+        default=1,
+        help="Evaluate every N epochs (higher = faster training).",
+    )
+    parser.add_argument(
+        "--save-every-n-epochs",
+        type=int,
+        default=5,
+        help="Save checkpoints every N epochs.",
+    )
     return parser.parse_args()
 
 
@@ -964,3 +1067,17 @@ if __name__ == "__main__":
         expert_batch_size=args.expert_batch_size,
         asr_batch_size=args.asr_batch_size,
         num_workers=args.num_workers,
+        fp16=(True if args.fp16 else False) if args.no_fp16 else (True if args.fp16 else None),
+        dataset_root=args.dataset_root,
+        whisper_model=args.whisper_model,
+        pooling=args.pooling,
+        reduce=args.reduce,
+        reduce_dim=args.reduce_dim,
+        plot_method=args.plot_method,
+        # NEW: Resume and optimization arguments
+        resume=args.resume,
+        no_plot=args.no_plot,
+        gradient_accumulation_steps=args.gradient_accumulation_steps,
+        eval_every_n_epochs=args.eval_every_n_epochs,
+        save_every_n_epochs=args.save_every_n_epochs,
+    )
