@@ -724,15 +724,17 @@ def run_pipeline(
         asr_max = None
         include_dev = True
 
-    # Override percentages if data_percent is specified
+    # Override percentages if data_percent is specified (scales proportionally)
     if data_percent is not None:
-        embedding_percent = data_percent
-        expert_percent = data_percent
-        asr_percent = data_percent
+        # Scale each stage proportionally: stage_percent * (data_percent / 100)
+        scale_factor = data_percent / 100.0
+        embedding_percent = embedding_percent * scale_factor
+        expert_percent = expert_percent * scale_factor
+        asr_percent = asr_percent * scale_factor
         embedding_max = None  # Use percentage, not fixed count
         expert_max = None
         asr_max = None
-        logger.info(f"Data percentages set to: embedding={embedding_percent}%, expert={expert_percent}%, asr={asr_percent}%")
+        logger.info(f"Scaling data to {data_percent}% - effective percentages: embedding={embedding_percent:.2f}%, expert={expert_percent:.2f}%, asr={asr_percent:.2f}%")
 
     # OPTIMIZATION: Only remove run directory if not resuming
     if not resume:

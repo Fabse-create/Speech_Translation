@@ -18,20 +18,22 @@ python Training_Scripts/train_pipeline.py --mode quick --seed 42
 python Training_Scripts/train_pipeline.py --mode full --seed 42
 ```
 
-### Test with 1% of data (with file logging)
+### Test with 10% of data (with file logging)
 
 Useful for verifying the full pipeline before committing to a long training run:
 
 ```bash
 python Training_Scripts/train_pipeline.py --mode full --seed 42 \
-  --data-percent 1 \
-  --log-file Runs/test_1percent/training.log
+  --data-percent 10 \
+  --log-file Runs/test_10percent/training.log
 ```
 
-This will:
-- Use 1% of data for all stages (embedding extraction, expert pre-training, ASR training)
-- Log all output to `Runs/test_1percent/training.log` for later review
-- Complete much faster than a full run while testing the entire pipeline
+The `--data-percent` flag **scales proportionally** while maintaining the stage ratios (5%/15%/100%):
+- `--data-percent 10` → embeddings: 0.5%, experts: 1.5%, ASR: 10%
+- `--data-percent 50` → embeddings: 2.5%, experts: 7.5%, ASR: 50%
+- `--data-percent 100` → embeddings: 5%, experts: 15%, ASR: 100% (default full run)
+
+This ensures the relative data distribution between stages stays consistent.
 
 ### Test with Spectral Clustering (recommended for balanced experts)
 
@@ -42,18 +44,18 @@ forces exactly N balanced clusters, which is often better for MoE training:
 python Training_Scripts/train_pipeline.py --mode full --seed 42 \
   --clustering-algorithm spectral \
   --num-experts 8 \
-  --data-percent 1 \
+  --data-percent 10 \
   --log-file Runs/test_spectral/training.log
 ```
 
-For a fuller test with 10% of data:
+For a fuller test with 50% of data:
 
 ```bash
 python Training_Scripts/train_pipeline.py --mode full --seed 42 \
   --clustering-algorithm spectral \
   --num-experts 8 \
-  --data-percent 10 \
-  --log-file Runs/test_spectral_10pct/training.log
+  --data-percent 50 \
+  --log-file Runs/test_spectral_50pct/training.log
 ```
 
 Defaults:
