@@ -870,6 +870,13 @@ def run_pipeline(
         if not no_plot:
             plot_expert_metrics(Path("Evaluation/expert_training_results"), Path("Evaluation/expert_training_results"))
 
+    # Clear GPU memory before ASR training to prevent OOM
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        import gc
+        gc.collect()
+        logger.info("Cleared GPU memory before ASR training")
+
     # STEP 5: Full ASR training (with resume support)
     asr_best_checkpoint = asr_output_dir / "best.json"
     skip_asr = resume and asr_best_checkpoint.exists()
