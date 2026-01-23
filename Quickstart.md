@@ -270,7 +270,7 @@ python Evaluation/plot_asr_metrics.py
 | `--num-experts` | `8` | Number of MoE experts |
 | `--resume` | `false` | Resume from existing checkpoints |
 | `--no-plot` | `false` | Skip plotting (faster on headless servers) |
-| `--data-percent` | `None` | Override data percentage for all stages (e.g., `1` for 1%) |
+| `--data-percent` | `None` | Override data percentage for all stages (e.g., `0.5`, `1`, `10`, `100`) |
 | `--log-file` | `None` | Path to log file for storing all output |
 
 ### Batch Size & Workers

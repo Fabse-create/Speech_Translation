@@ -681,7 +681,7 @@ def run_pipeline(
     gradient_accumulation_steps: int = 1,
     eval_every_n_epochs: int = 1,
     save_every_n_epochs: int = 5,
-    data_percent: Optional[int] = None,
+    data_percent: Optional[float] = None,
     log_file: Optional[str] = None,
 ) -> None:
     _set_seed(seed)
@@ -1105,9 +1105,9 @@ def _parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--data-percent",
-        type=int,
+        type=float,
         default=None,
-        help="Override data percentage for all stages (e.g., 1 for 1%% of data).",
+        help="Override data percentage for all stages (e.g., 0.5, 1, 10, 100).",
     )
     parser.add_argument(
         "--log-file",
