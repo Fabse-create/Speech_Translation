@@ -448,7 +448,7 @@ def _evaluate_wer(
             input_features = batch["input_features"].to(device)
             labels = batch["labels"].to(device)
 
-            generated_ids = model.generate(input_features)
+            generated_ids = model.generate(input_features=input_features)
             preds = processor.batch_decode(generated_ids, skip_special_tokens=True)
 
             labels = labels.clone()

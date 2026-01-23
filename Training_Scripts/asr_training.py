@@ -516,7 +516,7 @@ def _evaluate_wer(
                 if not mask.any():
                     continue
                 feats = input_features[mask]
-                generated_ids = model.generate(feats)
+                generated_ids = model.generate(input_features=feats)
                 preds = processor.batch_decode(
                     generated_ids, skip_special_tokens=True
                 )
