@@ -4,6 +4,8 @@ This repo supports both an end-to-end training pipeline and running each step
 individually. The pipeline enforces stratified sampling by illness (`etiology`)
 and uses reproducible seeds throughout.
 
+---
+
 ## End-to-end Pipeline
 
 ### Quick smoke test (10/5/5 samples)
@@ -15,7 +17,9 @@ python Training_Scripts/train_pipeline.py --mode quick --seed 42
 ### Full run (5% embeddings → 15% expert pretrain → 100% ASR)
 
 ```bash
-python Training_Scripts/train_pipeline.py --mode full --seed 42
+python Training_Scripts/train_pipeline.py --mode full --seed 42 \
+  --asr-batch-size 2 \
+  --gradient-accumulation-steps 8
 ```
 
 ### Test with 10% of data (with file logging)
@@ -25,7 +29,9 @@ Useful for verifying the full pipeline before committing to a long training run:
 ```bash
 python Training_Scripts/train_pipeline.py --mode full --seed 42 \
   --data-percent 10 \
-  --log-file Runs/test_10percent/training.log
+  --asr-batch-size 2 \
+  --gradient-accumulation-steps 8 \
+  --log-file Runs/full/training.log
 ```
 
 The `--data-percent` flag **scales proportionally** while maintaining the stage ratios (5%/15%/100%):
@@ -45,7 +51,9 @@ python Training_Scripts/train_pipeline.py --mode full --seed 42 \
   --clustering-algorithm spectral \
   --num-experts 8 \
   --data-percent 10 \
-  --log-file Runs/test_spectral/training.log
+  --asr-batch-size 2 \
+  --gradient-accumulation-steps 8 \
+  --log-file Runs/full/training.log
 ```
 
 For a fuller test with 50% of data:
@@ -55,17 +63,19 @@ python Training_Scripts/train_pipeline.py --mode full --seed 42 \
   --clustering-algorithm spectral \
   --num-experts 8 \
   --data-percent 50 \
-  --log-file Runs/test_spectral_50pct/training.log
+  --asr-batch-size 2 \
+  --gradient-accumulation-steps 8 \
+  --log-file Runs/full/training.log
 ```
 
 Defaults:
 - `num_experts=8`
 - Clustering uses HDBSCAN with dimensionality reduction and a plot.
-- Outputs are written under `Runs/<mode>/`.
+- Outputs are written under `Runs/<mode>/` (e.g., `Runs/full/` or `Runs/quick/`).
 
 ---
 
-## New Features: Resume & Optimization
+## Resume & Recovery
 
 ### Resume after crash or interruption
 
@@ -74,10 +84,17 @@ for long-running full training jobs that may take days:
 
 ```bash
 # First run
-python Training_Scripts/train_pipeline.py --mode full --seed 42
+python Training_Scripts/train_pipeline.py --mode full --seed 42 \
+  --asr-batch-size 2 \
+  --gradient-accumulation-steps 8 \
+  --log-file Runs/full/training.log
 
 # If it crashes, resume with:
-python Training_Scripts/train_pipeline.py --mode full --seed 42 --resume
+python Training_Scripts/train_pipeline.py --mode full --seed 42 \
+  --asr-batch-size 2 \
+  --gradient-accumulation-steps 8 \
+  --log-file Runs/full/training.log \
+  --resume
 ```
 
 The `--resume` flag will:
@@ -92,75 +109,65 @@ The `--resume` flag will:
 For faster runs or servers without display:
 
 ```bash
-python Training_Scripts/train_pipeline.py --mode full --no-plot
-```
-
-### Gradient accumulation for larger effective batch sizes
-
-If you're memory-constrained but want larger effective batch sizes:
-
-```bash
-python Training_Scripts/train_pipeline.py --mode full \
-  --expert-batch-size 4 \
-  --asr-batch-size 4 \
-  --gradient-accumulation-steps 4
-# Effective batch size = 4 × 4 = 16
-```
-
-### Reduce evaluation overhead
-
-Evaluation (especially WER) is expensive. For faster training:
-
-```bash
-python Training_Scripts/train_pipeline.py --mode full \
-  --eval-every-n-epochs 5 \
-  --save-every-n-epochs 10
+python Training_Scripts/train_pipeline.py --mode full --no-plot \
+  --asr-batch-size 2 \
+  --gradient-accumulation-steps 8
 ```
 
 ---
 
 ## Recommended Settings by GPU
 
-### A100 40GB
+> **Note:** All commands use reduced ASR batch size (2) with increased gradient 
+> accumulation (8) to prevent OOM errors. This gives the same effective batch size 
+> while using less peak memory.
+
+### A100 40GB (Recommended)
 
 ```bash
 python Training_Scripts/train_pipeline.py --mode full \
+  --resume \
   --fp16 \
   --gating-batch-size 512 \
   --expert-batch-size 4 \
-  --asr-batch-size 4 \
-  --gradient-accumulation-steps 4 \
+  --asr-batch-size 2 \
+  --gradient-accumulation-steps 8 \
   --num-workers 4 \
   --eval-every-n-epochs 2 \
-  --save-every-n-epochs 5
+  --save-every-n-epochs 5 \
+  --log-file Runs/full/training.log
 ```
 
 ### A100 80GB
 
 ```bash
 python Training_Scripts/train_pipeline.py --mode full \
+  --resume \
   --fp16 \
   --gating-batch-size 1024 \
   --expert-batch-size 8 \
-  --asr-batch-size 8 \
-  --gradient-accumulation-steps 4 \
+  --asr-batch-size 4 \
+  --gradient-accumulation-steps 8 \
   --num-workers 4 \
   --eval-every-n-epochs 2 \
-  --save-every-n-epochs 5
+  --save-every-n-epochs 5 \
+  --log-file Runs/full/training.log
 ```
 
 ### H100 80GB
 
 ```bash
 python Training_Scripts/train_pipeline.py --mode full \
+  --resume \
   --fp16 \
   --gating-batch-size 2048 \
   --expert-batch-size 12 \
-  --asr-batch-size 12 \
+  --asr-batch-size 8 \
   --gradient-accumulation-steps 4 \
   --num-workers 8 \
   --eval-every-n-epochs 2 \
-  --save-every-n-epochs 5
+  --save-every-n-epochs 5 \
+  --log-file Runs/full/training.log
 ```
 
 ### Production run with all optimizations
@@ -170,13 +177,121 @@ python Training_Scripts/train_pipeline.py --mode full \
   --resume \
   --no-plot \
   --fp16 \
-  --gating-batch-size 1024 \
-  --expert-batch-size 8 \
-  --asr-batch-size 8 \
-  --gradient-accumulation-steps 4 \
+  --gating-batch-size 512 \
+  --expert-batch-size 4 \
+  --asr-batch-size 2 \
+  --gradient-accumulation-steps 8 \
   --num-workers 4 \
   --eval-every-n-epochs 5 \
-  --save-every-n-epochs 10
+  --save-every-n-epochs 10 \
+  --log-file Runs/full/training.log
+```
+
+---
+
+## Parameter Reference
+
+### Core Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--mode` | str | `full` | Pipeline mode: `quick` (smoke test with 10/5/5 samples) or `full` (production training) |
+| `--seed` | int | `42` | Random seed for reproducibility across all stages |
+| `--resume` | flag | `false` | Resume from existing checkpoints instead of starting fresh |
+| `--no-plot` | flag | `false` | Skip generating plots (useful for headless servers) |
+
+### Data Configuration
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--data-percent` | float | `None` | Scale all data percentages proportionally. Example: `10` gives 0.5% embeddings, 1.5% experts, 10% ASR |
+| `--dataset-root` | path | `Data/extracted_data` | Root directory containing Train/Dev splits |
+| `--whisper-model` | str | `v2` | Whisper model version for embedding extraction: `v2` or `v3` |
+
+### Model Architecture
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--num-experts` | int | `8` | Number of MoE experts to create |
+
+### Batch Sizes
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--gating-batch-size` | int | `None` | Batch size for gating model pre-training (can be large, embeddings are small) |
+| `--expert-batch-size` | int | `None` | Batch size for expert pre-training (LoRA fine-tuning) |
+| `--asr-batch-size` | int | `None` | Batch size for full ASR training. **Use 2 on A100 40GB to avoid OOM** |
+| `--num-workers` | int | `None` | Number of DataLoader worker processes |
+
+### Training Optimization
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--gradient-accumulation-steps` | int | `1` | Accumulate gradients over N batches before optimizer step. **Use 8 with batch-size 2 for effective batch of 16** |
+| `--fp16` | flag | auto | Enable FP16 mixed precision training (recommended for speed) |
+| `--no-fp16` | flag | `false` | Disable FP16 even if GPU supports it |
+| `--eval-every-n-epochs` | int | `1` | Run validation every N epochs (increase to reduce overhead) |
+| `--save-every-n-epochs` | int | `5` | Save checkpoint every N epochs (in addition to best model) |
+
+### Clustering Configuration
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--clustering-algorithm` | str | `hdbscan` | Clustering algorithm: `hdbscan` (density-based, variable clusters) or `spectral` (fixed N clusters, more balanced) |
+| `--min-cluster-size` | int | `5` | HDBSCAN minimum cluster size (lower = more clusters) |
+| `--min-clusters` | int | `8` | Minimum number of clusters required (HDBSCAN only) |
+| `--min-samples` | int | `None` | HDBSCAN min_samples (defaults to min_cluster_size) |
+| `--metric` | str | `euclidean` | HDBSCAN distance metric (e.g., `euclidean`, `cosine`) |
+| `--allow-single-cluster` | flag | `false` | HDBSCAN: allow single cluster instead of all noise |
+| `--hdbscan-algorithm` | str | `best` | HDBSCAN backend: `best`, `generic`, `prims_kdtree`, `prims_balltree`, `boruvka_kdtree`, `boruvka_balltree` |
+| `--no-reduce-experts` | flag | `false` | Fail if clustering produces fewer experts than requested |
+| `--min-experts` | int | `2` | Minimum experts if reduction is allowed |
+| `--max-retries` | int | `5` | Retries for HDBSCAN with decreasing min_cluster_size |
+
+### Dimensionality Reduction & Visualization
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--reduce` | str | `pca` | Dimensionality reduction before clustering: `none`, `pca`, or `umap` |
+| `--reduce-dim` | int | `50` | Target dimensions for reduction |
+| `--pooling` | str | `mean` | Pooling for clustering embeddings: `mean`, `flatten`, or `none` |
+| `--plot-method` | str | `umap` | Visualization method for cluster plots: `pca` or `umap` |
+
+### Logging
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--log-file` | path | `None` | Path to save training logs. Essential for long runs on servers |
+
+---
+
+## Understanding Batch Size & Memory
+
+### Why reduced batch size?
+
+The full ASR training loads:
+- Base Whisper Large v2 model (~3GB)
+- 8 LoRA expert adapters
+- Gating network
+- Optimizer states
+
+On A100 40GB, this leaves limited memory for activations during forward/backward pass.
+
+### Effective batch size calculation
+
+```
+Effective Batch = batch_size × gradient_accumulation_steps
+```
+
+Examples:
+- `--asr-batch-size 4 --gradient-accumulation-steps 4` → Effective: 16
+- `--asr-batch-size 2 --gradient-accumulation-steps 8` → Effective: 16 (same, but lower peak memory)
+- `--asr-batch-size 1 --gradient-accumulation-steps 16` → Effective: 16 (minimum memory)
+
+### Memory-safe defaults for A100 40GB
+
+```bash
+--asr-batch-size 2 --gradient-accumulation-steps 8
 ```
 
 ---
@@ -187,13 +302,19 @@ python Training_Scripts/train_pipeline.py --mode full \
 
 ```bash
 # Use UMAP for dimensionality reduction (default is PCA)
-python Training_Scripts/train_pipeline.py --mode full --reduce umap --reduce-dim 50
+python Training_Scripts/train_pipeline.py --mode full \
+  --reduce umap --reduce-dim 50 \
+  --asr-batch-size 2 --gradient-accumulation-steps 8
 
-# Use spectral clustering instead of HDBSCAN
-python Training_Scripts/train_pipeline.py --mode full --clustering-algorithm spectral --num-experts 8
+# Use spectral clustering instead of HDBSCAN (recommended for balanced clusters)
+python Training_Scripts/train_pipeline.py --mode full \
+  --clustering-algorithm spectral --num-experts 8 \
+  --asr-batch-size 2 --gradient-accumulation-steps 8
 
 # Fail if HDBSCAN yields fewer clusters than requested
-python Training_Scripts/train_pipeline.py --mode full --no-reduce-experts
+python Training_Scripts/train_pipeline.py --mode full \
+  --no-reduce-experts \
+  --asr-batch-size 2 --gradient-accumulation-steps 8
 ```
 
 ### HDBSCAN fallback behavior
@@ -214,16 +335,22 @@ python Training_Scripts/train_pipeline.py --mode full --no-reduce-experts
 
 ### Key optimizations implemented
 
-1. **Per-expert subset routing** (ASR training): Only processes samples routed 
+1. **GPU memory cleanup** between stages: Prevents OOM when transitioning from 
+   expert pre-training to full ASR training.
+
+2. **Per-expert subset routing** (ASR training): Only processes samples routed 
    to each expert instead of running all experts on the full batch → ~4-8× speedup
 
-2. **Cached embedding reuse** (Expert pre-training): Uses embeddings from the 
+3. **Cached embedding reuse** (Expert pre-training): Uses embeddings from the 
    extraction phase instead of recomputing → ~10-100× speedup for expert assignment
 
-3. **Incremental checkpointing** (Embedding extraction): Saves progress every 
+4. **Incremental checkpointing** (Embedding extraction): Saves progress every 
    100 samples so crashes don't lose all work
 
-4. **Periodic model checkpointing** (ASR training): Saves checkpoints at 
+5. **Early stopping**: All training stages monitor validation loss and stop if 
+   no improvement for 5 epochs (prevents wasted compute and overfitting)
+
+6. **Periodic model checkpointing** (ASR training): Saves checkpoints at 
    configurable intervals, not just on best loss
 
 ---
@@ -284,50 +411,6 @@ python Evaluation/plot_asr_metrics.py
 
 ---
 
-## CLI Reference
-
-### Pipeline Arguments
-
-| Argument | Default | Description |
-|----------|---------|-------------|
-| `--mode` | `full` | `quick` for smoke test, `full` for production |
-| `--seed` | `42` | Random seed for reproducibility |
-| `--num-experts` | `8` | Number of MoE experts |
-| `--resume` | `false` | Resume from existing checkpoints |
-| `--no-plot` | `false` | Skip plotting (faster on headless servers) |
-| `--data-percent` | `None` | Override data percentage for all stages (e.g., `0.5`, `1`, `10`, `100`) |
-| `--log-file` | `None` | Path to log file for storing all output |
-
-### Batch Size & Workers
-
-| Argument | Default | Description |
-|----------|---------|-------------|
-| `--gating-batch-size` | `256` | Batch size for gating model training |
-| `--expert-batch-size` | `4` | Batch size for expert pre-training |
-| `--asr-batch-size` | `4` | Batch size for ASR training |
-| `--num-workers` | `4` | DataLoader worker processes |
-| `--fp16` | auto | Enable FP16 mixed precision |
-
-### Training Optimization
-
-| Argument | Default | Description |
-|----------|---------|-------------|
-| `--gradient-accumulation-steps` | `1` | Accumulate gradients over N batches |
-| `--eval-every-n-epochs` | `1` | Evaluate validation set every N epochs |
-| `--save-every-n-epochs` | `5` | Save checkpoint every N epochs |
-
-### Clustering
-
-| Argument | Default | Description |
-|----------|---------|-------------|
-| `--clustering-algorithm` | `hdbscan` | `hdbscan` or `spectral` |
-| `--reduce` | `pca` | Dimensionality reduction: `none`, `pca`, `umap` |
-| `--reduce-dim` | `50` | Target dimension for reduction |
-| `--plot-method` | `umap` | Visualization method for clusters |
-| `--min-cluster-size` | `5` | HDBSCAN minimum cluster size |
-
----
-
 ## Estimated Training Times
 
 | Stage | A100 40GB | A100 80GB | H100 80GB |
@@ -339,6 +422,8 @@ python Evaluation/plot_asr_metrics.py
 | Full ASR Training | ~60-80 hours | ~40-50 hours | ~30-40 hours |
 | **Total** | **~4-5 days** | **~3-4 days** | **~2-3 days** |
 
+> Note: Early stopping may significantly reduce these times if the model converges early.
+
 ---
 
 ## Notes on Reproducibility
@@ -346,5 +431,37 @@ python Evaluation/plot_asr_metrics.py
 - All steps accept a seed in their configs or CLI.
 - The pipeline sets deterministic PyTorch settings and always uses the same seed
   for sampling, clustering, and training.
-- Outputs are written to separate `Runs/<mode>/` directories to avoid
-  accidentally resuming from older checkpoints (unless `--resume` is used).
+- Outputs are written to `Runs/<mode>/` directories (e.g., `Runs/full/`, `Runs/quick/`).
+
+---
+
+## Troubleshooting
+
+### CUDA Out of Memory
+
+If you see OOM errors during ASR training:
+
+```bash
+# Reduce batch size further
+--asr-batch-size 1 --gradient-accumulation-steps 16
+
+# Or for expert training
+--expert-batch-size 2 --gradient-accumulation-steps 8
+```
+
+### Training stuck or slow
+
+```bash
+# Reduce evaluation frequency
+--eval-every-n-epochs 5
+
+# Reduce checkpoint frequency
+--save-every-n-epochs 10
+```
+
+### Missing embeddings during expert training
+
+The pipeline uses a mapping file to find embeddings. If you see warnings about missing embeddings:
+1. Ensure embedding extraction completed successfully
+2. Check that `mapping.json` exists in the embeddings directory
+3. Re-run with `--resume` to skip completed stages
