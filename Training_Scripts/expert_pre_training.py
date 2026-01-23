@@ -151,8 +151,28 @@ def _load_gating_model(
     return model
 
 
-def _find_embedding_file(embeddings_dir: Path, sample_id: str, contributor_id: Optional[str]) -> Optional[Path]:
+def _load_embedding_mapping(embeddings_dir: Path) -> Dict[str, Path]:
+    """Load embedding mapping.json to get exact sample_id -> embedding_path mapping."""
+    mapping_path = embeddings_dir / "mapping.json"
+    if not mapping_path.exists():
+        return {}
+    try:
+        with mapping_path.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+        # Build lookup: sample_id -> embedding_path
+        return {entry["id"]: Path(entry["embedding_path"]) for entry in data if "id" in entry and "embedding_path" in entry}
+    except (json.JSONDecodeError, KeyError):
+        return {}
+
+
+def _find_embedding_file(embeddings_dir: Path, sample_id: str, contributor_id: Optional[str], mapping: Optional[Dict[str, Path]] = None) -> Optional[Path]:
     """Find embedding file using multiple search strategies."""
+    # Strategy 0: Use mapping.json if available (most reliable)
+    if mapping and sample_id in mapping:
+        path = mapping[sample_id]
+        if path.exists():
+            return path
+
     # Strategy 1: Direct path with contributor subdirectory
     if contributor_id:
         path = embeddings_dir / contributor_id / f"{sample_id}.npy"
@@ -168,7 +188,7 @@ def _find_embedding_file(embeddings_dir: Path, sample_id: str, contributor_id: O
     if path.exists():
         return path
 
-    # Strategy 3: Search recursively
+    # Strategy 3: Search recursively (slower but catches edge cases)
     for candidate in embeddings_dir.rglob(f"*{sample_id}*.npy"):
         return candidate
 
@@ -190,6 +210,11 @@ def _assign_experts_from_cached_embeddings(
     assignments: Dict[str, List[int]] = {}
     missing_count = 0
 
+    # Load embedding mapping for reliable ID matching
+    embedding_mapping = _load_embedding_mapping(embeddings_dir)
+    if embedding_mapping:
+        print(f"Loaded embedding mapping with {len(embedding_mapping)} entries")
+
     iterator = samples
     if tqdm is not None:
         iterator = tqdm(samples, desc="Assigning experts from cached embeddings")
@@ -199,11 +224,12 @@ def _assign_experts_from_cached_embeddings(
             sample_id = _sample_key(sample)
             contributor_id = sample.get("contributor_id")
 
-            # Find cached embedding
+            # Find cached embedding using mapping if available
             embedding_path = _find_embedding_file(
                 embeddings_dir,
                 sample.get("id", ""),
-                contributor_id
+                contributor_id,
+                mapping=embedding_mapping
             )
 
             if embedding_path is None or not embedding_path.exists():
@@ -442,6 +468,7 @@ def _train_expert(
     config: TrainingConfig,
     processor: "WhisperProcessor",
     device: torch.device,
+    early_stopping_patience: int = 5,
 ) -> None:
     if not indices:
         return
@@ -491,6 +518,9 @@ def _train_expert(
             except json.JSONDecodeError:
                 metrics_history = []
 
+    best_val_loss = float("inf")
+    epochs_without_improvement = 0
+
     for epoch in range(1, config.epochs + 1):
         model.train()
         total_loss = 0.0
@@ -532,9 +562,11 @@ def _train_expert(
             optimizer.zero_grad()
 
         train_loss = total_loss / max(total_samples, 1)
+        current_loss = train_loss  # Default to train_loss for early stopping if no val
         if val_size > 0:
             val_loss = _evaluate(model, val_loader, device, config.fp16)
             val_wer = _evaluate_wer(model, val_loader, processor, device)
+            current_loss = val_loss
             metrics_history.append(
                 {
                     "epoch": epoch,
@@ -563,6 +595,16 @@ def _train_expert(
 
         with metrics_path.open("w", encoding="utf-8") as metrics_file:
             json.dump(metrics_history, metrics_file, indent=2)
+
+        # Early stopping check
+        if current_loss < best_val_loss:
+            best_val_loss = current_loss
+            epochs_without_improvement = 0
+        else:
+            epochs_without_improvement += 1
+            if epochs_without_improvement >= early_stopping_patience:
+                print(f"Expert {expert_id}: Early stopping after {epoch} epochs (no improvement for {early_stopping_patience} epochs)")
+                break
 
     output_dir = Path(config.output_dir) / f"expert_{expert_id}"
     output_dir.mkdir(parents=True, exist_ok=True)

@@ -423,6 +423,10 @@ def _run_asr_training(
     best_path = output_dir / "best.json"
     _remove_if_exists(best_path)
 
+    # Early stopping configuration
+    early_stopping_patience = 5
+    epochs_without_improvement = 0
+
     for epoch in range(1, config.epochs + 1):
         train_loss = asr_training._train_epoch(
             model=model,
@@ -470,6 +474,7 @@ def _run_asr_training(
 
         if val_loss < best_loss:
             best_loss = val_loss
+            epochs_without_improvement = 0
             torch.save(gating_model.state_dict(), output_dir / "gating_model.pt")
             if config.use_lora:
                 for expert_id in range(config.num_experts):
@@ -483,6 +488,11 @@ def _run_asr_training(
                 processor.save_pretrained(output_dir / "model")
             with best_path.open("w", encoding="utf-8") as best_file:
                 json.dump({"loss": best_loss, "epoch": epoch}, best_file, indent=2)
+        else:
+            epochs_without_improvement += 1
+            if epochs_without_improvement >= early_stopping_patience:
+                print(f"Early stopping triggered after {epoch} epochs (no improvement for {early_stopping_patience} epochs)")
+                break
 
     test_metrics_path = metrics_dir / "test_metrics.json"
     _remove_if_exists(test_metrics_path)

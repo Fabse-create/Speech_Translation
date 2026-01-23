@@ -692,6 +692,10 @@ def train(config_path: str, max_samples: Optional[int] = None) -> None:
         with best_path.open("r", encoding="utf-8") as f:
             best_loss = json.load(f).get("loss", float("inf"))
 
+    # Early stopping configuration
+    early_stopping_patience = 5
+    epochs_without_improvement = 0
+
     print(f"\nStarting training for {config.epochs} epochs...")
     print(f"Batch size: {config.batch_size}, Gradient accumulation: {config.gradient_accumulation_steps}")
     print(f"Effective batch size: {config.batch_size * config.gradient_accumulation_steps}")
@@ -760,7 +764,10 @@ def train(config_path: str, max_samples: Optional[int] = None) -> None:
         is_best = val_loss < best_loss
         if is_best:
             best_loss = val_loss
+            epochs_without_improvement = 0
             print(f"  -> New best loss: {best_loss:.4f}")
+        else:
+            epochs_without_improvement += 1
 
         should_save = (epoch % config.save_every_n_epochs == 0) or (epoch == config.epochs) or is_best
         if should_save:
@@ -781,6 +788,11 @@ def train(config_path: str, max_samples: Optional[int] = None) -> None:
         # Clear CUDA cache periodically
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
+
+        # Early stopping check
+        if epochs_without_improvement >= early_stopping_patience:
+            print(f"\nEarly stopping triggered after {epoch} epochs (no improvement for {early_stopping_patience} epochs)")
+            break
 
     print(f"\nTraining complete! Best loss: {best_loss:.4f}")
 

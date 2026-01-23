@@ -1,19 +1,7 @@
 [
   {
     "epoch": 1,
-    "train_loss": 6.22328519821167,
-    "val_loss": null,
-    "val_wer": null
-  },
-  {
-    "epoch": 2,
-    "train_loss": 5.973879337310791,
-    "val_loss": null,
-    "val_wer": null
-  },
-  {
-    "epoch": 3,
-    "train_loss": 5.798797607421875,
+    "train_loss": 4.820565700531006,
     "val_loss": null,
     "val_wer": null
   }

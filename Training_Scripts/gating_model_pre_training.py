@@ -142,6 +142,7 @@ def train(config_path: str = "Config/gating_model_config.json") -> Path:
     val_split = float(training_cfg.get("val_split", 0.1))
     seed = int(training_cfg.get("seed", 42))
     num_workers = int(training_cfg.get("num_workers", 0))
+    early_stopping_patience = int(training_cfg.get("early_stopping_patience", 5))
 
     _set_seed(seed)
 
@@ -178,6 +179,8 @@ def train(config_path: str = "Config/gating_model_config.json") -> Path:
                 metrics_history = json.load(metrics_file)
             except json.JSONDecodeError:
                 metrics_history = []
+
+    epochs_without_improvement = 0
 
     for epoch in range(1, epochs + 1):
         model.train()
@@ -221,6 +224,12 @@ def train(config_path: str = "Config/gating_model_config.json") -> Path:
             torch.save(model.state_dict(), best_path)
             with best_meta_path.open("w", encoding="utf-8") as meta_file:
                 json.dump({"loss": best_loss, "epoch": epoch}, meta_file, indent=2)
+            epochs_without_improvement = 0
+        else:
+            epochs_without_improvement += 1
+            if epochs_without_improvement >= early_stopping_patience:
+                print(f"Early stopping triggered after {epoch} epochs (no improvement for {early_stopping_patience} epochs)")
+                break
 
     return checkpoint_dir / "best.pt"
 
