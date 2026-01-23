@@ -1,0 +1,17 @@
+{
+  "data_config_path": "Config/dataloader_config.json",
+  "data_mode": "default",
+  "data_config_override": {
+    "dataset_root": "Data/extracted_data",
+    "split": "Train",
+    "percent": 100,
+    "sampling": "stratified",
+    "seed": 42,
+    "max_samples": 10,
+    "modes": {}
+  },
+  "whisper_model": "v2",
+  "output_dir": "Runs\\quick\\embeddings\\whisper_v2_embeddings",
+  "mapping_path": "Runs\\quick\\embeddings\\whisper_v2_embeddings\\mapping.json",
+  "overwrite": true
+}

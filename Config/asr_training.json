@@ -34,5 +34,6 @@
   },
   "experts_dir": "checkpoints/experts",
   "output_dir": "checkpoints/asr",
-  "fp16": true
+  "fp16": true,
+  "metrics_dir": "Evaluation/asr_training_results"
 }

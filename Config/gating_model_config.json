@@ -6,6 +6,7 @@
     "embeddings_dir": "Data/embeddings/whisper_v2_embeddings",
     "labels_path": "Data/embeddings/whisper_v2_embeddings_clustered/HDBSCAN_soft.json",
     "checkpoint_dir": "checkpoints/gating_model",
+    "metrics_dir": "Evaluation/gating_model_results",
     "batch_size": 32,
     "epochs": 10,
     "learning_rate": 0.0001,

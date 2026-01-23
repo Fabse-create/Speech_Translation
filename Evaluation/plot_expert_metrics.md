@@ -15,11 +15,11 @@ Outputs (default):
 
 ## Options
 
-- `--metrics-root` (default: `checkpoints/experts`)
+- `--metrics-root` (default: `Evaluation/expert_training_results`)
 - `--output-dir` (default: `Evaluation/expert_training_results`)
 
 Example:
 
 ```
-python Evaluation/plot_expert_metrics.py --metrics-root checkpoints/experts --output-dir Evaluation/expert_training_results
+python Evaluation/plot_expert_metrics.py --metrics-root Evaluation/expert_training_results --output-dir Evaluation/expert_training_results
 ```

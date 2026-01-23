@@ -64,7 +64,7 @@ def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Plot gating model metrics.")
     parser.add_argument(
         "--metrics-path",
-        default="checkpoints/gating_model/metrics.json",
+        default="Evaluation/gating_model_results/metrics.json",
         help="Path to metrics.json produced by gating pre-training.",
     )
     parser.add_argument(

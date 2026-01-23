@@ -15,11 +15,11 @@ Outputs (default):
 
 ## Options
 
-- `--metrics-path` (default: `checkpoints/gating_model/metrics.json`)
+- `--metrics-path` (default: `Evaluation/gating_model_results/metrics.json`)
 - `--output-dir` (default: `Evaluation/gating_model_results`)
 
 Example:
 
 ```
-python Evaluation/plot_gating_metrics.py --metrics-path checkpoints/gating_model/metrics.json --output-dir gating_model_results
+python Evaluation/plot_gating_metrics.py --metrics-path Evaluation/gating_model_results/metrics.json --output-dir Evaluation/gating_model_results
 ```

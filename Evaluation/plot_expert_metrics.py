@@ -19,7 +19,8 @@ def _extract_series(metrics: List[Dict[str, float]], key: str) -> List[float]:
     for entry in metrics:
         if key not in entry:
             raise ValueError(f"Missing '{key}' in metrics entry: {entry}")
-        values.append(float(entry[key]))
+        value = entry[key]
+        values.append(float(value) if value is not None else float("nan"))
     return values
 
 
@@ -70,7 +71,7 @@ def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Plot expert training metrics.")
     parser.add_argument(
         "--metrics-root",
-        default="checkpoints/experts",
+        default="Evaluation/expert_training_results",
         help="Root directory containing expert metrics.json files.",
     )
     parser.add_argument(

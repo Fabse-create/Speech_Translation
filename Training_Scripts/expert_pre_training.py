@@ -18,9 +18,13 @@ if str(ROOT_DIR) not in sys.path:
 from Data.datapreprocessing import WhisperDataLoader
 from Evaluation.evaluate_WER import WERScorer
 from Models.Gating_Model.gating_model import GatingModel
-from Models.Whisper.whisper_v2 import WhisperV2
 from utils.audio import load_audio
 from utils.load_config import load_config
+
+try:
+    from tqdm import tqdm
+except ImportError:
+    tqdm = None
 
 try:  # Optional dependencies for LoRA fine-tuning
     from peft import LoraConfig, get_peft_model
@@ -43,13 +47,8 @@ class TrainingConfig:
     data_config_path: str
     data_mode: str
     data_config_override: Optional[Dict[str, Any]]
-    cluster_labels_path: Optional[str]
-    embeddings_dir: Optional[str]
     gating_model_checkpoint: Optional[str]
     gating_model_config: str
-    use_gating_model: bool
-    use_whisper_embeddings_for_gating: bool
-    drop_noise: bool
     num_experts: int
     top_k_experts: int
     expert_fraction: float
@@ -68,6 +67,10 @@ class TrainingConfig:
     lora_target_modules: List[str]
     output_dir: str
     fp16: bool
+    # New optimization parameters
+    embeddings_dir: Optional[str]  # Path to cached embeddings
+    gradient_accumulation_steps: int
+    pin_memory: bool
 
 
 class WhisperMoEDataset(Dataset):
@@ -136,63 +139,11 @@ def _pool_embedding(embedding: np.ndarray) -> np.ndarray:
     return pooled.astype(np.float32)
 
 
-def _load_cluster_labels(
-    labels_path: Path, num_experts: int, drop_noise: bool, top_k_experts: int
-) -> Dict[str, List[int]]:
-    with labels_path.open("r", encoding="utf-8") as labels_file:
-        data = json.load(labels_file)
-
-    if not isinstance(data, list):
-        raise ValueError("Cluster labels file must contain a list of entries.")
-    if not data:
-        raise ValueError("Cluster labels file is empty.")
-    if not isinstance(data[0], dict) or "id" not in data[0]:
-        raise ValueError("Cluster labels must include explicit 'id' entries.")
-
-    assignments: Dict[str, List[int]] = {}
-    for entry in data:
-        entry_id = entry.get("id")
-        if entry_id is None:
-            continue
-        if "label" in entry:
-            label = int(entry["label"])
-            if label < 0 and drop_noise:
-                continue
-            assignments[entry_id] = [label]
-            continue
-        if "probs" in entry:
-            probs = np.asarray(entry["probs"], dtype=np.float32)
-            if drop_noise and probs.shape[0] == num_experts + 1:
-                probs = probs[:num_experts]
-            if probs.size == 0:
-                continue
-            k = max(1, min(int(top_k_experts), probs.shape[0]))
-            top_indices = np.argsort(probs)[-k:][::-1]
-            assignments[entry_id] = [int(idx) for idx in top_indices]
-            continue
-        raise ValueError("Cluster entry must include 'label' or 'probs'.")
-    return assignments
-
-
-def _load_embeddings(
-    embeddings_dir: Path,
-) -> Dict[str, np.ndarray]:
-    embedding_files = list(embeddings_dir.rglob("*.npy"))
-    if not embedding_files:
-        raise FileNotFoundError(f"No embeddings found in {embeddings_dir}")
-
-    embeddings: Dict[str, np.ndarray] = {}
-    for embedding_path in embedding_files:
-        sample_id = embedding_path.relative_to(embeddings_dir).with_suffix("")
-        embeddings[sample_id.as_posix()] = _pool_embedding(np.load(embedding_path))
-    return embeddings
-
-
 def _load_gating_model(
     checkpoint_path: Path, config_path: str, device: torch.device
 ) -> GatingModel:
     model = GatingModel(config_path=config_path).to(device)
-    state = torch.load(checkpoint_path, map_location=device)
+    state = torch.load(checkpoint_path, map_location=device, weights_only=True)
     model.load_state_dict(state)
     model.eval()
     for param in model.parameters():
@@ -200,56 +151,163 @@ def _load_gating_model(
     return model
 
 
-def _assign_experts(
+def _find_embedding_file(embeddings_dir: Path, sample_id: str, contributor_id: Optional[str]) -> Optional[Path]:
+    """Find embedding file using multiple search strategies."""
+    # Strategy 1: Direct path with contributor subdirectory
+    if contributor_id:
+        path = embeddings_dir / contributor_id / f"{sample_id}.npy"
+        if path.exists():
+            return path
+        # Try with .wav extension
+        path = embeddings_dir / contributor_id / f"{sample_id}.wav.npy"
+        if path.exists():
+            return path
+
+    # Strategy 2: Direct in root
+    path = embeddings_dir / f"{sample_id}.npy"
+    if path.exists():
+        return path
+
+    # Strategy 3: Search recursively
+    for candidate in embeddings_dir.rglob(f"*{sample_id}*.npy"):
+        return candidate
+
+    return None
+
+
+def _assign_experts_from_cached_embeddings(
     samples: List[Dict[str, Any]],
     num_experts: int,
-    labels_path: Optional[Path],
-    embeddings_dir: Optional[Path],
-    gating_model_checkpoint: Optional[Path],
-    gating_model_config: str,
-    use_gating_model: bool,
-    use_whisper_embeddings_for_gating: bool,
-    drop_noise: bool,
+    gating_model: GatingModel,
+    embeddings_dir: Path,
     top_k_experts: int,
     device: torch.device,
 ) -> Dict[str, List[int]]:
+    """
+    OPTIMIZED: Use cached embeddings instead of recomputing through Whisper encoder.
+    This is MUCH faster for large datasets.
+    """
     assignments: Dict[str, List[int]] = {}
-    if labels_path is not None:
-        assignments.update(
-            _load_cluster_labels(labels_path, num_experts, drop_noise, top_k_experts)
-        )
+    missing_count = 0
 
-    if use_gating_model:
-        if gating_model_checkpoint is None:
-            raise ValueError("gating_model_checkpoint is required.")
-        embeddings: Optional[Dict[str, np.ndarray]] = None
-        if not use_whisper_embeddings_for_gating:
-            if embeddings_dir is None:
-                raise ValueError("embeddings_dir is required when not using Whisper embeddings.")
-            embeddings = _load_embeddings(embeddings_dir)
-        gating_model = _load_gating_model(
-            gating_model_checkpoint, gating_model_config, device
-        )
-        whisper_model: Optional[WhisperV2] = None
-        if use_whisper_embeddings_for_gating:
-            whisper_model = WhisperV2(device=str(device))
-        with torch.no_grad():
-            for sample in samples:
-                sample_id = _sample_key(sample)
-                embedding: Optional[np.ndarray] = None
-                if embeddings is not None:
-                    embedding = embeddings.get(sample_id)
-                elif whisper_model is not None:
-                    embedding_tensor = whisper_model.extract_embeddings(sample["wav_path"])
-                    embedding = _pool_embedding(embedding_tensor.detach().cpu().numpy())
-                if embedding is None:
+    iterator = samples
+    if tqdm is not None:
+        iterator = tqdm(samples, desc="Assigning experts from cached embeddings")
+
+    with torch.no_grad():
+        for sample in iterator:
+            sample_id = _sample_key(sample)
+            contributor_id = sample.get("contributor_id")
+
+            # Find cached embedding
+            embedding_path = _find_embedding_file(
+                embeddings_dir,
+                sample.get("id", ""),
+                contributor_id
+            )
+
+            if embedding_path is None or not embedding_path.exists():
+                missing_count += 1
+                continue
+
+            # Load cached embedding
+            embedding = np.load(embedding_path)
+            embedding = _pool_embedding(embedding)
+
+            # Get gating decision
+            logits = gating_model(torch.from_numpy(embedding).unsqueeze(0).to(device))
+            probs = torch.softmax(logits, dim=-1)
+            k = max(1, min(int(top_k_experts), probs.shape[-1]))
+            top_indices = torch.topk(probs, k=k, dim=-1).indices
+            assignments[sample_id] = [int(idx) for idx in top_indices[0].cpu().tolist()]
+
+    if missing_count > 0:
+        print(f"Warning: {missing_count}/{len(samples)} samples had missing embeddings")
+
+    return assignments
+
+
+def _assign_experts_compute_on_fly(
+    samples: List[Dict[str, Any]],
+    num_experts: int,
+    gating_model: GatingModel,
+    model_name: str,
+    top_k_experts: int,
+    device: torch.device,
+) -> Dict[str, List[int]]:
+    """
+    Fallback: Compute embeddings on the fly if no cached embeddings available.
+    This is SLOW but works as a fallback.
+    """
+    from Models.Whisper.whisper_v2 import WhisperV2
+
+    assignments: Dict[str, List[int]] = {}
+    whisper_model = WhisperV2(device=str(device))
+
+    iterator = samples
+    if tqdm is not None:
+        iterator = tqdm(samples, desc="Computing embeddings and assigning experts (slow)")
+
+    with torch.no_grad():
+        for sample in iterator:
+            sample_id = _sample_key(sample)
+            try:
+                embedding_tensor = whisper_model.extract_embeddings(sample["wav_path"])
+                if embedding_tensor is None:
                     continue
-                logits = gating_model(torch.from_numpy(embedding).to(device))
+                embedding = _pool_embedding(embedding_tensor.detach().cpu().numpy())
+                logits = gating_model(torch.from_numpy(embedding).unsqueeze(0).to(device))
                 probs = torch.softmax(logits, dim=-1)
                 k = max(1, min(int(top_k_experts), probs.shape[-1]))
                 top_indices = torch.topk(probs, k=k, dim=-1).indices
-                assignments[sample_id] = [int(idx) for idx in top_indices.cpu().tolist()]
+                assignments[sample_id] = [int(idx) for idx in top_indices[0].cpu().tolist()]
+            except Exception as e:
+                print(f"Warning: Failed to process {sample_id}: {e}")
+                continue
+
     return assignments
+
+
+def _assign_experts(
+    samples: List[Dict[str, Any]],
+    num_experts: int,
+    gating_model_checkpoint: Optional[Path],
+    gating_model_config: str,
+    top_k_experts: int,
+    device: torch.device,
+    embeddings_dir: Optional[Path] = None,
+    model_name: str = "openai/whisper-large-v2",
+) -> Dict[str, List[int]]:
+    """Main dispatcher for expert assignment."""
+    if gating_model_checkpoint is None:
+        raise ValueError("gating_model_checkpoint is required.")
+
+    gating_model = _load_gating_model(gating_model_checkpoint, gating_model_config, device)
+
+    # OPTIMIZATION: Use cached embeddings if available
+    if embeddings_dir is not None and embeddings_dir.exists():
+        embedding_files = list(embeddings_dir.rglob("*.npy"))
+        if embedding_files:
+            print(f"Found {len(embedding_files)} cached embeddings in {embeddings_dir}")
+            return _assign_experts_from_cached_embeddings(
+                samples=samples,
+                num_experts=num_experts,
+                gating_model=gating_model,
+                embeddings_dir=embeddings_dir,
+                top_k_experts=top_k_experts,
+                device=device,
+            )
+
+    # Fallback to computing on the fly
+    print("Warning: No cached embeddings found. Computing on the fly (this is slow)...")
+    return _assign_experts_compute_on_fly(
+        samples=samples,
+        num_experts=num_experts,
+        gating_model=gating_model,
+        model_name=model_name,
+        top_k_experts=top_k_experts,
+        device=device,
+    )
 
 
 def _prepare_expert_indices(
@@ -395,12 +453,15 @@ def _train_expert(
     train_set, val_set = random_split(subset, [train_size, val_size], generator=generator)
 
     collator = WhisperCollator(processor)
+    use_pin_memory = config.pin_memory and torch.cuda.is_available()
+
     train_loader = DataLoader(
         train_set,
         batch_size=config.batch_size,
         shuffle=True,
         num_workers=config.num_workers,
         collate_fn=collator,
+        pin_memory=use_pin_memory,
     )
     val_loader = DataLoader(
         val_set,
@@ -408,6 +469,7 @@ def _train_expert(
         shuffle=False,
         num_workers=config.num_workers,
         collate_fn=collator,
+        pin_memory=use_pin_memory,
     )
 
     model = _build_model(config, processor).to(device)
@@ -417,8 +479,9 @@ def _train_expert(
         weight_decay=config.weight_decay,
     )
     scaler = torch.cuda.amp.GradScaler(enabled=config.fp16)
+    accumulation_steps = config.gradient_accumulation_steps
 
-    metrics_path = Path(config.output_dir) / f"expert_{expert_id}" / "metrics.json"
+    metrics_path = Path("Evaluation/expert_training_results") / f"expert_{expert_id}" / "metrics.json"
     metrics_path.parent.mkdir(parents=True, exist_ok=True)
     metrics_history: List[Dict[str, float]] = []
     if metrics_path.exists():
@@ -432,9 +495,15 @@ def _train_expert(
         model.train()
         total_loss = 0.0
         total_samples = 0
-        for batch in train_loader:
+
+        iterator = train_loader
+        if tqdm is not None:
+            iterator = tqdm(train_loader, desc=f"Expert {expert_id} Epoch {epoch}", leave=False)
+
+        optimizer.zero_grad()
+
+        for batch_idx, batch in enumerate(iterator):
             batch = {k: v.to(device) for k, v in batch.items()}
-            optimizer.zero_grad()
             with torch.cuda.amp.autocast(enabled=config.fp16):
                 outputs = _forward_model(
                     model,
@@ -442,12 +511,25 @@ def _train_expert(
                     labels=batch["labels"],
                 )
                 loss = outputs.loss
+
             batch_size = batch["input_features"].size(0)
             total_loss += loss.item() * batch_size
             total_samples += batch_size
+
+            # Gradient accumulation
+            loss = loss / accumulation_steps
             scaler.scale(loss).backward()
+
+            if (batch_idx + 1) % accumulation_steps == 0:
+                scaler.step(optimizer)
+                scaler.update()
+                optimizer.zero_grad()
+
+        # Handle remaining gradients
+        if (batch_idx + 1) % accumulation_steps != 0:
             scaler.step(optimizer)
             scaler.update()
+            optimizer.zero_grad()
 
         train_loss = total_loss / max(total_samples, 1)
         if val_size > 0:
@@ -502,13 +584,8 @@ def _load_training_config(config_path: str) -> TrainingConfig:
         data_config_path=config.get("data_config_path", "Config/dataloader_config.json"),
         data_mode=config.get("data_mode", "default"),
         data_config_override=config.get("data_config_override"),
-        cluster_labels_path=config.get("cluster_labels_path"),
-        embeddings_dir=config.get("embeddings_dir"),
         gating_model_checkpoint=config.get("gating_model_checkpoint"),
         gating_model_config=config.get("gating_model_config", "Config/gating_model_config.json"),
-        use_gating_model=bool(config.get("use_gating_model", False)),
-        use_whisper_embeddings_for_gating=bool(config.get("use_whisper_embeddings_for_gating", False)),
-        drop_noise=bool(config.get("drop_noise", True)),
         num_experts=int(config.get("num_experts", 8)),
         top_k_experts=int(config.get("top_k_experts", 2)),
         expert_fraction=float(config.get("expert_fraction", 0.5)),
@@ -527,6 +604,10 @@ def _load_training_config(config_path: str) -> TrainingConfig:
         lora_target_modules=list(lora_config.get("target_modules", ["q_proj", "v_proj"])),
         output_dir=config.get("output_dir", "checkpoints/experts"),
         fp16=bool(config.get("fp16", True)),
+        # New optimization parameters
+        embeddings_dir=config.get("embeddings_dir"),
+        gradient_accumulation_steps=int(config.get("gradient_accumulation_steps", 1)),
+        pin_memory=bool(config.get("pin_memory", True)),
     )
 
 
@@ -540,6 +621,10 @@ def train(config_path: str, max_samples: Optional[int] = None) -> None:
     _set_seed(config.seed)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Using device: {device}")
+
+    if not config.gating_model_checkpoint:
+        raise ValueError("gating_model_checkpoint is required for expert pre-training.")
 
     loader = WhisperDataLoader(
         config_path=config.data_config_path,
@@ -555,20 +640,22 @@ def train(config_path: str, max_samples: Optional[int] = None) -> None:
     if not samples:
         raise ValueError("No samples with transcripts available for training.")
 
+    print(f"Loaded {len(samples)} samples with transcripts")
+
+    # OPTIMIZATION: Use embeddings_dir for cached embeddings
+    embeddings_dir = Path(config.embeddings_dir) if config.embeddings_dir else None
+
     assignments = _assign_experts(
         samples=samples,
         num_experts=config.num_experts,
-        labels_path=Path(config.cluster_labels_path) if config.cluster_labels_path else None,
-        embeddings_dir=Path(config.embeddings_dir) if config.embeddings_dir else None,
         gating_model_checkpoint=Path(config.gating_model_checkpoint)
         if config.gating_model_checkpoint
         else None,
         gating_model_config=config.gating_model_config,
-        use_gating_model=config.use_gating_model,
-        use_whisper_embeddings_for_gating=config.use_whisper_embeddings_for_gating,
-        drop_noise=config.drop_noise,
         top_k_experts=config.top_k_experts,
         device=device,
+        embeddings_dir=embeddings_dir,
+        model_name=config.model_name,
     )
 
     indices_by_expert = _prepare_expert_indices(
@@ -579,6 +666,11 @@ def train(config_path: str, max_samples: Optional[int] = None) -> None:
         config.max_samples_per_expert,
         config.seed,
     )
+
+    # Print expert distribution
+    print("\nExpert sample distribution:")
+    for expert_id, indices in indices_by_expert.items():
+        print(f"  Expert {expert_id}: {len(indices)} samples")
 
     dataset = WhisperMoEDataset(
         [
@@ -595,8 +687,11 @@ def train(config_path: str, max_samples: Optional[int] = None) -> None:
 
     for expert_id, indices in indices_by_expert.items():
         if not indices:
-            print(f"Skipping expert {expert_id}: no assigned samples.")
+            print(f"\nSkipping expert {expert_id}: no assigned samples.")
             continue
+        print(f"\n{'='*50}")
+        print(f"Training expert {expert_id} with {len(indices)} samples")
+        print(f"{'='*50}")
         _train_expert(
             expert_id=expert_id,
             dataset=dataset,

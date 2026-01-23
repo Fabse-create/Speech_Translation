@@ -134,6 +134,7 @@ def train(config_path: str = "Config/gating_model_config.json") -> Path:
     embeddings_dir = Path(training_cfg.get("embeddings_dir", "Data/embeddings/whisper_v2_embeddings"))
     labels_path = Path(training_cfg.get("labels_path", "Data/embeddings/whisper_v2_embeddings_clustered/HDBSCAN_soft.json"))
     checkpoint_dir = Path(training_cfg.get("checkpoint_dir", "checkpoints/gating_model"))
+    metrics_dir = Path(training_cfg.get("metrics_dir", "Evaluation/gating_model_results"))
     batch_size = int(training_cfg.get("batch_size", 32))
     epochs = int(training_cfg.get("epochs", 10))
     learning_rate = float(training_cfg.get("learning_rate", 1e-4))
@@ -163,7 +164,8 @@ def train(config_path: str = "Config/gating_model_config.json") -> Path:
 
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
     best_meta_path = checkpoint_dir / "best.json"
-    metrics_path = checkpoint_dir / "metrics.json"
+    metrics_dir.mkdir(parents=True, exist_ok=True)
+    metrics_path = metrics_dir / "metrics.json"
     best_loss = float("inf")
     if best_meta_path.exists():
         with best_meta_path.open("r", encoding="utf-8") as meta_file:

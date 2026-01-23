@@ -1,0 +1,72 @@
+[
+  {
+    "id": "d847daf6-adac-4aaa-1f65-08db3dcbbd09_1099_399_16kHz.wav",
+    "contributor_id": "d847daf6-adac-4aaa-1f65-08db3dcbbd09",
+    "wav_filename": "d847daf6-adac-4aaa-1f65-08db3dcbbd09_1099_399_16kHz.wav",
+    "wav_path": "Data\\extracted_data\\Train\\d847daf6-adac-4aaa-1f65-08db3dcbbd09\\d847daf6-adac-4aaa-1f65-08db3dcbbd09_1099_399_16kHz.wav",
+    "embedding_path": "Runs\\quick\\embeddings\\whisper_v2_embeddings\\d847daf6-adac-4aaa-1f65-08db3dcbbd09\\d847daf6-adac-4aaa-1f65-08db3dcbbd09_1099_399_16kHz.wav.npy"
+  },
+  {
+    "id": "09716de8-6f65-4a68-3769-08db63d00ed9_166_1051_16kHz.wav",
+    "contributor_id": "09716de8-6f65-4a68-3769-08db63d00ed9",
+    "wav_filename": "09716de8-6f65-4a68-3769-08db63d00ed9_166_1051_16kHz.wav",
+    "wav_path": "Data\\extracted_data\\Train\\09716de8-6f65-4a68-3769-08db63d00ed9\\09716de8-6f65-4a68-3769-08db63d00ed9_166_1051_16kHz.wav",
+    "embedding_path": "Runs\\quick\\embeddings\\whisper_v2_embeddings\\09716de8-6f65-4a68-3769-08db63d00ed9\\09716de8-6f65-4a68-3769-08db63d00ed9_166_1051_16kHz.wav.npy"
+  },
+  {
+    "id": "56d198e7-ad8c-4441-be52-08dc5a51b53b_1070_4827_16kHz.wav",
+    "contributor_id": "56d198e7-ad8c-4441-be52-08dc5a51b53b",
+    "wav_filename": "56d198e7-ad8c-4441-be52-08dc5a51b53b_1070_4827_16kHz.wav",
+    "wav_path": "Data\\extracted_data\\Train\\56d198e7-ad8c-4441-be52-08dc5a51b53b\\56d198e7-ad8c-4441-be52-08dc5a51b53b_1070_4827_16kHz.wav",
+    "embedding_path": "Runs\\quick\\embeddings\\whisper_v2_embeddings\\56d198e7-ad8c-4441-be52-08dc5a51b53b\\56d198e7-ad8c-4441-be52-08dc5a51b53b_1070_4827_16kHz.wav.npy"
+  },
+  {
+    "id": "2ed8ae17-22a0-454e-8f05-08dc7f6a721b_214_6790_16kHz.wav",
+    "contributor_id": "2ed8ae17-22a0-454e-8f05-08dc7f6a721b",
+    "wav_filename": "2ed8ae17-22a0-454e-8f05-08dc7f6a721b_214_6790_16kHz.wav",
+    "wav_path": "Data\\extracted_data\\Train\\2ed8ae17-22a0-454e-8f05-08dc7f6a721b\\2ed8ae17-22a0-454e-8f05-08dc7f6a721b_214_6790_16kHz.wav",
+    "embedding_path": "Runs\\quick\\embeddings\\whisper_v2_embeddings\\2ed8ae17-22a0-454e-8f05-08dc7f6a721b\\2ed8ae17-22a0-454e-8f05-08dc7f6a721b_214_6790_16kHz.wav.npy"
+  },
+  {
+    "id": "49c0a40d-aa28-40c0-0fd6-08dcd99f98d3_31687_10260_16kHz.wav",
+    "contributor_id": "49c0a40d-aa28-40c0-0fd6-08dcd99f98d3",
+    "wav_filename": "49c0a40d-aa28-40c0-0fd6-08dcd99f98d3_31687_10260_16kHz.wav",
+    "wav_path": "Data\\extracted_data\\Train\\49c0a40d-aa28-40c0-0fd6-08dcd99f98d3\\49c0a40d-aa28-40c0-0fd6-08dcd99f98d3_31687_10260_16kHz.wav",
+    "embedding_path": "Runs\\quick\\embeddings\\whisper_v2_embeddings\\49c0a40d-aa28-40c0-0fd6-08dcd99f98d3\\49c0a40d-aa28-40c0-0fd6-08dcd99f98d3_31687_10260_16kHz.wav.npy"
+  },
+  {
+    "id": "373e5404-3f4d-4d3d-9fd4-08dcee0760b0_881_10075_16kHz.wav",
+    "contributor_id": "373e5404-3f4d-4d3d-9fd4-08dcee0760b0",
+    "wav_filename": "373e5404-3f4d-4d3d-9fd4-08dcee0760b0_881_10075_16kHz.wav",
+    "wav_path": "Data\\extracted_data\\Train\\373e5404-3f4d-4d3d-9fd4-08dcee0760b0\\373e5404-3f4d-4d3d-9fd4-08dcee0760b0_881_10075_16kHz.wav",
+    "embedding_path": "Runs\\quick\\embeddings\\whisper_v2_embeddings\\373e5404-3f4d-4d3d-9fd4-08dcee0760b0\\373e5404-3f4d-4d3d-9fd4-08dcee0760b0_881_10075_16kHz.wav.npy"
+  },
+  {
+    "id": "bd9c4f59-9245-4fae-9fe6-08db25c774fb_558_388_16kHz.wav",
+    "contributor_id": "bd9c4f59-9245-4fae-9fe6-08db25c774fb",
+    "wav_filename": "bd9c4f59-9245-4fae-9fe6-08db25c774fb_558_388_16kHz.wav",
+    "wav_path": "Data\\extracted_data\\Train\\bd9c4f59-9245-4fae-9fe6-08db25c774fb\\bd9c4f59-9245-4fae-9fe6-08db25c774fb_558_388_16kHz.wav",
+    "embedding_path": "Runs\\quick\\embeddings\\whisper_v2_embeddings\\bd9c4f59-9245-4fae-9fe6-08db25c774fb\\bd9c4f59-9245-4fae-9fe6-08db25c774fb_558_388_16kHz.wav.npy"
+  },
+  {
+    "id": "4419493f-cde2-40cb-611a-08dcdb04185c_1095_11959_16kHz.wav",
+    "contributor_id": "4419493f-cde2-40cb-611a-08dcdb04185c",
+    "wav_filename": "4419493f-cde2-40cb-611a-08dcdb04185c_1095_11959_16kHz.wav",
+    "wav_path": "Data\\extracted_data\\Train\\4419493f-cde2-40cb-611a-08dcdb04185c\\4419493f-cde2-40cb-611a-08dcdb04185c_1095_11959_16kHz.wav",
+    "embedding_path": "Runs\\quick\\embeddings\\whisper_v2_embeddings\\4419493f-cde2-40cb-611a-08dcdb04185c\\4419493f-cde2-40cb-611a-08dcdb04185c_1095_11959_16kHz.wav.npy"
+  },
+  {
+    "id": "1fdc2f8c-7bcb-4063-3383-08db7f04fed4_147_2703_16kHz.wav",
+    "contributor_id": "1fdc2f8c-7bcb-4063-3383-08db7f04fed4",
+    "wav_filename": "1fdc2f8c-7bcb-4063-3383-08db7f04fed4_147_2703_16kHz.wav",
+    "wav_path": "Data\\extracted_data\\Train\\1fdc2f8c-7bcb-4063-3383-08db7f04fed4\\1fdc2f8c-7bcb-4063-3383-08db7f04fed4_147_2703_16kHz.wav",
+    "embedding_path": "Runs\\quick\\embeddings\\whisper_v2_embeddings\\1fdc2f8c-7bcb-4063-3383-08db7f04fed4\\1fdc2f8c-7bcb-4063-3383-08db7f04fed4_147_2703_16kHz.wav.npy"
+  },
+  {
+    "id": "edc855c9-4e06-4163-43da-08dc13e54ff5_199_4298_16kHz.wav",
+    "contributor_id": "edc855c9-4e06-4163-43da-08dc13e54ff5",
+    "wav_filename": "edc855c9-4e06-4163-43da-08dc13e54ff5_199_4298_16kHz.wav",
+    "wav_path": "Data\\extracted_data\\Train\\edc855c9-4e06-4163-43da-08dc13e54ff5\\edc855c9-4e06-4163-43da-08dc13e54ff5_199_4298_16kHz.wav",
+    "embedding_path": "Runs\\quick\\embeddings\\whisper_v2_embeddings\\edc855c9-4e06-4163-43da-08dc13e54ff5\\edc855c9-4e06-4163-43da-08dc13e54ff5_199_4298_16kHz.wav.npy"
+  }
+]

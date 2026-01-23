@@ -1,0 +1,12 @@
+﻿numpy
+torch
+transformers
+torchaudio
+librosa
+sentencepiece
+hdbscan
+scikit-learn
+peft
+umap-learn
+matplotlib
+tqdm
