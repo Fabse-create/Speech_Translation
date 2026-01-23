@@ -18,7 +18,7 @@ except ImportError as exc:  # pragma: no cover - optional dependency
 class Spectral_Clustering:
     def __init__(
         self,
-        n_clusters: int = 10,
+        n_clusters: int = 8,
         affinity: str = "nearest_neighbors",
         assign_labels: str = "kmeans",
         random_state: int = 42,
