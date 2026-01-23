@@ -12,7 +12,7 @@ and uses reproducible seeds throughout.
 python Training_Scripts/train_pipeline.py --mode quick --seed 42
 ```
 
-### Full run (10% embeddings → 15% expert pretrain → 100% ASR)
+### Full run (5% embeddings → 15% expert pretrain → 100% ASR)
 
 ```bash
 python Training_Scripts/train_pipeline.py --mode full --seed 42

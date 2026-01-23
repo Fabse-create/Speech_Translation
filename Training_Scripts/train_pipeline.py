@@ -716,7 +716,7 @@ def run_pipeline(
         if not allow_reduce_experts:
             allow_reduce_experts = True
     else:
-        embedding_percent = 10
+        embedding_percent = 5
         embedding_max = None
         expert_percent = 15
         expert_max = None
