@@ -102,8 +102,15 @@ class WhisperCollator:
         ).input_features
 
         texts = [item["transcript"] for item in batch]
+        max_label_length = getattr(self.processor.tokenizer, "model_max_length", 448)
+        if max_label_length is None or max_label_length > 1000:
+            max_label_length = 448
         labels = self.processor.tokenizer(
-            texts, return_tensors="pt", padding=True
+            texts,
+            return_tensors="pt",
+            padding=True,
+            truncation=True,
+            max_length=max_label_length,
         ).input_ids
         labels = labels.clone()
         labels[labels == self.processor.tokenizer.pad_token_id] = -100
