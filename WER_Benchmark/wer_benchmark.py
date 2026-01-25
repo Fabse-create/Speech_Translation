@@ -92,16 +92,18 @@ def _prepare_samples(
     return samples
 
 
-def _set_forced_decoder_ids(
+def _configure_generation(
     model: WhisperForConditionalGeneration,
-    processor: WhisperProcessor,
     language: Optional[str],
     task: Optional[str],
 ) -> None:
-    if language or task:
-        model.config.forced_decoder_ids = processor.get_decoder_prompt_ids(
-            language=language, task=task
-        )
+    generation_config = getattr(model, "generation_config", model.config)
+    if language:
+        generation_config.language = language
+    if task:
+        generation_config.task = task
+    if hasattr(generation_config, "forced_decoder_ids"):
+        generation_config.forced_decoder_ids = None
 
 
 def _run_baseline(
@@ -115,17 +117,25 @@ def _run_baseline(
     processor = WhisperProcessor.from_pretrained(model_name)
     model = WhisperForConditionalGeneration.from_pretrained(model_name).to(device)
     model.eval()
-    _set_forced_decoder_ids(model, processor, language, task)
+    _configure_generation(model, language, task)
 
     tracker = WERTracker()
     with torch.no_grad():
         for batch in _batched(samples, batch_size):
             audio_list = [load_audio(sample["wav_path"]) for sample in batch]
             inputs = processor(
-                audio_list, sampling_rate=16000, return_tensors="pt"
+                audio_list,
+                sampling_rate=16000,
+                return_tensors="pt",
+                return_attention_mask=True,
             )
             input_features = inputs.input_features.to(device)
-            generated_ids = model.generate(input_features=input_features)
+            attention_mask = inputs.get("attention_mask")
+            if attention_mask is not None:
+                attention_mask = attention_mask.to(device)
+            generated_ids = model.generate(
+                input_features=input_features, attention_mask=attention_mask
+            )
             preds = processor.batch_decode(generated_ids, skip_special_tokens=True)
             for sample, pred in zip(batch, preds):
                 tracker.add(
@@ -141,10 +151,8 @@ def _resolve_finetuned_dir(base_dir: Path) -> Path:
     candidates = [
         base_dir,
         base_dir / "best",
-        Path("Runs/full/asr"),
-        Path("Runs/full/asr/best"),
-        Path("Runs/quick/asr"),
-        Path("Runs/quick/asr/best"),
+        Path("checkpoints/asr"),
+        Path("checkpoints/asr/best"),
     ]
     for candidate in candidates:
         if (candidate / "gating_model.pt").exists():
@@ -166,8 +174,8 @@ def _load_finetuned_bundle(
     processor = WhisperProcessor.from_pretrained(model_name)
     embedding_model = WhisperModel.from_pretrained(model_name).to(device).eval()
     asr_model = WhisperForConditionalGeneration.from_pretrained(model_name).to(device)
-    _set_forced_decoder_ids(
-        asr_model, processor, config.get("language"), config.get("task")
+    _configure_generation(
+        asr_model, config.get("language"), config.get("task")
     )
 
     if use_lora:
@@ -205,8 +213,7 @@ def _load_finetuned_bundle(
             raise FileNotFoundError(
                 "No LoRA adapters found in fine-tuned directory. "
                 f"Expected adapter_config.json under {fine_tuned_dir}/expert_*/. "
-                "If you trained with the pipeline, set --fine-tuned-dir to Runs/full/asr "
-                "(or Runs/quick/asr)."
+                "If you trained with the pipeline, set --fine-tuned-dir to checkpoints/asr."
             )
         for expert_id, adapter_dir in enumerate(adapter_dirs):
             if (adapter_dir / "adapter_config.json").exists():

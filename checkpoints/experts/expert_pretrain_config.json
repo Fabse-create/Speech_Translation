@@ -7,17 +7,17 @@
   "data_config_override": {
     "dataset_root": "Data/extracted_data",
     "split": "Train",
-    "percent": 100,
+    "percent": 0.015,
     "sampling": "stratified",
     "seed": 42,
-    "max_samples": 5,
+    "max_samples": null,
     "modes": {}
   },
-  "gating_model_checkpoint": "Runs\\quick\\gating_model\\best.pt",
-  "gating_model_config": "Runs\\quick\\gating_model\\gating_pretrain_config.json",
+  "gating_model_checkpoint": "Runs\\full\\gating_model\\best.pt",
+  "gating_model_config": "Runs\\full\\gating_model\\gating_pretrain_config.json",
   "num_experts": 8,
   "top_k_experts": 2,
-  "expert_fraction": 0.5,
+  "expert_fraction": 1.0,
   "max_samples_per_expert": null,
   "val_split": 0.1,
   "batch_size": 4,
@@ -38,7 +38,7 @@
   },
   "output_dir": "checkpoints/experts",
   "fp16": false,
-  "embeddings_dir": "Runs\\quick\\embeddings\\whisper_v2_embeddings",
-  "gradient_accumulation_steps": 1,
+  "embeddings_dir": "Runs\\full\\embeddings\\whisper_v2_embeddings",
+  "gradient_accumulation_steps": 8,
   "pin_memory": true
 }

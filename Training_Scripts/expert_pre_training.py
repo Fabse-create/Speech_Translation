@@ -90,18 +90,32 @@ class WhisperCollator:
 
     def __call__(self, batch: List[Dict[str, Any]]) -> Dict[str, torch.Tensor]:
         audio_list = [load_audio(item["wav_path"]) for item in batch]
-        input_features = self.processor.feature_extractor(
-            audio_list, sampling_rate=16000, return_tensors="pt"
-        ).input_features
+        features = self.processor.feature_extractor(
+            audio_list,
+            sampling_rate=16000,
+            return_tensors="pt",
+            return_attention_mask=True,
+        )
+        input_features = features.input_features
+        attention_mask = features.get("attention_mask")
 
         texts = [item["transcript"] for item in batch]
-        labels = self.processor.tokenizer(
-            texts, return_tensors="pt", padding=True
-        ).input_ids
-        labels = labels.clone()
+        label_batch = self.processor.tokenizer(
+            texts, return_tensors="pt", padding=True, return_attention_mask=True
+        )
+        labels = label_batch.input_ids.clone()
+        decoder_attention_mask = label_batch.attention_mask
         labels[labels == self.processor.tokenizer.pad_token_id] = -100
 
-        return {"input_features": input_features, "labels": labels}
+        batch_out: Dict[str, torch.Tensor] = {
+            "input_features": input_features,
+            "labels": labels,
+        }
+        if attention_mask is not None:
+            batch_out["attention_mask"] = attention_mask
+        if decoder_attention_mask is not None:
+            batch_out["decoder_attention_mask"] = decoder_attention_mask
+        return batch_out
 
 
 def _set_seed(seed: int) -> None:
@@ -149,6 +163,20 @@ def _load_gating_model(
     for param in model.parameters():
         param.requires_grad = False
     return model
+
+
+def _configure_generation(
+    model: "WhisperForConditionalGeneration",
+    language: Optional[str],
+    task: Optional[str],
+) -> None:
+    generation_config = getattr(model, "generation_config", model.config)
+    if language:
+        generation_config.language = language
+    if task:
+        generation_config.task = task
+    if hasattr(generation_config, "forced_decoder_ids"):
+        generation_config.forced_decoder_ids = None
 
 
 def _load_embedding_mapping(embeddings_dir: Path) -> Dict[str, Path]:
@@ -260,6 +288,8 @@ def _assign_experts_compute_on_fly(
     model_name: str,
     top_k_experts: int,
     device: torch.device,
+    embeddings_dir: Optional[Path] = None,
+    mapping_path: Optional[Path] = None,
 ) -> Dict[str, List[int]]:
     """
     Fallback: Compute embeddings on the fly if no cached embeddings available.
@@ -269,6 +299,19 @@ def _assign_experts_compute_on_fly(
 
     assignments: Dict[str, List[int]] = {}
     whisper_model = WhisperV2(device=str(device))
+    mapping_entries: List[Dict[str, Any]] = []
+    if embeddings_dir is not None:
+        embeddings_dir.mkdir(parents=True, exist_ok=True)
+        if mapping_path is None:
+            mapping_path = embeddings_dir / "mapping.json"
+        if mapping_path.exists():
+            try:
+                with mapping_path.open("r", encoding="utf-8") as f:
+                    mapping_entries = json.load(f)
+                if not isinstance(mapping_entries, list):
+                    mapping_entries = []
+            except json.JSONDecodeError:
+                mapping_entries = []
 
     iterator = samples
     if tqdm is not None:
@@ -281,15 +324,54 @@ def _assign_experts_compute_on_fly(
                 embedding_tensor = whisper_model.extract_embeddings(sample["wav_path"])
                 if embedding_tensor is None:
                     continue
-                embedding = _pool_embedding(embedding_tensor.detach().cpu().numpy())
-                logits = gating_model(torch.from_numpy(embedding).unsqueeze(0).to(device))
+                embedding_array = embedding_tensor.detach().cpu().numpy()
+                pooled_embedding = _pool_embedding(embedding_array)
+                logits = gating_model(
+                    torch.from_numpy(pooled_embedding).unsqueeze(0).to(device)
+                )
                 probs = torch.softmax(logits, dim=-1)
                 k = max(1, min(int(top_k_experts), probs.shape[-1]))
                 top_indices = torch.topk(probs, k=k, dim=-1).indices
                 assignments[sample_id] = [int(idx) for idx in top_indices[0].cpu().tolist()]
+
+                if embeddings_dir is not None:
+                    contributor_id = sample.get("contributor_id")
+                    wav_path = sample["wav_path"]
+                    wav_filename = Path(wav_path).name
+                    embedding_subdir = (
+                        embeddings_dir / contributor_id
+                        if contributor_id
+                        else embeddings_dir
+                    )
+                    embedding_subdir.mkdir(parents=True, exist_ok=True)
+                    embedding_path = embedding_subdir / f"{wav_filename}.npy"
+                    np.save(embedding_path, embedding_array)
+
+                    entry = {
+                        "id": sample.get("id"),
+                        "contributor_id": contributor_id,
+                        "wav_filename": wav_filename,
+                        "wav_path": wav_path,
+                        "embedding_path": str(embedding_path),
+                    }
+                    existing_idx = next(
+                        (i for i, e in enumerate(mapping_entries) if e.get("id") == entry["id"]),
+                        None,
+                    )
+                    if existing_idx is not None:
+                        mapping_entries[existing_idx] = entry
+                    else:
+                        mapping_entries.append(entry)
             except Exception as e:
                 print(f"Warning: Failed to process {sample_id}: {e}")
                 continue
+
+    if embeddings_dir is not None and mapping_path is not None:
+        try:
+            with mapping_path.open("w", encoding="utf-8") as f:
+                json.dump(mapping_entries, f, ensure_ascii=False, indent=2)
+        except OSError as e:
+            print(f"Warning: Failed to update embedding mapping at {mapping_path}: {e}")
 
     return assignments
 
@@ -315,7 +397,7 @@ def _assign_experts(
         embedding_files = list(embeddings_dir.rglob("*.npy"))
         if embedding_files:
             print(f"Found {len(embedding_files)} cached embeddings in {embeddings_dir}")
-            return _assign_experts_from_cached_embeddings(
+            assignments = _assign_experts_from_cached_embeddings(
                 samples=samples,
                 num_experts=num_experts,
                 gating_model=gating_model,
@@ -323,6 +405,27 @@ def _assign_experts(
                 top_k_experts=top_k_experts,
                 device=device,
             )
+            missing_samples = [
+                sample for sample in samples if _sample_key(sample) not in assignments
+            ]
+            if missing_samples:
+                print(
+                    f"Missing embeddings for {len(missing_samples)}/{len(samples)} samples. "
+                    "Computing missing embeddings on the fly..."
+                )
+                assignments.update(
+                    _assign_experts_compute_on_fly(
+                        samples=missing_samples,
+                        num_experts=num_experts,
+                        gating_model=gating_model,
+                        model_name=model_name,
+                        top_k_experts=top_k_experts,
+                        device=device,
+                        embeddings_dir=embeddings_dir,
+                        mapping_path=embeddings_dir / "mapping.json",
+                    )
+                )
+            return assignments
 
     # Fallback to computing on the fly
     print("Warning: No cached embeddings found. Computing on the fly (this is slow)...")
@@ -333,6 +436,8 @@ def _assign_experts(
         model_name=model_name,
         top_k_experts=top_k_experts,
         device=device,
+        embeddings_dir=embeddings_dir,
+        mapping_path=embeddings_dir / "mapping.json" if embeddings_dir else None,
     )
 
 
@@ -372,11 +477,7 @@ def _build_model(
 ) -> "WhisperForConditionalGeneration":
     model = WhisperForConditionalGeneration.from_pretrained(config.model_name)
 
-    if config.language or config.task:
-        forced_decoder_ids = processor.get_decoder_prompt_ids(
-            language=config.language, task=config.task
-        )
-        model.config.forced_decoder_ids = forced_decoder_ids
+    _configure_generation(model, config.language, config.task)
 
     for param in model.parameters():
         param.requires_grad = not config.use_lora
@@ -418,12 +519,18 @@ def _evaluate(
     with torch.no_grad():
         for batch in data_loader:
             batch = {k: v.to(device) for k, v in batch.items()}
+            attention_mask = batch.get("attention_mask")
+            decoder_attention_mask = batch.get("decoder_attention_mask")
             with torch.cuda.amp.autocast(enabled=use_amp):
-                outputs = _forward_model(
-                    model,
-                    input_features=batch["input_features"],
-                    labels=batch["labels"],
-                )
+                model_kwargs = {
+                    "input_features": batch["input_features"],
+                    "labels": batch["labels"],
+                }
+                if attention_mask is not None:
+                    model_kwargs["attention_mask"] = attention_mask
+                if decoder_attention_mask is not None:
+                    model_kwargs["decoder_attention_mask"] = decoder_attention_mask
+                outputs = _forward_model(model, **model_kwargs)
                 loss = outputs.loss
             batch_size = batch["input_features"].size(0)
             total_loss += loss.item() * batch_size
@@ -447,8 +554,13 @@ def _evaluate_wer(
         for batch in data_loader:
             input_features = batch["input_features"].to(device)
             labels = batch["labels"].to(device)
+            attention_mask = batch.get("attention_mask")
+            if attention_mask is not None:
+                attention_mask = attention_mask.to(device)
 
-            generated_ids = model.generate(input_features=input_features)
+            generated_ids = model.generate(
+                input_features=input_features, attention_mask=attention_mask
+            )
             preds = processor.batch_decode(generated_ids, skip_special_tokens=True)
 
             labels = labels.clone()
@@ -534,12 +646,18 @@ def _train_expert(
 
         for batch_idx, batch in enumerate(iterator):
             batch = {k: v.to(device) for k, v in batch.items()}
+            attention_mask = batch.get("attention_mask")
+            decoder_attention_mask = batch.get("decoder_attention_mask")
             with torch.cuda.amp.autocast(enabled=config.fp16):
-                outputs = _forward_model(
-                    model,
-                    input_features=batch["input_features"],
-                    labels=batch["labels"],
-                )
+                model_kwargs = {
+                    "input_features": batch["input_features"],
+                    "labels": batch["labels"],
+                }
+                if attention_mask is not None:
+                    model_kwargs["attention_mask"] = attention_mask
+                if decoder_attention_mask is not None:
+                    model_kwargs["decoder_attention_mask"] = decoder_attention_mask
+                outputs = _forward_model(model, **model_kwargs)
                 loss = outputs.loss
 
             batch_size = batch["input_features"].size(0)

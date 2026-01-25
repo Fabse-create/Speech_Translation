@@ -17,7 +17,7 @@
   "gating_model_config": "Config/gating_model_config.json",
   "num_experts": 8,
   "top_k_experts": 2,
-  "expert_fraction": 0.5,
+  "expert_fraction": 1.0,
   "max_samples_per_expert": null,
   "val_split": 0.1,
   "batch_size": 4,

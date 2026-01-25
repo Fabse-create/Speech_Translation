@@ -1,7 +1,56 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Data directories (raw and extracted)
 Data/raw_data/Downsampled/
 Data/extracted_data/Dev/
 Data/extracted_data/Train/
 Data/salmonn
-__pycache__/
-*.pyc
+
+# Generated embeddings (extracted during pipeline)
+Data/embeddings/
+Runs/*/embeddings/
+
+# Clustering results (generated during pipeline)
+Runs/*/clustered/
+Data/embeddings/*_clustered/
+
+# Model checkpoints (generated during training)
+# Note: final_model_checkpoints/ is at root level and will NOT be ignored
+checkpoints/
+
+# Old checkpoint locations (legacy, should be cleaned up)
+Runs/*/gating_model/
+Runs/*/asr/
+
+# Training metrics and plots (generated during training)
+Evaluation/*/metrics.json
+Evaluation/*.png
+Evaluation/*/expert_*/metrics.json
+Runs/*/*_results/
+
+# Training logs
+Runs/*/training.log
+*.err
+*.out
+
+# Generated configs (created during pipeline runs)
+checkpoints/*/*_pretrain_config.json
+checkpoints/*/*_training_config.json
+Runs/*/*/*_config.json
+Runs/*/embeddings/*/embedding_extraction_config.json
+
+# MT finetuned models
 MT/opus_finetuned
+
+# IDE and OS files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

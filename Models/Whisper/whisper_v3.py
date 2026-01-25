@@ -39,16 +39,29 @@ class WhisperV3:
         options.update(decode_options)
 
         audio = load_audio(wav_path)
-        input_features = self.processor.feature_extractor(
-            audio, sampling_rate=16000, return_tensors="pt"
-        ).input_features.to(self.device)
-
-        forced_decoder_ids = self.processor.get_decoder_prompt_ids(
-            language=options.get("language"),
-            task=options.get("task", "transcribe"),
+        features = self.processor.feature_extractor(
+            audio,
+            sampling_rate=16000,
+            return_tensors="pt",
+            return_attention_mask=True,
         )
+        input_features = features.input_features.to(self.device)
+        attention_mask = features.get("attention_mask")
+        if attention_mask is not None:
+            attention_mask = attention_mask.to(self.device)
+
+        generation_config = getattr(self.model, "generation_config", self.model.config)
+        language = options.get("language")
+        task = options.get("task", "transcribe")
+        if language:
+            generation_config.language = language
+        if task:
+            generation_config.task = task
+        if hasattr(generation_config, "forced_decoder_ids"):
+            generation_config.forced_decoder_ids = None
+
         generated_ids = self.model.generate(
-            input_features, forced_decoder_ids=forced_decoder_ids
+            input_features=input_features, attention_mask=attention_mask
         )
         text = self.processor.batch_decode(
             generated_ids, skip_special_tokens=True

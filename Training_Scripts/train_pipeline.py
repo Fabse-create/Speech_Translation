@@ -431,10 +431,7 @@ def _run_asr_training(
     if config.experts_dir and config.use_lora:
         asr_training._load_expert_adapters(model, Path(config.experts_dir), config.num_experts)
 
-    forced_decoder_ids = processor.get_decoder_prompt_ids(
-        language=config.language, task=config.task
-    )
-    model.config.forced_decoder_ids = forced_decoder_ids
+    asr_training._configure_generation(model, config.language, config.task)
 
     params = list(gating_model.parameters()) + [
         param for param in model.parameters() if param.requires_grad
@@ -697,11 +694,15 @@ def run_pipeline(
     embeddings_mapping = embeddings_dir / "mapping.json"
     clustered_dir = run_root / "clustered"
 
-    gating_ckpt_dir = run_root / "gating_model"
-    gating_metrics_dir = run_root / "gating_model_results"
+    # All checkpoints go to checkpoints/
+    gating_ckpt_dir = Path("checkpoints/gating_model")
+    experts_output_dir = Path("checkpoints/experts")
+    asr_output_dir = Path("checkpoints/asr")
 
-    asr_output_dir = run_root / "asr"
-    asr_metrics_dir = run_root / "asr_results"
+    # All metrics go to Evaluation/
+    gating_metrics_dir = Path("Evaluation/gating_model_results")
+    expert_metrics_dir = Path("Evaluation/expert_training_results")
+    asr_metrics_dir = Path("Evaluation/asr_training_results")
 
     if mode == "quick":
         embedding_percent = 100
@@ -716,9 +717,9 @@ def run_pipeline(
         if not allow_reduce_experts:
             allow_reduce_experts = True
     else:
-        embedding_percent = 5
+        embedding_percent = 20
         embedding_max = None
-        expert_percent = 15
+        expert_percent = 20
         expert_max = None
         asr_percent = 100
         asr_max = None
@@ -837,7 +838,6 @@ def run_pipeline(
             plot_gating_metrics(gating_metrics_dir / "metrics.json", gating_metrics_dir)
 
     # STEP 4: Expert pre-training (with resume support)
-    experts_output_dir = Path("checkpoints/experts")
     expert_dirs_exist = [
         (experts_output_dir / f"expert_{i}").exists() 
         for i in range(resolved_experts)
@@ -865,10 +865,10 @@ def run_pipeline(
             gradient_accumulation_steps=gradient_accumulation_steps,
         )
         if not resume:
-            _clear_expert_metrics(Path("Evaluation/expert_training_results"))
+            _clear_expert_metrics(expert_metrics_dir)
         train_experts(str(expert_config))
         if not no_plot:
-            plot_expert_metrics(Path("Evaluation/expert_training_results"), Path("Evaluation/expert_training_results"))
+            plot_expert_metrics(expert_metrics_dir, expert_metrics_dir)
 
     # Clear GPU memory before ASR training to prevent OOM
     if torch.cuda.is_available():
@@ -893,7 +893,7 @@ def run_pipeline(
             num_experts=resolved_experts,
             gating_checkpoint=gating_checkpoint,
             gating_config=str(gating_config),
-            experts_dir=Path("checkpoints/experts"),
+            experts_dir=experts_output_dir,
             data_override=asr_override,
             seed=seed,
             output_dir=asr_output_dir,

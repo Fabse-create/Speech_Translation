@@ -97,25 +97,40 @@ class WhisperCollator:
 
     def __call__(self, batch: List[Dict[str, Any]]) -> Dict[str, torch.Tensor]:
         audio_list = [load_audio(item["wav_path"]) for item in batch]
-        input_features = self.processor.feature_extractor(
-            audio_list, sampling_rate=16000, return_tensors="pt"
-        ).input_features
+        features = self.processor.feature_extractor(
+            audio_list,
+            sampling_rate=16000,
+            return_tensors="pt",
+            return_attention_mask=True,
+        )
+        input_features = features.input_features
+        attention_mask = features.get("attention_mask")
 
         texts = [item["transcript"] for item in batch]
         max_label_length = getattr(self.processor.tokenizer, "model_max_length", 448)
         if max_label_length is None or max_label_length > 1000:
             max_label_length = 448
-        labels = self.processor.tokenizer(
+        label_batch = self.processor.tokenizer(
             texts,
             return_tensors="pt",
             padding=True,
             truncation=True,
             max_length=max_label_length,
-        ).input_ids
-        labels = labels.clone()
+            return_attention_mask=True,
+        )
+        labels = label_batch.input_ids.clone()
+        decoder_attention_mask = label_batch.attention_mask
         labels[labels == self.processor.tokenizer.pad_token_id] = -100
 
-        return {"input_features": input_features, "labels": labels}
+        batch_out: Dict[str, torch.Tensor] = {
+            "input_features": input_features,
+            "labels": labels,
+        }
+        if attention_mask is not None:
+            batch_out["attention_mask"] = attention_mask
+        if decoder_attention_mask is not None:
+            batch_out["decoder_attention_mask"] = decoder_attention_mask
+        return batch_out
 
 
 def _set_seed(seed: int) -> None:
@@ -234,6 +249,20 @@ def _load_gating_model(
     return model
 
 
+def _configure_generation(
+    model: "WhisperForConditionalGeneration",
+    language: Optional[str],
+    task: Optional[str],
+) -> None:
+    generation_config = getattr(model, "generation_config", model.config)
+    if language:
+        generation_config.language = language
+    if task:
+        generation_config.task = task
+    if hasattr(generation_config, "forced_decoder_ids"):
+        generation_config.forced_decoder_ids = None
+
+
 def _sequence_loss(
     logits: torch.Tensor, labels: torch.Tensor
 ) -> torch.Tensor:
@@ -284,11 +313,15 @@ def _train_epoch(
         batch = {k: v.to(device) for k, v in batch.items()}
         input_features = batch["input_features"]
         labels = batch["labels"]
+        attention_mask = batch.get("attention_mask")
+        decoder_attention_mask = batch.get("decoder_attention_mask")
         batch_size = input_features.size(0)
 
         # OPTIMIZATION: Run encoder ONCE for gating decisions
         with torch.no_grad():
-            encoder_outputs = embedding_model.encoder(input_features)
+            encoder_outputs = embedding_model.encoder(
+                input_features, attention_mask=attention_mask
+            )
             pooled = encoder_outputs.last_hidden_state.mean(dim=1)
 
         # Get gating decisions
@@ -316,11 +349,25 @@ def _train_epoch(
 
             expert_features = input_features[mask]
             expert_labels = labels[mask]
+            expert_attention_mask = (
+                attention_mask[mask] if attention_mask is not None else None
+            )
+            expert_decoder_attention_mask = (
+                decoder_attention_mask[mask] if decoder_attention_mask is not None else None
+            )
             expert_weights = topk_weights[mask, 0]  # Primary expert weight
 
             with torch.cuda.amp.autocast(enabled=config.fp16):
+                model_kwargs = {
+                    "input_features": expert_features,
+                    "labels": expert_labels,
+                }
+                if expert_attention_mask is not None:
+                    model_kwargs["attention_mask"] = expert_attention_mask
+                if expert_decoder_attention_mask is not None:
+                    model_kwargs["decoder_attention_mask"] = expert_decoder_attention_mask
                 outputs = _forward_model(
-                    model, input_features=expert_features, labels=expert_labels
+                    model, **model_kwargs
                 )
                 logits = outputs.logits
                 loss_per_sample = _sequence_loss(logits, expert_labels)
@@ -346,11 +393,25 @@ def _train_epoch(
 
                 expert_features = input_features[mask]
                 expert_labels = labels[mask]
+                expert_attention_mask = (
+                    attention_mask[mask] if attention_mask is not None else None
+                )
+                expert_decoder_attention_mask = (
+                    decoder_attention_mask[mask] if decoder_attention_mask is not None else None
+                )
                 expert_weights = topk_weights[mask, 1]  # Secondary expert weight
 
                 with torch.cuda.amp.autocast(enabled=config.fp16):
+                    model_kwargs = {
+                        "input_features": expert_features,
+                        "labels": expert_labels,
+                    }
+                    if expert_attention_mask is not None:
+                        model_kwargs["attention_mask"] = expert_attention_mask
+                    if expert_decoder_attention_mask is not None:
+                        model_kwargs["decoder_attention_mask"] = expert_decoder_attention_mask
                     outputs = _forward_model(
-                        model, input_features=expert_features, labels=expert_labels
+                        model, **model_kwargs
                     )
                     logits = outputs.logits
                     loss_per_sample = _sequence_loss(logits, expert_labels)
@@ -411,9 +472,13 @@ def _evaluate(
             batch = {k: v.to(device) for k, v in batch.items()}
             input_features = batch["input_features"]
             labels = batch["labels"]
+            attention_mask = batch.get("attention_mask")
+            decoder_attention_mask = batch.get("decoder_attention_mask")
             batch_size = input_features.size(0)
 
-            encoder_outputs = embedding_model.encoder(input_features)
+            encoder_outputs = embedding_model.encoder(
+                input_features, attention_mask=attention_mask
+            )
             pooled = encoder_outputs.last_hidden_state.mean(dim=1)
             gate_logits = gating_model(pooled)
             gate_probs = torch.softmax(gate_logits, dim=-1)
@@ -436,11 +501,23 @@ def _evaluate(
 
                 expert_features = input_features[mask]
                 expert_labels = labels[mask]
+                expert_attention_mask = (
+                    attention_mask[mask] if attention_mask is not None else None
+                )
+                expert_decoder_attention_mask = (
+                    decoder_attention_mask[mask] if decoder_attention_mask is not None else None
+                )
                 expert_weights = topk_weights[mask, 0]
 
-                outputs = _forward_model(
-                    model, input_features=expert_features, labels=expert_labels
-                )
+                model_kwargs = {
+                    "input_features": expert_features,
+                    "labels": expert_labels,
+                }
+                if expert_attention_mask is not None:
+                    model_kwargs["attention_mask"] = expert_attention_mask
+                if expert_decoder_attention_mask is not None:
+                    model_kwargs["decoder_attention_mask"] = expert_decoder_attention_mask
+                outputs = _forward_model(model, **model_kwargs)
                 logits = outputs.logits
                 loss_per_sample = _sequence_loss(logits, expert_labels)
 
@@ -462,11 +539,23 @@ def _evaluate(
 
                     expert_features = input_features[mask]
                     expert_labels = labels[mask]
+                    expert_attention_mask = (
+                        attention_mask[mask] if attention_mask is not None else None
+                    )
+                    expert_decoder_attention_mask = (
+                        decoder_attention_mask[mask] if decoder_attention_mask is not None else None
+                    )
                     expert_weights = topk_weights[mask, 1]
 
-                    outputs = _forward_model(
-                        model, input_features=expert_features, labels=expert_labels
-                    )
+                    model_kwargs = {
+                        "input_features": expert_features,
+                        "labels": expert_labels,
+                    }
+                    if expert_attention_mask is not None:
+                        model_kwargs["attention_mask"] = expert_attention_mask
+                    if expert_decoder_attention_mask is not None:
+                        model_kwargs["decoder_attention_mask"] = expert_decoder_attention_mask
+                    outputs = _forward_model(model, **model_kwargs)
                     logits = outputs.logits
                     loss_per_sample = _sequence_loss(logits, expert_labels)
 
@@ -508,8 +597,11 @@ def _evaluate_wer(
             batch = {k: v.to(device) for k, v in batch.items()}
             input_features = batch["input_features"]
             labels = batch["labels"]
+            attention_mask = batch.get("attention_mask")
 
-            encoder_outputs = embedding_model.encoder(input_features)
+            encoder_outputs = embedding_model.encoder(
+                input_features, attention_mask=attention_mask
+            )
             pooled = encoder_outputs.last_hidden_state.mean(dim=1)
             gate_logits = gating_model(pooled)
             gate_probs = torch.softmax(gate_logits, dim=-1)
@@ -523,7 +615,10 @@ def _evaluate_wer(
                 if not mask.any():
                     continue
                 feats = input_features[mask]
-                generated_ids = model.generate(input_features=feats)
+                feats_mask = attention_mask[mask] if attention_mask is not None else None
+                generated_ids = model.generate(
+                    input_features=feats, attention_mask=feats_mask
+                )
                 preds = processor.batch_decode(
                     generated_ids, skip_special_tokens=True
                 )
@@ -698,10 +793,7 @@ def train(config_path: str, max_samples: Optional[int] = None) -> None:
     if config.experts_dir and config.use_lora:
         _load_expert_adapters(model, Path(config.experts_dir), config.num_experts)
 
-    forced_decoder_ids = processor.get_decoder_prompt_ids(
-        language=config.language, task=config.task
-    )
-    model.config.forced_decoder_ids = forced_decoder_ids
+    _configure_generation(model, config.language, config.task)
 
     params = list(gating_model.parameters()) + [
         param for param in model.parameters() if param.requires_grad
