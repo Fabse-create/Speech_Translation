@@ -181,14 +181,26 @@ def _load_finetuned_bundle(
             bias="none",
             task_type="SEQ_2_SEQ_LM",
         )
-        asr_model = get_peft_model(asr_model, lora_config, adapter_name="expert_0")
-        for expert_id in range(1, num_experts):
-            asr_model.add_adapter(f"expert_{expert_id}", lora_config)
+
+        # Support older peft versions without adapter_name in get_peft_model.
+        try:
+            asr_model = get_peft_model(asr_model, lora_config, adapter_name="expert_0")
+        except TypeError:
+            asr_model = get_peft_model(asr_model, lora_config)
+
+        if not hasattr(asr_model, "load_adapter"):
+            raise RuntimeError(
+                "peft version is too old (missing load_adapter). "
+                "Please upgrade: pip install -U peft"
+            )
+
         for expert_id in range(num_experts):
             adapter_dir = fine_tuned_dir / f"expert_{expert_id}"
             if adapter_dir.exists():
                 asr_model.load_adapter(adapter_dir, adapter_name=f"expert_{expert_id}")
-        asr_model.set_adapter("expert_0")
+
+        if hasattr(asr_model, "set_adapter") and (fine_tuned_dir / "expert_0").exists():
+            asr_model.set_adapter("expert_0")
 
     gating_config_path = config.get("gating_model_config", "Config/gating_model_config.json")
     gating_model = GatingModel(config_path=gating_config_path).to(device)
