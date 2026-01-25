@@ -540,6 +540,40 @@ def _evaluate_wer(
     return scorer.corpus_wer(references, hypotheses)
 
 
+def _save_expert_adapters(
+    model: nn.Module,
+    processor: "WhisperProcessor",
+    output_dir: Path,
+    num_experts: int,
+) -> None:
+    for expert_id in range(num_experts):
+        adapter_name = f"expert_{expert_id}"
+        adapter_dir = output_dir / adapter_name
+        adapter_dir.mkdir(parents=True, exist_ok=True)
+        if hasattr(model, "set_adapter"):
+            model.set_adapter(adapter_name)
+        saved = False
+        if hasattr(model, "save_adapter"):
+            try:
+                model.save_adapter(str(adapter_dir), adapter_name=adapter_name)
+                saved = True
+            except TypeError:
+                try:
+                    model.save_adapter(str(adapter_dir), adapter_name)
+                    saved = True
+                except TypeError:
+                    pass
+        if not saved:
+            try:
+                model.save_pretrained(adapter_dir, selected_adapters=[adapter_name])
+                saved = True
+            except TypeError:
+                pass
+        if not saved:
+            model.save_pretrained(adapter_dir)
+        processor.save_pretrained(adapter_dir)
+
+
 def _save_checkpoint(
     model: nn.Module,
     gating_model: nn.Module,
@@ -569,11 +603,7 @@ def _save_checkpoint(
 
     # Save expert adapters
     if config.use_lora:
-        for expert_id in range(config.num_experts):
-            model.set_adapter(f"expert_{expert_id}")
-            adapter_dir = checkpoint_dir / f"expert_{expert_id}"
-            adapter_dir.mkdir(parents=True, exist_ok=True)
-            model.save_pretrained(adapter_dir)
+        _save_expert_adapters(model, processor, checkpoint_dir, config.num_experts)
     else:
         model.save_pretrained(checkpoint_dir / "model")
 

@@ -31,7 +31,18 @@ python WER_Benchmark/wer_benchmark.py \
 - Increase `--max-samples` for more stable per-etiology scores if you have enough data.
 
 ## Fine-tuned model loading
-The fine-tuned model is expected to live under `checkpoints/asr` (or `checkpoints/asr/best`):
+The fine-tuned model is expected to live under `checkpoints/asr` (or `checkpoints/asr/best`).
+If you trained with the pipeline, the ASR output is typically under:
+
+```
+Runs/full/asr
+```
+
+or, for quick runs:
+
+```
+Runs/quick/asr
+```
 
 ```
 checkpoints/asr/

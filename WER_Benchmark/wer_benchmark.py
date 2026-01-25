@@ -138,11 +138,17 @@ def _run_baseline(
 
 
 def _resolve_finetuned_dir(base_dir: Path) -> Path:
-    if (base_dir / "gating_model.pt").exists():
-        return base_dir
-    best_dir = base_dir / "best"
-    if best_dir.exists():
-        return best_dir
+    candidates = [
+        base_dir,
+        base_dir / "best",
+        Path("Runs/full/asr"),
+        Path("Runs/full/asr/best"),
+        Path("Runs/quick/asr"),
+        Path("Runs/quick/asr/best"),
+    ]
+    for candidate in candidates:
+        if (candidate / "gating_model.pt").exists():
+            return candidate
     return base_dir
 
 
@@ -194,10 +200,17 @@ def _load_finetuned_bundle(
                 "Please upgrade: pip install -U peft"
             )
 
-        for expert_id in range(num_experts):
-            adapter_dir = fine_tuned_dir / f"expert_{expert_id}"
-            if adapter_dir.exists():
-                asr_model.load_adapter(adapter_dir, adapter_name=f"expert_{expert_id}")
+        adapter_dirs = [fine_tuned_dir / f"expert_{i}" for i in range(num_experts)]
+        if not any((adapter_dir / "adapter_config.json").exists() for adapter_dir in adapter_dirs):
+            raise FileNotFoundError(
+                "No LoRA adapters found in fine-tuned directory. "
+                f"Expected adapter_config.json under {fine_tuned_dir}/expert_*/. "
+                "If you trained with the pipeline, set --fine-tuned-dir to Runs/full/asr "
+                "(or Runs/quick/asr)."
+            )
+        for expert_id, adapter_dir in enumerate(adapter_dirs):
+            if (adapter_dir / "adapter_config.json").exists():
+                asr_model.load_adapter(str(adapter_dir), adapter_name=f"expert_{expert_id}")
 
         if hasattr(asr_model, "set_adapter") and (fine_tuned_dir / "expert_0").exists():
             asr_model.set_adapter("expert_0")

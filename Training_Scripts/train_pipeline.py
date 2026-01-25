@@ -508,12 +508,12 @@ def _run_asr_training(
             epochs_without_improvement = 0
             torch.save(gating_model.state_dict(), output_dir / "gating_model.pt")
             if config.use_lora:
-                for expert_id in range(config.num_experts):
-                    model.set_adapter(f"expert_{expert_id}")
-                    adapter_dir = output_dir / f"expert_{expert_id}"
-                    adapter_dir.mkdir(parents=True, exist_ok=True)
-                    model.save_pretrained(adapter_dir)
-                    processor.save_pretrained(adapter_dir)
+                asr_training._save_expert_adapters(
+                    model=model,
+                    processor=processor,
+                    output_dir=output_dir,
+                    num_experts=config.num_experts,
+                )
             else:
                 model.save_pretrained(output_dir / "model")
                 processor.save_pretrained(output_dir / "model")
