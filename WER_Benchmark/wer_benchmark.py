@@ -250,7 +250,9 @@ def _load_finetuned_bundle(
         for expert_id in range(num_experts):
             adapter_dir = _find_adapter_dir(fine_tuned_dir, expert_id)
             if adapter_dir is not None:
-                asr_model.load_adapter(str(adapter_dir), adapter_name=f"expert_{expert_id}")
+                # Convert to absolute path to avoid PEFT treating it as a Hub repo ID
+                adapter_path = adapter_dir.resolve()
+                asr_model.load_adapter(str(adapter_path), adapter_name=f"expert_{expert_id}")
 
         # Set default adapter if expert_0 exists
         if hasattr(asr_model, "set_adapter"):
