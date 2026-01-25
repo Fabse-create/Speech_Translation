@@ -223,8 +223,11 @@ def _run_finetuned(
     asr_model = bundle["asr_model"]
     gating_model = bundle["gating_model"]
     use_lora = bundle["use_lora"]
+    num_experts = int(bundle["num_experts"])
 
     tracker = WERTracker()
+    expert_usage_overall: Dict[int, int] = defaultdict(int)
+    expert_usage_by_etiology: Dict[str, Dict[int, int]] = defaultdict(lambda: defaultdict(int))
     with torch.no_grad():
         for batch in _batched(samples, batch_size):
             audio_list = [load_audio(sample["wav_path"]) for sample in batch]
@@ -253,14 +256,29 @@ def _run_finetuned(
                 for idx, pred in zip(torch.where(mask)[0].tolist(), preds):
                     predictions[idx] = pred
 
-            for sample, pred in zip(batch, predictions):
+            for sample, pred, expert_id in zip(
+                batch, predictions, top1_indices.tolist()
+            ):
+                etiology = sample.get("etiology", "Unknown")
                 tracker.add(
                     reference=sample["prompt"],
                     hypothesis=pred,
-                    etiology=sample.get("etiology", "Unknown"),
+                    etiology=etiology,
                 )
+                expert_usage_overall[expert_id] += 1
+                expert_usage_by_etiology[etiology][expert_id] += 1
 
-    return tracker.results()
+    results = tracker.results()
+    results["expert_usage"] = {
+        "overall": {str(i): int(expert_usage_overall.get(i, 0)) for i in range(num_experts)},
+        "per_etiology": {
+            etiology: {
+                str(i): int(counts.get(i, 0)) for i in range(num_experts)
+            }
+            for etiology, counts in sorted(expert_usage_by_etiology.items())
+        },
+    }
+    return results
 
 
 def main() -> None:

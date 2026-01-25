@@ -84,6 +84,13 @@ Example:
     "per_etiology": {
       "Spastic": { "wer": 0.31, "samples": 120 },
       "Ataxic": { "wer": 0.24, "samples": 95 }
+    },
+    "expert_usage": {
+      "overall": { "0": 210, "1": 98, "2": 65, "3": 42, "4": 33, "5": 21, "6": 10, "7": 3 },
+      "per_etiology": {
+        "Spastic": { "0": 54, "1": 24, "2": 18, "3": 12, "4": 6, "5": 4, "6": 1, "7": 1 },
+        "Ataxic": { "0": 40, "1": 21, "2": 11, "3": 9, "4": 8, "5": 3, "6": 2, "7": 1 }
+      }
     }
   }
 }
@@ -105,6 +112,7 @@ If you see WER higher than 0.70, data quality or transcript alignment is often t
 - Use the **same Dev split** each time for fair comparisons.
 - Keep `--seed` fixed.
 - If per-etiology counts are low, increase `--percent` or `--max-samples`.
+- The `finetuned_asr` section now includes `expert_usage` to show routing frequency overall and per etiology.
 
 ## Dependencies
 
