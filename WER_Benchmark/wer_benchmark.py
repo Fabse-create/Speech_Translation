@@ -208,19 +208,55 @@ def _load_finetuned_bundle(
                 "Please upgrade: pip install -U peft"
             )
 
-        adapter_dirs = [fine_tuned_dir / f"expert_{i}" for i in range(num_experts)]
-        if not any((adapter_dir / "adapter_config.json").exists() for adapter_dir in adapter_dirs):
+        # Helper function to find adapter directory (handles both flat and nested structures)
+        def _find_adapter_dir(base_dir: Path, expert_id: int) -> Optional[Path]:
+            """Find adapter directory, handling both flat and nested structures.
+            
+            Checks:
+            1. base_dir/expert_X/adapter_config.json (flat)
+            2. base_dir/expert_X/expert_X/adapter_config.json (nested)
+            3. Recursively searches for adapter_config.json in expert_X/
+            """
+            expert_dir = base_dir / f"expert_{expert_id}"
+            if not expert_dir.exists():
+                return None
+            
+            # Check flat structure
+            if (expert_dir / "adapter_config.json").exists():
+                return expert_dir
+            
+            # Check nested structure (expert_X/expert_X/)
+            nested_dir = expert_dir / f"expert_{expert_id}"
+            if nested_dir.exists() and (nested_dir / "adapter_config.json").exists():
+                return nested_dir
+            
+            # Recursively search for adapter_config.json
+            for path in expert_dir.rglob("adapter_config.json"):
+                return path.parent
+            
+            return None
+        
+        adapter_dirs = [_find_adapter_dir(fine_tuned_dir, i) for i in range(num_experts)]
+        adapter_dirs = [d for d in adapter_dirs if d is not None]
+        
+        if not adapter_dirs:
             raise FileNotFoundError(
                 "No LoRA adapters found in fine-tuned directory. "
-                f"Expected adapter_config.json under {fine_tuned_dir}/expert_*/. "
+                f"Expected adapter_config.json under {fine_tuned_dir}/expert_*/ "
+                f"(or {fine_tuned_dir}/expert_*/expert_*/ for nested structure). "
                 "If you trained with the pipeline, set --fine-tuned-dir to checkpoints/asr."
             )
-        for expert_id, adapter_dir in enumerate(adapter_dirs):
-            if (adapter_dir / "adapter_config.json").exists():
+        
+        for expert_id in range(num_experts):
+            adapter_dir = _find_adapter_dir(fine_tuned_dir, expert_id)
+            if adapter_dir is not None:
                 asr_model.load_adapter(str(adapter_dir), adapter_name=f"expert_{expert_id}")
 
-        if hasattr(asr_model, "set_adapter") and (fine_tuned_dir / "expert_0").exists():
-            asr_model.set_adapter("expert_0")
+        # Set default adapter if expert_0 exists
+        if hasattr(asr_model, "set_adapter"):
+            expert_0_dir = _find_adapter_dir(fine_tuned_dir, 0)
+            if expert_0_dir is not None:
+                asr_model.set_adapter("expert_0")
 
     gating_config_path = config.get("gating_model_config", "Config/gating_model_config.json")
     gating_model = GatingModel(config_path=gating_config_path).to(device)
