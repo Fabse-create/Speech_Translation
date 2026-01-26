@@ -15,7 +15,7 @@
   },
   "gating_model_checkpoint": "checkpoints/gating_model/best.pt",
   "gating_model_config": "Config/gating_model_config.json",
-  "num_experts": 8,
+  "num_experts": 4,
   "top_k_experts": 2,
   "expert_fraction": 1.0,
   "max_samples_per_expert": null,

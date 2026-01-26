@@ -13,7 +13,7 @@
     "max_samples": null,
     "modes": {}
   },
-  "num_experts": 8,
+  "num_experts": 4,
   "top_k_experts": 2,
   "batch_size": 4,
   "epochs": 5,
@@ -22,7 +22,7 @@
   "seed": 42,
   "num_workers": 4,
   "val_split": 0.1,
-  "load_balance_coef": 0.05,
+  "load_balance_coef": 0.2,
   "gating_model_config": "Config/gating_model_config.json",
   "gating_checkpoint": "checkpoints/gating_model/best.pt",
   "use_lora": true,
@@ -43,6 +43,13 @@
   "soft_routing_epochs": 3,
   "topk_routing_epochs": 6,
   "routing_temperature_start": 2.0,
-  "routing_temperature_end": 0.5,
-  "min_expert_usage_fraction": 0.05
+  "routing_temperature_end": 1.0,
+  "min_expert_usage_fraction": 0.05,
+  "routing_temperature_min": 1.0,
+  "router_noise_std": 0.1,
+  "routing_alignment_coef": 0.1,
+  "routing_alignment_temperature": 1.0,
+  "routing_entropy_coef": 0.01,
+  "save_every_epoch": true,
+  "rebase_output_dir": true
 }

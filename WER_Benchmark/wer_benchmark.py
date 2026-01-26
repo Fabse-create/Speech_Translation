@@ -106,6 +106,17 @@ def _configure_generation(
         generation_config.forced_decoder_ids = None
 
 
+def _compute_gating_probs(
+    gate_logits: torch.Tensor, temperature: float, min_prob: float = 0.0
+) -> torch.Tensor:
+    safe_temp = max(1e-4, float(temperature))
+    gate_probs = torch.softmax(gate_logits / safe_temp, dim=-1)
+    if min_prob > 0:
+        gate_probs = torch.clamp(gate_probs, min=min_prob)
+        gate_probs = gate_probs / gate_probs.sum(dim=-1, keepdim=True)
+    return gate_probs
+
+
 def _run_baseline(
     samples: List[Dict[str, str]],
     model_name: str,
@@ -177,6 +188,7 @@ def _load_finetuned_bundle(
     _configure_generation(
         asr_model, config.get("language"), config.get("task")
     )
+    asr_model.eval()
 
     if use_lora:
         try:
@@ -270,6 +282,13 @@ def _load_finetuned_bundle(
     gating_model.load_state_dict(torch.load(gating_checkpoint, map_location=device))
     gating_model.eval()
 
+    routing_temperature = float(
+        config.get(
+            "routing_temperature_min",
+            config.get("routing_temperature_end", 1.0),
+        )
+    )
+
     return {
         "processor": processor,
         "embedding_model": embedding_model,
@@ -277,6 +296,7 @@ def _load_finetuned_bundle(
         "gating_model": gating_model,
         "num_experts": num_experts,
         "use_lora": use_lora,
+        "routing_temperature": routing_temperature,
     }
 
 
@@ -286,6 +306,7 @@ def _run_finetuned(
     fine_tuned_dir: Path,
     device: torch.device,
     batch_size: int,
+    gating_output_path: Optional[Path] = None,
 ) -> Dict[str, object]:
     bundle = _load_finetuned_bundle(asr_config_path, fine_tuned_dir, device)
     processor = bundle["processor"]
@@ -294,49 +315,100 @@ def _run_finetuned(
     gating_model = bundle["gating_model"]
     use_lora = bundle["use_lora"]
     num_experts = int(bundle["num_experts"])
+    routing_temperature = float(bundle["routing_temperature"])
 
     tracker = WERTracker()
     expert_usage_overall: Dict[int, int] = defaultdict(int)
     expert_usage_by_etiology: Dict[str, Dict[int, int]] = defaultdict(lambda: defaultdict(int))
+    gate_prob_sum = torch.zeros(num_experts, dtype=torch.float64)
+    gate_prob_count = 0
+    gate_prob_sum_by_etiology: Dict[str, torch.Tensor] = defaultdict(
+        lambda: torch.zeros(num_experts, dtype=torch.float64)
+    )
+    gate_prob_count_by_etiology: Dict[str, int] = defaultdict(int)
+    gate_entropy_sum = 0.0
+    gating_handle = None
+    if gating_output_path is not None:
+        gating_output_path.parent.mkdir(parents=True, exist_ok=True)
+        gating_handle = gating_output_path.open("w", encoding="utf-8")
     with torch.no_grad():
-        for batch in _batched(samples, batch_size):
-            audio_list = [load_audio(sample["wav_path"]) for sample in batch]
-            inputs = processor(
-                audio_list, sampling_rate=16000, return_tensors="pt"
-            )
-            input_features = inputs.input_features.to(device)
-
-            encoder_outputs = embedding_model.encoder(input_features)
-            pooled = encoder_outputs.last_hidden_state.mean(dim=1)
-            gate_probs = torch.softmax(gating_model(pooled), dim=-1)
-            top1_indices = torch.argmax(gate_probs, dim=-1)
-
-            predictions = [""] * input_features.size(0)
-            for expert_id in torch.unique(top1_indices).tolist():
-                mask = top1_indices == expert_id
-                if not mask.any():
-                    continue
-                if use_lora:
-                    asr_model.set_adapter(f"expert_{expert_id}")
-                feats = input_features[mask]
-                generated_ids = asr_model.generate(input_features=feats)
-                preds = processor.batch_decode(
-                    generated_ids, skip_special_tokens=True
+        try:
+            for batch in _batched(samples, batch_size):
+                audio_list = [load_audio(sample["wav_path"]) for sample in batch]
+                inputs = processor(
+                    audio_list,
+                    sampling_rate=16000,
+                    return_tensors="pt",
+                    return_attention_mask=True,
                 )
-                for idx, pred in zip(torch.where(mask)[0].tolist(), preds):
-                    predictions[idx] = pred
+                input_features = inputs.input_features.to(device)
+                attention_mask = inputs.get("attention_mask")
+                if attention_mask is not None:
+                    attention_mask = attention_mask.to(device)
 
-            for sample, pred, expert_id in zip(
-                batch, predictions, top1_indices.tolist()
-            ):
-                etiology = sample.get("etiology", "Unknown")
-                tracker.add(
-                    reference=sample["prompt"],
-                    hypothesis=pred,
-                    etiology=etiology,
+                encoder_outputs = embedding_model.encoder(
+                    input_features, attention_mask=attention_mask
                 )
-                expert_usage_overall[expert_id] += 1
-                expert_usage_by_etiology[etiology][expert_id] += 1
+                pooled = encoder_outputs.last_hidden_state.mean(dim=1)
+                gate_probs = _compute_gating_probs(
+                    gating_model(pooled),
+                    temperature=routing_temperature,
+                    min_prob=0.0,
+                )
+                top1_indices = torch.argmax(gate_probs, dim=-1)
+                gate_probs_cpu = gate_probs.detach().cpu().double()
+                top1_cpu = top1_indices.detach().cpu().tolist()
+
+                gate_prob_sum += gate_probs_cpu.sum(dim=0)
+                gate_prob_count += gate_probs_cpu.size(0)
+                gate_entropy = -(gate_probs_cpu * torch.log(gate_probs_cpu + 1e-8)).sum(dim=-1)
+                gate_entropy_sum += float(gate_entropy.sum().item())
+
+                for idx, sample in enumerate(batch):
+                    etiology = sample.get("etiology", "Unknown")
+                    gate_prob_sum_by_etiology[etiology] += gate_probs_cpu[idx]
+                    gate_prob_count_by_etiology[etiology] += 1
+                    if gating_handle is not None:
+                        payload = {
+                            "id": sample.get("id"),
+                            "etiology": etiology,
+                            "gate_probs": [float(x) for x in gate_probs_cpu[idx].tolist()],
+                            "top1_expert": int(top1_cpu[idx]),
+                        }
+                        gating_handle.write(json.dumps(payload) + "\n")
+
+                predictions = [""] * input_features.size(0)
+                for expert_id in torch.unique(top1_indices).tolist():
+                    mask = top1_indices == expert_id
+                    if not mask.any():
+                        continue
+                    if use_lora:
+                        asr_model.set_adapter(f"expert_{expert_id}")
+                    feats = input_features[mask]
+                    feats_mask = attention_mask[mask] if attention_mask is not None else None
+                    generated_ids = asr_model.generate(
+                        input_features=feats, attention_mask=feats_mask
+                    )
+                    preds = processor.batch_decode(
+                        generated_ids, skip_special_tokens=True
+                    )
+                    for idx, pred in zip(torch.where(mask)[0].tolist(), preds):
+                        predictions[idx] = pred
+
+                for sample, pred, expert_id in zip(
+                    batch, predictions, top1_cpu
+                ):
+                    etiology = sample.get("etiology", "Unknown")
+                    tracker.add(
+                        reference=sample["prompt"],
+                        hypothesis=pred,
+                        etiology=etiology,
+                    )
+                    expert_usage_overall[expert_id] += 1
+                    expert_usage_by_etiology[etiology][expert_id] += 1
+        finally:
+            if gating_handle is not None:
+                gating_handle.close()
 
     results = tracker.results()
     results["expert_usage"] = {
@@ -347,6 +419,25 @@ def _run_finetuned(
             }
             for etiology, counts in sorted(expert_usage_by_etiology.items())
         },
+    }
+    gate_prob_mean = (gate_prob_sum / max(1, gate_prob_count)).tolist()
+    results["gating_probabilities"] = {
+        "temperature": float(routing_temperature),
+        "mean_overall": {str(i): float(gate_prob_mean[i]) for i in range(num_experts)},
+        "mean_entropy": float(gate_entropy_sum / max(1, gate_prob_count)),
+        "per_etiology": {
+            etiology: {
+                str(i): float(
+                    (
+                        gate_prob_sum_by_etiology[etiology]
+                        / max(1, gate_prob_count_by_etiology[etiology])
+                    )[i]
+                )
+                for i in range(num_experts)
+            }
+            for etiology in sorted(gate_prob_sum_by_etiology.keys())
+        },
+        "per_sample_path": str(gating_output_path) if gating_output_path else None,
     }
     return results
 
@@ -401,6 +492,11 @@ def main() -> None:
         "--output",
         default=None,
         help="Optional JSON output path for results.",
+    )
+    parser.add_argument(
+        "--gating-output",
+        default=None,
+        help="Optional JSONL output path for per-sample gating probabilities.",
     )
 
     args = parser.parse_args()
@@ -463,6 +559,7 @@ def main() -> None:
             fine_tuned_dir=fine_tuned_dir,
             device=device,
             batch_size=args.batch_size,
+            gating_output_path=Path(args.gating_output) if args.gating_output else None,
         )
 
     print(json.dumps(results, indent=2))

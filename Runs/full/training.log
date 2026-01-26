@@ -99,3 +99,19 @@
 2026-01-26 13:04:13 - INFO - [RESUME] Skipping gating pre-training - found checkpoint at checkpoints\gating_model\best.pt
 2026-01-26 13:04:13 - INFO - [RESUME] Skipping expert pre-training - found 3/8 expert directories
 2026-01-26 13:04:13 - INFO - [STEP 5/5] Training full ASR model...
+2026-01-26 14:41:13 - INFO - Logging to file: Runs\full\training.log
+2026-01-26 14:41:13 - INFO - Starting pipeline in 'full' mode with seed=42
+2026-01-26 14:41:13 - INFO - Using device: cpu
+2026-01-26 14:41:13 - INFO - Using custom data percentage: 0.01%
+2026-01-26 14:41:13 - INFO - Scaling data to 0.01% - effective percentages: embedding=0.00%, expert=0.00%, asr=0.01%
+2026-01-26 14:41:13 - INFO - Resuming from existing run at Runs\full
+2026-01-26 14:41:13 - INFO - [RESUME] Skipping embedding extraction - found 14 embeddings
+2026-01-26 14:41:13 - INFO - [RESUME] Skipping clustering - found labels at Runs\full\clustered\Spectral_soft.json with 8 experts
+2026-01-26 14:41:13 - INFO - [RESUME] Skipping gating pre-training - found checkpoint at checkpoints\gating_model\best.pt
+2026-01-26 14:41:13 - INFO - [RESUME] Skipping expert pre-training - found 3/8 expert directories
+2026-01-26 14:41:13 - INFO - [STEP 5/5] Training full ASR model...
+2026-01-26 19:38:05 - INFO - Logging to file: Runs\full\training.log
+2026-01-26 19:38:05 - INFO - Starting pipeline in 'full' mode with seed=42
+2026-01-26 19:38:05 - INFO - Using device: cpu
+2026-01-26 19:38:05 - INFO - Using custom data percentage: 0.01%
+2026-01-26 19:38:05 - INFO - Scaling data to 0.01% - effective percentages: embedding=0.00%, expert=0.00%, asr=0.01%
