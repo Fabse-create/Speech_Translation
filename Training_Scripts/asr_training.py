@@ -78,6 +78,12 @@ class TrainingConfig:
     eval_every_n_epochs: int
     save_every_n_epochs: int
     pin_memory: bool
+    # Routing curriculum parameters
+    soft_routing_epochs: int
+    topk_routing_epochs: int
+    routing_temperature_start: float
+    routing_temperature_end: float
+    min_expert_usage_fraction: float
 
 
 class WhisperMoEDataset(Dataset):
@@ -190,6 +196,12 @@ def _load_training_config(config_path: str) -> TrainingConfig:
         eval_every_n_epochs=int(config.get("eval_every_n_epochs", 1)),
         save_every_n_epochs=int(config.get("save_every_n_epochs", 5)),
         pin_memory=bool(config.get("pin_memory", True)),
+        # Routing curriculum parameters
+        soft_routing_epochs=int(config.get("soft_routing_epochs", 3)),
+        topk_routing_epochs=int(config.get("topk_routing_epochs", 6)),
+        routing_temperature_start=float(config.get("routing_temperature_start", 2.0)),
+        routing_temperature_end=float(config.get("routing_temperature_end", 0.5)),
+        min_expert_usage_fraction=float(config.get("min_expert_usage_fraction", 0.05)),
     )
 
 
@@ -278,8 +290,43 @@ def _sequence_loss(
 def _load_balance_loss(
     probs: torch.Tensor, num_experts: int
 ) -> torch.Tensor:
-    avg_probs = probs.mean(dim=0)
-    return torch.sum(avg_probs * torch.log(avg_probs * num_experts + 1e-8))
+    """
+    KL divergence between a uniform target and the empirical expert usage.
+    """
+    importance = probs.mean(dim=0)
+    uniform = torch.full_like(importance, 1.0 / num_experts)
+    eps = 1e-8
+    return torch.sum(uniform * torch.log((uniform + eps) / (importance + eps)))
+
+
+def _compute_routing_mode(epoch_idx: int, config: TrainingConfig) -> str:
+    if epoch_idx < config.soft_routing_epochs:
+        return "soft"
+    if epoch_idx < config.topk_routing_epochs:
+        return "topk_soft"
+    return "topk_hard"
+
+
+def _compute_routing_temperature(epoch_idx: int, config: TrainingConfig) -> float:
+    max_epoch = max(1, config.topk_routing_epochs)
+    progress = min(1.0, epoch_idx / max_epoch)
+    return (
+        config.routing_temperature_start * (1 - progress)
+        + config.routing_temperature_end * progress
+    )
+
+
+def _compute_gating_probabilities(
+    gate_logits: torch.Tensor,
+    temperature: float,
+    min_prob: float = 0.0,
+) -> torch.Tensor:
+    safe_temp = max(1e-4, float(temperature))
+    gate_probs = torch.softmax(gate_logits / safe_temp, dim=-1)
+    if min_prob > 0:
+        gate_probs = torch.clamp(gate_probs, min=min_prob)
+        gate_probs = gate_probs / gate_probs.sum(dim=-1, keepdim=True)
+    return gate_probs
 
 
 def _train_epoch(
@@ -292,10 +339,10 @@ def _train_epoch(
     device: torch.device,
     processor: "WhisperProcessor",
     scaler: torch.cuda.amp.GradScaler,
+    epoch_idx: int = 0,
 ) -> float:
     """
-    OPTIMIZED: Routes per-expert SUBSETS instead of running full batch per expert.
-    This reduces compute from O(batch * num_experts) to O(batch * top_k_avg).
+    Train one epoch with curriculum routing (soft -> topk_soft -> topk_hard).
     """
     model.train()
     gating_model.train()
@@ -308,6 +355,17 @@ def _train_epoch(
         iterator = tqdm(data_loader, desc="Training", leave=False)
 
     optimizer.zero_grad()
+
+    routing_mode = _compute_routing_mode(epoch_idx, config)
+    temperature = _compute_routing_temperature(epoch_idx, config)
+    min_prob = min(
+        max(config.min_expert_usage_fraction, 0.0),
+        1.0 / max(1, config.num_experts),
+    )
+    print(
+        f"  [Epoch {epoch_idx + 1}] Routing mode: {routing_mode}, "
+        f"Temperature: {temperature:.2f}"
+    )
 
     for batch_idx, batch in enumerate(iterator):
         batch = {k: v.to(device) for k, v in batch.items()}
@@ -326,99 +384,77 @@ def _train_epoch(
 
         # Get gating decisions
         gate_logits = gating_model(pooled)
-        gate_probs = torch.softmax(gate_logits, dim=-1)
-        k = max(1, min(config.top_k_experts, gate_probs.size(-1)))
-        topk_values, topk_indices = torch.topk(gate_probs, k=k, dim=-1)
-        topk_weights = topk_values / topk_values.sum(dim=-1, keepdim=True).clamp_min(1e-8)
-
-        # OPTIMIZATION: Route per-expert SUBSETS instead of full batch per expert
-        # For each sample, find its primary expert (highest weight) and route there
-        primary_expert = topk_indices[:, 0]  # [batch_size]
-        unique_experts = torch.unique(primary_expert).tolist()
+        gate_probs = _compute_gating_probabilities(
+            gate_logits,
+            temperature=temperature,
+            min_prob=min_prob,
+        )
 
         per_sample_loss = torch.zeros(batch_size, device=device)
 
-        for expert_id in unique_experts:
-            if config.use_lora:
-                model.set_adapter(f"expert_{expert_id}")
-
-            # Only process samples routed to this expert
-            mask = primary_expert == expert_id
-            if not mask.any():
-                continue
-
-            expert_features = input_features[mask]
-            expert_labels = labels[mask]
-            expert_attention_mask = (
-                attention_mask[mask] if attention_mask is not None else None
-            )
-            expert_decoder_attention_mask = (
-                decoder_attention_mask[mask] if decoder_attention_mask is not None else None
-            )
-            expert_weights = topk_weights[mask, 0]  # Primary expert weight
-
-            with torch.cuda.amp.autocast(enabled=config.fp16):
-                model_kwargs = {
-                    "input_features": expert_features,
-                    "labels": expert_labels,
-                }
-                if expert_attention_mask is not None:
-                    model_kwargs["attention_mask"] = expert_attention_mask
-                if expert_decoder_attention_mask is not None:
-                    model_kwargs["decoder_attention_mask"] = expert_decoder_attention_mask
-                outputs = _forward_model(
-                    model, **model_kwargs
-                )
-                logits = outputs.logits
-                loss_per_sample = _sequence_loss(logits, expert_labels)
-
-            # Weight the loss by expert weight
-            weighted_loss = expert_weights * loss_per_sample
-            # Scatter back to original positions
-            indices = torch.where(mask)[0]
-            per_sample_loss[indices] = weighted_loss
-
-        # Handle secondary experts if top_k > 1
-        if k > 1:
-            secondary_expert = topk_indices[:, 1]  # [batch_size]
-            unique_secondary = torch.unique(secondary_expert).tolist()
-
-            for expert_id in unique_secondary:
+        if routing_mode == "soft":
+            for expert_id in range(config.num_experts):
                 if config.use_lora:
                     model.set_adapter(f"expert_{expert_id}")
 
-                mask = secondary_expert == expert_id
-                if not mask.any():
+                expert_weight = gate_probs[:, expert_id]
+                if expert_weight.mean() < 1e-4:
                     continue
-
-                expert_features = input_features[mask]
-                expert_labels = labels[mask]
-                expert_attention_mask = (
-                    attention_mask[mask] if attention_mask is not None else None
-                )
-                expert_decoder_attention_mask = (
-                    decoder_attention_mask[mask] if decoder_attention_mask is not None else None
-                )
-                expert_weights = topk_weights[mask, 1]  # Secondary expert weight
 
                 with torch.cuda.amp.autocast(enabled=config.fp16):
                     model_kwargs = {
-                        "input_features": expert_features,
-                        "labels": expert_labels,
+                        "input_features": input_features,
+                        "labels": labels,
                     }
-                    if expert_attention_mask is not None:
-                        model_kwargs["attention_mask"] = expert_attention_mask
-                    if expert_decoder_attention_mask is not None:
-                        model_kwargs["decoder_attention_mask"] = expert_decoder_attention_mask
-                    outputs = _forward_model(
-                        model, **model_kwargs
-                    )
-                    logits = outputs.logits
-                    loss_per_sample = _sequence_loss(logits, expert_labels)
+                    if attention_mask is not None:
+                        model_kwargs["attention_mask"] = attention_mask
+                    if decoder_attention_mask is not None:
+                        model_kwargs["decoder_attention_mask"] = decoder_attention_mask
+                    outputs = _forward_model(model, **model_kwargs)
+                    loss_per_sample = _sequence_loss(outputs.logits, labels)
 
-                weighted_loss = expert_weights * loss_per_sample
-                indices = torch.where(mask)[0]
-                per_sample_loss[indices] += weighted_loss
+                per_sample_loss += expert_weight * loss_per_sample
+        else:
+            k = max(1, min(config.top_k_experts, gate_probs.size(-1)))
+            topk_values, topk_indices = torch.topk(gate_probs, k=k, dim=-1)
+            topk_weights = topk_values / topk_values.sum(dim=-1, keepdim=True).clamp_min(1e-8)
+
+            for rank in range(k):
+                experts_at_rank = topk_indices[:, rank]
+                weights_at_rank = topk_weights[:, rank]
+
+                for expert_id in torch.unique(experts_at_rank).tolist():
+                    if config.use_lora:
+                        model.set_adapter(f"expert_{expert_id}")
+
+                    mask = experts_at_rank == expert_id
+                    if not mask.any():
+                        continue
+
+                    expert_features = input_features[mask]
+                    expert_labels = labels[mask]
+                    expert_attention_mask = (
+                        attention_mask[mask] if attention_mask is not None else None
+                    )
+                    expert_decoder_attention_mask = (
+                        decoder_attention_mask[mask] if decoder_attention_mask is not None else None
+                    )
+                    expert_weights = weights_at_rank[mask]
+
+                    with torch.cuda.amp.autocast(enabled=config.fp16):
+                        model_kwargs = {
+                            "input_features": expert_features,
+                            "labels": expert_labels,
+                        }
+                        if expert_attention_mask is not None:
+                            model_kwargs["attention_mask"] = expert_attention_mask
+                        if expert_decoder_attention_mask is not None:
+                            model_kwargs["decoder_attention_mask"] = expert_decoder_attention_mask
+                        outputs = _forward_model(model, **model_kwargs)
+                        loss_per_sample = _sequence_loss(outputs.logits, expert_labels)
+
+                    indices = torch.where(mask)[0]
+                    per_sample_loss[indices] += expert_weights * loss_per_sample
 
         main_loss = per_sample_loss.mean()
         balance_loss = _load_balance_loss(gate_probs, config.num_experts)
@@ -437,8 +473,23 @@ def _train_epoch(
         total_loss += loss.item() * accumulation_steps
         total_batches += 1
 
+        # Diagnostic output: expert usage statistics
+        if batch_idx % 50 == 0:
+            expert_usage = gate_probs.mean(dim=0)  # [num_experts]
+            entropy = -(gate_probs * torch.log(gate_probs + 1e-8)).sum(dim=-1).mean()
+            max_usage = expert_usage.max().item()
+            min_usage = expert_usage.min().item()
+            print(
+                f"    Batch {batch_idx}: entropy={entropy:.3f}, "
+                f"max_expert={max_usage:.3f}, min_expert={min_usage:.3f}, "
+                f"usage_range={max_usage - min_usage:.3f}"
+            )
+
         if tqdm is not None and isinstance(iterator, tqdm):
-            iterator.set_postfix(loss=f"{loss.item() * accumulation_steps:.4f}")
+            iterator.set_postfix({
+                "loss": f"{loss.item() * accumulation_steps:.4f}",
+                "mode": routing_mode,
+            })
 
     # Handle remaining gradients
     if total_batches % accumulation_steps != 0:
@@ -456,8 +507,9 @@ def _evaluate(
     data_loader: DataLoader,
     config: TrainingConfig,
     device: torch.device,
+    epoch_idx: int = 0,
 ) -> float:
-    """OPTIMIZED: Same per-expert subset routing as training."""
+    """Evaluate with the same routing curriculum as training."""
     model.eval()
     gating_model.eval()
     total_loss = 0.0
@@ -466,6 +518,13 @@ def _evaluate(
     iterator = data_loader
     if tqdm is not None:
         iterator = tqdm(data_loader, desc="Evaluating", leave=False)
+
+    routing_mode = _compute_routing_mode(epoch_idx, config)
+    temperature = _compute_routing_temperature(epoch_idx, config)
+    min_prob = min(
+        max(config.min_expert_usage_fraction, 0.0),
+        1.0 / max(1, config.num_experts),
+    )
 
     with torch.no_grad():
         for batch in iterator:
@@ -481,87 +540,74 @@ def _evaluate(
             )
             pooled = encoder_outputs.last_hidden_state.mean(dim=1)
             gate_logits = gating_model(pooled)
-            gate_probs = torch.softmax(gate_logits, dim=-1)
-            k = max(1, min(config.top_k_experts, gate_probs.size(-1)))
-            topk_values, topk_indices = torch.topk(gate_probs, k=k, dim=-1)
-            topk_weights = topk_values / topk_values.sum(dim=-1, keepdim=True).clamp_min(1e-8)
-
-            primary_expert = topk_indices[:, 0]
-            unique_experts = torch.unique(primary_expert).tolist()
+            gate_probs = _compute_gating_probabilities(
+                gate_logits,
+                temperature=temperature,
+                min_prob=min_prob,
+            )
 
             per_sample_loss = torch.zeros(batch_size, device=device)
 
-            for expert_id in unique_experts:
-                if config.use_lora:
-                    model.set_adapter(f"expert_{expert_id}")
-
-                mask = primary_expert == expert_id
-                if not mask.any():
-                    continue
-
-                expert_features = input_features[mask]
-                expert_labels = labels[mask]
-                expert_attention_mask = (
-                    attention_mask[mask] if attention_mask is not None else None
-                )
-                expert_decoder_attention_mask = (
-                    decoder_attention_mask[mask] if decoder_attention_mask is not None else None
-                )
-                expert_weights = topk_weights[mask, 0]
-
-                model_kwargs = {
-                    "input_features": expert_features,
-                    "labels": expert_labels,
-                }
-                if expert_attention_mask is not None:
-                    model_kwargs["attention_mask"] = expert_attention_mask
-                if expert_decoder_attention_mask is not None:
-                    model_kwargs["decoder_attention_mask"] = expert_decoder_attention_mask
-                outputs = _forward_model(model, **model_kwargs)
-                logits = outputs.logits
-                loss_per_sample = _sequence_loss(logits, expert_labels)
-
-                weighted_loss = expert_weights * loss_per_sample
-                indices = torch.where(mask)[0]
-                per_sample_loss[indices] = weighted_loss
-
-            if k > 1:
-                secondary_expert = topk_indices[:, 1]
-                unique_secondary = torch.unique(secondary_expert).tolist()
-
-                for expert_id in unique_secondary:
+            if routing_mode == "soft":
+                for expert_id in range(config.num_experts):
                     if config.use_lora:
                         model.set_adapter(f"expert_{expert_id}")
 
-                    mask = secondary_expert == expert_id
-                    if not mask.any():
+                    expert_weight = gate_probs[:, expert_id]
+                    if expert_weight.mean() < 1e-4:
                         continue
 
-                    expert_features = input_features[mask]
-                    expert_labels = labels[mask]
-                    expert_attention_mask = (
-                        attention_mask[mask] if attention_mask is not None else None
-                    )
-                    expert_decoder_attention_mask = (
-                        decoder_attention_mask[mask] if decoder_attention_mask is not None else None
-                    )
-                    expert_weights = topk_weights[mask, 1]
-
                     model_kwargs = {
-                        "input_features": expert_features,
-                        "labels": expert_labels,
+                        "input_features": input_features,
+                        "labels": labels,
                     }
-                    if expert_attention_mask is not None:
-                        model_kwargs["attention_mask"] = expert_attention_mask
-                    if expert_decoder_attention_mask is not None:
-                        model_kwargs["decoder_attention_mask"] = expert_decoder_attention_mask
+                    if attention_mask is not None:
+                        model_kwargs["attention_mask"] = attention_mask
+                    if decoder_attention_mask is not None:
+                        model_kwargs["decoder_attention_mask"] = decoder_attention_mask
                     outputs = _forward_model(model, **model_kwargs)
-                    logits = outputs.logits
-                    loss_per_sample = _sequence_loss(logits, expert_labels)
+                    loss_per_sample = _sequence_loss(outputs.logits, labels)
+                    per_sample_loss += expert_weight * loss_per_sample
+            else:
+                k = max(1, min(config.top_k_experts, gate_probs.size(-1)))
+                topk_values, topk_indices = torch.topk(gate_probs, k=k, dim=-1)
+                topk_weights = topk_values / topk_values.sum(dim=-1, keepdim=True).clamp_min(1e-8)
 
-                    weighted_loss = expert_weights * loss_per_sample
-                    indices = torch.where(mask)[0]
-                    per_sample_loss[indices] += weighted_loss
+                for rank in range(k):
+                    experts_at_rank = topk_indices[:, rank]
+                    weights_at_rank = topk_weights[:, rank]
+
+                    for expert_id in torch.unique(experts_at_rank).tolist():
+                        if config.use_lora:
+                            model.set_adapter(f"expert_{expert_id}")
+
+                        mask = experts_at_rank == expert_id
+                        if not mask.any():
+                            continue
+
+                        expert_features = input_features[mask]
+                        expert_labels = labels[mask]
+                        expert_attention_mask = (
+                            attention_mask[mask] if attention_mask is not None else None
+                        )
+                        expert_decoder_attention_mask = (
+                            decoder_attention_mask[mask] if decoder_attention_mask is not None else None
+                        )
+                        expert_weights = weights_at_rank[mask]
+
+                        model_kwargs = {
+                            "input_features": expert_features,
+                            "labels": expert_labels,
+                        }
+                        if expert_attention_mask is not None:
+                            model_kwargs["attention_mask"] = expert_attention_mask
+                        if expert_decoder_attention_mask is not None:
+                            model_kwargs["decoder_attention_mask"] = expert_decoder_attention_mask
+                        outputs = _forward_model(model, **model_kwargs)
+                        loss_per_sample = _sequence_loss(outputs.logits, expert_labels)
+
+                        indices = torch.where(mask)[0]
+                        per_sample_loss[indices] += expert_weights * loss_per_sample
 
             main_loss = per_sample_loss.mean()
             balance_loss = _load_balance_loss(gate_probs, config.num_experts)
@@ -581,6 +627,7 @@ def _evaluate_wer(
     config: TrainingConfig,
     device: torch.device,
     processor: "WhisperProcessor",
+    epoch_idx: int = 0,
 ) -> float:
     model.eval()
     gating_model.eval()
@@ -591,6 +638,13 @@ def _evaluate_wer(
     iterator = data_loader
     if tqdm is not None:
         iterator = tqdm(data_loader, desc="Computing WER", leave=False)
+
+    routing_mode = _compute_routing_mode(epoch_idx, config)
+    temperature = _compute_routing_temperature(epoch_idx, config)
+    min_prob = min(
+        max(config.min_expert_usage_fraction, 0.0),
+        1.0 / max(1, config.num_experts),
+    )
 
     with torch.no_grad():
         for batch in iterator:
@@ -604,8 +658,17 @@ def _evaluate_wer(
             )
             pooled = encoder_outputs.last_hidden_state.mean(dim=1)
             gate_logits = gating_model(pooled)
-            gate_probs = torch.softmax(gate_logits, dim=-1)
-            top1_indices = torch.argmax(gate_probs, dim=-1)
+            gate_probs = _compute_gating_probabilities(
+                gate_logits,
+                temperature=temperature,
+                min_prob=min_prob,
+            )
+            if routing_mode == "soft":
+                top1_indices = torch.argmax(gate_probs, dim=-1)
+            else:
+                k = max(1, min(config.top_k_experts, gate_probs.size(-1)))
+                _, topk_indices = torch.topk(gate_probs, k=k, dim=-1)
+                top1_indices = topk_indices[:, 0]
 
             generated = [""] * input_features.size(0)
             for expert_id in torch.unique(top1_indices).tolist():
@@ -834,6 +897,8 @@ def train(config_path: str, max_samples: Optional[int] = None) -> None:
         print(f"Epoch {epoch}/{config.epochs}")
         print(f"{'='*50}")
 
+        epoch_idx = epoch - 1
+
         train_loss = _train_epoch(
             model=model,
             gating_model=gating_model,
@@ -844,6 +909,7 @@ def train(config_path: str, max_samples: Optional[int] = None) -> None:
             device=device,
             processor=processor,
             scaler=scaler,
+            epoch_idx=epoch_idx,
         )
 
         val_loss = train_loss
@@ -860,6 +926,7 @@ def train(config_path: str, max_samples: Optional[int] = None) -> None:
                 data_loader=val_loader,
                 config=config,
                 device=device,
+                epoch_idx=epoch_idx,
             )
             val_wer = _evaluate_wer(
                 model=model,
@@ -869,6 +936,7 @@ def train(config_path: str, max_samples: Optional[int] = None) -> None:
                 config=config,
                 device=device,
                 processor=processor,
+                epoch_idx=epoch_idx,
             )
 
         metrics_entry = {

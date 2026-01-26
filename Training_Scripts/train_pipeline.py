@@ -388,6 +388,7 @@ def _run_asr_training(
     seed: int,
     output_dir: Path,
     metrics_dir: Path,
+    device: Optional[torch.device] = None,
 ) -> None:
     config = asr_training._load_training_config(str(config_path))
     _set_seed(seed)
@@ -399,7 +400,8 @@ def _run_asr_training(
     val_set = _build_moe_dataset(val_samples)
     test_set = _build_moe_dataset(test_samples)
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if device is None:
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     processor = asr_training.WhisperProcessor.from_pretrained(config.model_name)
     collator = asr_training.WhisperCollator(processor)
 
@@ -680,12 +682,18 @@ def run_pipeline(
     save_every_n_epochs: int = 5,
     data_percent: Optional[float] = None,
     log_file: Optional[str] = None,
+    device: Optional[str] = None,
 ) -> None:
     _set_seed(seed)
 
-    # Setup logging
+    # Determine device
+    if device is not None:
+        torch_device = torch.device(device)
+    else:
+        torch_device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     logger = _setup_logging(log_file)
     logger.info(f"Starting pipeline in '{mode}' mode with seed={seed}")
+    logger.info(f"Using device: {torch_device}")
     if data_percent is not None:
         logger.info(f"Using custom data percentage: {data_percent}%")
 
@@ -934,6 +942,7 @@ def run_pipeline(
             seed=seed,
             output_dir=asr_output_dir,
             metrics_dir=asr_metrics_dir,
+            device=torch_device,
         )
         if not no_plot:
             plot_asr_metrics(asr_metrics_dir / "metrics.json", asr_metrics_dir)
@@ -1124,6 +1133,13 @@ def _parse_args() -> argparse.Namespace:
         default=None,
         help="Path to log file. If specified, all output is logged to this file.",
     )
+    parser.add_argument(
+        "--device",
+        type=str,
+        default=None,
+        choices=["cpu", "cuda"],
+        help="Force device selection (cpu or cuda). If not specified, auto-detects CUDA availability.",
+    )
     return parser.parse_args()
 
 
@@ -1163,4 +1179,5 @@ if __name__ == "__main__":
         # Data percentage and logging
         data_percent=args.data_percent,
         log_file=args.log_file,
+        device=args.device,
     )
