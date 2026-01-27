@@ -466,6 +466,7 @@ def _run_asr_training(
     output_dir: Path,
     metrics_dir: Path,
     device: Optional[torch.device] = None,
+    benchmark_context: Optional[Dict[str, Any]] = None,
 ) -> None:
     config = asr_training._load_training_config(str(config_path))
     _set_seed(seed)
@@ -595,6 +596,48 @@ def _run_asr_training(
                 processor.save_pretrained(output_dir / "model")
             with best_path.open("w", encoding="utf-8") as best_file:
                 json.dump({"loss": best_loss, "epoch": epoch}, best_file, indent=2)
+            if benchmark_context is not None:
+                benchmark_dir = benchmark_context["benchmark_dir"]
+                benchmark_index = benchmark_context["benchmark_index"]
+                benchmark_settings = benchmark_context["benchmark_settings"]
+                benchmark_samples = benchmark_context["benchmark_samples"]
+                benchmark_batch_size = benchmark_context["benchmark_batch_size"]
+                run_id = benchmark_context["run_id"]
+                top1_output = benchmark_dir / f"benchmark_{run_id}_epoch{epoch}_top1.json"
+                top1_gating = benchmark_dir / f"gating_{run_id}_epoch{epoch}_top1.jsonl"
+                try:
+                    top1_results = _run_asr_benchmark(
+                        samples=benchmark_samples,
+                        asr_config_path=config_path,
+                        fine_tuned_dir=output_dir,
+                        device=device,
+                        batch_size=benchmark_batch_size,
+                        moe_top_k=1,
+                        moe_mixture=False,
+                        output_path=top1_output,
+                        gating_output_path=top1_gating,
+                        settings={
+                            **benchmark_settings,
+                            "epoch": epoch,
+                            "moe_top_k": 1,
+                            "moe_decoding": "top1",
+                        },
+                    )
+                    _append_jsonl(
+                        benchmark_index,
+                        {
+                            "run_id": run_id,
+                            "epoch": epoch,
+                            "timestamp": datetime.now().isoformat(),
+                            "moe_decoding": "top1",
+                            "moe_top_k": 1,
+                            "output_path": str(top1_output),
+                            "gating_output_path": str(top1_gating),
+                            "total_wer": top1_results.get("finetuned_asr", {}).get("total_wer"),
+                        },
+                    )
+                except Exception as exc:
+                    print(f"[BENCHMARK] Failed at epoch {epoch}: {exc}")
         else:
             epochs_without_improvement += 1
             if epochs_without_improvement >= early_stopping_patience:
@@ -1052,6 +1095,38 @@ def run_pipeline(
         if not all_samples:
             raise ValueError("No ASR samples with transcripts available for training.")
 
+        benchmark_dir = Path("Evaluation/asr_benchmark_results")
+        benchmark_dir.mkdir(parents=True, exist_ok=True)
+        benchmark_samples, benchmark_samples_path = _load_or_create_benchmark_samples(
+            benchmark_dir=benchmark_dir,
+            dataloader_config="Config/dataloader_config.json",
+            dataset_root=dataset_root,
+            split=benchmark_split,
+            percent=benchmark_percent,
+            sampling=benchmark_sampling,
+            seed=benchmark_seed,
+            max_samples=benchmark_max_samples,
+        )
+        benchmark_settings = {
+            "split": benchmark_split,
+            "percent": benchmark_percent,
+            "sampling": benchmark_sampling,
+            "seed": benchmark_seed,
+            "max_samples": benchmark_max_samples,
+            "samples_used": len(benchmark_samples),
+            "mode": mode,
+            "run_id": run_id,
+            "samples_path": str(benchmark_samples_path),
+        }
+        benchmark_context = {
+            "benchmark_dir": benchmark_dir,
+            "benchmark_index": benchmark_dir / "benchmarks_index.jsonl",
+            "benchmark_samples": benchmark_samples,
+            "benchmark_settings": benchmark_settings,
+            "benchmark_batch_size": benchmark_batch_size,
+            "run_id": run_id,
+        }
+
         _run_asr_training(
             config_path=asr_config,
             samples=all_samples,
@@ -1059,102 +1134,10 @@ def run_pipeline(
             output_dir=asr_output_dir,
             metrics_dir=asr_metrics_dir,
             device=torch_device,
+            benchmark_context=benchmark_context,
         )
         if not no_plot:
             plot_asr_metrics(asr_metrics_dir / "metrics.json", asr_metrics_dir)
-
-        # Benchmark the fine-tuned ASR after each pipeline run.
-        try:
-            benchmark_dir = Path("Evaluation/asr_benchmark_results")
-            benchmark_dir.mkdir(parents=True, exist_ok=True)
-            benchmark_samples, benchmark_samples_path = _load_or_create_benchmark_samples(
-                benchmark_dir=benchmark_dir,
-                dataloader_config="Config/dataloader_config.json",
-                dataset_root=dataset_root,
-                split=benchmark_split,
-                percent=benchmark_percent,
-                sampling=benchmark_sampling,
-                seed=benchmark_seed,
-                max_samples=benchmark_max_samples,
-            )
-            benchmark_settings = {
-                "split": benchmark_split,
-                "percent": benchmark_percent,
-                "sampling": benchmark_sampling,
-                "seed": benchmark_seed,
-                "max_samples": benchmark_max_samples,
-                "samples_used": len(benchmark_samples),
-                "mode": mode,
-                "run_id": run_id,
-                "samples_path": str(benchmark_samples_path),
-            }
-            benchmark_index = benchmark_dir / "benchmarks_index.jsonl"
-            effective_top_k = max(1, min(int(benchmark_top_k), resolved_experts))
-
-            top1_output = benchmark_dir / f"benchmark_{run_id}_top1.json"
-            top1_gating = benchmark_dir / f"gating_{run_id}_top1.jsonl"
-            top1_results = _run_asr_benchmark(
-                samples=benchmark_samples,
-                asr_config_path=asr_config,
-                fine_tuned_dir=asr_output_dir,
-                device=torch_device,
-                batch_size=benchmark_batch_size,
-                moe_top_k=1,
-                moe_mixture=False,
-                output_path=top1_output,
-                gating_output_path=top1_gating,
-                settings={**benchmark_settings, "moe_top_k": 1, "moe_decoding": "top1"},
-            )
-            _append_jsonl(
-                benchmark_index,
-                {
-                    "run_id": run_id,
-                    "timestamp": datetime.now().isoformat(),
-                    "mode": mode,
-                    "moe_decoding": "top1",
-                    "moe_top_k": 1,
-                    "output_path": str(top1_output),
-                    "gating_output_path": str(top1_gating),
-                    "total_wer": top1_results.get("finetuned_asr", {}).get("total_wer"),
-                },
-            )
-
-            topk_output = benchmark_dir / f"benchmark_{run_id}_topk{effective_top_k}.json"
-            topk_gating = benchmark_dir / f"gating_{run_id}_topk{effective_top_k}.jsonl"
-            topk_results = _run_asr_benchmark(
-                samples=benchmark_samples,
-                asr_config_path=asr_config,
-                fine_tuned_dir=asr_output_dir,
-                device=torch_device,
-                batch_size=benchmark_batch_size,
-                moe_top_k=effective_top_k,
-                moe_mixture=True,
-                output_path=topk_output,
-                gating_output_path=topk_gating,
-                settings={
-                    **benchmark_settings,
-                    "moe_top_k": effective_top_k,
-                    "moe_decoding": f"top{effective_top_k}_mixture",
-                },
-            )
-            _append_jsonl(
-                benchmark_index,
-                {
-                    "run_id": run_id,
-                    "timestamp": datetime.now().isoformat(),
-                    "mode": mode,
-                    "moe_decoding": f"top{effective_top_k}_mixture",
-                    "moe_top_k": effective_top_k,
-                    "output_path": str(topk_output),
-                    "gating_output_path": str(topk_gating),
-                    "total_wer": topk_results.get("finetuned_asr", {}).get("total_wer"),
-                },
-            )
-            logger.info(
-                f"[BENCHMARK] Saved results to {benchmark_dir} (top1 + top{effective_top_k} mixture)."
-            )
-        except Exception as exc:
-            logger.error(f"[BENCHMARK] Failed to run WER benchmark: {exc}")
 
     logger.info("="*50)
     logger.info("Pipeline complete!")

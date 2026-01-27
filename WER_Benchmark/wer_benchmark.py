@@ -106,6 +106,20 @@ def _configure_generation(
         generation_config.forced_decoder_ids = None
 
 
+def _forward_model(model: torch.nn.Module, **kwargs: torch.Tensor) -> Any:
+    base_model = getattr(model, "base_model", None)
+    if base_model is not None and hasattr(base_model, "forward"):
+        return base_model(**kwargs)
+    return model(**kwargs)
+
+
+def _safe_torch_load(path: Path, device: torch.device) -> Dict[str, torch.Tensor]:
+    try:
+        return torch.load(path, map_location=device, weights_only=True)
+    except TypeError:
+        return torch.load(path, map_location=device)
+
+
 def _resolve_decoder_start_token_id(
     model: WhisperForConditionalGeneration,
     processor: WhisperProcessor,
@@ -212,7 +226,8 @@ def _decode_topk_mixture(
                 if past_by_expert.get(expert_id) is None
                 else decoder_input_ids[mask, -1:].contiguous()
             )
-            outputs = model(
+            outputs = _forward_model(
+                model,
                 input_features=input_features[mask],
                 attention_mask=attention_mask[mask] if attention_mask is not None else None,
                 decoder_input_ids=decoder_input,
@@ -413,7 +428,7 @@ def _load_finetuned_bundle(
         raise FileNotFoundError(
             f"Missing gating model checkpoint: {gating_checkpoint}"
         )
-    gating_model.load_state_dict(torch.load(gating_checkpoint, map_location=device))
+    gating_model.load_state_dict(_safe_torch_load(gating_checkpoint, device))
     gating_model.eval()
 
     routing_temperature = float(
