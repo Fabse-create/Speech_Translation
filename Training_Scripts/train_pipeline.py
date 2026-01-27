@@ -57,6 +57,7 @@ from Evaluation.plot_gating_metrics import plot_metrics as plot_gating_metrics
 from Training_Scripts import asr_training
 from Training_Scripts.expert_pre_training import train as train_experts
 from Training_Scripts.gating_model_pre_training import train as train_gate
+from WER_Benchmark import wer_benchmark
 from utils.load_config import load_config
 
 
@@ -74,6 +75,82 @@ def _write_json(path: Path, payload: Dict[str, Any]) -> Path:
     with path.open("w", encoding="utf-8") as handle:
         json.dump(payload, handle, indent=2)
     return path
+
+
+def _append_jsonl(path: Path, payload: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(payload) + "\n")
+
+
+def _benchmark_samples_path(
+    benchmark_dir: Path,
+    dataset_root: str,
+    split: str,
+    sampling: str,
+    percent: float,
+    max_samples: Optional[int],
+    seed: int,
+) -> Path:
+    dataset_tag = Path(dataset_root).name or "dataset"
+    percent_tag = str(percent).replace(".", "p")
+    max_tag = "all" if max_samples is None else str(max_samples)
+    return benchmark_dir / (
+        f"benchmark_samples_{dataset_tag}_{split.lower()}_{sampling}"
+        f"_p{percent_tag}_max{max_tag}_seed{seed}.json"
+    )
+
+
+def _load_or_create_benchmark_samples(
+    benchmark_dir: Path,
+    dataloader_config: str,
+    dataset_root: str,
+    split: str,
+    percent: float,
+    sampling: str,
+    seed: int,
+    max_samples: Optional[int],
+) -> Tuple[List[Dict[str, Any]], Path]:
+    samples_path = _benchmark_samples_path(
+        benchmark_dir,
+        dataset_root,
+        split,
+        sampling,
+        percent,
+        max_samples,
+        seed,
+    )
+    if samples_path.exists():
+        with samples_path.open("r", encoding="utf-8") as handle:
+            payload = json.load(handle)
+        if isinstance(payload, dict) and "samples" in payload:
+            return payload["samples"], samples_path
+        if isinstance(payload, list):
+            return payload, samples_path
+
+    samples = wer_benchmark._prepare_samples(
+        dataloader_config=dataloader_config,
+        dataset_root=dataset_root,
+        split=split,
+        percent=percent,
+        sampling=sampling,
+        seed=seed,
+        max_samples=max_samples,
+    )
+    payload = {
+        "settings": {
+            "dataloader_config": dataloader_config,
+            "dataset_root": dataset_root,
+            "split": split,
+            "percent": percent,
+            "sampling": sampling,
+            "seed": seed,
+            "max_samples": max_samples,
+        },
+        "samples": samples,
+    }
+    _write_json(samples_path, payload)
+    return samples, samples_path
 
 
 def _remove_if_exists(path: Path) -> None:
@@ -548,6 +625,36 @@ def _run_asr_training(
             json.dump({"test_loss": float(test_loss), "test_wer": float(test_wer)}, metrics_file, indent=2)
 
 
+def _run_asr_benchmark(
+    samples: List[Dict[str, Any]],
+    asr_config_path: Path,
+    fine_tuned_dir: Path,
+    device: torch.device,
+    batch_size: int,
+    moe_top_k: int,
+    moe_mixture: bool,
+    output_path: Path,
+    gating_output_path: Optional[Path],
+    settings: Dict[str, Any],
+) -> Dict[str, Any]:
+    finetuned_results = wer_benchmark._run_finetuned(
+        samples=samples,
+        asr_config_path=str(asr_config_path),
+        fine_tuned_dir=fine_tuned_dir,
+        device=device,
+        batch_size=batch_size,
+        gating_output_path=gating_output_path,
+        moe_top_k=moe_top_k,
+        moe_mixture=moe_mixture,
+    )
+    payload = {
+        "settings": settings,
+        "finetuned_asr": finetuned_results,
+    }
+    _write_json(output_path, payload)
+    return payload
+
+
 def _build_gating_config(
     base_path: str,
     num_experts: int,
@@ -683,6 +790,13 @@ def run_pipeline(
     data_percent: Optional[float] = None,
     log_file: Optional[str] = None,
     device: Optional[str] = None,
+    benchmark_split: str = "Dev",
+    benchmark_percent: float = 100.0,
+    benchmark_sampling: str = "stratified",
+    benchmark_max_samples: Optional[int] = 200,
+    benchmark_batch_size: int = 2,
+    benchmark_seed: int = 42,
+    benchmark_top_k: int = 2,
 ) -> None:
     _set_seed(seed)
 
@@ -696,6 +810,8 @@ def run_pipeline(
     logger.info(f"Using device: {torch_device}")
     if data_percent is not None:
         logger.info(f"Using custom data percentage: {data_percent}%")
+    run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+    logger.info(f"Pipeline run id: {run_id}")
 
     run_root = Path("Runs") / mode
     embeddings_dir = run_root / "embeddings" / f"whisper_{whisper_model}_embeddings"
@@ -947,6 +1063,99 @@ def run_pipeline(
         if not no_plot:
             plot_asr_metrics(asr_metrics_dir / "metrics.json", asr_metrics_dir)
 
+        # Benchmark the fine-tuned ASR after each pipeline run.
+        try:
+            benchmark_dir = Path("Evaluation/asr_benchmark_results")
+            benchmark_dir.mkdir(parents=True, exist_ok=True)
+            benchmark_samples, benchmark_samples_path = _load_or_create_benchmark_samples(
+                benchmark_dir=benchmark_dir,
+                dataloader_config="Config/dataloader_config.json",
+                dataset_root=dataset_root,
+                split=benchmark_split,
+                percent=benchmark_percent,
+                sampling=benchmark_sampling,
+                seed=benchmark_seed,
+                max_samples=benchmark_max_samples,
+            )
+            benchmark_settings = {
+                "split": benchmark_split,
+                "percent": benchmark_percent,
+                "sampling": benchmark_sampling,
+                "seed": benchmark_seed,
+                "max_samples": benchmark_max_samples,
+                "samples_used": len(benchmark_samples),
+                "mode": mode,
+                "run_id": run_id,
+                "samples_path": str(benchmark_samples_path),
+            }
+            benchmark_index = benchmark_dir / "benchmarks_index.jsonl"
+            effective_top_k = max(1, min(int(benchmark_top_k), resolved_experts))
+
+            top1_output = benchmark_dir / f"benchmark_{run_id}_top1.json"
+            top1_gating = benchmark_dir / f"gating_{run_id}_top1.jsonl"
+            top1_results = _run_asr_benchmark(
+                samples=benchmark_samples,
+                asr_config_path=asr_config,
+                fine_tuned_dir=asr_output_dir,
+                device=torch_device,
+                batch_size=benchmark_batch_size,
+                moe_top_k=1,
+                moe_mixture=False,
+                output_path=top1_output,
+                gating_output_path=top1_gating,
+                settings={**benchmark_settings, "moe_top_k": 1, "moe_decoding": "top1"},
+            )
+            _append_jsonl(
+                benchmark_index,
+                {
+                    "run_id": run_id,
+                    "timestamp": datetime.now().isoformat(),
+                    "mode": mode,
+                    "moe_decoding": "top1",
+                    "moe_top_k": 1,
+                    "output_path": str(top1_output),
+                    "gating_output_path": str(top1_gating),
+                    "total_wer": top1_results.get("finetuned_asr", {}).get("total_wer"),
+                },
+            )
+
+            topk_output = benchmark_dir / f"benchmark_{run_id}_topk{effective_top_k}.json"
+            topk_gating = benchmark_dir / f"gating_{run_id}_topk{effective_top_k}.jsonl"
+            topk_results = _run_asr_benchmark(
+                samples=benchmark_samples,
+                asr_config_path=asr_config,
+                fine_tuned_dir=asr_output_dir,
+                device=torch_device,
+                batch_size=benchmark_batch_size,
+                moe_top_k=effective_top_k,
+                moe_mixture=True,
+                output_path=topk_output,
+                gating_output_path=topk_gating,
+                settings={
+                    **benchmark_settings,
+                    "moe_top_k": effective_top_k,
+                    "moe_decoding": f"top{effective_top_k}_mixture",
+                },
+            )
+            _append_jsonl(
+                benchmark_index,
+                {
+                    "run_id": run_id,
+                    "timestamp": datetime.now().isoformat(),
+                    "mode": mode,
+                    "moe_decoding": f"top{effective_top_k}_mixture",
+                    "moe_top_k": effective_top_k,
+                    "output_path": str(topk_output),
+                    "gating_output_path": str(topk_gating),
+                    "total_wer": topk_results.get("finetuned_asr", {}).get("total_wer"),
+                },
+            )
+            logger.info(
+                f"[BENCHMARK] Saved results to {benchmark_dir} (top1 + top{effective_top_k} mixture)."
+            )
+        except Exception as exc:
+            logger.error(f"[BENCHMARK] Failed to run WER benchmark: {exc}")
+
     logger.info("="*50)
     logger.info("Pipeline complete!")
     logger.info("="*50)
@@ -1140,6 +1349,48 @@ def _parse_args() -> argparse.Namespace:
         choices=["cpu", "cuda"],
         help="Force device selection (cpu or cuda). If not specified, auto-detects CUDA availability.",
     )
+    parser.add_argument(
+        "--benchmark-split",
+        default="Dev",
+        choices=["Train", "Dev"],
+        help="Dataset split for WER benchmark.",
+    )
+    parser.add_argument(
+        "--benchmark-percent",
+        type=float,
+        default=100.0,
+        help="Percent of split used for WER benchmark.",
+    )
+    parser.add_argument(
+        "--benchmark-sampling",
+        default="stratified",
+        choices=["random", "stratified"],
+        help="Sampling strategy for WER benchmark.",
+    )
+    parser.add_argument(
+        "--benchmark-max-samples",
+        type=int,
+        default=200,
+        help="Max samples for WER benchmark.",
+    )
+    parser.add_argument(
+        "--benchmark-batch-size",
+        type=int,
+        default=2,
+        help="Batch size for WER benchmark.",
+    )
+    parser.add_argument(
+        "--benchmark-seed",
+        type=int,
+        default=42,
+        help="Seed for benchmark sample selection.",
+    )
+    parser.add_argument(
+        "--benchmark-top-k",
+        type=int,
+        default=2,
+        help="Top-k experts for mixture decoding benchmark.",
+    )
     return parser.parse_args()
 
 
@@ -1180,4 +1431,11 @@ if __name__ == "__main__":
         data_percent=args.data_percent,
         log_file=args.log_file,
         device=args.device,
+        benchmark_split=args.benchmark_split,
+        benchmark_percent=args.benchmark_percent,
+        benchmark_sampling=args.benchmark_sampling,
+        benchmark_max_samples=args.benchmark_max_samples,
+        benchmark_batch_size=args.benchmark_batch_size,
+        benchmark_top_k=args.benchmark_top_k,
+        benchmark_seed=args.benchmark_seed,
     )

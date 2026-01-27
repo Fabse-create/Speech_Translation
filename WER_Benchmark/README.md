@@ -25,6 +25,18 @@ python WER_Benchmark/wer_benchmark.py \
   --output WER_Benchmark/results.json
 ```
 
+### Mixture decoding (top-k experts)
+Enable top-k mixture decoding for the fine-tuned model:
+
+```bash
+python WER_Benchmark/wer_benchmark.py \
+  --models finetuned \
+  --moe-top-k 2 \
+  --moe-mixture \
+  --output WER_Benchmark/results_topk.json \
+  --gating-output WER_Benchmark/gating_topk.jsonl
+```
+
 ### Notes on representativeness
 - The script defaults to **stratified sampling**, which preserves the etiology mix.
 - For a representative estimate, use **10–30%** of the Dev split or at least **300–1000** samples.

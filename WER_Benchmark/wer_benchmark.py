@@ -3,7 +3,7 @@ import json
 import sys
 from collections import defaultdict
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional
+from typing import Dict, Iterable, List, Optional, Tuple
 
 import torch
 
@@ -104,6 +104,140 @@ def _configure_generation(
         generation_config.task = task
     if hasattr(generation_config, "forced_decoder_ids"):
         generation_config.forced_decoder_ids = None
+
+
+def _resolve_decoder_start_token_id(
+    model: WhisperForConditionalGeneration,
+    processor: WhisperProcessor,
+) -> int:
+    generation_config = getattr(model, "generation_config", model.config)
+    decoder_start_token_id = getattr(
+        generation_config, "decoder_start_token_id", None
+    )
+    if decoder_start_token_id is None:
+        decoder_start_token_id = getattr(model.config, "decoder_start_token_id", None)
+    if decoder_start_token_id is None:
+        decoder_start_token_id = getattr(model.config, "bos_token_id", None)
+    if decoder_start_token_id is None and processor is not None:
+        decoder_start_token_id = processor.tokenizer.bos_token_id
+    if decoder_start_token_id is None:
+        raise ValueError("Missing decoder_start_token_id for mixture decoding.")
+    return int(decoder_start_token_id)
+
+
+def _resolve_eos_token_id(
+    model: WhisperForConditionalGeneration,
+    processor: WhisperProcessor,
+) -> int:
+    generation_config = getattr(model, "generation_config", model.config)
+    eos_token_id = getattr(generation_config, "eos_token_id", None)
+    if eos_token_id is None:
+        eos_token_id = getattr(model.config, "eos_token_id", None)
+    if isinstance(eos_token_id, (list, tuple)):
+        eos_token_id = eos_token_id[0]
+    if eos_token_id is None and processor is not None:
+        eos_token_id = processor.tokenizer.eos_token_id
+    if eos_token_id is None:
+        raise ValueError("Missing eos_token_id for mixture decoding.")
+    return int(eos_token_id)
+
+
+def _resolve_max_length(
+    model: WhisperForConditionalGeneration,
+    processor: WhisperProcessor,
+) -> int:
+    generation_config = getattr(model, "generation_config", model.config)
+    max_length = getattr(generation_config, "max_length", None)
+    if max_length is None:
+        max_length = getattr(model.config, "max_length", None)
+    if max_length is None and processor is not None:
+        max_length = processor.tokenizer.model_max_length
+    if max_length is None or max_length <= 0 or max_length > 2048:
+        max_length = 448
+    return int(max_length)
+
+
+def _trim_to_eos(sequences: torch.Tensor, eos_token_id: int) -> List[List[int]]:
+    trimmed: List[List[int]] = []
+    for seq in sequences.tolist():
+        if eos_token_id in seq:
+            eos_index = seq.index(eos_token_id)
+            seq = seq[: eos_index + 1]
+        trimmed.append(seq)
+    return trimmed
+
+
+def _decode_topk_mixture(
+    model: WhisperForConditionalGeneration,
+    processor: WhisperProcessor,
+    input_features: torch.Tensor,
+    attention_mask: Optional[torch.Tensor],
+    topk_indices: torch.Tensor,
+    topk_weights: torch.Tensor,
+    use_lora: bool,
+) -> List[str]:
+    batch_size = input_features.size(0)
+    device = input_features.device
+    decoder_start_token_id = _resolve_decoder_start_token_id(model, processor)
+    eos_token_id = _resolve_eos_token_id(model, processor)
+    max_length = _resolve_max_length(model, processor)
+    vocab_size = int(getattr(model.config, "vocab_size", 0)) or 51865
+
+    decoder_input_ids = torch.full(
+        (batch_size, 1),
+        decoder_start_token_id,
+        device=device,
+        dtype=torch.long,
+    )
+    finished = torch.zeros(batch_size, dtype=torch.bool, device=device)
+
+    num_experts = int(topk_indices.max().item() + 1) if topk_indices.numel() > 0 else 0
+    weight_matrix = torch.zeros(
+        batch_size, num_experts, device=device, dtype=topk_weights.dtype
+    )
+    weight_matrix.scatter_(1, topk_indices, topk_weights)
+    past_by_expert: Dict[int, Optional[Tuple[torch.Tensor, ...]]] = {}
+
+    for _ in range(max_length - 1):
+        combined_logits = torch.zeros(batch_size, vocab_size, device=device)
+        for expert_id in range(num_experts):
+            weights = weight_matrix[:, expert_id]
+            if not torch.any(weights > 0):
+                continue
+            if use_lora:
+                model.set_adapter(f"expert_{expert_id}")
+            mask = weights > 0
+            decoder_input = (
+                decoder_input_ids[mask]
+                if past_by_expert.get(expert_id) is None
+                else decoder_input_ids[mask, -1:].contiguous()
+            )
+            outputs = model(
+                input_features=input_features[mask],
+                attention_mask=attention_mask[mask] if attention_mask is not None else None,
+                decoder_input_ids=decoder_input,
+                use_cache=True,
+                past_key_values=past_by_expert.get(expert_id),
+            )
+            past_by_expert[expert_id] = outputs.past_key_values
+            logits = outputs.logits[:, -1, :]
+            combined_logits[mask] += weights[mask].unsqueeze(-1) * logits
+
+        if finished.any():
+            min_val = torch.finfo(combined_logits.dtype).min
+            combined_logits[finished] = min_val
+            combined_logits[finished, eos_token_id] = 0.0
+
+        next_tokens = torch.argmax(combined_logits, dim=-1)
+        decoder_input_ids = torch.cat(
+            [decoder_input_ids, next_tokens.unsqueeze(-1)], dim=-1
+        )
+        finished = finished | (next_tokens == eos_token_id)
+        if finished.all():
+            break
+
+    trimmed = _trim_to_eos(decoder_input_ids, eos_token_id)
+    return processor.batch_decode(trimmed, skip_special_tokens=True)
 
 
 def _compute_gating_probs(
@@ -307,6 +441,8 @@ def _run_finetuned(
     device: torch.device,
     batch_size: int,
     gating_output_path: Optional[Path] = None,
+    moe_top_k: int = 1,
+    moe_mixture: bool = False,
 ) -> Dict[str, object]:
     bundle = _load_finetuned_bundle(asr_config_path, fine_tuned_dir, device)
     processor = bundle["processor"]
@@ -316,10 +452,13 @@ def _run_finetuned(
     use_lora = bundle["use_lora"]
     num_experts = int(bundle["num_experts"])
     routing_temperature = float(bundle["routing_temperature"])
+    effective_top_k = max(1, min(int(moe_top_k), num_experts))
 
     tracker = WERTracker()
     expert_usage_overall: Dict[int, int] = defaultdict(int)
     expert_usage_by_etiology: Dict[str, Dict[int, int]] = defaultdict(lambda: defaultdict(int))
+    expert_topk_usage_overall: Dict[int, int] = defaultdict(int)
+    expert_topk_usage_by_etiology: Dict[str, Dict[int, int]] = defaultdict(lambda: defaultdict(int))
     gate_prob_sum = torch.zeros(num_experts, dtype=torch.float64)
     gate_prob_count = 0
     gate_prob_sum_by_etiology: Dict[str, torch.Tensor] = defaultdict(
@@ -355,9 +494,15 @@ def _run_finetuned(
                     temperature=routing_temperature,
                     min_prob=0.0,
                 )
-                top1_indices = torch.argmax(gate_probs, dim=-1)
+                k = max(1, min(effective_top_k, gate_probs.size(-1)))
+                topk_values, topk_indices = torch.topk(gate_probs, k=k, dim=-1)
+                topk_weights = topk_values / topk_values.sum(
+                    dim=-1, keepdim=True
+                ).clamp_min(1e-8)
+                top1_indices = topk_indices[:, 0]
                 gate_probs_cpu = gate_probs.detach().cpu().double()
                 top1_cpu = top1_indices.detach().cpu().tolist()
+                topk_cpu = topk_indices.detach().cpu().tolist()
 
                 gate_prob_sum += gate_probs_cpu.sum(dim=0)
                 gate_prob_count += gate_probs_cpu.size(0)
@@ -368,6 +513,9 @@ def _run_finetuned(
                     etiology = sample.get("etiology", "Unknown")
                     gate_prob_sum_by_etiology[etiology] += gate_probs_cpu[idx]
                     gate_prob_count_by_etiology[etiology] += 1
+                    for expert_id in topk_cpu[idx]:
+                        expert_topk_usage_overall[expert_id] += 1
+                        expert_topk_usage_by_etiology[etiology][expert_id] += 1
                     if gating_handle is not None:
                         payload = {
                             "id": sample.get("id"),
@@ -375,25 +523,40 @@ def _run_finetuned(
                             "gate_probs": [float(x) for x in gate_probs_cpu[idx].tolist()],
                             "top1_expert": int(top1_cpu[idx]),
                         }
+                        if k > 1:
+                            payload["topk_experts"] = [int(x) for x in topk_cpu[idx]]
                         gating_handle.write(json.dumps(payload) + "\n")
 
-                predictions = [""] * input_features.size(0)
-                for expert_id in torch.unique(top1_indices).tolist():
-                    mask = top1_indices == expert_id
-                    if not mask.any():
-                        continue
-                    if use_lora:
-                        asr_model.set_adapter(f"expert_{expert_id}")
-                    feats = input_features[mask]
-                    feats_mask = attention_mask[mask] if attention_mask is not None else None
-                    generated_ids = asr_model.generate(
-                        input_features=feats, attention_mask=feats_mask
+                if moe_mixture and k > 1:
+                    predictions = _decode_topk_mixture(
+                        model=asr_model,
+                        processor=processor,
+                        input_features=input_features,
+                        attention_mask=attention_mask,
+                        topk_indices=topk_indices,
+                        topk_weights=topk_weights,
+                        use_lora=use_lora,
                     )
-                    preds = processor.batch_decode(
-                        generated_ids, skip_special_tokens=True
-                    )
-                    for idx, pred in zip(torch.where(mask)[0].tolist(), preds):
-                        predictions[idx] = pred
+                else:
+                    predictions = [""] * input_features.size(0)
+                    for expert_id in torch.unique(top1_indices).tolist():
+                        mask = top1_indices == expert_id
+                        if not mask.any():
+                            continue
+                        if use_lora:
+                            asr_model.set_adapter(f"expert_{expert_id}")
+                        feats = input_features[mask]
+                        feats_mask = (
+                            attention_mask[mask] if attention_mask is not None else None
+                        )
+                        generated_ids = asr_model.generate(
+                            input_features=feats, attention_mask=feats_mask
+                        )
+                        preds = processor.batch_decode(
+                            generated_ids, skip_special_tokens=True
+                        )
+                        for idx, pred in zip(torch.where(mask)[0].tolist(), preds):
+                            predictions[idx] = pred
 
                 for sample, pred, expert_id in zip(
                     batch, predictions, top1_cpu
@@ -411,6 +574,9 @@ def _run_finetuned(
                 gating_handle.close()
 
     results = tracker.results()
+    decoding_mode = "top1"
+    if moe_mixture and effective_top_k > 1:
+        decoding_mode = f"top{int(effective_top_k)}_mixture"
     results["expert_usage"] = {
         "overall": {str(i): int(expert_usage_overall.get(i, 0)) for i in range(num_experts)},
         "per_etiology": {
@@ -420,6 +586,16 @@ def _run_finetuned(
             for etiology, counts in sorted(expert_usage_by_etiology.items())
         },
     }
+    if effective_top_k > 1:
+        results["expert_topk_usage"] = {
+            "overall": {str(i): int(expert_topk_usage_overall.get(i, 0)) for i in range(num_experts)},
+            "per_etiology": {
+                etiology: {
+                    str(i): int(counts.get(i, 0)) for i in range(num_experts)
+                }
+                for etiology, counts in sorted(expert_topk_usage_by_etiology.items())
+            },
+        }
     gate_prob_mean = (gate_prob_sum / max(1, gate_prob_count)).tolist()
     results["gating_probabilities"] = {
         "temperature": float(routing_temperature),
@@ -439,6 +615,8 @@ def _run_finetuned(
         },
         "per_sample_path": str(gating_output_path) if gating_output_path else None,
     }
+    results["moe_decoding"] = decoding_mode
+    results["moe_top_k"] = int(effective_top_k)
     return results
 
 
@@ -498,6 +676,17 @@ def main() -> None:
         default=None,
         help="Optional JSONL output path for per-sample gating probabilities.",
     )
+    parser.add_argument(
+        "--moe-top-k",
+        type=int,
+        default=1,
+        help="Top-k experts to use for mixture decoding (finetuned only).",
+    )
+    parser.add_argument(
+        "--moe-mixture",
+        action="store_true",
+        help="Enable top-k mixture decoding for finetuned model.",
+    )
 
     args = parser.parse_args()
 
@@ -528,6 +717,8 @@ def main() -> None:
             "seed": args.seed,
             "max_samples": args.max_samples,
             "samples_used": len(samples),
+            "moe_top_k": args.moe_top_k,
+            "moe_decoding": "topk_mixture" if args.moe_mixture else "top1",
         }
     }
 
@@ -560,6 +751,8 @@ def main() -> None:
             device=device,
             batch_size=args.batch_size,
             gating_output_path=Path(args.gating_output) if args.gating_output else None,
+            moe_top_k=args.moe_top_k,
+            moe_mixture=args.moe_mixture,
         )
 
     print(json.dumps(results, indent=2))
