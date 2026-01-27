@@ -3,7 +3,7 @@ import json
 import sys
 from collections import defaultdict
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 import torch
 
