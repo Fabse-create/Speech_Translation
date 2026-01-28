@@ -22,6 +22,27 @@ python Training_Scripts/train_pipeline.py --mode full --seed 42 \
   --gradient-accumulation-steps 8
 ```
 
+### Regular MoE training (skip pretraining, train end-to-end)
+
+For regular MoE training where gating and experts train jointly from scratch:
+
+```bash
+python Training_Scripts/train_pipeline.py --mode full --seed 42 \
+  --skip-pretraining \
+  --num-experts 8 \
+  --asr-batch-size 2 \
+  --gradient-accumulation-steps 8
+```
+
+This will:
+- Skip embedding extraction (not needed for end-to-end training)
+- Skip clustering (not needed - uses `--num-experts` directly)
+- Skip gating model pretraining
+- Skip expert pretraining  
+- Start ASR training directly with randomly initialized gating and experts
+
+**Note:** When using `--skip-pretraining`, you must specify `--num-experts` to define the number of experts. The clustering step is bypassed entirely.
+
 ### Test with 10% of data (with file logging)
 
 Useful for verifying the full pipeline before committing to a long training run:
@@ -199,6 +220,7 @@ python Training_Scripts/train_pipeline.py --mode full \
 | `--seed` | int | `42` | Random seed for reproducibility across all stages |
 | `--resume` | flag | `false` | Resume from existing checkpoints instead of starting fresh |
 | `--no-plot` | flag | `false` | Skip generating plots (useful for headless servers) |
+| `--skip-pretraining` | flag | `false` | Skip gating and expert pretraining, start ASR training directly (regular MoE training mode) |
 
 ### Data Configuration
 

@@ -785,9 +785,9 @@ def _build_expert_config(
 def _build_asr_config(
     base_path: str,
     num_experts: int,
-    gating_checkpoint: Path,
+    gating_checkpoint: Optional[Path],
     gating_config: str,
-    experts_dir: Path,
+    experts_dir: Optional[Path],
     data_override: Dict[str, Any],
     seed: int,
     output_dir: Path,
@@ -801,9 +801,9 @@ def _build_asr_config(
 ) -> Path:
     config = load_config(base_path)
     config["num_experts"] = num_experts
-    config["gating_checkpoint"] = str(gating_checkpoint)
+    config["gating_checkpoint"] = str(gating_checkpoint) if gating_checkpoint else None
     config["gating_model_config"] = gating_config
-    config["experts_dir"] = str(experts_dir)
+    config["experts_dir"] = str(experts_dir) if experts_dir else None
     config["data_config_override"] = data_override
     config["seed"] = seed
     config["val_split"] = 0.1
@@ -863,6 +863,7 @@ def run_pipeline(
     benchmark_batch_size: int = 2,
     benchmark_seed: int = 42,
     benchmark_top_k: int = 2,
+    skip_pretraining: bool = False,
 ) -> None:
     _set_seed(seed)
 
@@ -947,133 +948,150 @@ def run_pipeline(
     else:
         logger.info(f"Resuming from existing run at {run_root}")
 
-    # STEP 1: Embedding extraction (with resume support)
-    skip_embeddings = resume and embeddings_mapping.exists() and len(list(embeddings_dir.rglob("*.npy"))) > 0
-    if skip_embeddings:
-        logger.info(f"[RESUME] Skipping embedding extraction - found {len(list(embeddings_dir.rglob('*.npy')))} embeddings")
+    # STEP 1: Embedding extraction (with resume support and skip_pretraining flag)
+    resolved_experts = num_experts  # Default to user-specified num_experts
+    
+    if skip_pretraining:
+        logger.info("[SKIP PRETRAINING] Skipping embedding extraction and clustering - using --num-experts directly")
     else:
-        logger.info(f"[STEP 1/5] Extracting embeddings...")
-        logger.info(f"[STEP 1/5] Embedding data source (dataset_root): {dataset_root}")
-        _extract_embeddings(
-            dataset_root=dataset_root,
-            split="Train",
-            percent=embedding_percent,
-            max_samples=embedding_max,
-            seed=seed,
-            output_dir=embeddings_dir,
-            mapping_path=embeddings_mapping,
-            whisper_model=whisper_model,
-            sampling="stratified",
-        )
-
-    # STEP 2: Clustering (with resume support)
-    soft_labels_path = clustered_dir / "HDBSCAN_soft.json"
-    spectral_labels_path = clustered_dir / "Spectral_soft.json"
-    skip_clustering = resume and (soft_labels_path.exists() or spectral_labels_path.exists())
-
-    if skip_clustering:
-        # Determine which labels file exists and count experts
-        if soft_labels_path.exists():
-            labels_path = soft_labels_path
+        skip_embeddings = resume and embeddings_mapping.exists() and len(list(embeddings_dir.rglob("*.npy"))) > 0
+        if skip_embeddings:
+            logger.info(f"[RESUME] Skipping embedding extraction - found {len(list(embeddings_dir.rglob('*.npy')))} embeddings")
         else:
-            labels_path = spectral_labels_path
-        import json as _json
-        with labels_path.open("r") as f:
-            labels_data = _json.load(f)
-        if labels_data and "probs" in labels_data[0]:
-            resolved_experts = len(labels_data[0]["probs"])
-            # Adjust for noise column if present
-            if resolved_experts > num_experts:
+            logger.info(f"[STEP 1/5] Extracting embeddings...")
+            logger.info(f"[STEP 1/5] Embedding data source (dataset_root): {dataset_root}")
+            _extract_embeddings(
+                dataset_root=dataset_root,
+                split="Train",
+                percent=embedding_percent,
+                max_samples=embedding_max,
+                seed=seed,
+                output_dir=embeddings_dir,
+                mapping_path=embeddings_mapping,
+                whisper_model=whisper_model,
+                sampling="stratified",
+            )
+
+        # STEP 2: Clustering (with resume support)
+        soft_labels_path = clustered_dir / "HDBSCAN_soft.json"
+        spectral_labels_path = clustered_dir / "Spectral_soft.json"
+        skip_clustering = resume and (soft_labels_path.exists() or spectral_labels_path.exists())
+
+        if skip_clustering:
+            # Determine which labels file exists and count experts
+            if soft_labels_path.exists():
+                labels_path = soft_labels_path
+            else:
+                labels_path = spectral_labels_path
+            import json as _json
+            with labels_path.open("r") as f:
+                labels_data = _json.load(f)
+            if labels_data and "probs" in labels_data[0]:
+                resolved_experts = len(labels_data[0]["probs"])
+                # Adjust for noise column if present
+                if resolved_experts > num_experts:
+                    resolved_experts = num_experts
+            else:
                 resolved_experts = num_experts
+            logger.info(f"[RESUME] Skipping clustering - found labels at {labels_path} with {resolved_experts} experts")
         else:
-            resolved_experts = num_experts
-        logger.info(f"[RESUME] Skipping clustering - found labels at {labels_path} with {resolved_experts} experts")
-    else:
-        logger.info("[STEP 2/5] Clustering embeddings...")
-        labels_path, resolved_experts = _cluster_embeddings(
-            embedding_dir=embeddings_dir,
-            output_dir=clustered_dir,
-            algorithm=clustering_algorithm,
-            num_experts=num_experts,
-            min_clusters=min_clusters,
-            min_cluster_size=min_cluster_size,
-            min_samples=min_samples,
-            metric=metric,
-            allow_single_cluster=allow_single_cluster,
-            hdbscan_algorithm=hdbscan_algorithm,
-            allow_reduce_experts=allow_reduce_experts,
-            min_experts=min_experts,
-            max_retries=max_retries,
-            pooling=pooling,
-            reduce=reduce,
-            reduce_dim=reduce_dim,
-            plot_method=plot_method if not no_plot else "pca",  # Use PCA if not plotting
-            seed=seed,
-        )
+            logger.info("[STEP 2/5] Clustering embeddings...")
+            labels_path, resolved_experts = _cluster_embeddings(
+                embedding_dir=embeddings_dir,
+                output_dir=clustered_dir,
+                algorithm=clustering_algorithm,
+                num_experts=num_experts,
+                min_clusters=min_clusters,
+                min_cluster_size=min_cluster_size,
+                min_samples=min_samples,
+                metric=metric,
+                allow_single_cluster=allow_single_cluster,
+                hdbscan_algorithm=hdbscan_algorithm,
+                allow_reduce_experts=allow_reduce_experts,
+                min_experts=min_experts,
+                max_retries=max_retries,
+                pooling=pooling,
+                reduce=reduce,
+                reduce_dim=reduce_dim,
+                plot_method=plot_method if not no_plot else "pca",  # Use PCA if not plotting
+                seed=seed,
+            )
 
     if fp16 is None:
         fp16 = torch.cuda.is_available()
 
-    # STEP 3: Gating model pre-training (with resume support)
-    gating_best_checkpoint = gating_ckpt_dir / "best.pt"
-    skip_gating = resume and gating_best_checkpoint.exists()
-
-    if skip_gating:
-        gating_checkpoint = gating_best_checkpoint
-        gating_config = gating_ckpt_dir / "gating_pretrain_config.json"
-        logger.info(f"[RESUME] Skipping gating pre-training - found checkpoint at {gating_checkpoint}")
+    # STEP 3: Gating model pre-training (with resume support and skip_pretraining flag)
+    gating_checkpoint: Optional[Path] = None
+    gating_config: Optional[Path] = None
+    
+    if skip_pretraining:
+        logger.info("[SKIP PRETRAINING] Skipping gating model pre-training - will initialize from scratch")
+        # Still need gating_config path for ASR training
+        gating_config = Path("Config/gating_model_config.json")
+        logger.info(f"[SKIP PRETRAINING] Using {resolved_experts} experts (from --num-experts)")
     else:
-        logger.info("[STEP 3/5] Training gating model...")
-        gating_config = _build_gating_config(
-            base_path="Config/gating_model_config.json",
-            num_experts=resolved_experts,
-            embeddings_dir=embeddings_dir,
-            labels_path=labels_path,
-            checkpoint_dir=gating_ckpt_dir,
-            metrics_dir=gating_metrics_dir,
-            seed=seed,
-            batch_size=gating_batch_size,
-            num_workers=num_workers,
-        )
-        if not resume:
-            _remove_if_exists(gating_metrics_dir / "metrics.json")
-            _remove_if_exists(gating_ckpt_dir / "best.json")
-        gating_checkpoint = train_gate(str(gating_config))
-        if not no_plot:
-            plot_gating_metrics(gating_metrics_dir / "metrics.json", gating_metrics_dir)
+        gating_best_checkpoint = gating_ckpt_dir / "best.pt"
+        skip_gating = resume and gating_best_checkpoint.exists()
 
-    # STEP 4: Expert pre-training (with resume support)
-    expert_dirs_exist = [
-        (experts_output_dir / f"expert_{i}").exists() 
-        for i in range(resolved_experts)
-    ]
-    skip_experts = resume and any(expert_dirs_exist)
+        if skip_gating:
+            gating_checkpoint = gating_best_checkpoint
+            gating_config = gating_ckpt_dir / "gating_pretrain_config.json"
+            logger.info(f"[RESUME] Skipping gating pre-training - found checkpoint at {gating_checkpoint}")
+        else:
+            logger.info("[STEP 3/5] Training gating model...")
+            gating_config = _build_gating_config(
+                base_path="Config/gating_model_config.json",
+                num_experts=resolved_experts,
+                embeddings_dir=embeddings_dir,
+                labels_path=labels_path,
+                checkpoint_dir=gating_ckpt_dir,
+                metrics_dir=gating_metrics_dir,
+                seed=seed,
+                batch_size=gating_batch_size,
+                num_workers=num_workers,
+            )
+            if not resume:
+                _remove_if_exists(gating_metrics_dir / "metrics.json")
+                _remove_if_exists(gating_ckpt_dir / "best.json")
+            gating_checkpoint = train_gate(str(gating_config))
+            if not no_plot:
+                plot_gating_metrics(gating_metrics_dir / "metrics.json", gating_metrics_dir)
 
-    if skip_experts:
-        logger.info(f"[RESUME] Skipping expert pre-training - found {sum(expert_dirs_exist)}/{resolved_experts} expert directories")
+    # STEP 4: Expert pre-training (with resume support and skip_pretraining flag)
+    if skip_pretraining:
+        logger.info("[SKIP PRETRAINING] Skipping expert pre-training - will initialize from scratch")
     else:
-        logger.info("[STEP 4/5] Training experts...")
-        expert_override = _build_data_override(
-            dataset_root, "Train", expert_percent, "stratified", seed, expert_max
-        )
-        expert_config = _build_expert_config(
-            base_path="Config/expert_pre_training.json",
-            num_experts=resolved_experts,
-            gating_checkpoint=gating_checkpoint,
-            gating_config=str(gating_config),
-            data_override=expert_override,
-            seed=seed,
-            batch_size=expert_batch_size,
-            num_workers=num_workers,
-            fp16=fp16,
-            embeddings_dir=embeddings_dir,  # OPTIMIZATION: Pass cached embeddings
-            gradient_accumulation_steps=gradient_accumulation_steps,
-        )
-        if not resume:
-            _clear_expert_metrics(expert_metrics_dir)
-        train_experts(str(expert_config))
-        if not no_plot:
-            plot_expert_metrics(expert_metrics_dir, expert_metrics_dir)
+        expert_dirs_exist = [
+            (experts_output_dir / f"expert_{i}").exists() 
+            for i in range(resolved_experts)
+        ]
+        skip_experts = resume and any(expert_dirs_exist)
+
+        if skip_experts:
+            logger.info(f"[RESUME] Skipping expert pre-training - found {sum(expert_dirs_exist)}/{resolved_experts} expert directories")
+        else:
+            logger.info("[STEP 4/5] Training experts...")
+            expert_override = _build_data_override(
+                dataset_root, "Train", expert_percent, "stratified", seed, expert_max
+            )
+            expert_config = _build_expert_config(
+                base_path="Config/expert_pre_training.json",
+                num_experts=resolved_experts,
+                gating_checkpoint=gating_checkpoint,
+                gating_config=str(gating_config),
+                data_override=expert_override,
+                seed=seed,
+                batch_size=expert_batch_size,
+                num_workers=num_workers,
+                fp16=fp16,
+                embeddings_dir=embeddings_dir,  # OPTIMIZATION: Pass cached embeddings
+                gradient_accumulation_steps=gradient_accumulation_steps,
+            )
+            if not resume:
+                _clear_expert_metrics(expert_metrics_dir)
+            train_experts(str(expert_config))
+            if not no_plot:
+                plot_expert_metrics(expert_metrics_dir, expert_metrics_dir)
 
     # Clear GPU memory before ASR training to prevent OOM
     if torch.cuda.is_available():
@@ -1096,9 +1114,9 @@ def run_pipeline(
         asr_config = _build_asr_config(
             base_path="Config/asr_training.json",
             num_experts=resolved_experts,
-            gating_checkpoint=gating_checkpoint,
+            gating_checkpoint=gating_checkpoint if not skip_pretraining else None,
             gating_config=str(gating_config),
-            experts_dir=experts_output_dir,
+            experts_dir=experts_output_dir if not skip_pretraining else None,
             data_override=asr_override,
             seed=seed,
             output_dir=asr_output_dir,
@@ -1412,6 +1430,11 @@ def _parse_args() -> argparse.Namespace:
         default=2,
         help="Top-k experts for mixture decoding benchmark.",
     )
+    parser.add_argument(
+        "--skip-pretraining",
+        action="store_true",
+        help="Skip gating and expert pretraining, start ASR training directly (regular MoE training mode).",
+    )
     return parser.parse_args()
 
 
@@ -1459,4 +1482,5 @@ if __name__ == "__main__":
         benchmark_batch_size=args.benchmark_batch_size,
         benchmark_top_k=args.benchmark_top_k,
         benchmark_seed=args.benchmark_seed,
+        skip_pretraining=args.skip_pretraining,
     )
