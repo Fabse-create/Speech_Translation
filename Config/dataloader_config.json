@@ -1,5 +1,5 @@
 {
-  "dataset_root": "10percent_data_replication",
+  "dataset_root": "Data/extracted_data",
   "split": "Train",
   "percent": 100,
   "sampling": "random",
