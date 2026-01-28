@@ -565,15 +565,19 @@ def _run_asr_training(
                 config=config,
                 device=device,
             )
-            val_wer = asr_training._evaluate_wer(
-                model=model,
-                gating_model=gating_model,
-                embedding_model=embedding_model,
-                data_loader=val_loader,
-                config=config,
-                device=device,
-                processor=processor,
-            )
+            try:
+                val_wer = asr_training._evaluate_wer(
+                    model=model,
+                    gating_model=gating_model,
+                    embedding_model=embedding_model,
+                    data_loader=val_loader,
+                    config=config,
+                    device=device,
+                    processor=processor,
+                )
+            except Exception as exc:
+                print(f"[WARNING] WER validation failed at epoch {epoch}: {exc}")
+                val_wer = None
         else:
             val_wer = None
 
@@ -663,17 +667,28 @@ def _run_asr_training(
             config=config,
             device=device,
         )
-        test_wer = asr_training._evaluate_wer(
-            model=model,
-            gating_model=gating_model,
-            embedding_model=embedding_model,
-            data_loader=test_loader,
-            config=config,
-            device=device,
-            processor=processor,
-        )
+        try:
+            test_wer = asr_training._evaluate_wer(
+                model=model,
+                gating_model=gating_model,
+                embedding_model=embedding_model,
+                data_loader=test_loader,
+                config=config,
+                device=device,
+                processor=processor,
+            )
+        except Exception as exc:
+            print(f"[WARNING] Test WER evaluation failed: {exc}")
+            test_wer = None
         with test_metrics_path.open("w", encoding="utf-8") as metrics_file:
-            json.dump({"test_loss": float(test_loss), "test_wer": float(test_wer)}, metrics_file, indent=2)
+            json.dump(
+                {
+                    "test_loss": float(test_loss),
+                    "test_wer": None if test_wer is None else float(test_wer)
+                },
+                metrics_file,
+                indent=2
+            )
 
 
 def _run_asr_benchmark(

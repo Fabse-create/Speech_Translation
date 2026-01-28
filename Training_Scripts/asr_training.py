@@ -1043,16 +1043,20 @@ def train(config_path: str, max_samples: Optional[int] = None) -> None:
                 device=device,
                 epoch_idx=epoch_idx,
             )
-            val_wer = _evaluate_wer(
-                model=model,
-                gating_model=gating_model,
-                embedding_model=embedding_model,
-                data_loader=val_loader,
-                config=config,
-                device=device,
-                processor=processor,
-                epoch_idx=epoch_idx,
-            )
+            try:
+                val_wer = _evaluate_wer(
+                    model=model,
+                    gating_model=gating_model,
+                    embedding_model=embedding_model,
+                    data_loader=val_loader,
+                    config=config,
+                    device=device,
+                    processor=processor,
+                    epoch_idx=epoch_idx,
+                )
+            except Exception as exc:
+                print(f"[WARNING] WER validation failed at epoch {epoch}: {exc}")
+                val_wer = None
 
         metrics_entry = {
             "epoch": epoch,
