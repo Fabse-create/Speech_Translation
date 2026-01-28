@@ -480,7 +480,7 @@ def _run_asr_training(
     _set_seed(seed)
 
     train_samples, val_samples, test_samples = _stratified_split(
-        samples, (0.8, 0.1, 0.1), seed
+        samples, (0.97, 0.025, 0.005), seed
     )
     train_set = _build_moe_dataset(train_samples)
     val_set = _build_moe_dataset(val_samples)

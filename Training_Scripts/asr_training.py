@@ -297,6 +297,22 @@ def _configure_generation(
         generation_config.forced_decoder_ids = None
 
 
+def _resolve_max_length(
+    model: "WhisperForConditionalGeneration",
+    processor: "WhisperProcessor",
+) -> int:
+    """Resolve max generation length, same logic as WER benchmark."""
+    generation_config = getattr(model, "generation_config", model.config)
+    max_length = getattr(generation_config, "max_length", None)
+    if max_length is None:
+        max_length = getattr(model.config, "max_length", None)
+    if max_length is None and processor is not None:
+        max_length = processor.tokenizer.model_max_length
+    if max_length is None or max_length <= 0 or max_length > 2048:
+        max_length = 448
+    return int(max_length)
+
+
 def _sequence_loss(
     logits: torch.Tensor, labels: torch.Tensor
 ) -> torch.Tensor:
@@ -755,6 +771,7 @@ def _evaluate_wer(
                 top1_indices = topk_indices[:, 0]
 
             generated = [""] * input_features.size(0)
+            max_length = _resolve_max_length(model, processor)
             for expert_id in torch.unique(top1_indices).tolist():
                 if config.use_lora:
                     model.set_adapter(f"expert_{expert_id}")
@@ -764,7 +781,9 @@ def _evaluate_wer(
                 feats = input_features[mask]
                 feats_mask = attention_mask[mask] if attention_mask is not None else None
                 generated_ids = model.generate(
-                    input_features=feats, attention_mask=feats_mask
+                    input_features=feats,
+                    attention_mask=feats_mask,
+                    max_length=max_length,
                 )
                 preds = processor.batch_decode(
                     generated_ids, skip_special_tokens=True
