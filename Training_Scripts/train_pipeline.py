@@ -185,8 +185,9 @@ def _build_data_override(
     sampling: str,
     seed: int,
     max_samples: Optional[int],
+    exclude_impairment: Optional[str] = None,
 ) -> Dict[str, Any]:
-    return {
+    override = {
         "dataset_root": dataset_root,
         "split": split,
         "percent": percent,
@@ -195,6 +196,9 @@ def _build_data_override(
         "max_samples": max_samples,
         "modes": {},
     }
+    if exclude_impairment is not None:
+        override["exclude_impairment"] = exclude_impairment
+    return override
 
 
 def _extract_embeddings(
@@ -207,12 +211,13 @@ def _extract_embeddings(
     mapping_path: Path,
     whisper_model: str,
     sampling: str,
+    exclude_impairment: Optional[str] = None,
 ) -> Path:
     config = {
         "data_config_path": "Config/dataloader_config.json",
         "data_mode": "default",
         "data_config_override": _build_data_override(
-            dataset_root, split, percent, sampling, seed, max_samples
+            dataset_root, split, percent, sampling, seed, max_samples, exclude_impairment
         ),
         "whisper_model": whisper_model,
         "output_dir": str(output_dir),
@@ -411,11 +416,12 @@ def _load_samples(
     sampling: str,
     seed: int,
     max_samples: Optional[int],
+    exclude_impairment: Optional[str] = None,
 ) -> List[Dict[str, Any]]:
     loader = WhisperDataLoader(
         config_path="Config/dataloader_config.json",
         mode="default",
-        config=_build_data_override(dataset_root, split, percent, sampling, seed, max_samples),
+        config=_build_data_override(dataset_root, split, percent, sampling, seed, max_samples, exclude_impairment),
     )
     return [sample for sample in loader.sample() if sample.get("prompt")]
 
@@ -863,6 +869,7 @@ def run_pipeline(
     benchmark_batch_size: int = 2,
     benchmark_seed: int = 42,
     benchmark_top_k: int = 2,
+    exclude_impairment: Optional[str] = None,
 ) -> None:
     _set_seed(seed)
 
@@ -875,6 +882,8 @@ def run_pipeline(
     logger.info(f"Starting pipeline in '{mode}' mode with seed={seed}")
     logger.info(f"Using device: {torch_device}")
     logger.info(f"Dataset root: {dataset_root}")
+    if exclude_impairment:
+        logger.info(f"Excluding impairment: {exclude_impairment}")
     if data_percent is not None:
         logger.info(f"Using custom data percentage: {data_percent}%")
     run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -964,6 +973,7 @@ def run_pipeline(
             mapping_path=embeddings_mapping,
             whisper_model=whisper_model,
             sampling="stratified",
+            exclude_impairment=exclude_impairment,
         )
 
     # STEP 2: Clustering (with resume support)
@@ -1118,6 +1128,7 @@ def run_pipeline(
             sampling="stratified",
             seed=seed,
             max_samples=asr_max,
+            exclude_impairment=exclude_impairment,
         )
         dev_samples: List[Dict[str, Any]] = []
         if include_dev:
@@ -1128,6 +1139,7 @@ def run_pipeline(
                 sampling="stratified",
                 seed=seed,
                 max_samples=asr_max,
+                exclude_impairment=exclude_impairment,
             )
         all_samples = train_samples + dev_samples
         if not all_samples:
@@ -1412,6 +1424,12 @@ def _parse_args() -> argparse.Namespace:
         default=2,
         help="Top-k experts for mixture decoding benchmark.",
     )
+    parser.add_argument(
+        "--exclude-impairment",
+        type=str,
+        default=None,
+        help="Exclude samples with a specific impairment/etiology from training (e.g., 'ALS', 'Parkinson's Disease').",
+    )
     return parser.parse_args()
 
 
@@ -1459,4 +1477,5 @@ if __name__ == "__main__":
         benchmark_batch_size=args.benchmark_batch_size,
         benchmark_top_k=args.benchmark_top_k,
         benchmark_seed=args.benchmark_seed,
+        exclude_impairment=args.exclude_impairment,
     )

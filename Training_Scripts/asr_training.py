@@ -887,12 +887,14 @@ def _save_checkpoint(
             json.dump(payload, f, indent=2)
 
 
-def train(config_path: str, max_samples: Optional[int] = None) -> None:
+def train(config_path: str, max_samples: Optional[int] = None, exclude_impairment: Optional[str] = None) -> None:
     config = _load_training_config(config_path)
+    if config.data_config_override is None:
+        config.data_config_override = {}
     if max_samples is not None:
-        if config.data_config_override is None:
-            config.data_config_override = {}
         config.data_config_override["max_samples"] = int(max_samples)
+    if exclude_impairment is not None:
+        config.data_config_override["exclude_impairment"] = exclude_impairment
     _ensure_dependencies(config.use_lora)
     _set_seed(config.seed)
     run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -1152,9 +1154,15 @@ def _parse_args() -> argparse.Namespace:
         default=None,
         help="Override max_samples for data selection (e.g., 50).",
     )
+    parser.add_argument(
+        "--exclude-impairment",
+        type=str,
+        default=None,
+        help="Exclude samples with a specific impairment/etiology from training (e.g., 'ALS', 'Parkinson's Disease').",
+    )
     return parser.parse_args()
 
 
 if __name__ == "__main__":
     args = _parse_args()
-    train(args.config, args.max_samples)
+    train(args.config, args.max_samples, args.exclude_impairment)

@@ -26,6 +26,7 @@ class WhisperDataLoader:
         self.sampling = mode_config.get("sampling", config_data.get("sampling", "random"))
         self.seed = mode_config.get("seed", config_data.get("seed", 42))
         self.max_samples = mode_config.get("max_samples", config_data.get("max_samples"))
+        self.exclude_impairment = mode_config.get("exclude_impairment", config_data.get("exclude_impairment"))
 
         if self.split not in {"Train", "Dev"}:
             raise ValueError("split must be 'Train' or 'Dev'.")
@@ -144,6 +145,14 @@ class WhisperDataLoader:
 
     def sample(self) -> List[Dict[str, Any]]:
         samples = self.build_index()
+        
+        # Filter out excluded impairment if specified
+        if self.exclude_impairment:
+            samples = [
+                sample for sample in samples 
+                if sample.get("etiology", "Unknown") != self.exclude_impairment
+            ]
+        
         rng = random.Random(self.seed)
 
         target = int(round(len(samples) * (self.percent / 100.0)))
