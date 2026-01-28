@@ -158,6 +158,14 @@ def _remove_if_exists(path: Path) -> None:
         path.unlink()
 
 
+def _close_log_file_handlers(logger: logging.Logger) -> None:
+    """Close all file handlers in the logger to release file locks."""
+    for handler in logger.handlers[:]:
+        if isinstance(handler, logging.FileHandler):
+            handler.close()
+            logger.removeHandler(handler)
+
+
 def _remove_dir(path: Path) -> None:
     if path.exists():
         shutil.rmtree(path)
@@ -851,6 +859,7 @@ def run_pipeline(
     logger = _setup_logging(log_file)
     logger.info(f"Starting pipeline in '{mode}' mode with seed={seed}")
     logger.info(f"Using device: {torch_device}")
+    logger.info(f"Dataset root: {dataset_root}")
     if data_percent is not None:
         logger.info(f"Using custom data percentage: {data_percent}%")
     run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -906,7 +915,20 @@ def run_pipeline(
 
     # OPTIMIZATION: Only remove run directory if not resuming
     if not resume:
+        # Close log file handlers before removing directory (Windows file lock issue)
+        log_file_path = Path(log_file) if log_file else None
+        log_file_inside_run_root = (
+            log_file_path is not None 
+            and (log_file_path.is_relative_to(run_root) if hasattr(Path, 'is_relative_to') 
+                 else str(log_file_path).startswith(str(run_root)))
+        )
+        if log_file_inside_run_root:
+            _close_log_file_handlers(logger)
         _remove_dir(run_root)
+        # Reopen logging if log file was inside the removed directory
+        if log_file_inside_run_root:
+            logger = _setup_logging(log_file)
+            logger.info(f"Reopened logging after directory cleanup")
     else:
         logger.info(f"Resuming from existing run at {run_root}")
 
@@ -915,7 +937,8 @@ def run_pipeline(
     if skip_embeddings:
         logger.info(f"[RESUME] Skipping embedding extraction - found {len(list(embeddings_dir.rglob('*.npy')))} embeddings")
     else:
-        logger.info("[STEP 1/5] Extracting embeddings...")
+        logger.info(f"[STEP 1/5] Extracting embeddings...")
+        logger.info(f"[STEP 1/5] Embedding data source (dataset_root): {dataset_root}")
         _extract_embeddings(
             dataset_root=dataset_root,
             split="Train",

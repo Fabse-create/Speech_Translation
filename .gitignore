@@ -10,6 +10,7 @@ Data/raw_data/Downsampled/
 Data/extracted_data/Dev/
 Data/extracted_data/Train/
 Data/salmonn
+10percent_data_replication/
 
 # Generated embeddings (extracted during pipeline)
 Data/embeddings/

@@ -5,7 +5,7 @@
   "data_config_path": "Config/dataloader_config.json",
   "data_mode": "default",
   "data_config_override": {
-    "dataset_root": "Data/extracted_data",
+    "dataset_root": "10percent_data_replication",
     "split": "Train",
     "percent": 100,
     "sampling": "random",
